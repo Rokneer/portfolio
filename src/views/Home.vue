@@ -3,7 +3,7 @@
     class="animate__animated animate__fadeInLeft flex flex-row items-center py-6 lg:px-12"
   >
     <img
-      class="mx-2 h-80 rounded-full bg-secondary-300 object-scale-down p-2"
+      class="mx-2 h-80 rounded-full bg-secondary-300 object-scale-down p-2 text-center align-middle text-white"
       src="placeholder-head.png"
       alt="A drawing of the portfolio owner"
     />
@@ -37,7 +37,7 @@
       >
         <router-link :to="{ name: project.title }">
           <img
-            class="rounded-lg transition duration-150 hover:scale-105"
+            class="rounded-lg text-center align-middle text-white transition duration-150 hover:scale-105"
             :src="project.imageVertical"
             :alt="project.title"
           />

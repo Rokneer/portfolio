@@ -1,7 +1,7 @@
 <template>
   <div class="py-6">
     <div
-      class="animate__animated animate__fadeInUp flex w-full justify-center bg-gradient-to-l from-tertiary-500 from-20% via-tertiary-300 to-tertiary-500 to-80% py-3 text-4xl font-extrabold uppercase text-white backdrop-blur md:text-5xl"
+      class="animate__animated animate__fadeInUp flex w-full justify-center bg-gradient-to-l from-tertiary-500 from-20% via-tertiary-300 to-tertiary-500 to-80% py-3 text-4xl font-extrabold uppercase text-white md:text-5xl"
     >
       <span v-if="projectType === 'games'">Games</span>
       <span v-if="projectType === 'others'">Others</span>
@@ -16,7 +16,7 @@
       <div class="w-1/2 transition duration-150 hover:scale-110">
         <router-link :to="{ name: project.title }">
           <img
-            class="animate__animated animate__fadeInLeft h-auto max-h-[26rem] rounded-3xl border-4 border-secondary-300 object-scale-down"
+            class="animate__animated animate__fadeInLeft h-auto max-h-[26rem] rounded-3xl border-4 border-secondary-300 object-scale-down text-center align-middle text-white"
             :src="project.imageHorizontal"
             :alt="project.title"
           />

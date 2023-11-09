@@ -6,8 +6,8 @@
       <div class="cursor-pointer justify-start pr-2">
         <router-link :to="{ name: 'Home' }">
           <img
-            class="h-10 w-full transition duration-150 hover:scale-105"
-            src="tomato_logo_horizontal.png"
+            class="h-10 w-full text-center align-middle text-white transition duration-150 hover:scale-105"
+            src="tomato-logo-horizontal.png"
             alt="Tomato Logo"
           />
         </router-link>

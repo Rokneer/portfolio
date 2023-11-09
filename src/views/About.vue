@@ -3,7 +3,7 @@
     <img
       src=""
       alt="A drawing of the portfolio owner"
-      class="animate__animated animate__fadeInDown h-48 rounded-xl border-4 border-secondary-300 md:h-64 lg:h-80 xl:h-96"
+      class="animate__animated animate__fadeInDown h-48 rounded-xl border-4 border-secondary-300 text-center align-middle text-white md:h-64 lg:h-80 xl:h-96"
     />
   </div>
   <div
