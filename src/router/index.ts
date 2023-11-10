@@ -1,13 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Portfolio from "../views/projects/Portfolio.vue";
-import Masquerade from "../views/projects/Masquerade.vue";
-import PotionRush from "../views/projects/PotionRush.vue";
-import SoulsOfLight from "../views/projects/SoulsOfLight.vue";
-import UnRecuerdo from "../views/projects/UnRecuerdo.vue";
-import VoltronInfographic from "../views/projects/VoltronInfographic.vue";
+import Portfolio from "../views/Portfolio.vue";
 import About from "../views/About.vue";
 import Contact from "../views/Contact.vue";
+import Project from "../views/Project.vue";
 
 const routes = [
   {
@@ -21,29 +17,9 @@ const routes = [
     component: Portfolio,
   },
   {
-    path: "/portfolio/masquerade",
-    name: "Masquerade",
-    component: Masquerade,
-  },
-  {
-    path: "/portfolio/potion-rush",
-    name: "Potion Rush",
-    component: PotionRush,
-  },
-  {
-    path: "/portfolio/souls-of-light",
-    name: "Souls of Light",
-    component: SoulsOfLight,
-  },
-  {
-    path: "/portfolio/un-recuerdo",
-    name: "Un Recuerdo",
-    component: UnRecuerdo,
-  },
-  {
-    path: "/portfolio/voltron-infographic",
-    name: "Voltron Infographic",
-    component: VoltronInfographic,
+    path: "/portfolio/:title",
+    name: "Project",
+    component: Project,
   },
   {
     path: "/about",

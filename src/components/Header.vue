@@ -6,7 +6,7 @@
       <div class="cursor-pointer justify-start pr-2">
         <router-link :to="{ name: 'Home' }">
           <img
-            class="h-10 w-full text-center align-middle text-white transition duration-150 hover:scale-105"
+            class="middle h-10 w-full text-center text-white transition duration-150 hover:scale-105"
             src="tomato-logo-horizontal.png"
             alt="Tomato Logo"
           />
@@ -41,11 +41,26 @@
             Contact
           </Button>
         </router-link>
+        <!-- <span v-for="(project, index) in projects" :key="index">
+          <router-link
+            :to="{
+              name: 'Project',
+              params: { title: project.title.toLowerCase().replace(/\s/g, '-') },
+            }"
+          >
+            <Button
+              class="mx-1 rounded-2xl px-4 py-1 text-sm font-semibold uppercase md:px-6 md:text-base lg:mx-2 lg:px-10 xl:px-16"
+            >
+              {{ project.title }}
+            </Button>
+          </router-link>
+        </span> -->
       </div>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
+//import { projects } from "..";
 import Button from "./Button.vue";
 </script>

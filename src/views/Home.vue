@@ -7,7 +7,7 @@
       src="placeholder-head.png"
       alt="A drawing of the portfolio owner"
     />
-    <div class="text-white">
+    <div>
       <div
         class="animate__animated animate__fadeInLeft animate__faster px-8 py-3 text-4xl md:text-5xl lg:text-7xl"
       >
@@ -35,9 +35,14 @@
       <div
         class="flex min-h-[200px] cursor-pointer items-center md:min-h-[300px] lg:min-h-[400px]"
       >
-        <router-link :to="{ name: project.title }">
+        <router-link
+          :to="{
+            name: 'Project',
+            params: { title: project.title.toLowerCase().replace(/\s/g, '-') },
+          }"
+        >
           <img
-            class="rounded-lg text-center align-middle text-white transition duration-150 hover:scale-105"
+            class="rounded-lg text-center text-white transition duration-150 hover:scale-105"
             :src="project.imageVertical"
             :alt="project.title"
           />

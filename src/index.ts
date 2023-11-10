@@ -7,59 +7,60 @@ export function sendEmail() {
   window.open(`mailto:${email}?subject=${subject}&body=${msgBody}`);
 }
 
-export const projects: Project[] = [
-  {
+export const projects: Record<string, Project> = {
+  masquerade: {
     title: "Masquerade",
     short_description:
       "A story driven puzzle game set in a floating village of masked people.",
     long_description:
-      "A story driven puzzle game set in a floating village of masked people.",
-    role: "",
+      "After a mysterious train ride you find yourself stranded in the floating village of Liberio. Its inhabitants are cheerful and welcoming, but you can't seem to shake the feeling that something is wrong. Why are you here, why does everyone in the village wear a mask and who was that towering figure that spoke to you in the train, the answers to this questions are for you to find.",
+    role: "I worked as game designer, level designer, 3D artist, QA tester, script writer and quest designer for this project.",
     imageVertical: "masquerade/masquerade_vertical.png",
     imageHorizontal: "masquerade/masquerade_horizontal.png",
     category: "game",
   },
-  {
+  potion_rush: {
     title: "Potion Rush",
     short_description:
       "A quirky mobile game about a witch trying to survive in the big city.",
     long_description:
-      "A story driven puzzle game set in a floating village of masked people.",
-    role: "",
+      "You've just opened your Potions Café in the middle of the world's greatest magical city, New Arkadia. With open doors you receive your first customers, only to discover that everyone is in a hurry to go elsewhere and does not have the patience to wait for their orders for long. In a hurry, you start creating potions and giving them to your customers. It's going to be hard but the rent doesn't pay for itself.",
+    role: "I worked as the game designer, level designer, UI & UX designer and artist for this project.",
     imageVertical: "potion_rush/potionRush_vertical.png",
     imageHorizontal: "potion_rush/potionRush_horizontal.png",
     category: "game",
   },
-  {
+  souls_of_light: {
     title: "Souls of Light",
     short_description:
       "A mysterious 2D puzzle platformer where light is your only ally.",
     long_description:
-      "A story driven puzzle game set in a floating village of masked people.",
-    role: "",
+      "You wake up in the middle of a cold dark forest, at your side lies a metallamp, a weak ember appears to burn inside it. In front of you an enormouscastle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover thewalls. A chill runs down your spine, you try to remember who you are, whyyou are here, but your mind is blank. Who knows what other mysteries lieahead in this darken path.",
+    role: "I worked as the game designer, level designer and script writer for this project.",
     imageVertical: "souls_of_light/soulsOfLight_vertical.png",
     imageHorizontal: "souls_of_light/soulsOfLight_horizontal.png",
     category: "game",
   },
-  {
+  un_recuerdo: {
     title: "Un Recuerdo",
     short_description: "A short film about memories and unconditional love.",
-    long_description:
-      "A story driven puzzle game set in a floating village of masked people.",
-    role: "",
+    long_description: `Today is an special day for Amelia, she and her husband Jorge are going on a date to her favorite museum the Parque Explora. The date goes great but the past a truth that they need to live with every day.
+
+    This shortfilm was nominated in the Smartfilms 2022 film festival in the REDvolucionarias category.`,
+    role: "I worked as an actor, video editor and poster designer for this project.",
     imageVertical: "un_recuerdo/unRecuerdo_vertical.png",
     imageHorizontal: "un_recuerdo/unRecuerdo_horizontal.png",
     category: "other",
   },
-  {
+  voltron_infographic: {
     title: "Voltron Infographic",
     short_description:
       "An interactive introduction to the world of Voltron: The Legendary Defender",
     long_description:
-      "A story driven puzzle game set in a floating village of masked people.",
-    role: "",
+      "Meet the many characters of the Voltron: The Legendary Defender universe in this interactive infrografic. Learn their stories, the planets they visited, their and much more in this thematic informative piece.",
+    role: "I worked as UI & UX designer, programmer and animator for this project.",
     imageVertical: "voltron_infographic/voltron_vertical.png",
     imageHorizontal: "voltron_infographic/voltron_horizontal.png",
     category: "other",
   },
-];
+};
