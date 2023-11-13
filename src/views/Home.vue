@@ -38,12 +38,12 @@
         <router-link
           :to="{
             name: 'Project',
-            params: { title: project.title.toLowerCase().replace(/\s/g, '-') },
+            params: { title: project.title },
           }"
         >
           <img
             class="rounded-lg text-center text-white transition duration-150 hover:scale-105"
-            :src="project.imageVertical"
+            :src="`${project.title}/${project.title}-vertical.png`"
             :alt="project.title"
           />
         </router-link>

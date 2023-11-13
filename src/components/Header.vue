@@ -1,66 +1,83 @@
 <template>
-  <header>
+  <header class="sticky top-0 z-40">
     <div
-      class="flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-300 px-4 py-3 md:px-6 lg:px-12 xl:px-24"
+      class="animate__animated animate__fadeInDown flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-300 px-4 py-3 shadow-sm shadow-tertiary-400 md:px-6 lg:px-12 xl:px-24"
     >
-      <div class="cursor-pointer justify-start pr-2">
+      <div class="flex cursor-pointer justify-start pr-2">
         <router-link :to="{ name: 'Home' }">
           <img
-            class="middle h-10 w-full text-center text-white transition duration-150 hover:scale-105"
+            class="h-10 w-full text-center text-white transition duration-150 hover:scale-105"
             src="tomato-logo-horizontal.png"
             alt="Tomato Logo"
           />
         </router-link>
       </div>
-      <div class="justify-end">
+      <div class="flex justify-end text-sm font-semibold md:text-base">
         <router-link :to="{ name: 'Home' }">
           <Button
-            class="mx-1 rounded-2xl px-4 py-1 text-sm font-semibold uppercase md:px-6 md:text-base lg:mx-2 lg:px-10 xl:px-16"
+            class="mx-1 rounded-2xl px-4 py-1 uppercase md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
             Home
           </Button>
         </router-link>
-        <router-link :to="{ name: 'Portfolio' }">
-          <Button
-            class="mx-1 rounded-2xl px-4 py-1 text-sm font-semibold uppercase md:px-6 md:text-base lg:mx-2 lg:px-10 xl:px-16"
+        <span class="group flex w-full flex-col items-center justify-center">
+          <router-link :to="{ name: 'Portfolio' }">
+            <Button
+              class="mx-1 rounded-2xl px-4 py-1 uppercase md:px-6 lg:mx-2 lg:px-10 xl:px-16"
+            >
+              Portfolio
+            </Button>
+          </router-link>
+          <span
+            class="animate__animated animate__fadeIn invisible absolute top-12 z-50 pt-2 group-hover:visible"
           >
-            Portfolio
-          </Button>
-        </router-link>
+            <ul
+              class="flex flex-col justify-center rounded-b-xl bg-gradient-to-t from-tertiary-400 from-85% to-tertiary-300 to-95% px-3 py-2"
+            >
+              <li
+                class="py-1.5"
+                v-for="(project, index) in projects"
+                :key="index"
+              >
+                <router-link
+                  :to="{
+                    name: 'Project',
+                    params: {
+                      title: project.title,
+                    },
+                  }"
+                >
+                  <Button
+                    class="w-28 rounded-2xl py-1 text-xs uppercase md:w-32 md:text-sm lg:w-48 xl:text-base"
+                  >
+                    {{ project.title.replace(/-/g, " ") }}
+                  </Button>
+                </router-link>
+              </li>
+            </ul>
+          </span>
+        </span>
+
         <router-link :to="{ name: 'About' }">
           <Button
-            class="mx-1 rounded-2xl px-4 py-1 text-sm font-semibold uppercase md:px-6 md:text-base lg:mx-2 lg:px-10 xl:px-16"
+            class="mx-1 rounded-2xl px-4 py-1 uppercase md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
             About
           </Button>
         </router-link>
         <router-link :to="{ name: 'Contact' }">
           <Button
-            class="mx-1 rounded-2xl px-4 py-1 text-sm font-semibold uppercase md:px-6 md:text-base lg:mx-2 lg:px-10 xl:px-16"
+            class="mx-1 rounded-2xl px-4 py-1 uppercase md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
             Contact
           </Button>
         </router-link>
-        <!-- <span v-for="(project, index) in projects" :key="index">
-          <router-link
-            :to="{
-              name: 'Project',
-              params: { title: project.title.toLowerCase().replace(/\s/g, '-') },
-            }"
-          >
-            <Button
-              class="mx-1 rounded-2xl px-4 py-1 text-sm font-semibold uppercase md:px-6 md:text-base lg:mx-2 lg:px-10 xl:px-16"
-            >
-              {{ project.title }}
-            </Button>
-          </router-link>
-        </span> -->
       </div>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-//import { projects } from "..";
+import { projects } from "..";
 import Button from "./Button.vue";
 </script>

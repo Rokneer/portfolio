@@ -17,13 +17,13 @@
         <router-link
           :to="{
             name: 'Project',
-            params: { title: project.title.toLowerCase().replace(/\s/g, '-') },
+            params: { title: project.title },
           }"
         >
           <img
             class="animate__animated animate__fadeInLeft h-auto max-h-[26rem] rounded-3xl border-4 border-secondary-300 object-scale-down text-center text-white"
-            :src="project.imageHorizontal"
-            :alt="project.title"
+            :src="`${project.title}/${project.title}-horizontal.png`"
+            :alt="`${project.title.replace(/-/g, ' ')} vertical image`"
           />
         </router-link>
       </div>

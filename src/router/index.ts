@@ -4,6 +4,7 @@ import Portfolio from "../views/Portfolio.vue";
 import About from "../views/About.vue";
 import Contact from "../views/Contact.vue";
 import Project from "../views/Project.vue";
+import NotFound from "../views/Home.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact,
+  },
+  {
+    path: "/:pathName(.*)",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 
