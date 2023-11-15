@@ -36,6 +36,6 @@ const route = useRoute();
 const projectName = computed(() => {
   if (typeof route.params.title === "string")
     return route.params.title.replace(/-/g, "_");
-  else return "";
+  return "";
 });
 </script>

@@ -23,6 +23,9 @@ dependencies:
   vue3-carousel:
     specifier: ^0.3.1
     version: 0.3.1(vue@3.3.7)
+  vue3-picture-swipe:
+    specifier: ^3.0.6
+    version: 3.0.6
 
 devDependencies:
   '@types/node':
@@ -1262,6 +1265,10 @@ packages:
       vue: ^3.2.0
     dependencies:
       vue: 3.3.7(typescript@5.2.2)
+    dev: false
+
+  /vue3-picture-swipe@3.0.6:
+    resolution: {integrity: sha512-tCoWJr5cXZMk8hlycPPdo9UCl5m3ZChDVdDhHdiJedtkTZL6H0wYV6mZvL8Lz6e80kpiIXxsoltJobcePnKB0A==}
     dev: false
 
   /vue@3.3.7(typescript@5.2.2):

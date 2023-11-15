@@ -4,6 +4,7 @@ import Portfolio from "../views/Portfolio.vue";
 import About from "../views/About.vue";
 import Contact from "../views/Contact.vue";
 import Project from "../views/Project.vue";
+import Masquerade from "../views/projects/masquerade.vue";
 import NotFound from "../views/Home.vue";
 
 const routes = [
@@ -21,6 +22,11 @@ const routes = [
     path: "/portfolio/:title",
     name: "Project",
     component: Project,
+  },
+  {
+    path: "/portfolio/masquerade",
+    name: "Project",
+    component: Masquerade,
   },
   {
     path: "/about",
