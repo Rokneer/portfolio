@@ -22,17 +22,17 @@
     <div
       class="animate__animated animate__fadeInDown flex w-10/12 flex-row justify-center gap-x-16 py-4"
     >
-      <FeatureBox
+      <feature-box
         title="Title"
         icon="mdi-plus"
         description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium praesentium dignissimos fugiat consequatur"
       />
-      <FeatureBox
+      <feature-box
         title="Title"
         icon="mdi-plus"
         description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium praesentium dignissimos fugiat consequatur"
       />
-      <FeatureBox
+      <feature-box
         title="Title"
         icon="mdi-plus"
         description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium praesentium dignissimos fugiat consequatur"
@@ -43,8 +43,13 @@
       <video src=""></video>
     </div>
     <!-- IMAGES -->
-    <div>
-      <vue-picture-swipe :items="images"></vue-picture-swipe>
+    <div class="animate__animated animate__fadeInDown w-10/12 py-4">
+      <div
+        class="my-3 w-full bg-gradient-to-l from-tertiary-500 from-35% via-tertiary-300 to-tertiary-500 to-65% p-2 text-3xl lg:my-6 lg:text-4xl"
+      >
+        Galery
+      </div>
+      <image-viewer :images="images" />
     </div>
   </div>
 </template>
@@ -52,51 +57,15 @@
 <script setup lang="ts">
 import { projects } from "../../.";
 import FeatureBox from "../../components/FeatureBox.vue";
-import VuePictureSwipe from "vue3-picture-swipe";
+import ImageViewer from "../../components/ImageViewer.vue";
 
 const images = [
-  {
-    src: "../masquerade/masquerade-1.png",
-    thumbnail: "../masquerade/masquerade-1.png",
-    w: 600,
-    h: 400,
-  },
-  {
-    src: "../masquerade/masquerade-2.png",
-    thumbnail: "../masquerade/masquerade-2.png",
-    w: 1200,
-    h: 900,
-  },
-  ,
-  {
-    src: "../masquerade/masquerade-3.png",
-    thumbnail: "../masquerade/masquerade-3.png",
-    w: 1200,
-    h: 900,
-  },
-  {
-    src: "../masquerade/masquerade-4.png",
-    thumbnail: "../masquerade/masquerade-4.png",
-    w: 1200,
-    h: 900,
-  },
-  {
-    src: "../masquerade/masquerade-5.png",
-    thumbnail: "../masquerade/masquerade-5.png",
-    w: 1200,
-    h: 900,
-  },
-  {
-    src: "../masquerade/masquerade-6.png",
-    thumbnail: "../masquerade/masquerade-6.png",
-    w: 1200,
-    h: 900,
-  },
-  {
-    src: "../masquerade/masquerade-7.png",
-    thumbnail: "../masquerade/masquerade-7.png",
-    w: 1200,
-    h: 900,
-  },
+  "../../../masquerade/masquerade-1.png",
+  "../../../masquerade/masquerade-2.png",
+  "../../../masquerade/masquerade-3.png",
+  "../../../masquerade/masquerade-4.png",
+  "../../../masquerade/masquerade-5.png",
+  "../../../masquerade/masquerade-6.png",
+  "../../../masquerade/masquerade-7.png",
 ];
 </script>

@@ -7,7 +7,7 @@
         <router-link :to="{ name: 'Home' }">
           <img
             class="h-10 w-full text-center text-white transition duration-150 hover:scale-105"
-            src="tomato-logo-horizontal.png"
+            src="../../tomato-logo-horizontal.png"
             alt="Tomato Logo"
           />
         </router-link>

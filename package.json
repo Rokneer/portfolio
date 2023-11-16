@@ -12,10 +12,11 @@
     "@fontsource-variable/open-sans": "^5.0.18",
     "@fontsource-variable/sora": "^5.0.15",
     "animate.css": "^4.1.1",
+    "v-viewer": "^3.0.11",
+    "viewerjs": "^1.11.6",
     "vue": "^3.3.7",
     "vue-router": "^4.2.5",
-    "vue3-carousel": "^0.3.1",
-    "vue3-picture-swipe": "^3.0.6"
+    "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {
     "@types/node": "^20.8.10",
