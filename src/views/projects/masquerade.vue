@@ -39,15 +39,15 @@
       />
     </div>
     <!-- TRAILER -->
-    <div class="animate__animated animate__fadeInDown flex w-10/12 py-4">
-      <video src=""></video>
+    <div class="flex w-10/12 justify-center py-10">
+      <embed-video id="ymdhRMiMGK0" title="monke spin" />
     </div>
     <!-- IMAGES -->
-    <div class="animate__animated animate__fadeInDown w-10/12 py-4">
+    <div class="w-10/12 py-4">
       <div
-        class="my-3 w-full bg-gradient-to-l from-tertiary-500 from-35% via-tertiary-300 to-tertiary-500 to-65% p-2 text-3xl lg:my-6 lg:text-4xl"
+        class="animate__animated animate__fadeInDown mb-3 w-full bg-gradient-to-l from-tertiary-500 from-35% via-tertiary-300 to-tertiary-500 to-65% p-2 text-3xl lg:mb-6 lg:text-4xl"
       >
-        Galery
+        Gallery
       </div>
       <image-viewer :images="images" />
     </div>
@@ -58,6 +58,7 @@
 import { projects } from "../../.";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
+import EmbedVideo from "../../components/EmbedVideo.vue";
 
 const images = [
   "../../../masquerade/masquerade-1.png",
