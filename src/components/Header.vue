@@ -3,15 +3,16 @@
     <div
       class="animate__animated animate__fadeInDown flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-300 px-4 py-3 shadow-sm shadow-tertiary-400 md:px-6 lg:px-12 xl:px-24"
     >
-      <div class="flex cursor-pointer justify-start pr-2">
-        <router-link :to="{ name: 'Home' }">
-          <img
-            class="h-10 w-full text-center text-white transition duration-150 hover:scale-105"
-            src="../../tomato-logo-horizontal.png"
-            alt="Tomato Logo"
-          />
-        </router-link>
-      </div>
+      <router-link
+        class="flex cursor-pointer justify-start pr-2"
+        :to="{ name: 'Home' }"
+      >
+        <img
+          class="h-10 w-full text-center text-white transition duration-150 hover:scale-105"
+          src="../../tomato-logo-horizontal.png"
+          alt="Tomato Logo"
+        />
+      </router-link>
       <div class="flex justify-end text-sm font-semibold md:text-base">
         <router-link :to="{ name: 'Home' }">
           <Button
@@ -41,10 +42,7 @@
               >
                 <router-link
                   :to="{
-                    name: 'Project',
-                    params: {
-                      title: project.title,
-                    },
+                    name: `${project.title}`,
                   }"
                 >
                   <Button
@@ -57,7 +55,6 @@
             </ul>
           </span>
         </span>
-
         <router-link :to="{ name: 'About' }">
           <Button
             class="mx-1 rounded-2xl px-4 py-1 uppercase md:px-6 lg:mx-2 lg:px-10 xl:px-16"

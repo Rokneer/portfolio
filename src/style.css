@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  font-family: "Sora Variable", sans-serif;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Sora Variable", sans-serif;
+    font-weight: 500;
+    font-variation-settings:
+      "wdth" 75,
+      "wght" 500;
+  }
 }

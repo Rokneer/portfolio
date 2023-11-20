@@ -19,7 +19,7 @@
       >
         <div>Shoot me an email!</div>
         <img
-          class="h-[180px] w-[180px] cursor-pointer text-center text-white transition duration-150 hover:scale-110 lg:h-[340px] lg:w-[340px]"
+          class="w-[180px] cursor-pointer text-center text-white transition duration-150 hover:scale-110 lg:w-[340px]"
           src="email.png"
           alt="Email"
           @click="sendEmail"
@@ -35,7 +35,7 @@
           rel="noreferrer"
         >
           <img
-            class="h-[180px] w-[180px] text-center text-white transition duration-150 hover:scale-110 lg:h-[340px] lg:w-[340px]"
+            class="w-[180px] text-center text-white transition duration-150 hover:scale-110 lg:w-[340px]"
             src="linkedin.png"
             alt="LinkedIn"
           />

@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource-variable/open-sans": "^5.0.18",
+    "@fontsource/open-sans": "^5.0.17",
     "@fontsource-variable/sora": "^5.0.15",
+    "@mdi/font": "^7.3.67",
     "animate.css": "^4.1.1",
     "v-viewer": "^3.0.11",
     "viewerjs": "^1.11.6",

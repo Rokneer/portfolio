@@ -3,9 +3,12 @@ import Home from "../views/Home.vue";
 import Portfolio from "../views/Portfolio.vue";
 import About from "../views/About.vue";
 import Contact from "../views/Contact.vue";
-import Project from "../views/Project.vue";
 import Masquerade from "../views/projects/masquerade.vue";
-import NotFound from "../views/Home.vue";
+import PotionRush from "../views/projects/potionRush.vue";
+import SoulsOflight from "../views/projects/soulsOfLight.vue";
+import UnRecuerdo from "../views/projects/unRecuerdo.vue";
+import VoltronInfographic from "../views/projects/voltronInfographic.vue";
+import NotFound from "../views/404.vue";
 
 const routes = [
   {
@@ -19,14 +22,29 @@ const routes = [
     component: Portfolio,
   },
   {
-    path: "/portfolio/:title",
-    name: "Project",
-    component: Project,
+    path: "/portfolio/masquerade",
+    name: "masquerade",
+    component: Masquerade,
   },
   {
-    path: "/portfolio/masquerade",
-    name: "Project",
-    component: Masquerade,
+    path: "/portfolio/potion-rush",
+    name: "potion-rush",
+    component: PotionRush,
+  },
+  {
+    path: "/portfolio/souls-of-light",
+    name: "souls-of-light",
+    component: SoulsOflight,
+  },
+  {
+    path: "/portfolio/un-recuerdo",
+    name: "un-recuerdo",
+    component: UnRecuerdo,
+  },
+  {
+    path: "/portfolio/voltron-infographic",
+    name: "voltron-infographic",
+    component: VoltronInfographic,
   },
   {
     path: "/about",
@@ -48,6 +66,9 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(""),
   routes: routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;

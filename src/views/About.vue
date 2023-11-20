@@ -1,9 +1,9 @@
 <template>
   <div class="px-16 py-6">
     <img
+      class="animate__animated animate__fadeInDown h-48 rounded-xl border-4 border-secondary-300 text-center text-white md:h-64 lg:h-80 xl:h-96"
       src=""
       alt="A drawing of the portfolio owner"
-      class="animate__animated animate__fadeInDown h-48 rounded-xl border-4 border-secondary-300 text-center text-white md:h-64 lg:h-80 xl:h-96"
     />
   </div>
   <div class="break-words px-16 py-4 text-2xl md:text-4xl lg:text-5xl">

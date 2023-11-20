@@ -1,6 +1,6 @@
 <template>
   <div
-    class="animate__animated animate__fadeIn w-10/12 rounded-md border-4 border-secondary-300 text-center text-white"
+    class="animate__animated animate__fadeIn w-11/12 rounded-md border-4 border-secondary-300 text-center text-white"
   >
     <LiteYouTubeEmbed :id="id" :title="title" />
   </div>

@@ -1,12 +1,15 @@
 <template>
   <div
-    class="flex h-72 w-72 flex-col items-center justify-center rounded-3xl bg-secondary-300 p-4 text-center"
+    class="flex w-56 flex-col items-center rounded-3xl bg-secondary-300 p-2 text-center lg:w-72 lg:p-4"
   >
-    <div class="py-1 text-2xl font-bold">{{ title }}</div>
-    <div class="py-3">
-      <Icon :icon="icon" class="rounded-full bg-tertiary-200 px-5 py-2.5" />
+    <div class="py-2 text-2xl font-bold lg:text-3xl">{{ title }}</div>
+    <div class="py-2 lg:py-5">
+      <Icon
+        :icon="icon"
+        class="rounded-full bg-tertiary-200 px-3 py-2.5 text-xl lg:px-4 lg:py-3 lg:text-3xl"
+      />
     </div>
-    <div class="py-1">
+    <div class="py-2 text-sm lg:text-lg">
       {{ description }}
     </div>
   </div>

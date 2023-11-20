@@ -1,10 +1,10 @@
 <template>
   <footer>
     <div
-      class="h-full bg-gradient-to-t from-tertiary-400 from-40% to-tertiary-500 px-4 pb-6 pt-8"
+      class="bg-gradient-to-t from-tertiary-400 from-40% to-tertiary-500 px-4 pb-6 pt-8"
     >
       <img
-        class="mx-auto h-16 w-16 text-center text-white md:h-20 md:w-20"
+        class="mx-auto w-16 text-center text-white md:w-20"
         src="../../tomato-logo.png"
         alt="Tomate Logo"
       />

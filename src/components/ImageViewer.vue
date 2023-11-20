@@ -9,19 +9,21 @@
         zoomable: true,
         rotatable: false,
         scalable: false,
+        title: false,
       }"
     >
       <img
-        v-for="src in images"
-        :key="src"
-        :src="src"
-        class="m-4 w-[460px] cursor-pointer rounded-lg border-4 border-secondary-300 text-center text-white transition duration-150 hover:scale-105"
+        v-for="image in images"
+        :key="image"
+        :src="image"
+        class="m-2 w-[220px] cursor-pointer rounded-lg border-4 border-secondary-300 text-center text-white transition duration-150 hover:scale-105 lg:m-4 lg:w-[460px]"
       />
     </viewer>
   </div>
 </template>
 
 <script setup lang="ts">
+
 defineProps<{
   images: string[];
 }>();

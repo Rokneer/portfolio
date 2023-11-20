@@ -2,11 +2,13 @@
   <div
     class="animate__animated animate__fadeInLeft flex flex-row items-center py-6 lg:px-12"
   >
-    <img
-      class="mx-2 h-80 rounded-full bg-secondary-300 object-scale-down p-2 text-center align-middle text-white"
-      src="placeholder-head.png"
-      alt="A drawing of the portfolio owner"
-    />
+    <router-link class="transition duration-150 hover:scale-105" to="about">
+      <img
+        class="w-64 max-w-sm rounded-full bg-secondary-300 p-1 text-center text-white lg:w-80"
+        src="placeholder-head.png"
+        alt="A drawing of the portfolio owner"
+      />
+    </router-link>
     <div>
       <div
         class="animate__animated animate__fadeInLeft animate__faster px-8 py-3 text-4xl md:text-5xl lg:text-7xl"
@@ -32,13 +34,10 @@
       v-for="project in projects"
       :key="project.title"
     >
-      <div
-        class="flex min-h-[200px] cursor-pointer items-center md:min-h-[300px] lg:min-h-[400px]"
-      >
+      <div class="flex min-h-[200px] cursor-pointer items-center">
         <router-link
           :to="{
-            name: 'Project',
-            params: { title: project.title },
+            name: `${project.title}`,
           }"
         >
           <img
@@ -61,7 +60,6 @@
 </template>
 
 <script setup lang="ts">
-import "animate.css";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide } from "vue3-carousel";
 import { sendEmail, projects } from "..";

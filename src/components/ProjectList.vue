@@ -16,12 +16,11 @@
       <div class="w-1/2 transition duration-150 hover:scale-110">
         <router-link
           :to="{
-            name: 'Project',
-            params: { title: project.title },
+            name: `${project.title}`,
           }"
         >
           <img
-            class="animate__animated animate__fadeInLeft h-auto max-h-[26rem] rounded-3xl border-4 border-secondary-300 object-scale-down text-center text-white"
+            class="animate__animated animate__fadeInLeft rounded-3xl border-4 border-secondary-300 object-scale-down text-center text-white"
             :src="`${project.title}/${project.title}-horizontal.png`"
             :alt="`${project.title.replace(/-/g, ' ')} vertical image`"
           />
@@ -31,7 +30,7 @@
         <div
           class="pb-6 text-2xl font-bold uppercase md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
         >
-          {{ project.title }}
+          {{ project.title.replace(/-/g, " ") }}
         </div>
         <div class="text-md md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
           {{ project.short_description }}

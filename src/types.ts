@@ -4,5 +4,4 @@ export interface Project {
   long_description: string;
   role: string;
   category: string;
-  images: string[];
 }
