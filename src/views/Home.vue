@@ -2,7 +2,10 @@
   <div
     class="animate__animated animate__fadeInLeft flex flex-row items-center py-6 lg:px-12"
   >
-    <router-link class="transition duration-150 hover:scale-105" to="about">
+    <router-link
+      class="transition duration-150 hover:scale-105"
+      :to="{ name: 'about' }"
+    >
       <img
         class="w-64 max-w-sm rounded-full bg-secondary-200 p-1 text-center text-white lg:w-80"
         src="/placeholder-head.png"

@@ -55,14 +55,14 @@
             </ul>
           </span>
         </span>
-        <router-link :to="{ name: 'About' }">
+        <router-link :to="{ name: 'about' }">
           <Button
             class="mx-1 rounded-2xl px-4 py-1 uppercase md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
             About
           </Button>
         </router-link>
-        <router-link :to="{ name: 'Contact' }">
+        <router-link :to="{ name: 'contact' }">
           <Button
             class="mx-1 rounded-2xl px-4 py-1 uppercase md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >

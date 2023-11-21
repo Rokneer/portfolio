@@ -10,55 +10,57 @@ import UnRecuerdo from "../views/projects/unRecuerdo.vue";
 import VoltronInfographic from "../views/projects/voltronInfographic.vue";
 import NotFound from "../views/404.vue";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const routes = [
   {
-    path: "/home",
+    path: baseUrl,
     name: "home",
     component: Home,
   },
   {
-    path: "/projects",
+    path: `${baseUrl}projects`,
     name: "projects",
     component: Portfolio,
   },
   {
-    path: "/projects/masquerade",
+    path: `${baseUrl}projects/masquerade`,
     name: "masquerade",
     component: Masquerade,
   },
   {
-    path: "/projects/potion-rush",
+    path: `${baseUrl}projects/potion-rush`,
     name: "potion-rush",
     component: PotionRush,
   },
   {
-    path: "/projects/souls-of-light",
+    path: `${baseUrl}projects/souls-of-light`,
     name: "souls-of-light",
     component: SoulsOflight,
   },
   {
-    path: "/projects/un-recuerdo",
+    path: `${baseUrl}projects/un-recuerdo`,
     name: "un-recuerdo",
     component: UnRecuerdo,
   },
   {
-    path: "/projects/voltron-infographic",
+    path: `${baseUrl}projects/voltron-infographic`,
     name: "voltron-infographic",
     component: VoltronInfographic,
   },
   {
-    path: "/about",
-    name: "About",
+    path: `${baseUrl}about`,
+    name: "about",
     component: About,
   },
   {
-    path: "/contact",
-    name: "Contact",
+    path: `${baseUrl}contact`,
+    name: "contact",
     component: Contact,
   },
   {
-    path: "/:pathName(.*)",
-    name: "NotFound",
+    path: `${baseUrl}:pathName(.*)`,
+    name: "not-found",
     component: NotFound,
   },
 ];
