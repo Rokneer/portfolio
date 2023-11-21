@@ -1,16 +1,16 @@
 <template>
   <div class="py-6">
     <div
-      class="animate__animated animate__fadeInUp flex w-full justify-center bg-gradient-to-l from-tertiary-500 from-20% via-tertiary-300 to-tertiary-500 to-80% py-3 text-4xl font-extrabold uppercase backdrop-blur md:text-5xl"
+      class="animate__animated animate__fadeInUp flex w-full justify-center bg-gradient-to-l from-tertiary-500 from-20% via-tertiary-200 to-tertiary-500 to-80% py-3 text-4xl font-extrabold uppercase backdrop-blur md:text-5xl"
     >
       <span v-if="projectType === 'games'">Games</span>
       <span v-if="projectType === 'others'">Others</span>
     </div>
   </div>
   <div
-    class="w-full px-8 py-2 md:px-12 lg:px-40 lg:py-4"
     v-for="project in projects"
     :key="project.title"
+    class="w-full px-8 py-2 md:px-12 lg:px-40 lg:py-4"
   >
     <div class="flex flex-grow flex-row items-center">
       <div class="w-1/2 transition duration-150 hover:scale-110">
@@ -20,7 +20,7 @@
           }"
         >
           <img
-            class="animate__animated animate__fadeInLeft rounded-3xl border-4 border-secondary-300 object-scale-down text-center text-white"
+            class="animate__animated animate__fadeInLeft rounded-3xl border-4 border-secondary-200 object-scale-down text-center text-white"
             :src="`${project.title}/${project.title}-horizontal.png`"
             :alt="`${project.title.replace(/-/g, ' ')} vertical image`"
           />
@@ -28,7 +28,7 @@
       </div>
       <div class="animate__animated animate__fadeInRight w-1/2 px-12">
         <div
-          class="pb-6 text-2xl font-bold uppercase md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+          class="pb-6 text-2xl font-extrabold uppercase md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
         >
           {{ project.title.replace(/-/g, " ") }}
         </div>

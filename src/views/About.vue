@@ -1,9 +1,9 @@
 <template>
-  <div class="px-16 py-6">
+  <div class="flex justify-center py-6">
     <img
-      class="animate__animated animate__fadeInDown h-48 rounded-xl border-4 border-secondary-300 text-center text-white md:h-64 lg:h-80 xl:h-96"
-      src=""
-      alt="A drawing of the portfolio owner"
+      class="animate__animated animate__fadeInLeft object-scale h-24 rounded-xl text-center text-white md:h-36 lg:h-48"
+      src="tomato-logo-horizontal.png"
+      alt="A drawing of the portfolio tomato"
     />
   </div>
   <div class="break-words px-16 py-4 text-2xl md:text-4xl lg:text-5xl">
@@ -20,5 +20,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>

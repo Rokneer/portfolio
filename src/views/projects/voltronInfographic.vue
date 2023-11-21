@@ -18,7 +18,7 @@
     >
       <img
         class="mr-4 w-10 text-white lg:w-12"
-        src="../../../tomato-single.png"
+        src="../../../android-chrome-192x192.png"
         alt="Tomate icon"
       />
       <div class="text-left">
@@ -27,13 +27,35 @@
     </div>
     <!-- GAME -->
     <div
-      class="flex h-96 w-9/12 justify-center rounded-2xl border-4 border-secondary-200 py-6"
+      class="animate__animated animate__fadeIn flex w-7/12 flex-col justify-center"
     >
-      <div class="text-white">Game goes here</div>
+      <div class="rounded-xl border-4 border-secondary-300">
+        <VueUnity class="rounded-lg" :unity="unityContext" />
+      </div>
+      <div class="flex flex-row-reverse gap-x-4 py-4">
+        <Button class="rounded-2xl px-4 py-1 align-middle" @click="fullScreen">
+          FULLSCREEN
+          <icon class="text-lg" icon="mdi-fullscreen" />
+        </Button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { projects } from "../../.";
+import Button from "../../components/Button.vue";
+import Icon from "../../components/Icon.vue";
+import UnityWebgl from "unity-webgl";
+import VueUnity from "unity-webgl/vue";
+
+const unityContext = new UnityWebgl({
+  loaderUrl: "/build/voltron-build.loader.js",
+  dataUrl: "/build/voltron-build.data",
+  frameworkUrl: "/build/voltron-build.framework.js",
+  codeUrl: "/build/voltron-build.wasm",
+});
+function fullScreen() {
+  unityContext.setFullscreen(true);
+}
 </script>

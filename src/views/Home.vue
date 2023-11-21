@@ -4,7 +4,7 @@
   >
     <router-link class="transition duration-150 hover:scale-105" to="about">
       <img
-        class="w-64 max-w-sm rounded-full bg-secondary-300 p-1 text-center text-white lg:w-80"
+        class="w-64 max-w-sm rounded-full bg-secondary-200 p-1 text-center text-white lg:w-80"
         src="placeholder-head.png"
         alt="A drawing of the portfolio owner"
       />
@@ -30,9 +30,9 @@
     pause-autoplay-on-hover
   >
     <Slide
-      class="px-4 py-6 md:px-6 md:py-12"
       v-for="project in projects"
       :key="project.title"
+      class="px-4 py-6 md:px-6 md:py-12"
     >
       <div class="flex min-h-[200px] cursor-pointer items-center">
         <router-link

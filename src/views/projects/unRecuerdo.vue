@@ -18,7 +18,7 @@
     >
       <img
         class="mr-4 w-10 text-white lg:w-12"
-        src="../../../tomato-single.png"
+        src="../../../android-chrome-192x192.png"
         alt="Tomate icon"
       />
       <div class="text-left">

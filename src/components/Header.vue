@@ -1,7 +1,7 @@
 <template>
   <header class="sticky top-0 z-40">
     <div
-      class="animate__animated animate__fadeInDown flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-300 px-4 py-3 shadow-sm shadow-tertiary-400 md:px-6 lg:px-12 xl:px-24"
+      class="animate__animated animate__fadeInDown flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-200 px-4 py-3 shadow-sm shadow-tertiary-400 md:px-6 lg:px-12 xl:px-24"
     >
       <router-link
         class="flex cursor-pointer justify-start pr-2"
@@ -33,12 +33,12 @@
             class="animate__animated animate__fadeIn invisible absolute top-12 z-50 pt-2 group-hover:visible"
           >
             <ul
-              class="flex flex-col justify-center rounded-b-xl bg-gradient-to-t from-tertiary-400 from-85% to-tertiary-300 to-95% px-3 py-2"
+              class="flex flex-col justify-center rounded-b-xl bg-gradient-to-t from-tertiary-400 from-85% to-tertiary-200 to-95% px-3 py-2"
             >
               <li
-                class="py-1.5"
                 v-for="(project, index) in projects"
                 :key="index"
+                class="py-1.5"
               >
                 <router-link
                   :to="{

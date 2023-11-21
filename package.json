@@ -1,28 +1,38 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint-check": "prettier --check src/ && eslint --ext .ts,.vue src/",
+    "lint-fix": "prettier --write src/ && eslint --ext .ts,.vue --fix src/"
   },
   "dependencies": {
-    "@fontsource/open-sans": "^5.0.17",
     "@fontsource-variable/sora": "^5.0.15",
+    "@fontsource/open-sans": "^5.0.17",
     "@mdi/font": "^7.3.67",
     "animate.css": "^4.1.1",
+    "unity-webgl": "^3.5.2",
     "v-viewer": "^3.0.11",
     "viewerjs": "^1.11.6",
     "vue": "^3.3.7",
     "vue-lite-youtube-embed": "^1.2.1",
     "vue-router": "^4.2.5",
+    "vue-unity-webgl": "^1.2.0",
     "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20.8.10",
+    "@rushstack/eslint-patch": "^1.3.2",
+    "@vue/eslint-config-prettier": "^7.1.0",
     "@vitejs/plugin-vue": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "@types/node": "^20.8.10",
+    "eslint": "^8.43.0",
+    "eslint-plugin-vue": "^9.18.1",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",

@@ -38,7 +38,7 @@
     >
       <img
         class="mr-4 w-10 text-white lg:w-12"
-        src="../../../tomato-single.png"
+        src="../../../android-chrome-192x192.png"
         alt="Tomate icon"
       />
       <div class="text-left">
@@ -52,11 +52,11 @@
     <!-- IMAGES -->
     <div class="w-10/12 py-6">
       <div
-        class="animate__animated animate__fadeInDown mb-3 w-full bg-gradient-to-l from-tertiary-500 from-35% via-tertiary-300 to-tertiary-500 to-65% p-2 text-3xl lg:mb-6 lg:text-4xl"
+        class="animate__animated animate__fadeInDown mb-3 w-full bg-gradient-to-l from-tertiary-500 from-35% via-tertiary-200 to-tertiary-500 to-65% p-2 text-3xl lg:mb-6 lg:text-4xl"
       >
         Gallery
       </div>
-      <image-viewer :images="images" />
+      <image-viewer :images="images" orientation="horizontal" />
     </div>
   </div>
 </template>

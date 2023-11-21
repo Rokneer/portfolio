@@ -19,17 +19,17 @@
       <feature-box
         title="Brew"
         icon="mdi-bottle-tonic"
-        description="Create delicious potions with a variety of magical ingredients."
+        description="Cook up delicious potions with a variety of magical ingredients."
       />
       <feature-box
-        title="Title"
-        icon="mdi-account"
-        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium praesentium dignissimos fugiat consequatur"
+        title="Profit"
+        icon="mdi-cash-multiple"
+        description="Make as much money as you can by getting tips from satisfied customers to try to pay rent."
       />
       <feature-box
-        title="Title"
-        icon="mdi-account"
-        description=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium praesentium dignissimos fugiat consequatur"
+        title="Mood"
+        icon="mdi-emoticon-angry"
+        description="Deal with the ever changing temperament of the many people of New Arkadia."
       />
     </div>
     <!-- SMALL DESCRIPTION -->
@@ -38,25 +38,21 @@
     >
       <img
         class="mr-4 w-10 text-white lg:w-12"
-        src="../../../tomato-single.png"
+        src="../../../android-chrome-192x192.png"
         alt="Tomate icon"
       />
       <div class="text-left">
         {{ projects["potion_rush"].role }}
       </div>
     </div>
-    <!-- TRAILER -->
-    <div class="flex w-9/12 justify-center py-6">
-      <embed-video id="I28apxBG1aI" title="monke spin" />
-    </div>
     <!-- IMAGES -->
     <div class="w-10/12 py-6">
       <div
-        class="animate__animated animate__fadeInDown mb-3 w-full bg-gradient-to-l from-tertiary-500 from-35% via-tertiary-300 to-tertiary-500 to-65% p-2 text-3xl lg:mb-6 lg:text-4xl"
+        class="animate__animated animate__fadeInDown mb-3 w-full bg-gradient-to-l from-tertiary-500 from-35% via-tertiary-200 to-tertiary-500 to-65% p-2 text-3xl lg:mb-6 lg:text-4xl"
       >
         Gallery
       </div>
-      <image-viewer :images="images" />
+      <image-viewer :images="images" orientation="vertical" />
     </div>
   </div>
 </template>
@@ -65,7 +61,6 @@
 import { projects } from "../../.";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
-import EmbedVideo from "../../components/EmbedVideo.vue";
 
 const images = [
   "../../../potion-rush/potion-rush-1.png",
@@ -74,5 +69,7 @@ const images = [
   "../../../potion-rush/potion-rush-4.png",
   "../../../potion-rush/potion-rush-5.png",
   "../../../potion-rush/potion-rush-6.png",
+  "../../../potion-rush/potion-rush-7.png",
+  "../../../potion-rush/potion-rush-8.png",
 ];
 </script>

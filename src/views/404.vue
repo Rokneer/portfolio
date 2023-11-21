@@ -10,7 +10,7 @@
     </div>
     <div class="animate__animated animate__fadeInDown py-3">
       How about we go back
-      <router-link class="text-primary-200" :to="{ name: 'Home' }">
+      <router-link class="text-primary-100" :to="{ name: 'Home' }">
         home?
       </router-link>
       :)

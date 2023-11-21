@@ -16,15 +16,19 @@
         v-for="image in images"
         :key="image"
         :src="image"
-        class="m-2 w-[220px] cursor-pointer rounded-lg border-4 border-secondary-300 text-center text-white transition duration-150 hover:scale-105 lg:m-4 lg:w-[460px]"
+        class="m-2 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 hover:scale-105 lg:m-4"
+        :class="{
+          'w-[220px] lg:w-[460px]': orientation === 'horizontal',
+          'w-[140px] lg:w-[240px] xl:w-[340px]': orientation === 'vertical',
+        }"
       />
     </viewer>
   </div>
 </template>
 
 <script setup lang="ts">
-
 defineProps<{
   images: string[];
+  orientation: "horizontal" | "vertical";
 }>();
 </script>

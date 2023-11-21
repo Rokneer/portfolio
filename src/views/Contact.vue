@@ -1,7 +1,7 @@
 <template>
   <div class="py-6">
     <div
-      class="animate__animated animate__fadeInDown bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-300 to-tertiary-500 to-75% py-3 text-center text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl"
+      class="animate__animated animate__fadeInDown bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-200 to-tertiary-500 to-75% py-3 text-center text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl"
     >
       Contact me!
     </div>
