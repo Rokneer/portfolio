@@ -3,8 +3,8 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 lg:max-w-xl"
-      :src="`../voltron-infographic/voltron-infographic-logo.png`"
-      :alt="`Voltron Infographic logo`"
+      src="/voltron-infographic/voltron-infographic-logo.png"
+      alt="Voltron Infographic logo"
     />
     <!-- LONG DESCRIPTION -->
     <div
@@ -18,7 +18,7 @@
     >
       <img
         class="mr-4 w-10 text-white lg:w-12"
-        src="../../../android-chrome-192x192.png"
+        src="/android-chrome-192x192.png"
         alt="Tomate icon"
       />
       <div class="text-left">

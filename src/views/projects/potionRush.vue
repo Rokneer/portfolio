@@ -3,8 +3,8 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 lg:max-w-sm"
-      :src="`../potion-rush/potion-rush-logo.png`"
-      :alt="`Potion Rush logo`"
+      src="/potion-rush/potion-rush-logo.png"
+      alt="Potion Rush logo"
     />
     <!-- LONG DESCRIPTION -->
     <div
@@ -38,7 +38,7 @@
     >
       <img
         class="mr-4 w-10 text-white lg:w-12"
-        src="../../../android-chrome-192x192.png"
+        src="/android-chrome-192x192.png"
         alt="Tomate icon"
       />
       <div class="text-left">
@@ -63,13 +63,13 @@ import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 
 const images = [
-  "../../../potion-rush/potion-rush-1.png",
-  "../../../potion-rush/potion-rush-2.png",
-  "../../../potion-rush/potion-rush-3.png",
-  "../../../potion-rush/potion-rush-4.png",
-  "../../../potion-rush/potion-rush-5.png",
-  "../../../potion-rush/potion-rush-6.png",
-  "../../../potion-rush/potion-rush-7.png",
-  "../../../potion-rush/potion-rush-8.png",
+  "/potion-rush/potion-rush-1.png",
+  "/potion-rush/potion-rush-2.png",
+  "/potion-rush/potion-rush-3.png",
+  "/potion-rush/potion-rush-4.png",
+  "/potion-rush/potion-rush-5.png",
+  "/potion-rush/potion-rush-6.png",
+  "/potion-rush/potion-rush-7.png",
+  "/potion-rush/potion-rush-8.png",
 ];
 </script>

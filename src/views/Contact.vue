@@ -20,7 +20,7 @@
         <div>Shoot me an email!</div>
         <img
           class="w-[180px] cursor-pointer text-center text-white transition duration-150 hover:scale-110 lg:w-[340px]"
-          src="email.png"
+          src="/email.png"
           alt="Email"
           @click="sendEmail"
         />
@@ -36,7 +36,7 @@
         >
           <img
             class="w-[180px] text-center text-white transition duration-150 hover:scale-110 lg:w-[340px]"
-            src="linkedin.png"
+            src="/linkedin.png"
             alt="LinkedIn"
           />
         </a>

@@ -2,7 +2,7 @@
   <div class="flex justify-center py-6">
     <img
       class="animate__animated animate__fadeInLeft object-scale h-24 rounded-xl text-center text-white md:h-36 lg:h-48"
-      src="tomato-logo-horizontal.png"
+      src="/tomato-logo-horizontal.png"
       alt="A drawing of the portfolio tomato"
     />
   </div>

@@ -3,8 +3,8 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4"
-      :src="`../souls-of-light/souls-of-light-logo.png`"
-      :alt="`Souls of Light logo`"
+      src="/souls-of-light/souls-of-light-logo.png"
+      alt="Souls of Light logo"
     />
     <!-- LONG DESCRIPTION -->
     <div
@@ -38,7 +38,7 @@
     >
       <img
         class="mr-4 w-10 text-white lg:w-12"
-        src="../../../android-chrome-192x192.png"
+        src="/android-chrome-192x192.png"
         alt="Tomate icon"
       />
       <div class="text-left">
@@ -68,11 +68,11 @@ import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 
 const images = [
-  "../../../souls-of-light/souls-of-light-1.png",
-  "../../../souls-of-light/souls-of-light-2.png",
-  "../../../souls-of-light/souls-of-light-3.png",
-  "../../../souls-of-light/souls-of-light-4.png",
-  "../../../souls-of-light/souls-of-light-5.png",
-  "../../../souls-of-light/souls-of-light-6.png",
+  "/souls-of-light/souls-of-light-1.png",
+  "/souls-of-light/souls-of-light-2.png",
+  "/souls-of-light/souls-of-light-3.png",
+  "/souls-of-light/souls-of-light-4.png",
+  "/souls-of-light/souls-of-light-5.png",
+  "/souls-of-light/souls-of-light-6.png",
 ];
 </script>

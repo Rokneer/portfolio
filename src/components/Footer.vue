@@ -5,7 +5,7 @@
     >
       <img
         class="mx-auto w-16 text-center text-white md:w-20"
-        src="../../tomato-logo.png"
+        src="/tomato-logo.png"
         alt="Tomate Logo"
       />
       <div class="pt-3 text-center text-sm text-slate-400">

@@ -3,8 +3,8 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 lg:max-w-sm"
-      :src="`../masquerade/masquerade-logo.png`"
-      :alt="`Masquerade logo`"
+      src="/masquerade/masquerade-logo.png"
+      alt="Masquerade logo"
     />
     <!-- LONG DESCRIPTION -->
     <div
@@ -38,7 +38,7 @@
     >
       <img
         class="mr-4 w-10 text-white lg:w-12"
-        src="../../../android-chrome-192x192.png"
+        src="/android-chrome-192x192.png"
         alt="Tomate icon"
       />
       <div class="text-left">
@@ -68,12 +68,12 @@ import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 
 const images = [
-  "../../../masquerade/masquerade-1.png",
-  "../../../masquerade/masquerade-2.png",
-  "../../../masquerade/masquerade-3.png",
-  "../../../masquerade/masquerade-4.png",
-  "../../../masquerade/masquerade-5.png",
-  "../../../masquerade/masquerade-6.png",
-  "../../../masquerade/masquerade-7.png",
+  "/masquerade/masquerade-1.png",
+  "/masquerade/masquerade-2.png",
+  "/masquerade/masquerade-3.png",
+  "/masquerade/masquerade-4.png",
+  "/masquerade/masquerade-5.png",
+  "/masquerade/masquerade-6.png",
+  "/masquerade/masquerade-7.png",
 ];
 </script>

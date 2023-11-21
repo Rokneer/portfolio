@@ -5,7 +5,7 @@
     <router-link class="transition duration-150 hover:scale-105" to="about">
       <img
         class="w-64 max-w-sm rounded-full bg-secondary-200 p-1 text-center text-white lg:w-80"
-        src="placeholder-head.png"
+        src="/placeholder-head.png"
         alt="A drawing of the portfolio owner"
       />
     </router-link>
@@ -42,7 +42,7 @@
         >
           <img
             class="rounded-lg text-center text-white transition duration-150 hover:scale-105"
-            :src="`${project.title}/${project.title}-vertical.png`"
+            :src="`/${project.title}/${project.title}-vertical.png`"
             :alt="project.title"
           />
         </router-link>
