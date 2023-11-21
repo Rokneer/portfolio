@@ -5,7 +5,7 @@
     >
       <router-link
         class="flex cursor-pointer justify-start pr-2"
-        :to="{ name: 'Home' }"
+        :to="{ name: 'home' }"
       >
         <img
           class="h-10 w-full text-center text-white transition duration-150 hover:scale-105"
@@ -14,7 +14,7 @@
         />
       </router-link>
       <div class="flex justify-end text-sm font-semibold md:text-base">
-        <router-link :to="{ name: 'Home' }">
+        <router-link :to="{ name: 'home' }">
           <Button
             class="mx-1 rounded-2xl px-4 py-1 uppercase md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
@@ -22,7 +22,7 @@
           </Button>
         </router-link>
         <span class="group flex w-full flex-col items-center justify-center">
-          <router-link :to="{ name: 'Portfolio' }">
+          <router-link :to="{ name: 'projects' }">
             <Button
               class="mx-1 rounded-2xl px-4 py-1 uppercase md:px-6 lg:mx-2 lg:px-10 xl:px-16"
             >

@@ -12,37 +12,37 @@ import NotFound from "../views/404.vue";
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: "/home",
+    name: "home",
     component: Home,
   },
   {
-    path: "/portfolio",
-    name: "Portfolio",
+    path: "/projects",
+    name: "projects",
     component: Portfolio,
   },
   {
-    path: "/portfolio/masquerade",
+    path: "/projects/masquerade",
     name: "masquerade",
     component: Masquerade,
   },
   {
-    path: "/portfolio/potion-rush",
+    path: "/projects/potion-rush",
     name: "potion-rush",
     component: PotionRush,
   },
   {
-    path: "/portfolio/souls-of-light",
+    path: "/projects/souls-of-light",
     name: "souls-of-light",
     component: SoulsOflight,
   },
   {
-    path: "/portfolio/un-recuerdo",
+    path: "/projects/un-recuerdo",
     name: "un-recuerdo",
     component: UnRecuerdo,
   },
   {
-    path: "/portfolio/voltron-infographic",
+    path: "/projects/voltron-infographic",
     name: "voltron-infographic",
     component: VoltronInfographic,
   },
