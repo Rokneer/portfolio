@@ -50,10 +50,10 @@ import UnityWebgl from "unity-webgl";
 import VueUnity from "unity-webgl/vue";
 
 const unityContext = new UnityWebgl({
-  loaderUrl: "/build/voltron-build.loader.js",
-  dataUrl: "/build/voltron-build.data",
-  frameworkUrl: "/build/voltron-build.framework.js",
-  codeUrl: "/build/voltron-build.wasm",
+  loaderUrl: "/portfolio/build/voltron-build.loader.js",
+  dataUrl: "/portfolio/build/voltron-build.data",
+  frameworkUrl: "/portfolio/build/voltron-build.framework.js",
+  codeUrl: "/portfolio/build/voltron-build.wasm",
 });
 function fullScreen() {
   unityContext.setFullscreen(true);

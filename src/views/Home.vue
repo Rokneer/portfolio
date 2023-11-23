@@ -14,30 +14,30 @@
     </router-link>
     <div>
       <div
-        class="animate__animated animate__fadeInLeft animate__faster px-8 py-3 text-4xl md:text-5xl lg:text-7xl"
+        class="animate__animated animate__fadeInLeft animate__faster px-8 py-3 text-4xl font-semibold md:text-5xl lg:text-6xl xl:text-7xl"
       >
         Hi there, my name is Alejandro.
       </div>
       <div
-        class="animate__animated animate__fadeInLeft px-8 py-3 text-3xl md:text-4xl lg:text-6xl"
+        class="animate__animated animate__fadeInLeft px-8 py-3 text-2xl md:text-4xl lg:text-5xl xl:text-6xl"
       >
         I design and develop games and other neat stuff!
       </div>
     </div>
   </div>
   <Carousel
-    class="animate__animated animate__fadeInUp py-6 md:py-8"
+    class="animate__animated animate__fadeInUp py-4"
     :autoplay="5000"
     :wrap-around="true"
-    :items-to-show="3"
+    :items-to-show="carouselItemNumber"
     pause-autoplay-on-hover
   >
     <Slide
       v-for="project in projects"
       :key="project.title"
-      class="px-4 py-6 md:px-6 md:py-12"
+      class="px-4 py-6 md:px-6"
     >
-      <div class="flex min-h-[200px] cursor-pointer items-center">
+      <div class="relative flex w-96 cursor-pointer items-center">
         <router-link
           :to="{
             name: `${project.title}`,
@@ -45,14 +45,14 @@
         >
           <img
             class="rounded-lg text-center text-white transition duration-150 hover:scale-105"
-            :src="`/${project.title}/${project.title}-vertical.png`"
+            :src="`/portfolio/${project.title}/${project.title}-vertical.png`"
             :alt="project.title"
           />
         </router-link>
       </div>
     </Slide>
   </Carousel>
-  <div class="animate__animated animate__fadeInUp flex justify-center py-5">
+  <div class="animate__animated animate__fadeInUp flex justify-center py-6">
     <Button
       class="rounded-lg px-8 py-1.5 text-2xl uppercase md:text-3xl lg:text-4xl"
       @click="sendEmail"
@@ -63,10 +63,16 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide } from "vue3-carousel";
 import { sendEmail, projects } from "..";
 import Button from "../components/Button.vue";
+
+const carouselItemNumber = computed(() => {
+  if (window.matchMedia("(min-width: 1280px)").matches) return 5;
+  return 3;
+});
 </script>
 
 <style scoped>

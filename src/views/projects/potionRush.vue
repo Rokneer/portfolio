@@ -63,13 +63,13 @@ import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 
 const images = [
-  "/potion-rush/potion-rush-1.png",
-  "/potion-rush/potion-rush-2.png",
-  "/potion-rush/potion-rush-3.png",
-  "/potion-rush/potion-rush-4.png",
-  "/potion-rush/potion-rush-5.png",
-  "/potion-rush/potion-rush-6.png",
-  "/potion-rush/potion-rush-7.png",
-  "/potion-rush/potion-rush-8.png",
+  "/portfolio/potion-rush/potion-rush-1.png",
+  "/portfolio/potion-rush/potion-rush-2.png",
+  "/portfolio/potion-rush/potion-rush-3.png",
+  "/portfolio/potion-rush/potion-rush-4.png",
+  "/portfolio/potion-rush/potion-rush-5.png",
+  "/portfolio/potion-rush/potion-rush-6.png",
+  "/portfolio/potion-rush/potion-rush-7.png",
+  "/portfolio/potion-rush/potion-rush-8.png",
 ];
 </script>

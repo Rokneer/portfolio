@@ -21,7 +21,7 @@
         >
           <img
             class="animate__animated animate__fadeInLeft rounded-3xl border-4 border-secondary-200 object-scale-down text-center text-white"
-            :src="`/${project.title}/${project.title}-horizontal.png`"
+            :src="`/portfolio/${project.title}/${project.title}-horizontal.png`"
             :alt="`${project.title.replace(/-/g, ' ')} horizontal image`"
           />
         </router-link>

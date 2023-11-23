@@ -68,12 +68,12 @@ import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 
 const images = [
-  "/masquerade/masquerade-1.png",
-  "/masquerade/masquerade-2.png",
-  "/masquerade/masquerade-3.png",
-  "/masquerade/masquerade-4.png",
-  "/masquerade/masquerade-5.png",
-  "/masquerade/masquerade-6.png",
-  "/masquerade/masquerade-7.png",
+  "/portfolio/masquerade/masquerade-1.png",
+  "/portfolio/masquerade/masquerade-2.png",
+  "/portfolio/masquerade/masquerade-3.png",
+  "/portfolio/masquerade/masquerade-4.png",
+  "/portfolio/masquerade/masquerade-5.png",
+  "/portfolio/masquerade/masquerade-6.png",
+  "/portfolio/masquerade/masquerade-7.png",
 ];
 </script>

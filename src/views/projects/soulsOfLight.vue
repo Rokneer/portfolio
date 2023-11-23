@@ -68,11 +68,11 @@ import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 
 const images = [
-  "/souls-of-light/souls-of-light-1.png",
-  "/souls-of-light/souls-of-light-2.png",
-  "/souls-of-light/souls-of-light-3.png",
-  "/souls-of-light/souls-of-light-4.png",
-  "/souls-of-light/souls-of-light-5.png",
-  "/souls-of-light/souls-of-light-6.png",
+  "/portfolio/souls-of-light/souls-of-light-1.png",
+  "/portfolio/souls-of-light/souls-of-light-2.png",
+  "/portfolio/souls-of-light/souls-of-light-3.png",
+  "/portfolio/souls-of-light/souls-of-light-4.png",
+  "/portfolio/souls-of-light/souls-of-light-5.png",
+  "/portfolio/souls-of-light/souls-of-light-6.png",
 ];
 </script>
