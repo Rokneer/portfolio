@@ -1,21 +1,23 @@
 <template>
-  <div class="flex justify-center py-6">
+  <div class="flex justify-center py-3 sm:py-6">
     <img
-      class="animate__animated animate__fadeInLeft object-scale h-24 rounded-xl text-center text-white md:h-36 lg:h-48"
+      class="animate__animated animate__fadeInLeft object-scale h-16 text-center text-white sm:h-24 md:h-36 lg:h-48"
       src="/tomato-logo-horizontal.png"
       alt="A drawing of the portfolio tomato"
     />
   </div>
-  <div class="break-words px-16 py-4 text-2xl md:text-4xl lg:text-5xl">
-    <div class="animate__animated animate__fadeInLeft animate__faster py-4">
+  <div
+    class="flex flex-col justify-center gap-y-4 break-words p-4 text-lg sm:gap-y-8 sm:px-16 sm:py-6 sm:text-2xl md:text-4xl lg:px-20 lg:text-5xl xl:px-44"
+  >
+    <div class="animate__animated animate__fadeInLeft animate__faster">
       I'm a game developer and designer with a degree in engineering for digital
       entertainment design with an emphasis on videogames.
     </div>
-    <div class="animate__animated animate__fadeInLeft animate__fast py-4">
+    <div class="animate__animated animate__fadeInLeft animate__fast">
       My goal is to create new and exciting experiences and tell wonderful
       stories that inspire and entertain the people who play them.
     </div>
-    <div class="animate__animated animate__fadeInLeft py-4">
+    <div class="animate__animated animate__fadeInLeft">
       Here is some of my work, hope you enjoy it.
     </div>
   </div>

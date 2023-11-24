@@ -21,6 +21,12 @@ export default {
         "tertiary-400": "#11053C",
         "tertiary-500": "#070217",
       },
+      screens: {
+        xs: "475px",
+      },
+      borderWidth: {
+        3: "3px",
+      },
     },
   },
   plugins: [],

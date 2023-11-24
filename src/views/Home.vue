@@ -1,32 +1,32 @@
 <template>
   <div
-    class="animate__animated animate__fadeInLeft flex flex-row items-center py-6 lg:px-12"
+    class="animate__animated animate__fadeInLeft flex flex-row items-center py-3 sm:py-6 lg:px-12"
   >
     <router-link
       class="transition duration-150 hover:scale-105"
       :to="{ name: 'about' }"
     >
       <img
-        class="w-64 max-w-sm rounded-full bg-secondary-200 p-1 text-center text-white lg:w-80"
+        class="w-44 min-w-[10rem] rounded-full bg-secondary-200 p-1 text-center text-white sm:w-64 lg:w-80"
         src="/placeholder-head.png"
         alt="A drawing of the portfolio owner"
       />
     </router-link>
     <div>
       <div
-        class="animate__animated animate__fadeInLeft animate__faster px-8 py-3 text-4xl font-semibold md:text-5xl lg:text-6xl xl:text-7xl"
+        class="animate__animated animate__fadeInLeft animate__faster py-1 pl-4 text-2xl font-semibold sm:px-8 sm:py-3 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
       >
         Hi there, my name is Alejandro.
       </div>
       <div
-        class="animate__animated animate__fadeInLeft px-8 py-3 text-2xl md:text-4xl lg:text-5xl xl:text-6xl"
+        class="animate__animated animate__fadeInLeft py-1 pl-4 sm:px-8 sm:py-3 sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl"
       >
         I design and develop games and other neat stuff!
       </div>
     </div>
   </div>
   <Carousel
-    class="animate__animated animate__fadeInUp py-4"
+    class="animate__animated animate__fadeInUp py-2 sm:py-4"
     :autoplay="5000"
     :wrap-around="true"
     :items-to-show="carouselItemNumber"
@@ -35,7 +35,7 @@
     <Slide
       v-for="project in projects"
       :key="project.title"
-      class="px-4 py-6 md:px-6"
+      class="px-2 py-4 sm:px-4 sm:py-6 md:px-6"
     >
       <div class="relative flex w-96 cursor-pointer items-center">
         <router-link
@@ -54,7 +54,7 @@
   </Carousel>
   <div class="animate__animated animate__fadeInUp flex justify-center py-6">
     <Button
-      class="rounded-lg px-8 py-1.5 text-2xl uppercase md:text-3xl lg:text-4xl"
+      class="rounded-lg px-4 py-1.5 text-sm uppercase sm:px-8 sm:text-2xl md:text-3xl lg:text-4xl"
       @click="sendEmail"
     >
       alejandro.hincapie.lo@gmail.com
@@ -66,11 +66,11 @@
 import { computed } from "vue";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide } from "vue3-carousel";
-import { sendEmail, projects } from "..";
+import { sendEmail, projects, onWindowResize } from "..";
 import Button from "../components/Button.vue";
 
 const carouselItemNumber = computed(() => {
-  if (window.matchMedia("(min-width: 1280px)").matches) return 5;
+  if (onWindowResize().width.value >= 1280) return 5;
   return 3;
 });
 </script>

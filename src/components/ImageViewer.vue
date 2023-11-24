@@ -18,8 +18,8 @@
         :src="image"
         class="m-2 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 hover:scale-105 lg:m-4"
         :class="{
-          'w-[220px] lg:w-[460px]': orientation === 'horizontal',
-          'w-[140px] lg:w-[240px] xl:w-[340px]': orientation === 'vertical',
+          'md:w-56 lg:w-[495px]': orientation === 'horizontal',
+          'w-36 lg:w-60 xl:w-[360px]': orientation === 'vertical',
         }"
       />
     </viewer>

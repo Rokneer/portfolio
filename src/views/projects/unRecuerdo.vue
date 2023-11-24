@@ -14,7 +14,7 @@
     </div>
     <!-- SMALL DESCRIPTION -->
     <div
-      class="animate__animated animate__fadeInDown text-md flex w-10/12 flex-row items-center justify-center py-6 lg:text-xl"
+      class="animate__animated animate__fadeInDown text-md flex w-10/12 flex-row items-center justify-center py-4 sm:py-8 lg:text-xl"
     >
       <img
         class="mr-4 w-10 text-white lg:w-12"
@@ -26,7 +26,7 @@
       </div>
     </div>
     <!-- TRAILER -->
-    <div class="flex w-9/12 justify-center py-6">
+    <div class="flex w-full justify-center py-3 sm:py-6 md:w-11/12">
       <embed-video id="HOMR1tvPWy0" title="Un Recuerdo Short Film" />
     </div>
   </div>

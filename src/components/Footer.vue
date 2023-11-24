@@ -8,7 +8,7 @@
         src="/tomato-logo.png"
         alt="Tomate Logo"
       />
-      <div class="pt-3 text-center text-sm text-slate-400">
+      <div class="mx-8 pt-3 text-center text-xs text-slate-400 sm:text-sm">
         Designed and developed in Vue by Alejandro Hincapie López
       </div>
     </div>

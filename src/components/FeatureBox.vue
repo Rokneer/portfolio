@@ -9,7 +9,7 @@
         class="rounded-full bg-tertiary-300 px-3 py-2.5 text-xl lg:px-4 lg:py-3 lg:text-3xl"
       />
     </div>
-    <div class="py-2 text-sm lg:text-lg">
+    <div class="my-auto py-2 text-sm lg:text-lg">
       {{ description }}
     </div>
   </div>
