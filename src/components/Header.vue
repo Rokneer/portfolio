@@ -82,7 +82,8 @@ import { onWindowResize, projects } from "..";
 import Button from "./Button.vue";
 
 const logoImage = computed(() => {
-  if (onWindowResize().width.value >= 640) return "/tomato-logo-horizontal.png";
-  return "/android-chrome-192x192.png";
+  if (onWindowResize().width.value >= 640)
+    return "/portfolio/tomato-logo-horizontal.png";
+  return "/portfolio/android-chrome-192x192.png";
 });
 </script>
