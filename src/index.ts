@@ -32,7 +32,7 @@ export function isMobile() {
       )
     )
       check = true;
-  })(navigator.userAgent || window.opera);
+  })(navigator.userAgent);
   return check;
 }
 
