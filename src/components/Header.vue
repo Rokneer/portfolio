@@ -9,7 +9,7 @@
       >
         <img
           class="mx-2 h-8 w-full text-center text-white transition duration-150 hover:scale-105 sm:h-10"
-          src="/portfolio/tomato-logo-horizontal.png"
+          src="/tomato-logo-horizontal.png"
           alt="Tomato Logo"
         />
       </router-link>
