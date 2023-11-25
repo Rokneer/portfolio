@@ -7,7 +7,7 @@
       :to="{ name: 'about' }"
     >
       <img
-        class="w-44 min-w-[10rem] rounded-full bg-secondary-200 p-1 text-center text-white sm:w-64 lg:w-80"
+        class="w-44 min-w-[10rem] rounded-full bg-secondary-200 p-1 text-center text-white sm:w-64 md:w-72 lg:w-80"
         src="/placeholder-head.png"
         alt="A drawing of the portfolio owner"
       />
