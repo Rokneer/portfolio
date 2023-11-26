@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center text-center text-white">
     <!-- LOGO -->
     <img
-      class="animate__animated animate__fadeInDown max-w-md object-scale-down p-6 lg:max-w-xl"
+      class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-6 lg:max-w-xl"
       src="/un-recuerdo/un-recuerdo-logo.png"
       alt="Un Recuerdo logo"
     />

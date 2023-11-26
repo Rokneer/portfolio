@@ -7,19 +7,19 @@
       :to="{ name: 'about' }"
     >
       <img
-        class="w-44 min-w-[10rem] rounded-full bg-secondary-200 p-1 text-center text-white sm:w-64 md:w-72 lg:w-80"
+        class="w-44 min-w-[8.5rem] rounded-full bg-secondary-200 p-1 text-center text-white sm:w-64 md:w-72 lg:w-80"
         src="/placeholder-head.png"
         alt="A drawing of the portfolio owner"
       />
     </router-link>
     <div>
       <div
-        class="animate__animated animate__fadeInLeft animate__faster py-1 pl-4 text-2xl font-semibold sm:px-8 sm:py-3 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+        class="animate__animated animate__fadeInLeft animate__faster py-1 pl-4 text-2xl font-semibold sm:py-3 sm:pl-8 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
       >
         Hi there, my name is Alejandro.
       </div>
       <div
-        class="animate__animated animate__fadeInLeft py-1 pl-4 sm:px-8 sm:py-3 sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl"
+        class="animate__animated animate__fadeInLeft py-1 pl-4 sm:py-3 sm:pl-8 sm:text-2xl md:text-4xl lg:text-5xl xl:text-[3.3rem]"
       >
         I design and develop games and other neat stuff!
       </div>

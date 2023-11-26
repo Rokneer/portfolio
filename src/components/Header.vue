@@ -4,17 +4,16 @@
       class="animate__animated animate__fadeInDown flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-200 px-2 py-3 shadow-sm shadow-tertiary-400 sm:px-4 md:px-6 lg:px-12 xl:px-24"
     >
       <router-link
-        class="flex cursor-pointer justify-start sm:pr-2"
+        class="flex shrink cursor-pointer justify-start sm:pr-2"
         :to="{ name: 'home' }"
       >
         <img
-          class="mx-2 h-8 w-full text-center text-white transition duration-150 hover:scale-105 sm:h-10"
+          class="h-8 w-full text-center text-white transition duration-150 hover:scale-105 sm:h-10"
           src="/tomato-logo-horizontal.png"
           alt="Tomato Logo"
         />
       </router-link>
       <Icon
-        v-show="isMobile()"
         class="mx-2 flex items-center text-2xl text-white transition duration-150 hover:scale-110 sm:hidden"
         icon="mdi-menu"
         clickable
@@ -39,7 +38,8 @@
             </Button>
           </router-link>
           <span
-            class="animate__animated animate__fadeIn invisible absolute top-10 z-50 pt-2 group-hover:visible sm:top-12"
+            class="animate__animated animate__fadeIn invisible absolute top-8 z-50 pt-2 sm:top-12"
+            :class="{ 'group-hover:visible': !isMobile() }"
           >
             <ul
               class="flex flex-col justify-center rounded-b-xl bg-gradient-to-t from-tertiary-400 from-85% to-tertiary-200 to-95% px-2 py-1 sm:px-3 sm:py-2"
