@@ -28,11 +28,9 @@
     <!-- GAME -->
     <div
       v-if="!isMobile()"
-      class="animate__animated animate__fadeInDown flex w-full flex-col justify-center py-3 sm:py-6 md:w-11/12"
+      class="animate__animated animate__fadeIn flex w-full flex-col justify-center py-3 sm:py-6 md:w-11/12"
     >
-      <div class="rounded-xl border-4 border-secondary-300">
-        <VueUnity class="rounded-lg" :unity="unityContext" />
-      </div>
+      <VueUnity class="rounded-lg" :unity="unityContext" />
       <div class="flex flex-row-reverse gap-x-4 py-4">
         <Button
           class="rounded-2xl px-2 py-1 align-middle text-sm sm:px-4 sm:text-base"

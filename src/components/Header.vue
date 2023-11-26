@@ -1,6 +1,6 @@
 <template>
-  <nav class="sticky top-0 z-40">
-    <div
+  <div class="sticky top-0 z-40">
+    <nav
       class="animate__animated animate__fadeInDown flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-200 px-2 py-3 shadow-sm shadow-tertiary-400 sm:px-4 md:px-6 lg:px-12 xl:px-24"
     >
       <router-link
@@ -79,8 +79,8 @@
           </Button>
         </router-link>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
   <div class="navbar-menu relative z-50" :class="{ hidden: !showSideMenu }">
     <nav
       class="animate__animated fixed bottom-0 left-0 top-0 flex w-full flex-col overflow-y-auto bg-gradient-to-t from-tertiary-400/95 from-40% to-tertiary-500/95 p-8"

@@ -26,7 +26,9 @@
       </div>
     </div>
     <!-- TRAILER -->
-    <div class="flex w-full justify-center py-3 sm:py-6 md:w-11/12">
+    <div
+      class="animate__animated animate__fadeIn flex w-full justify-center py-3 sm:py-6 md:w-11/12"
+    >
       <embed-video id="HOMR1tvPWy0" title="Un Recuerdo Short Film" />
     </div>
   </div>

@@ -47,7 +47,7 @@
     </div>
     <!-- TRAILER -->
     <div
-      class="animate__animated animate__fadeInDown flex w-full justify-center py-3 sm:py-6 md:w-11/12"
+      class="animate__animated animate__fadeIn flex w-full justify-center py-3 sm:py-6 md:w-11/12"
     >
       <embed-video id="TJUIgSQkQws" title="Masquerade Trailer" />
     </div>
