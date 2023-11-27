@@ -4,9 +4,11 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-display: swap;
 }
 @supports (font-variation-settings: normal) {
   body {
     font-family: "Sora Variable", sans-serif;
+    font-display: swap;
   }
 }

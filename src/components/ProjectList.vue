@@ -20,17 +20,17 @@
           }"
         >
           <img
-            class="animate__animated animate__fadeInLeft rounded-3xl border-3 border-secondary-200 object-scale-down text-center text-white sm:border-4"
+            class="animate__animated animate__fadeInLeft rounded-3xl border-2 border-secondary-200 object-scale-down text-center text-white sm:border-4"
             :src="`/portfolio/${project.title}/${project.title}-horizontal.png`"
             :alt="`${project.title.replace(/-/g, ' ')} horizontal image`"
           />
         </router-link>
       </div>
       <div
-        class="animate__animated animate__fadeInRight w-1/2 px-4 sm:px-6 md:px-8 lg:px-12"
+        class="animate__animated animate__fadeInRight w-1/2 px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12"
       >
         <div
-          class="pb-3 text-lg font-extrabold uppercase xs:text-xl sm:pb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+          class="text-md pb-1 font-extrabold uppercase xs:pb-3 xs:text-xl sm:pb-6 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
         >
           {{ project.title.replace(/-/g, " ") }}
         </div>

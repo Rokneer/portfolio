@@ -54,7 +54,7 @@
     <!-- IMAGES -->
     <div class="py-3 sm:py-6">
       <div
-        class="animate__animated animate__fadeInDown mb-3 w-full bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-200 to-tertiary-500 to-75% p-2 text-3xl lg:mb-6 lg:text-4xl"
+        class="animate__animated animate__fadeInDown mb-4 w-full bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-200 to-tertiary-500 to-75% p-2 text-3xl lg:mb-6 lg:text-4xl"
       >
         Gallery
       </div>
