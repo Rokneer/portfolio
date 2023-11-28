@@ -12,16 +12,48 @@
         title: false,
       }"
     >
-      <img
-        v-for="image in images"
-        :key="image"
-        :src="image"
-        class="m-2 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 hover:scale-105 xs:m-2 lg:m-4"
-        :class="{
-          'md:w-56 lg:w-[495px]': orientation === 'horizontal',
-          'w-32 xs:w-36 lg:w-60 xl:w-[360px]': orientation === 'vertical',
-        }"
-      />
+      <span
+        v-if="orientation === 'horizontal'"
+        class="flex flex-wrap justify-center"
+      >
+        <img
+          v-for="image in images"
+          :key="image"
+          :src="`${image}-1380x.png`"
+          :srcset="`
+            ${image}-487x.png 487w,
+            ${image}-974x.png 974w,
+            ${image}-1380x.png 1380w,
+          `"
+          sizes="
+            (min-width: 1040px) 487px,
+            (min-width: 780px) 216px,
+            (min-width: 500px) 50vw, 91.11vw
+          "
+          class="m-2 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 hover:scale-105 xs:m-2 md:w-56 lg:m-4 lg:w-[495px]"
+        />
+      </span>
+      <span
+        v-if="orientation === 'vertical'"
+        class="flex flex-wrap justify-center"
+      >
+        <img
+          v-for="image in images"
+          :key="image"
+          :src="`${image}-704x.png`"
+          :srcset="`
+            ${image}-704x.png 704w,
+            ${image}-464x.png 464w,
+            ${image}-272x.png 272w,
+          `"
+          sizes="
+            (min-width: 1280px) 352px,
+            (min-width: 1040px) 232px,
+            (min-width: 480px) 136px, 120px
+          "
+          class="m-2 w-32 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 hover:scale-105 xs:m-2 xs:w-36 lg:m-4 lg:w-60 xl:w-[360px]"
+        />
+      </span>
     </viewer>
   </div>
 </template>

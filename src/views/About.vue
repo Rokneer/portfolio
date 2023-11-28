@@ -3,8 +3,15 @@
     <img
       class="animate__animated animate__fadeInLeft object-scale h-16 text-center text-white sm:h-24 md:h-36 lg:h-48"
       src="/tomato-horizontal-960x.png"
-      srcset="tomato-horizontal-960x.png 960w, tomato-horizontal-380x.png 380w"
-      sizes="(min-width: 640px) 171px, 137px"
+      srcset="
+        /tomato-horizontal-960x.png 960w,
+        /tomato-horizontal-380x.png 380w
+      "
+      sizes="
+        (min-width: 1040px) 820px,
+        (min-width: 780px) 615px,
+        (min-width: 640px) 410px, 263px
+      "
       alt="A drawing of the portfolio tomato logo"
     />
   </div>

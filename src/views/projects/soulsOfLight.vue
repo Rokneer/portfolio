@@ -3,7 +3,12 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 xs:w-72 md:w-80 lg:max-w-sm"
-      src="/souls-of-light/souls-of-light-logo.png"
+      src="/souls-of-light/souls-of-light-logo-576x.png"
+      srcset="
+        /souls-of-light/souls-of-light-logo-576x.png 576w,
+        /souls-of-light/souls-of-light-logo-288x.png 288w
+      "
+      sizes="(min-width: 780px) 288px, (min-width: 480px) 256px, 208px"
       alt="Souls of Light logo"
     />
     <!-- LONG DESCRIPTION -->
@@ -70,11 +75,11 @@ import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 
 const images = [
-  "/portfolio/souls-of-light/souls-of-light-1.png",
-  "/portfolio/souls-of-light/souls-of-light-2.png",
-  "/portfolio/souls-of-light/souls-of-light-3.png",
-  "/portfolio/souls-of-light/souls-of-light-4.png",
-  "/portfolio/souls-of-light/souls-of-light-5.png",
-  "/portfolio/souls-of-light/souls-of-light-6.png",
+  "/portfolio/souls-of-light/souls-of-light-1",
+  "/portfolio/souls-of-light/souls-of-light-2",
+  "/portfolio/souls-of-light/souls-of-light-3",
+  "/portfolio/souls-of-light/souls-of-light-4",
+  "/portfolio/souls-of-light/souls-of-light-5",
+  "/portfolio/souls-of-light/souls-of-light-6",
 ];
 </script>

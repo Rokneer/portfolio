@@ -9,7 +9,7 @@
       <img
         class="w-40 min-w-[8rem] rounded-full bg-secondary-200 p-1 text-center text-white sm:w-64 md:w-72 lg:w-80"
         src="/headshot-624x.png"
-        srcset="headshot-312x.png 312w, headshot-624x.png 624w"
+        srcset="/headshot-312x.png 312w, /headshot-624x.png 624w"
         sizes="(min-width: 1920px) 312px, (min-width: 1280px) 16.45vw, (min-width: 1040px) calc(20.91vw - 41px), (min-width: 780px) calc(23.75vw - 21px), (min-width: 520px) calc(27.92vw - 17px), 116px"
         alt="A drawing of the portfolio owner"
       />
@@ -53,11 +53,12 @@
             /portfolio/${project.title}/${project.title}-vertical-384x.png 384w
             `"
             sizes="
-             (min-width: 2340px) 384px,
-             (min-width: 780px) calc(18.77vw - 51px),
-             (min-width: 640px) calc(20vw - 45px),
-             (min-width: 480px) calc(20vw - 26px),
-             calc(20vw - 22px)
+              (min-width: 2360px) 384px,
+              (min-width: 2320px) calc(960vw - 22080px),
+              (min-width: 780px) calc(18.82vw - 52px),
+              (min-width: 640px) calc(20vw - 45px),
+              (min-width: 480px) calc(20vw - 26px),
+              calc(20vw - 22px)
             "
             :alt="project.title"
           />

@@ -3,7 +3,12 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 xs:w-72 md:w-80 lg:max-w-sm"
-      src="/potion-rush/potion-rush-logo.png"
+      src="/potion-rush/potion-rush-logo-576x.png"
+      srcset="
+        /potion-rush/potion-rush-logo-576x.png 576w,
+        /potion-rush/potion-rush-logo-288x.png 288w
+      "
+      sizes="(min-width: 780px) 288px, (min-width: 480px) 256px, 208px"
       alt="Potion Rush logo"
     />
     <!-- LONG DESCRIPTION -->
@@ -63,13 +68,13 @@ import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 
 const images = [
-  "/portfolio/potion-rush/potion-rush-1.png",
-  "/portfolio/potion-rush/potion-rush-2.png",
-  "/portfolio/potion-rush/potion-rush-3.png",
-  "/portfolio/potion-rush/potion-rush-4.png",
-  "/portfolio/potion-rush/potion-rush-5.png",
-  "/portfolio/potion-rush/potion-rush-6.png",
-  "/portfolio/potion-rush/potion-rush-7.png",
-  "/portfolio/potion-rush/potion-rush-8.png",
+  "/portfolio/potion-rush/potion-rush-1",
+  "/portfolio/potion-rush/potion-rush-2",
+  "/portfolio/potion-rush/potion-rush-3",
+  "/portfolio/potion-rush/potion-rush-4",
+  "/portfolio/potion-rush/potion-rush-5",
+  "/portfolio/potion-rush/potion-rush-6",
+  "/portfolio/potion-rush/potion-rush-7",
+  "/portfolio/potion-rush/potion-rush-8",
 ];
 </script>

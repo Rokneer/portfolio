@@ -30,9 +30,13 @@
               /portfolio/${project.title}/${project.title}-horizontal-256x.png 256w
             `"
             sizes="
+              (min-width: 2800px) calc(50vw - 200px),
+              (min-width: 2680px) calc(36vw - 150px),
               (min-width: 1040px) calc(50vw - 200px),
-              (min-width: 780px) calc(50vw - 88px),
-              calc(45.65vw - 7px)
+              (min-width: 1000px) calc(50vw - 88px),
+              (min-width: 780px) calc(11.5vw - 22px),
+              (min-width: 580px) calc(10.56vw - 3px),
+              calc(45.77vw - 7px)
             "
             :alt="`${project.title.replace(/-/g, ' ')} horizontal image`"
           />

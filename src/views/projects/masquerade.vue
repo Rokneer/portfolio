@@ -3,7 +3,12 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 xs:w-72 md:w-80 lg:max-w-sm"
-      src="/masquerade/masquerade-logo.png"
+      src="/masquerade/masquerade-logo-576x.png"
+      srcset="
+        /masquerade/masquerade-logo-576x.png 576w,
+        /masquerade/masquerade-logo-288x.png 288w
+      "
+      sizes="(min-width: 780px) 288px, (min-width: 480px) 256px, 208px"
       alt="Masquerade logo"
     />
     <!-- LONG DESCRIPTION -->
@@ -70,12 +75,12 @@ import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 
 const images = [
-  "/portfolio/masquerade/masquerade-1.png",
-  "/portfolio/masquerade/masquerade-2.png",
-  "/portfolio/masquerade/masquerade-3.png",
-  "/portfolio/masquerade/masquerade-4.png",
-  "/portfolio/masquerade/masquerade-5.png",
-  "/portfolio/masquerade/masquerade-6.png",
-  "/portfolio/masquerade/masquerade-7.png",
+  "/portfolio/masquerade/masquerade-1",
+  "/portfolio/masquerade/masquerade-2",
+  "/portfolio/masquerade/masquerade-3",
+  "/portfolio/masquerade/masquerade-4",
+  "/portfolio/masquerade/masquerade-5",
+  "/portfolio/masquerade/masquerade-6",
+  "/portfolio/masquerade/masquerade-7",
 ];
 </script>
