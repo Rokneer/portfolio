@@ -18,8 +18,9 @@
       >
         <img
           v-for="image in images"
-          :key="image"
-          :src="`${image}-1380x.png`"
+          :key="image.src"
+          :src="`${image.src}-1380x.png`"
+          :alt="image.alt"
           :srcset="`
             ${image}-487x.png 487w,
             ${image}-974x.png 974w,
@@ -39,8 +40,9 @@
       >
         <img
           v-for="image in images"
-          :key="image"
-          :src="`${image}-704x.png`"
+          :key="image.src"
+          :src="`${image.src}-704x.png`"
+          :alt="image.alt"
           :srcset="`
             ${image}-704x.png 704w,
             ${image}-464x.png 464w,
@@ -60,7 +62,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  images: string[];
+  images: { src: string; alt: string }[];
   orientation: "horizontal" | "vertical";
 }>();
 </script>

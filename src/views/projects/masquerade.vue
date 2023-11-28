@@ -75,12 +75,33 @@ import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 
 const images = [
-  "/portfolio/masquerade/masquerade-1",
-  "/portfolio/masquerade/masquerade-2",
-  "/portfolio/masquerade/masquerade-3",
-  "/portfolio/masquerade/masquerade-4",
-  "/portfolio/masquerade/masquerade-5",
-  "/portfolio/masquerade/masquerade-6",
-  "/portfolio/masquerade/masquerade-7",
+  {
+    src: "/portfolio/masquerade/masquerade-1",
+    alt: "An image of a colorful house with trees at its sides at night. A figure wearing a squirrel mask stands at the right of the house.",
+  },
+  {
+    src: "/portfolio/masquerade/masquerade-2",
+    alt: "An image of a disheveled church at night, its golden bell ringing. Mountains can be seen in the background breaking the cloud top.",
+  },
+  {
+    src: "/portfolio/masquerade/masquerade-3",
+    alt: "An image of a figure wearing an axolotl mask siting on a beach. A text box at the bottom reads in spanish: 'Tal vez debería darme un chapuzón más tarde, creo que me estoy empezando a cocinar bajo el sol.'",
+  },
+  {
+    src: "/portfolio/masquerade/masquerade-4",
+    alt: "An image of a marketplace during the day, a monument with a floating star stands on the center, three small carts around it. On the background a massive mountain frames the image.",
+  },
+  {
+    src: "/portfolio/masquerade/masquerade-5",
+    alt: "An image of a florally decorated cart with a figure wearing a humming-bird mask tending to it.",
+  },
+  {
+    src: "/portfolio/masquerade/masquerade-6",
+    alt: "An image of two small huts with an asortment of magical looking objects. A purple crystal floats a top of them.",
+  },
+  {
+    src: "/portfolio/masquerade/masquerade-7",
+    alt: "An image of farm, five pigs roam around freely sniffing at the ground. A figure with a pig mask stands far in the background.",
+  },
 ];
 </script>

@@ -10,7 +10,13 @@
         class="w-40 min-w-[8rem] rounded-full bg-secondary-200 p-1 text-center text-white sm:w-64 md:w-72 lg:w-80"
         src="/headshot-624x.png"
         srcset="/headshot-312x.png 312w, /headshot-624x.png 624w"
-        sizes="(min-width: 1920px) 312px, (min-width: 1280px) 16.45vw, (min-width: 1040px) calc(20.91vw - 41px), (min-width: 780px) calc(23.75vw - 21px), (min-width: 520px) calc(27.92vw - 17px), 116px"
+        sizes="
+          (min-width: 1920px) 312px,
+          (min-width: 1280px) 16.45vw,
+          (min-width: 1040px) calc(20.91vw - 41px),
+          (min-width: 780px) calc(23.75vw - 21px),
+          (min-width: 520px) calc(27.92vw - 17px),
+          116px"
         alt="A drawing of the portfolio owner"
       />
     </router-link>
@@ -37,9 +43,9 @@
     <Slide
       v-for="project in projects"
       :key="project.title"
-      class="p-2 xs:px-2 xs:py-4 sm:px-4 sm:py-6 md:px-6"
+      class="flex justify-center p-2 xs:px-2 xs:py-4 sm:px-6 sm:py-4 xl:p-6"
     >
-      <div class="relative flex w-96 cursor-pointer items-center">
+      <div class="relative flex cursor-pointer items-center">
         <router-link
           :to="{
             name: `${project.title}`,
@@ -55,11 +61,8 @@
             sizes="
               (min-width: 2360px) 384px,
               (min-width: 2320px) calc(960vw - 22080px),
-              (min-width: 780px) calc(18.82vw - 52px),
-              (min-width: 640px) calc(20vw - 45px),
-              (min-width: 480px) calc(20vw - 26px),
-              calc(20vw - 22px)
-            "
+              (min-width: 780px) calc(20vw - 26px),
+              calc(33.75vw - 20px)"
             :alt="project.title"
           />
         </router-link>
@@ -77,19 +80,25 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import "vue3-carousel/dist/carousel.css";
+import "../carousel-custom.css";
 import { Carousel, Slide } from "vue3-carousel";
 import { sendEmail, projects, onWindowResize } from "..";
 import Button from "../components/Button.vue";
+import { computed } from "vue";
 
 const carouselItemNumber = computed(() => {
-  if (onWindowResize().width.value >= 1280) return 5;
+  if (onWindowResize().width.value >= 810) return 5;
   return 3;
 });
 </script>
 
 <style scoped>
+.carousel__viewport {
+  overflow: visible;
+}
+.carousel__sr-only {
+  overflow: visible;
+}
 .carousel__slide--sliding {
   transition: 1s;
 }

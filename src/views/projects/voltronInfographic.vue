@@ -62,12 +62,15 @@ import UnityWebgl from "unity-webgl";
 import VueUnity from "unity-webgl/vue";
 
 const images = [
-  "/portfolio/voltron-infographic/voltron-infographic-1",
-  "/portfolio/voltron-infographic/voltron-infographic-2",
-  "/portfolio/voltron-infographic/voltron-infographic-3",
-  "/portfolio/voltron-infographic/voltron-infographic-4",
-  "/portfolio/voltron-infographic/voltron-infographic-5",
-  "/portfolio/voltron-infographic/voltron-infographic-6",
+  {
+    src: "/portfolio/voltron-infographic/voltron-infographic-1",
+    alt: "An image displaying Voltron from Voltron: Legendary Defender, three of the shows main planets: Altea, Daibazal and Balmera, the Lion's Castle and an edited version of the show's logo.",
+  },
+  { src: "/portfolio/voltron-infographic/voltron-infographic-2", alt: "" },
+  { src: "/portfolio/voltron-infographic/voltron-infographic-3", alt: "" },
+  { src: "/portfolio/voltron-infographic/voltron-infographic-4", alt: "" },
+  { src: "/portfolio/voltron-infographic/voltron-infographic-5", alt: "" },
+  { src: "/portfolio/voltron-infographic/voltron-infographic-6", alt: "" },
 ];
 const unityContext = new UnityWebgl({
   loaderUrl: "/portfolio/build/voltron-build.loader.js",
