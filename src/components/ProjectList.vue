@@ -21,7 +21,19 @@
         >
           <img
             class="animate__animated animate__fadeInLeft rounded-3xl border-2 border-secondary-200 object-scale-down text-center text-white sm:border-4"
-            :src="`/portfolio/${project.title}/${project.title}-horizontal.png`"
+            :src="`/portfolio/${project.title}/${project.title}-horizontal-2048x.png`"
+            :srcset="`
+              /portfolio/${project.title}/${project.title}-horizontal-2048x.png 2048w,
+              /portfolio/${project.title}/${project.title}-horizontal-1920x.png 1920w,
+              /portfolio/${project.title}/${project.title}-horizontal-1580x.png 1580w,
+              /portfolio/${project.title}/${project.title}-horizontal-1130x.png 1130w,
+              /portfolio/${project.title}/${project.title}-horizontal-256x.png 256w
+            `"
+            sizes="
+              (min-width: 1040px) calc(50vw - 200px),
+              (min-width: 780px) calc(50vw - 88px),
+              calc(45.65vw - 7px)
+            "
             :alt="`${project.title.replace(/-/g, ' ')} horizontal image`"
           />
         </router-link>

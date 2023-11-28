@@ -9,7 +9,12 @@
       >
         <img
           class="h-8 w-full text-center text-white transition duration-150 hover:scale-105 sm:h-10"
-          src="/tomato-logo-horizontal.png"
+          src="/tomato-horizontal-960x.png"
+          srcset="
+            tomato-horizontal-960x.png 960w,
+            tomato-horizontal-380x.png 380w
+          "
+          sizes="(min-width: 640px) 171px, 137px"
           alt="Tomato Logo"
         />
       </router-link>
