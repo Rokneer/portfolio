@@ -62,12 +62,12 @@ import UnityWebgl from "unity-webgl";
 import VueUnity from "unity-webgl/vue";
 
 const images = [
-  "/portfolio/voltron-infographic/voltron-infographic-1.png",
-  "/portfolio/voltron-infographic/voltron-infographic-2.png",
-  "/portfolio/voltron-infographic/voltron-infographic-3.png",
-  "/portfolio/voltron-infographic/voltron-infographic-4.png",
-  "/portfolio/voltron-infographic/voltron-infographic-5.png",
-  "/portfolio/voltron-infographic/voltron-infographic-6.png",
+  "/portfolio/voltron-infographic/voltron-infographic-1",
+  "/portfolio/voltron-infographic/voltron-infographic-2",
+  "/portfolio/voltron-infographic/voltron-infographic-3",
+  "/portfolio/voltron-infographic/voltron-infographic-4",
+  "/portfolio/voltron-infographic/voltron-infographic-5",
+  "/portfolio/voltron-infographic/voltron-infographic-6",
 ];
 const unityContext = new UnityWebgl({
   loaderUrl: "/portfolio/build/voltron-build.loader.js",
