@@ -74,15 +74,15 @@ const images = [
   },
   {
     src: "/portfolio/potion-rush/potion-rush-2",
-    alt: "An image of a decorated potion shop. A bussinessman looking customer is asking for a fire potion. In the middle, a blender its being used. Below it, three ingredients are displayed in a bar.",
+    alt: "An image of a decorated potion shop. A businessman looking customer is asking for a fire potion. In the middle, a blender it's being used. Below it, three ingredients are displayed in a bar.",
   },
   {
     src: "/portfolio/potion-rush/potion-rush-3",
-    alt: "An image of a decorated potion shop. A robot looking customer is asking for a wine potion. In the middle, a cauldron is being stired. Below it, three ingredients are displayed in a bar.",
+    alt: "An image of a decorated potion shop. A robot looking customer is asking for a wine potion. In the middle, a cauldron is being stirred. Below it, three ingredients are displayed in a bar.",
   },
   {
     src: "/portfolio/potion-rush/potion-rush-4",
-    alt: "An image of a decorated potion shop. A witch looking customer is asking for a fruity potion. In the middle, a cauldron is being stired. Below it, three ingredients are displayed in a bar.",
+    alt: "An image of a decorated potion shop. A witch looking customer is asking for a fruity potion. In the middle, a cauldron is being stirred. Below it, three ingredients are displayed in a bar.",
   },
   {
     src: "/portfolio/potion-rush/potion-rush-5",

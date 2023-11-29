@@ -29,7 +29,7 @@
           sizes="
             (min-width: 1040px) 487px,
             (min-width: 780px) 216px,
-            (min-width: 500px) 50vw, 91.11vw
+            calc(93.04vw - 19px)
           "
           class="m-2 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 hover:scale-105 xs:m-2 md:w-56 lg:m-4 lg:w-[495px]"
         />

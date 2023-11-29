@@ -85,11 +85,11 @@ const images = [
   },
   {
     src: "/portfolio/masquerade/masquerade-3",
-    alt: "An image of a figure wearing an axolotl mask siting on a beach. A text box at the bottom reads in spanish: 'Tal vez debería darme un chapuzón más tarde, creo que me estoy empezando a cocinar bajo el sol.'",
+    alt: "An image of a figure wearing an axolotl mask sitting on a beach. A text box at the bottom reads in spanish: 'Tal vez debería darme un chapuzón más tarde, creo que me estoy empezando a cocinar bajo el sol.'",
   },
   {
     src: "/portfolio/masquerade/masquerade-4",
-    alt: "An image of a marketplace during the day, a monument with a floating star stands on the center, three small carts around it. On the background a massive mountain frames the image.",
+    alt: "An image of a marketplace during the day, a monument with a floating star stands on the center, three small carts around it. In the background a massive mountain frames the image.",
   },
   {
     src: "/portfolio/masquerade/masquerade-5",
@@ -97,7 +97,7 @@ const images = [
   },
   {
     src: "/portfolio/masquerade/masquerade-6",
-    alt: "An image of two small huts with an asortment of magical looking objects. A purple crystal floats a top of them.",
+    alt: "An image of two small huts with an assortment of magical looking objects. A purple crystal floats on top of them.",
   },
   {
     src: "/portfolio/masquerade/masquerade-7",

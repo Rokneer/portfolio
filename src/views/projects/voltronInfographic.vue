@@ -64,13 +64,28 @@ import VueUnity from "unity-webgl/vue";
 const images = [
   {
     src: "/portfolio/voltron-infographic/voltron-infographic-1",
-    alt: "An image displaying Voltron from Voltron: Legendary Defender, three of the shows main planets: Altea, Daibazal and Balmera, the Lion's Castle and an edited version of the show's logo.",
+    alt: "An image displaying Voltron from Voltron: Legendary Defender, three of the show's main planets: Altea, Daibazal and Balmera, as well as the Lion's Castle spaceship and an edited version of the show's logo.",
   },
-  { src: "/portfolio/voltron-infographic/voltron-infographic-2", alt: "" },
-  { src: "/portfolio/voltron-infographic/voltron-infographic-3", alt: "" },
-  { src: "/portfolio/voltron-infographic/voltron-infographic-4", alt: "" },
-  { src: "/portfolio/voltron-infographic/voltron-infographic-5", alt: "" },
-  { src: "/portfolio/voltron-infographic/voltron-infographic-6", alt: "" },
+  {
+    src: "/portfolio/voltron-infographic/voltron-infographic-2",
+    alt: "An image displaying two character descriptions from Voltron: Legendary Defender, to the left is the Black Lion and to the right is Shiro, leader of Voltron.",
+  },
+  {
+    src: "/portfolio/voltron-infographic/voltron-infographic-3",
+    alt: "An image displaying two character descriptions from Voltron: Legendary Defender, to the left is the Yellow Lion and to the right is Hunk mechanic and cook of Voltron.",
+  },
+  {
+    src: "/portfolio/voltron-infographic/voltron-infographic-4",
+    alt: "An image displaying two descriptions from Voltron: Legendary Defender, to the left is the planet of Altea and to the right is Allura, Altea's princess.",
+  },
+  {
+    src: "/portfolio/voltron-infographic/voltron-infographic-5",
+    alt: "An image displaying two descriptions from Voltron: Legendary Defender, to the left is the planet of Daibazaal and to the right is Zarkon, king of the Galra people.",
+  },
+  {
+    src: "/portfolio/voltron-infographic/voltron-infographic-6",
+    alt: "An image displaying three detailed weapon descriptions from Voltron: Legendary Defender, the weapons are separated into their pieces. To the left is Voltron's energy shield, to the upper right is Voltron's shoulder mounted laser cannon and to the lower right is Voltron's energy sword, its main weapon.",
+  },
 ];
 const unityContext = new UnityWebgl({
   loaderUrl: "/portfolio/build/voltron-build.loader.js",

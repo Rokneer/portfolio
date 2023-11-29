@@ -77,27 +77,27 @@ import EmbedVideo from "../../components/EmbedVideo.vue";
 const images = [
   {
     src: "/portfolio/souls-of-light/souls-of-light-1",
-    alt: "An image of a dark castle room iluminated by red lamp light. A floating bright emblem sits a top of a skeleton.",
+    alt: "An image of a dark castle room illuminated by red lamp light. A floating bright emblem sits on top of a skeleton.",
   },
   {
     src: "/portfolio/souls-of-light/souls-of-light-2",
-    alt: "An image of a dark castle room iluminated by blue lamp light. A monster made of plants stands aside the playable character. ",
+    alt: "An image of a dark castle room illuminated by blue lamp light. A monster made of plants stands aside the playable character.",
   },
   {
     src: "/portfolio/souls-of-light/souls-of-light-3",
-    alt: "An image of a dark castle room iluminated by blue lamp light. A text box displaying a conversation between the playable character and a ghostly old man.",
+    alt: "An image of a dark castle room illuminated by blue lamp light. A text box displaying a conversation between the playable character and a ghostly old man.",
   },
   {
     src: "/portfolio/souls-of-light/souls-of-light-4",
-    alt: "An image of a dark castle room iluminated by green lamp light. The playable character is in the middle of a jump.",
+    alt: "An image of a dark castle room illuminated by green lamp light. The playable character is in the middle of a jump.",
   },
   {
     src: "/portfolio/souls-of-light/souls-of-light-5",
-    alt: "An image of a dark castle room iluminated by blue lamp light. A monster made of plants is frozen in a block of ice.",
+    alt: "An image of a dark castle room illuminated by blue lamp light. A monster made of plants is frozen in a block of ice.",
   },
   {
     src: "/portfolio/souls-of-light/souls-of-light-6",
-    alt: "An image of a dark castle room iluminated by red lamp light. Darken vines burn besides a skeleton.",
+    alt: "An image of a dark castle room illuminated by red lamp light. Darken vines burn besides a skeleton.",
   },
 ];
 </script>
