@@ -19,9 +19,11 @@
       >
         <div>Shoot me an email!</div>
         <img
-          class="w-32 cursor-pointer text-center text-white transition duration-150 hover:scale-110 sm:w-44 lg:w-80"
+          class="w-32 cursor-pointer text-center text-white transition duration-150 content-visibility-auto hover:scale-110 sm:w-44 lg:w-80"
           src="/email.png"
           alt="Email"
+          decoding="async"
+          loading="lazy"
           @click="sendEmail"
         />
       </div>
@@ -35,9 +37,11 @@
           rel="noreferrer"
         >
           <img
-            class="w-32 text-center text-white transition duration-150 hover:scale-110 sm:w-44 lg:w-80"
+            class="w-32 text-center text-white transition duration-150 content-visibility-auto hover:scale-110 sm:w-44 lg:w-80"
             src="/linkedin.png"
             alt="LinkedIn"
+            decoding="async"
+            loading="lazy"
           />
         </a>
       </div>

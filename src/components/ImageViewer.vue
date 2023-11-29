@@ -19,19 +19,21 @@
         <img
           v-for="image in images"
           :key="image.src"
-          :src="`${image.src}-1380x.png`"
+          :src="`${image.src}-1380x.avif`"
           :alt="image.alt"
           :srcset="`
-            ${image}-487x.png 487w,
-            ${image}-974x.png 974w,
-            ${image}-1380x.png 1380w,
+            ${image}-487x.avif 487w,
+            ${image}-974x.avif 974w,
+            ${image}-1380x.avif 1380w,
           `"
           sizes="
             (min-width: 1040px) 487px,
             (min-width: 780px) 216px,
             calc(93.04vw - 19px)
           "
-          class="m-2 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 hover:scale-105 xs:m-2 md:w-56 lg:m-4 lg:w-[495px]"
+          class="m-2 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 content-visibility-auto hover:scale-105 xs:m-2 md:w-56 lg:m-4 lg:w-[495px]"
+          decoding="async"
+          loading="lazy"
         />
       </span>
       <span
@@ -41,19 +43,21 @@
         <img
           v-for="image in images"
           :key="image.src"
-          :src="`${image.src}-704x.png`"
+          :src="`${image.src}-704x.avif`"
           :alt="image.alt"
           :srcset="`
-            ${image}-704x.png 704w,
-            ${image}-464x.png 464w,
-            ${image}-272x.png 272w,
+            ${image}-704x.avif 704w,
+            ${image}-464x.avif 464w,
+            ${image}-272x.avif 272w,
           `"
           sizes="
             (min-width: 1280px) 352px,
             (min-width: 1040px) 232px,
             (min-width: 480px) 136px, 120px
           "
-          class="m-2 w-32 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 hover:scale-105 xs:m-2 xs:w-36 lg:m-4 lg:w-60 xl:w-[360px]"
+          class="m-2 w-32 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 content-visibility-auto hover:scale-105 xs:m-2 xs:w-36 lg:m-4 lg:w-60 xl:w-[360px]"
+          decoding="async"
+          loading="lazy"
         />
       </span>
     </viewer>

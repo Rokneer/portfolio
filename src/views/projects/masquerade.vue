@@ -2,11 +2,11 @@
   <div class="flex flex-col items-center text-center text-white">
     <!-- LOGO -->
     <img
-      class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 xs:w-72 md:w-80 lg:max-w-sm"
-      src="/masquerade/masquerade-logo-576x.png"
+      class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 content-visibility-auto xs:w-72 md:w-80 lg:max-w-sm"
+      src="/masquerade/masquerade-logo-576x.avif"
       srcset="
-        /masquerade/masquerade-logo-576x.png 576w,
-        /masquerade/masquerade-logo-288x.png 288w
+        /masquerade/masquerade-logo-576x.avif 576w,
+        /masquerade/masquerade-logo-288x.avif 288w
       "
       sizes="(min-width: 780px) 288px, (min-width: 480px) 256px, 208px"
       alt="Masquerade logo"
@@ -19,7 +19,7 @@
     </div>
     <!-- FEATURES -->
     <div
-      class="animate__animated animate__fadeInDown flex w-10/12 flex-col items-center justify-center gap-y-4 py-4 sm:gap-x-4 sm:py-6 md:flex-row md:items-stretch md:gap-x-8 lg:gap-x-16"
+      class="animate__animated animate__fadeInDown flex w-10/12 flex-col items-center justify-center gap-y-4 py-4 content-visibility-auto sm:gap-x-4 sm:py-6 md:flex-row md:items-stretch md:gap-x-8 lg:gap-x-16"
     >
       <feature-box
         title="Solve"
@@ -42,9 +42,11 @@
       class="animate__animated animate__fadeInDown text-md flex w-10/12 flex-row items-center justify-center py-4 sm:py-8 lg:text-xl"
     >
       <img
-        class="mr-4 w-10 text-white lg:w-12"
+        class="mr-4 w-10 text-white content-visibility-auto lg:w-12"
         src="/android-chrome-192x192.png"
         alt="Tomate icon"
+        decoding="async"
+        loading="lazy"
       />
       <div class="text-left">
         {{ projects["masquerade"].role }}

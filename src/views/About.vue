@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center py-3 sm:py-6">
     <img
-      class="animate__animated animate__fadeInLeft object-scale h-16 text-center text-white sm:h-24 md:h-36 lg:h-48"
+      class="animate__animated animate__fadeInLeft object-scale h-16 text-center text-white content-visibility-auto sm:h-24 md:h-36 lg:h-48"
       src="/tomato-horizontal-960x.png"
       srcset="
         /tomato-horizontal-960x.png 960w,
@@ -13,6 +13,8 @@
         (min-width: 640px) 410px, 263px
       "
       alt="A drawing of the portfolio tomato logo"
+      decoding="async"
+      loading="lazy"
     />
   </div>
   <div

@@ -2,9 +2,11 @@
   <div class="flex flex-col items-center text-center text-white">
     <!-- LOGO -->
     <img
-      class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 lg:max-w-xl"
-      src="/voltron-infographic/voltron-infographic-logo.png"
+      class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 content-visibility-auto lg:max-w-xl"
+      src="/voltron-infographic/voltron-infographic-logo.avif"
       alt="Voltron Infographic logo"
+      decoding="async"
+      loading="lazy"
     />
     <!-- LONG DESCRIPTION -->
     <div
@@ -17,9 +19,11 @@
       class="animate__animated animate__fadeInDown text-md flex w-10/12 flex-row items-center justify-center py-4 sm:py-8 lg:text-xl"
     >
       <img
-        class="mr-4 w-10 text-white lg:w-12"
+        class="mr-4 w-10 text-white content-visibility-auto lg:w-12"
         src="/android-chrome-192x192.png"
         alt="Tomate icon"
+        decoding="async"
+        loading="lazy"
       />
       <div class="text-left">
         {{ projects["voltron_infographic"].role }}
