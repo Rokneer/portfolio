@@ -5,6 +5,8 @@
       class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 content-visibility-auto lg:max-w-xl"
       src="/voltron-infographic/voltron-infographic-logo.avif"
       alt="Voltron Infographic logo"
+      width="880"
+      height="326"
       decoding="async"
       loading="lazy"
     />
@@ -22,6 +24,8 @@
         class="mr-4 w-10 text-white content-visibility-auto lg:w-12"
         src="/android-chrome-192x192.png"
         alt="Tomate icon"
+        width="192"
+        height="192"
         decoding="async"
         loading="lazy"
       />

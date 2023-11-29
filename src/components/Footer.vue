@@ -7,6 +7,8 @@
         class="w-16 text-center text-white content-visibility-auto md:w-20"
         src="/tomato-logo.png"
         alt="Tomate Logo"
+        width="160"
+        heigth="160"
         decoding="async"
         loading="lazy"
       />

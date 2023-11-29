@@ -18,6 +18,8 @@
           (min-width: 520px) calc(27.92vw - 17px),
           116px"
         alt="A drawing of the portfolio owner"
+        width="624"
+        height="624"
         decoding="async"
         loading="lazy"
       />
@@ -66,6 +68,8 @@
               (min-width: 780px) calc(20vw - 26px),
               calc(33.75vw - 20px)"
             :alt="project.title"
+            width="768"
+            height="1078"
             decoding="async"
             loading="lazy"
           />
@@ -86,12 +90,12 @@
 <script setup lang="ts">
 import "../carousel-custom.css";
 import { Carousel, Slide } from "vue3-carousel";
+import { computed } from "vue";
 import { sendEmail, projects, onWindowResize } from "..";
 import Button from "../components/Button.vue";
-import { computed } from "vue";
 
 const carouselItemNumber = computed(() => {
-  if (onWindowResize().width.value >= 810) return 5;
+  if (onWindowResize().width.value >= 780) return 5;
   return 3;
 });
 </script>

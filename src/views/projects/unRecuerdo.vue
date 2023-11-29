@@ -5,7 +5,10 @@
       class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-6 content-visibility-auto lg:max-w-xl"
       src="/un-recuerdo/un-recuerdo-logo.avif"
       alt="Un Recuerdo logo"
+      width="795"
+      height="166"
       decoding="async"
+      loading="lazy"
     />
     <!-- LONG DESCRIPTION -->
     <div
@@ -21,6 +24,8 @@
         class="mr-4 w-10 text-white content-visibility-auto lg:w-12"
         src="/android-chrome-192x192.png"
         alt="Tomate icon"
+        width="192"
+        height="192"
         decoding="async"
         loading="lazy"
       />

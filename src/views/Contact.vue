@@ -21,7 +21,9 @@
         <img
           class="w-32 cursor-pointer text-center text-white transition duration-150 content-visibility-auto hover:scale-110 sm:w-44 lg:w-80"
           src="/email.png"
-          alt="Email"
+          alt="Shoot me an email!"
+          width="256"
+          height="256"
           decoding="async"
           loading="lazy"
           @click="sendEmail"
@@ -39,7 +41,9 @@
           <img
             class="w-32 text-center text-white transition duration-150 content-visibility-auto hover:scale-110 sm:w-44 lg:w-80"
             src="/linkedin.png"
-            alt="LinkedIn"
+            alt="Check me out on LinkedIn!"
+            width="256"
+            height="256"
             decoding="async"
             loading="lazy"
           />

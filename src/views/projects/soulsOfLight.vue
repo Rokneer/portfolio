@@ -10,6 +10,8 @@
       "
       sizes="(min-width: 780px) 288px, (min-width: 480px) 256px, 208px"
       alt="Souls of Light logo"
+      width="576"
+      height="576"
       decoding="async"
       loading="lazy"
     />
@@ -47,6 +49,8 @@
         class="mr-4 w-10 text-white content-visibility-auto lg:w-12"
         src="/android-chrome-192x192.png"
         alt="Tomate icon"
+        width="192"
+        height="192"
         decoding="async"
         loading="lazy"
       />

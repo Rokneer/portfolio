@@ -32,6 +32,8 @@
             calc(93.04vw - 19px)
           "
           class="m-2 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 content-visibility-auto hover:scale-105 xs:m-2 md:w-56 lg:m-4 lg:w-[495px]"
+          width="1380"
+          height="776"
           decoding="async"
           loading="lazy"
         />
@@ -56,6 +58,8 @@
             (min-width: 480px) 136px, 120px
           "
           class="m-2 w-32 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 content-visibility-auto hover:scale-105 xs:m-2 xs:w-36 lg:m-4 lg:w-60 xl:w-[360px]"
+          width="740"
+          height="1252"
           decoding="async"
           loading="lazy"
         />

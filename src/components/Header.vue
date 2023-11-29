@@ -1,7 +1,14 @@
 <template>
-  <div class="sticky top-0 z-40">
+  <div
+    class="animate__animated sticky top-0 z-40"
+    :class="`${
+      showHeader
+        ? 'animate__fadeInDown animate__faster'
+        : 'animate__fadeOutUp animate__faster'
+    }`"
+  >
     <nav
-      class="animate__animated animate__fadeInDown flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-200 px-2 py-3 shadow-sm shadow-tertiary-400 sm:px-4 md:px-6 lg:px-12 xl:px-24"
+      class="flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-200 px-2 py-3 shadow-sm shadow-tertiary-400 sm:px-4 md:px-6 lg:px-12 xl:px-24"
     >
       <router-link
         class="flex shrink cursor-pointer justify-start sm:pr-2"
@@ -16,6 +23,8 @@
           "
           sizes="(min-width: 640px) 171px, 137px"
           alt="Tomato Logo"
+          width="960"
+          height="225"
           decoding="async"
           loading="lazy"
         />
@@ -45,7 +54,7 @@
             </Button>
           </router-link>
           <span
-            class="animate__animated animate__fadeIn invisible absolute top-8 z-50 pt-2 sm:top-12"
+            class="invisible absolute top-8 z-50 pt-2 sm:top-12"
             :class="{ 'group-hover:visible': !isMobile() }"
           >
             <ul
@@ -88,7 +97,17 @@
       </div>
     </nav>
   </div>
-  <div class="navbar-menu relative z-50" :class="{ hidden: !showSideMenu }">
+  <div
+    class="navbar-menu relative z-50"
+    :class="[
+      { hidden: !showSideMenu },
+      `${
+        showHeader
+          ? 'animate__fadeInDown animate__faster'
+          : 'animate__fadeOutUp animate__faster'
+      }`,
+    ]"
+  >
     <nav
       class="animate__animated fixed bottom-0 left-0 top-0 flex w-full flex-col overflow-y-auto bg-gradient-to-t from-tertiary-400/95 from-40% to-tertiary-500/95 p-8"
       :class="{
@@ -154,12 +173,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { onMounted, onUnmounted, ref, watch } from "vue";
 import { projects, isMobile } from "..";
 import Button from "./Button.vue";
 import Icon from "./Icon.vue";
 
 const showSideMenu = ref(false);
+const showHeader = ref(true);
+const lastScrollPosition = ref(0);
+const scrollOffset = 40;
+onMounted(() => {
+  window.addEventListener("scroll", onScroll);
+});
+onUnmounted(() => {
+  window.removeEventListener("scroll", onScroll);
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelectorAll(".navbar-menu");
   const close = document.querySelectorAll(".navbar-close");
@@ -187,4 +216,13 @@ watch(showSideMenu, () => {
   document.body.style.top = "";
   window.scrollTo(0, parseInt(scrollY || "0") * -1);
 });
+
+// Function
+function onScroll() {
+  if (window.scrollY < 0) return;
+  if (Math.abs(window.scrollY - lastScrollPosition.value) < scrollOffset)
+    return;
+  showHeader.value = window.scrollY < lastScrollPosition.value;
+  lastScrollPosition.value = window.scrollY;
+}
 </script>
