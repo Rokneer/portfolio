@@ -29,6 +29,16 @@ export default {
       borderWidth: {
         3: "3px",
       },
+      contentVisibility: {
+        auto: "auto",
+        hidden: "hidden",
+        visible: "visible",
+      },
+      textShadow: {
+        sm: "0 1px 2px var(--tw-shadow-color)",
+        DEFAULT: "0 2px 4px var(--tw-shadow-color)",
+        lg: "0 8px 16px var(--tw-shadow-color)",
+      },
       animation: {
         shimmer: "shimmer 1.4s infinite",
       },
@@ -41,42 +51,39 @@ export default {
     },
   },
   plugins: [
-    plugin(
-      function ({ matchUtilities, theme }) {
-        matchUtilities(
-          {
-            "content-visibility": (value) => {
-              return {
-                "content-visibility": value,
-              };
-            },
-          },
-          {
-            values: theme("contentVisibility"),
-          },
-        );
-        matchUtilities(
-          {
-            "contain-intrinsic-size": (value) => {
-              return {
-                "contain-intrinsic-size": value,
-              };
-            },
-          },
-          {
-            values: theme("containIntrinsicSize"),
-          },
-        );
-      },
-      {
-        theme: {
-          contentVisibility: {
-            auto: "auto",
-            hidden: "hidden",
-            visible: "visible",
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "content-visibility": (value) => {
+            return {
+              "content-visibility": value,
+            };
           },
         },
-      },
-    ),
+        {
+          values: theme("contentVisibility"),
+        },
+      );
+      matchUtilities(
+        {
+          "contain-intrinsic-size": (value) => {
+            return {
+              "contain-intrinsic-size": value,
+            };
+          },
+        },
+        {
+          values: theme("containIntrinsicSize"),
+        },
+      );
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") },
+      );
+    }),
   ],
 };
