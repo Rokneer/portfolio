@@ -11,7 +11,7 @@
     "lint-fix": "prettier --write src/ && eslint --ext .ts,.vue --fix src/"
   },
   "dependencies": {
-    "@fontsource-variable/sora": "^5.0.15",
+    "@fontsource/sora": "^5.0.15",
     "@fontsource/open-sans": "^5.0.17",
     "@mdi/font": "^7.3.67",
     "animate.css": "^4.1.1",
@@ -21,12 +21,11 @@
     "vue": "^3.3.9",
     "vue-lite-youtube-embed": "^1.2.1",
     "vue-router": "^4.2.5",
-    "vue-unity-webgl": "^1.2.0",
     "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.6.0",
-    "@types/node": "^20.10.0",
+    "@types/node": "^20.10.1",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-vue": "^4.5.0",
@@ -40,6 +39,6 @@
     "tailwindcss": "^3.3.5",
     "typescript": "^5.3.2",
     "vite": "^4.5.0",
-    "vue-tsc": "^1.8.22"
+    "vue-tsc": "^1.8.24"
   }
 }
