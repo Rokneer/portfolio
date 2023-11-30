@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Sora", sans-serif;
   font-display: swap;
-}
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: "Sora", sans-serif;
-    font-display: swap;
-  }
 }

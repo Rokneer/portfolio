@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@fontsource/sora": "^5.0.15",
-    "@fontsource/open-sans": "^5.0.17",
     "@mdi/font": "^7.3.67",
     "animate.css": "^4.1.1",
     "unity-webgl": "^3.5.2",
