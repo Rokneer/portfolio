@@ -21,7 +21,6 @@
         width="624"
         height="624"
         decoding="async"
-        loading="lazy"
       />
     </router-link>
     <div>
@@ -71,7 +70,6 @@
             width="768"
             height="1078"
             decoding="async"
-            loading="lazy"
           />
         </router-link>
       </div>

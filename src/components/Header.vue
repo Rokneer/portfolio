@@ -25,8 +25,6 @@
           alt="Tomato Logo"
           width="960"
           height="225"
-          decoding="async"
-          loading="lazy"
         />
       </router-link>
       <Icon

@@ -40,7 +40,6 @@
             width="2048"
             height="1152"
             decoding="async"
-            loading="lazy"
           />
         </router-link>
       </div>

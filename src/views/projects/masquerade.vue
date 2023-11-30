@@ -12,6 +12,7 @@
       alt="Masquerade logo"
       width="576"
       height="563"
+      decoding="async"
     />
     <!-- LONG DESCRIPTION -->
     <div

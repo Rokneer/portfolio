@@ -8,7 +8,6 @@
       width="880"
       height="326"
       decoding="async"
-      loading="lazy"
     />
     <!-- LONG DESCRIPTION -->
     <div

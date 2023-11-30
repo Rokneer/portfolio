@@ -25,7 +25,6 @@
           width="256"
           height="256"
           decoding="async"
-          loading="lazy"
           @click="sendEmail"
         />
       </div>
@@ -45,7 +44,6 @@
             width="256"
             height="256"
             decoding="async"
-            loading="lazy"
           />
         </a>
       </div>

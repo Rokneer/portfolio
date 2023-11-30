@@ -13,7 +13,6 @@
       width="576"
       height="548"
       decoding="async"
-      loading="lazy"
     />
     <!-- LONG DESCRIPTION -->
     <div
