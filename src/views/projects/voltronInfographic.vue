@@ -41,6 +41,7 @@
       <div class="flex flex-row-reverse gap-x-4 py-4">
         <Button
           class="rounded-2xl px-2 py-1 align-middle text-sm sm:px-4 sm:text-base"
+          :disabled="isUnityDisabled"
           @click="fullScreen"
         >
           FULLSCREEN
@@ -61,6 +62,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed, onUnmounted } from "vue";
 import { projects, isMobile } from "../../.";
 import Button from "../../components/Button.vue";
 import Icon from "../../components/Icon.vue";
@@ -68,6 +70,24 @@ import ImageViewer from "../../components/ImageViewer.vue";
 import UnityWebgl from "unity-webgl";
 import VueUnity from "unity-webgl/vue";
 
+const unityContext = computed(() => {
+  if (isMobile()) return {} as UnityWebgl;
+  return new UnityWebgl({
+    loaderUrl: "/portfolio/build/voltron-build.loader.js",
+    dataUrl: "/portfolio/build/voltron-build.data",
+    frameworkUrl: "/portfolio/build/voltron-build.framework.js",
+    codeUrl: "/portfolio/build/voltron-build.wasm",
+    companyName: "Tomate Dev",
+    productName: "Voltron Infographic",
+    productVersion: "1.0.0",
+  });
+});
+const isUnityDisabled = computed(() => {
+  return (
+    Object.keys(unityContext.value).length === 0 &&
+    unityContext.value.constructor === Object
+  );
+});
 const images = [
   {
     src: "/portfolio/voltron-infographic/voltron-infographic-1",
@@ -94,15 +114,15 @@ const images = [
     alt: "An image displaying three detailed weapon descriptions from Voltron: Legendary Defender, the weapons are separated into their pieces. To the left is Voltron's energy shield, to the upper right is Voltron's shoulder mounted laser cannon and to the lower right is Voltron's energy sword, its main weapon.",
   },
 ];
-const unityContext = new UnityWebgl({
-  loaderUrl: "/portfolio/build/voltron-build.loader.js",
-  dataUrl: "/portfolio/build/voltron-build.data",
-  frameworkUrl: "/portfolio/build/voltron-build.framework.js",
-  codeUrl: "/portfolio/build/voltron-build.wasm",
+
+onUnmounted(() => {
+  if (!isUnityDisabled.value) return;
+  unityContext.value.unload();
 });
 
 // Functions
 function fullScreen() {
-  unityContext.setFullscreen(true);
+  if (isUnityDisabled.value) return;
+  unityContext.value.setFullscreen(true);
 }
 </script>
