@@ -8,7 +8,7 @@ body {
 }
 @supports (font-variation-settings: normal) {
   body {
-    font-family: "Sora Variable", sans-serif;
+    font-family: "Sora", sans-serif;
     font-display: swap;
   }
 }
