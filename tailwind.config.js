@@ -66,18 +66,6 @@ export default {
       );
       matchUtilities(
         {
-          "contain-intrinsic-size": (value) => {
-            return {
-              "contain-intrinsic-size": value,
-            };
-          },
-        },
-        {
-          values: theme("containIntrinsicSize"),
-        },
-      );
-      matchUtilities(
-        {
           "text-shadow": (value) => ({
             textShadow: value,
           }),

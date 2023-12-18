@@ -1,41 +1,35 @@
 <template>
-  <div class="flex flex-col items-center text-center text-white">
+  <div class="flex flex-col items-center text-center">
     <!-- LOGO -->
     <img
-      class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-6 content-visibility-auto lg:max-w-xl"
+      class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 content-visibility-auto lg:max-w-xl"
       src="/un-recuerdo/un-recuerdo-logo.avif"
       alt="Un Recuerdo logo"
       width="795"
       height="166"
-      decoding="async"
     />
     <!-- LONG DESCRIPTION -->
-    <div
-      class="animate__animated animate__fadeInDown text-md w-10/12 py-6 lg:text-2xl"
-    >
+    <div class="animate__animated animate__fadeInDown w-10/12 py-6 lg:text-2xl">
       {{ projects["un_recuerdo"].long_description }}
     </div>
     <!-- SMALL DESCRIPTION -->
     <div
-      class="animate__animated animate__fadeInDown text-md flex w-10/12 flex-row items-center justify-center py-4 sm:py-8 lg:text-xl"
+      class="animate__animated animate__fadeInDown flex w-10/12 flex-row items-center justify-center py-4 sm:py-8 lg:text-xl"
     >
       <img
-        class="mr-4 w-10 text-white content-visibility-auto lg:w-12"
+        class="mr-4 w-10 content-visibility-auto lg:w-12"
         src="/android-chrome-192x192.png"
         alt="Tomate icon"
         width="192"
         height="192"
-        decoding="async"
         loading="lazy"
       />
       <div class="text-left">
         {{ projects["un_recuerdo"].role }}
       </div>
     </div>
-    <!-- TRAILER -->
-    <div
-      class="animate__animated animate__fadeIn flex w-full justify-center py-3 sm:py-6 md:w-11/12"
-    >
+    <!-- VIDEO -->
+    <div class="flex w-full justify-center py-3 sm:py-6">
       <embed-video id="HOMR1tvPWy0" title="Un Recuerdo Short Film" />
     </div>
   </div>

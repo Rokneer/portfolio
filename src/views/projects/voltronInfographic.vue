@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center text-center text-white">
+  <div class="flex flex-col items-center text-center">
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 content-visibility-auto lg:max-w-xl"
@@ -7,25 +7,21 @@
       alt="Voltron Infographic logo"
       width="880"
       height="326"
-      decoding="async"
     />
     <!-- LONG DESCRIPTION -->
-    <div
-      class="animate__animated animate__fadeInDown text-md w-10/12 py-6 lg:text-2xl"
-    >
+    <div class="animate__animated animate__fadeInDown w-10/12 py-6 lg:text-2xl">
       {{ projects["voltron_infographic"].long_description }}
     </div>
     <!-- SMALL DESCRIPTION -->
     <div
-      class="animate__animated animate__fadeInDown text-md flex w-10/12 flex-row items-center justify-center py-4 sm:py-8 lg:text-xl"
+      class="animate__animated animate__fadeInDown flex w-10/12 flex-row items-center justify-center py-4 sm:py-8 lg:text-xl"
     >
       <img
-        class="mr-4 w-10 text-white content-visibility-auto lg:w-12"
+        class="mr-4 w-10 content-visibility-auto lg:w-12"
         src="/android-chrome-192x192.png"
         alt="Tomate icon"
         width="192"
         height="192"
-        decoding="async"
         loading="lazy"
       />
       <div class="text-left">
@@ -35,24 +31,24 @@
     <!-- GAME -->
     <div
       v-if="!isMobile()"
-      class="animate__animated animate__fadeIn flex w-full flex-col justify-center py-3 sm:py-6 md:w-11/12"
+      class="animate__animated animate__fadeIn flex flex-col justify-center py-3 sm:py-6 md:w-11/12"
     >
       <VueUnity class="rounded-lg bg-tertiary-100/30" :unity="unityContext" />
       <div class="flex flex-row-reverse gap-x-4 py-4">
         <Button
-          class="rounded-2xl px-2 py-1 align-middle text-sm sm:px-4 sm:text-base"
+          class="rounded-2xl px-2 py-1 text-sm sm:px-4 sm:text-base"
           :disabled="isUnityDisabled"
           @click="fullScreen"
         >
           FULLSCREEN
-          <icon class="text-md sm:text-lg" icon="mdi-fullscreen" />
+          <icon class="sm:text-lg" icon="mdi-fullscreen" />
         </Button>
       </div>
     </div>
     <!-- IMAGES -->
     <div v-if="isMobile()" class="py-3 sm:py-6">
       <div
-        class="animate__animated animate__fadeInUp mb-3 w-full bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-200 to-tertiary-500 to-75% p-2 text-3xl lg:mb-6 lg:text-4xl"
+        class="animate__animated animate__fadeInUp mb-3 bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-200 to-tertiary-500 to-75% p-2 text-3xl lg:mb-6 lg:text-4xl"
       >
         Gallery
       </div>

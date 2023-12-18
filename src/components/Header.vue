@@ -8,14 +8,14 @@
     }`"
   >
     <nav
-      class="flex w-full flex-row flex-wrap items-center justify-between bg-tertiary-200 px-2 py-3 shadow-sm shadow-tertiary-400 sm:px-4 md:px-6 lg:px-12 xl:px-24"
+      class="flex flex-row flex-wrap items-center justify-between bg-tertiary-200 p-3 shadow-sm shadow-tertiary-400 sm:px-4 md:px-6 lg:px-12 xl:px-24"
     >
       <router-link
         class="flex shrink cursor-pointer justify-start sm:pr-2"
         :to="{ name: 'home' }"
       >
         <img
-          class="h-8 w-full text-center text-white transition duration-150 content-visibility-auto hover:scale-105 sm:h-10"
+          class="h-8 w-full transition content-visibility-auto hover:scale-105 sm:h-10"
           src="/tomato-horizontal-960x.png"
           srcset="
             /tomato-horizontal-960x.png 960w,
@@ -28,7 +28,7 @@
         />
       </router-link>
       <Icon
-        class="mx-2 flex items-center text-2xl text-white transition duration-150 hover:scale-110 sm:hidden"
+        class="mx-2 flex text-2xl transition hover:scale-110 sm:hidden"
         icon="mdi-menu"
         clickable
         @click="showSideMenu = true"
@@ -43,7 +43,7 @@
             Home
           </Button>
         </router-link>
-        <span class="group flex w-full flex-col items-center justify-center">
+        <span class="group flex flex-col items-center justify-center">
           <router-link :to="{ name: 'projects' }">
             <Button
               class="mx-0.5 rounded-2xl px-2 py-1 uppercase sm:mx-1 sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
@@ -114,7 +114,7 @@
       }"
     >
       <Icon
-        class="navbar-close flex self-end rounded-full text-4xl text-white"
+        class="navbar-close flex self-end rounded-full text-4xl"
         icon="mdi-close"
         clickable
         button
@@ -124,7 +124,7 @@
         <li class="py-4">
           <router-link :to="{ name: 'home' }">
             <Button
-              class="navbar-close flex w-full rounded-2xl p-4 text-4xl font-bold uppercase text-white hover:scale-110 hover:text-secondary-200"
+              class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
               type="text"
               @click="showSideMenu = false"
             >
@@ -135,7 +135,7 @@
         <li class="py-4">
           <router-link :to="{ name: 'projects' }">
             <Button
-              class="navbar-close flex w-full rounded-2xl p-4 text-4xl font-bold uppercase text-white hover:scale-110 hover:text-secondary-200"
+              class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
               type="text"
               @click="showSideMenu = false"
             >
@@ -146,7 +146,7 @@
         <li class="py-4">
           <router-link :to="{ name: 'about' }">
             <Button
-              class="navbar-close flex w-full rounded-2xl p-4 text-4xl font-bold uppercase text-white hover:scale-110 hover:text-secondary-200"
+              class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
               type="text"
               @click="showSideMenu = false"
             >
@@ -157,7 +157,7 @@
         <li class="py-4">
           <router-link :to="{ name: 'contact' }">
             <Button
-              class="navbar-close flex w-full rounded-2xl p-4 text-4xl font-bold uppercase text-white hover:scale-110 hover:text-secondary-200"
+              class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
               type="text"
               @click="showSideMenu = false"
             >

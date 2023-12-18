@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center text-center text-white">
+  <div class="flex flex-col items-center text-center">
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 content-visibility-auto xs:w-72 md:w-80 lg:max-w-sm"
@@ -12,11 +12,10 @@
       alt="Souls of Light logo"
       width="576"
       height="576"
-      decoding="async"
     />
     <!-- LONG DESCRIPTION -->
     <div
-      class="animate__animated animate__fadeInDown text-md w-10/12 py-4 sm:py-6 lg:text-2xl"
+      class="animate__animated animate__fadeInDown w-10/12 py-4 sm:py-6 lg:text-2xl"
     >
       {{ projects["souls_of_light"].long_description }}
     </div>
@@ -42,31 +41,42 @@
     </div>
     <!-- SMALL DESCRIPTION -->
     <div
-      class="animate__animated animate__fadeInDown text-md flex w-10/12 flex-row items-center justify-center py-4 sm:py-8 lg:text-xl"
+      class="animate__animated animate__fadeInDown flex w-10/12 flex-row items-center justify-center pb-4 pt-6 lg:text-xl"
     >
       <img
-        class="mr-4 w-10 text-white content-visibility-auto lg:w-12"
+        class="mr-4 w-10 content-visibility-auto lg:w-12"
         src="/android-chrome-192x192.png"
         alt="Tomate icon"
         width="192"
         height="192"
-        decoding="async"
         loading="lazy"
       />
       <div class="text-left">
         {{ projects["souls_of_light"].role }}
       </div>
     </div>
-    <!-- TRAILER -->
+    <!-- GAME -->
     <div
-      class="animate__animated animate__fadeIn flex w-full justify-center py-3 sm:py-6 md:w-11/12"
+      class="animate__animated animate__fadeInDown flex flex-row items-center justify-center pb-6 pt-4 xs:text-xl sm:text-2xl lg:text-3xl"
     >
+      <a
+        href="https://skarddy.itch.io/souls-of-light"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Button class="rounded-2xl px-6 py-1 lg:px-10 xl:px-16" block>
+          Play the game here!
+        </Button>
+      </a>
+    </div>
+    <!-- TRAILER -->
+    <div class="flex w-full justify-center py-3 sm:py-6">
       <embed-video id="iAwDhvxiL7o" title="Souls of Light Trailer" />
     </div>
     <!-- IMAGES -->
     <div class="py-3 sm:py-6">
       <div
-        class="animate__animated animate__fadeInDown mb-4 w-full bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-200 to-tertiary-500 to-75% p-2 text-3xl lg:mb-6 lg:text-4xl"
+        class="animate__animated animate__fadeInDown mb-4 bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-200 to-tertiary-500 to-75% p-2 text-3xl lg:mb-6 lg:text-4xl"
       >
         Gallery
       </div>
@@ -77,6 +87,7 @@
 
 <script setup lang="ts">
 import { projects } from "../../.";
+import Button from "../../components/Button.vue";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";

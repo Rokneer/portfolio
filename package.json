@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,33 +11,32 @@
     "lint-fix": "prettier --write src/ && eslint --ext .ts,.vue --fix src/"
   },
   "dependencies": {
-    "@fontsource/sora": "^5.0.15",
     "@mdi/font": "^7.3.67",
     "animate.css": "^4.1.1",
     "unity-webgl": "^3.5.2",
     "v-viewer": "^3.0.11",
     "viewerjs": "^1.11.6",
-    "vue": "^3.3.9",
+    "vue": "^3.3.12",
     "vue-lite-youtube-embed": "^1.2.1",
     "vue-router": "^4.2.5",
     "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.6.0",
-    "@types/node": "^20.10.1",
+    "@rushstack/eslint-patch": "^1.6.1",
+    "@types/node": "^20.10.4",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "@vitejs/plugin-vue": "^4.5.0",
+    "@vitejs/plugin-vue": "^4.5.2",
     "@vue/eslint-config-prettier": "^7.1.0",
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.54.0",
-    "eslint-plugin-vue": "^9.18.1",
-    "postcss": "^8.4.31",
-    "prettier": "^3.1.0",
-    "prettier-plugin-tailwindcss": "^0.5.7",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5.3.2",
-    "vite": "^4.5.0",
-    "vue-tsc": "^1.8.24"
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
+    "vite": "^4.5.1",
+    "vue-tsc": "^1.8.25"
   }
 }

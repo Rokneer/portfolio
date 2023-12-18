@@ -12,38 +12,43 @@
       hesitate to contact me.
     </div>
     <div
-      class="flex flex-row justify-center gap-x-4 text-center text-xl font-semibold md:gap-x-24 md:text-2xl lg:text-3xl xl:text-4xl"
+      class="animate__animated animate__fadeInUp flex flex-row justify-center gap-x-4 text-center text-lg font-semibold md:gap-x-20 md:text-2xl lg:text-3xl xl:text-4xl"
     >
-      <div
-        class="animate__animated animate__fadeInUp flex flex-col items-center sm:p-4"
-      >
-        <div>Shoot me an email!</div>
+      <div class="flex flex-col items-center">
+        <div class="grow pb-4 md:pb-8">Shoot me an email!</div>
         <img
-          class="w-32 cursor-pointer text-center text-white transition duration-150 content-visibility-auto hover:scale-110 sm:w-44 lg:w-80"
+          class="cursor-pointer transition hover:scale-110"
           src="/email.png"
           alt="Shoot me an email!"
           width="256"
           height="256"
-          decoding="async"
           @click="sendEmail"
         />
       </div>
-      <div
-        class="animate__animated animate__fadeInUp flex flex-col items-center sm:p-4"
-      >
-        <div>Check me out on LinkedIn!</div>
+      <div class="flex flex-col items-center">
+        <div class="grow pb-4 md:pb-8">Look at my CV!</div>
         <a
+          class="transition hover:scale-110"
+          href="https://drive.google.com/file/d/1c11vZkUXzI7QEqjcQp86l1xCUVQTRyqQ"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="/cv.png" alt="Look at my CV!" width="256" height="256" />
+        </a>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="grow pb-4 md:pb-8">Check my LinkedIn!</div>
+        <a
+          class="transition hover:scale-110"
           href="https://www.linkedin.com/in/alejandro-hincapie/"
           target="_blank"
           rel="noreferrer"
         >
           <img
-            class="w-32 text-center text-white transition duration-150 content-visibility-auto hover:scale-110 sm:w-44 lg:w-80"
             src="/linkedin.png"
-            alt="Check me out on LinkedIn!"
+            alt="Check my LinkedIn!"
             width="256"
             height="256"
-            decoding="async"
           />
         </a>
       </div>

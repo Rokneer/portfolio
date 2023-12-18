@@ -5,7 +5,7 @@
       invisible: hide && !showIf,
       visible: isIconSeen,
       'cursor-pointer': clickable === true && isIconSeen && !disabled,
-      'transition duration-150 hover:scale-90':
+      'transition  hover:scale-90':
         clickable === true && button === true && isIconSeen && !disabled,
       'material-icons': !outlined,
       'material-icons-outlined': outlined,

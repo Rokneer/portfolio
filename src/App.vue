@@ -1,8 +1,6 @@
 <template>
   <Header />
-  <div
-    class="w-full overflow-hidden bg-tertiary-500 p-4 text-white xs:p-6 sm:p-8"
-  >
+  <div class="overflow-hidden bg-tertiary-500 p-4 xs:p-6 sm:p-8">
     <router-view />
   </div>
   <Footer />

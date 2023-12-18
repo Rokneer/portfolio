@@ -7,10 +7,10 @@
 import { computed } from "vue";
 import { projects } from "..";
 import ProjectList from "../components/ProjectList.vue";
-const games = computed(() => {
-  return Object.values(projects).filter((game) => game.category === "game");
-});
-const others = computed(() => {
-  return Object.values(projects).filter((game) => game.category === "other");
-});
+const games = computed(() =>
+  Object.values(projects).filter((game) => game.category === "game"),
+);
+const others = computed(() =>
+  Object.values(projects).filter((game) => game.category === "other"),
+);
 </script>

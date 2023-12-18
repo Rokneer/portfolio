@@ -5,12 +5,11 @@
     >
       <div class="w-16 md:w-20">
         <img
-          class="text-center text-white content-visibility-auto"
+          class="content-visibility-auto"
           src="/tomato-logo.png"
           alt="Tomate Logo"
           width="160"
           heigth="160"
-          decoding="async"
           loading="lazy"
         />
       </div>

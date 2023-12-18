@@ -2,12 +2,9 @@
   <div
     class="animate__animated animate__fadeInLeft flex flex-row items-center py-3 sm:py-6 lg:px-12"
   >
-    <router-link
-      class="transition duration-150 hover:scale-105"
-      :to="{ name: 'about' }"
-    >
+    <router-link class="transition hover:scale-105" :to="{ name: 'about' }">
       <img
-        class="w-40 min-w-[8rem] rounded-full bg-secondary-200 p-1 text-center text-white content-visibility-auto sm:w-64 md:w-72 lg:w-80"
+        class="w-40 min-w-[8rem] rounded-full bg-secondary-200 p-1 content-visibility-auto sm:w-64 md:w-72 lg:w-80"
         src="/headshot-624x.avif"
         srcset="/headshot-312x.avif 312w, /headshot-624x.avif 624w"
         sizes="
@@ -20,7 +17,6 @@
         alt="A drawing of the portfolio owner"
         width="624"
         height="624"
-        decoding="async"
       />
     </router-link>
     <div>
@@ -55,7 +51,7 @@
           }"
         >
           <img
-            class="rounded-lg text-center text-white transition duration-150 content-visibility-auto hover:scale-105"
+            class="rounded-lg transition content-visibility-auto hover:scale-105"
             :src="`/portfolio/${project.title}/${project.title}-vertical-768x.avif`"
             :srcset="`
             /portfolio/${project.title}/${project.title}-vertical-768x.avif 768w,
@@ -69,7 +65,6 @@
             :alt="project.title"
             width="768"
             height="1078"
-            decoding="async"
           />
         </router-link>
       </div>
@@ -97,34 +92,3 @@ const carouselItemNumber = computed(() => {
   return 3;
 });
 </script>
-
-<style scoped>
-.carousel__viewport {
-  overflow: visible;
-}
-.carousel__sr-only {
-  overflow: visible;
-}
-.carousel__slide--sliding {
-  transition: 1s;
-}
-.carousel__slide {
-  opacity: 0.9;
-  transform: rotateY(-20deg) scale(0.9);
-}
-.carousel__slide--active ~ .carousel__slide {
-  transform: rotateY(20deg) scale(0.9);
-}
-.carousel__slide--prev {
-  opacity: 1;
-  transform: rotateY(-10deg) scale(0.95);
-}
-.carousel__slide--next {
-  opacity: 1;
-  transform: rotateY(10deg) scale(0.95);
-}
-.carousel__slide--active {
-  opacity: 1;
-  transform: rotateY(0) scale(1.1);
-}
-</style>

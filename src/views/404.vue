@@ -8,7 +8,7 @@
     <div
       class="animate__animated animate__fadeInDown flex flex-col gap-y-6 py-3 text-xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
     >
-      <div>Woops! Couldnt find the page you were looking for.</div>
+      <div>Woops! Couldn't find the page you were looking for.</div>
       <div>
         How about we go back
         <router-link

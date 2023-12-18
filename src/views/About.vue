@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center px-4 py-3 sm:px-16 sm:py-6">
     <img
-      class="animate__animated animate__fadeInLeft object-scale text-center text-white content-visibility-auto"
+      class="animate__animated animate__fadeInLeft object-scale content-visibility-auto"
       src="/tomato-horizontal-960x.png"
       srcset="
         /tomato-horizontal-960x.png 960w,
@@ -11,7 +11,6 @@
       alt="Tomate logo"
       width="960"
       height="225"
-      decoding="async"
     />
   </div>
   <div

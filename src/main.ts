@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import "./style.css";
-import "@fontsource/sora";
 import "@mdi/font/css/materialdesignicons.css";
 import "viewerjs/dist/viewer.css";
 import "animate.css";

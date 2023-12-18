@@ -1,7 +1,7 @@
 <template>
   <div>
     <viewer
-      class="flex flex-row flex-wrap justify-center"
+      class="flex flex-row flex-wrap"
       :images="images"
       :options="{
         toolbar: false,
@@ -31,10 +31,9 @@
             (min-width: 780px) 216px,
             calc(93.04vw - 19px)
           "
-          class="m-2 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 content-visibility-auto hover:scale-105 xs:m-2 md:w-56 lg:m-4 lg:w-[495px]"
+          class="md:w-54 m-2 cursor-pointer rounded-lg border-4 border-secondary-200 bg-secondary-200 transition content-visibility-auto hover:scale-105 xs:m-2 md:m-3 lg:m-4 lg:w-[448px]"
           width="1380"
           height="776"
-          decoding="async"
           loading="lazy"
         />
       </span>
@@ -57,10 +56,9 @@
             (min-width: 1040px) 232px,
             (min-width: 480px) 136px, 120px
           "
-          class="m-2 w-32 cursor-pointer rounded-lg border-4 border-secondary-200 text-center text-white transition duration-150 content-visibility-auto hover:scale-105 xs:m-2 xs:w-36 lg:m-4 lg:w-60 xl:w-[360px]"
+          class="m-2 w-32 cursor-pointer rounded-lg border-4 border-secondary-200 bg-secondary-200 transition content-visibility-auto hover:scale-105 xs:m-2 xs:w-36 lg:m-4 lg:w-60 xl:w-[360px]"
           width="740"
           height="1252"
-          decoding="async"
           loading="lazy"
         />
       </span>
