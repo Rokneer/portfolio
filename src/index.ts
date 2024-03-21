@@ -1,4 +1,4 @@
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 import { Project } from "./types";
 
 // Functions
@@ -14,7 +14,7 @@ export function onWindowResize() {
   return { width, height };
 }
 
-export function isMobile() {
+export const isMobile = computed(() => {
   let check = false;
   (function (a) {
     if (
@@ -28,7 +28,7 @@ export function isMobile() {
       check = true;
   })(navigator.userAgent);
   return check;
-}
+});
 
 export function sendEmail() {
   const email = "alejandro.hincapie.lo@gmail.com";
@@ -37,8 +37,8 @@ export function sendEmail() {
   window.open(`mailto:${email}?subject=${subject}&body=${msgBody}`);
 }
 
-// Globals
-export const projects: Record<string, Project> = {
+// Constanst
+export const PROJECTS: Record<string, Project> = {
   masquerade: {
     title: "masquerade",
     short_description:
@@ -62,7 +62,7 @@ export const projects: Record<string, Project> = {
     short_description:
       "A mysterious 2D puzzle platformer where light is your only ally.",
     long_description:
-      "You wake up in the middle of a cold dark forest, at your side lies a metallamp, a weak ember appears to burn inside it. In front of you an enormouscastle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover thewalls. A chill runs down your spine, you try to remember who you are, whyyou are here, but your mind is blank. Who knows what other mysteries lieahead in this darken path.",
+      "You wake up in the middle of a cold dark forest, at your side lies a metallamp, a weak ember appears to burn inside it. In front of you an enormous castle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover thewalls. A chill runs down your spine, you try to remember who you are, whyyou are here, but your mind is blank. Who knows what other mysteries lieahead in this darken path.",
     role: "I worked as the game designer, level designer and script writer for this project.",
     category: "game",
   },
@@ -79,7 +79,7 @@ export const projects: Record<string, Project> = {
     short_description:
       "An interactive introduction to the world of Voltron: The Legendary Defender",
     long_description:
-      "Meet the many characters of the Voltron: The Legendary Defender universe in this interactive infrografic. Learn their stories, the planets they visited, their and much more in this thematic informative piece.",
+      "Meet the many characters of the Voltron: The Legendary Defender universe in this interactive infographic. Learn their stories, the planets they visited, their and much more in this thematic informative piece.",
     role: "I worked as developer, UI & UX designer, programmer and animator for this project.",
     category: "other",
   },

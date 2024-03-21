@@ -17,7 +17,7 @@
     <div
       class="animate__animated animate__fadeInDown w-10/12 py-4 sm:py-6 lg:text-2xl"
     >
-      {{ projects["souls_of_light"].long_description }}
+      {{ PROJECTS["souls_of_light"].long_description }}
     </div>
     <!-- FEATURES -->
     <div
@@ -52,7 +52,7 @@
         loading="lazy"
       />
       <div class="text-left">
-        {{ projects["souls_of_light"].role }}
+        {{ PROJECTS["souls_of_light"].role }}
       </div>
     </div>
     <!-- GAME -->
@@ -80,19 +80,20 @@
       >
         Gallery
       </div>
-      <image-viewer :images="images" orientation="horizontal" />
+      <image-viewer :images="IMAGES" orientation="horizontal" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { projects } from "../../.";
+import { PROJECTS } from "../../.";
 import Button from "../../components/Button.vue";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 
-const images = [
+// Constants
+const IMAGES = [
   {
     src: "/portfolio/souls-of-light/souls-of-light-1",
     alt: "An image of a dark castle room illuminated by red lamp light. A floating bright emblem sits on top of a skeleton.",

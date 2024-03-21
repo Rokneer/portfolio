@@ -17,6 +17,8 @@
 
 <script setup lang="ts">
 import Icon from "./Icon.vue";
+
+// Properties
 defineProps<{
   title: string;
   icon: string;

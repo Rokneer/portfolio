@@ -17,7 +17,7 @@
     <div
       class="animate__animated animate__fadeInDown w-10/12 py-4 sm:py-6 lg:text-2xl"
     >
-      {{ projects["potion_rush"].long_description }}
+      {{ PROJECTS["potion_rush"].long_description }}
     </div>
     <!-- FEATURES -->
     <div
@@ -52,7 +52,7 @@
         loading="lazy"
       />
       <div class="text-left">
-        {{ projects["potion_rush"].role }}
+        {{ PROJECTS["potion_rush"].role }}
       </div>
     </div>
     <!-- GAME -->
@@ -76,18 +76,19 @@
       >
         Gallery
       </div>
-      <image-viewer :images="images" orientation="vertical" />
+      <image-viewer :images="IMAGES" orientation="vertical" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { projects } from "../../.";
+import { PROJECTS } from "../../.";
 import Button from "../../components/Button.vue";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 
-const images = [
+// Constants
+const IMAGES = [
   {
     src: "/portfolio/potion-rush/potion-rush-1",
     alt: "A comic depicting a potion shop in the middle of a city. Two customers walk in, the first one leaves angrily, the second one waits.",

@@ -16,6 +16,10 @@
 </template>
 
 <script setup lang="ts">
+// Types
+type ButtonStyles = "main" | "plain" | "text";
+
+// Properties
 withDefaults(
   defineProps<{
     type?: ButtonStyles;
@@ -26,6 +30,4 @@ withDefaults(
     type: "main",
   },
 );
-
-type ButtonStyles = "main" | "plain" | "text";
 </script>

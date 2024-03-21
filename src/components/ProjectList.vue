@@ -63,6 +63,7 @@
 <script setup lang="ts">
 import { Project } from "../types";
 
+// Properties
 defineProps<{
   projectType: "games" | "others";
   projects: Project[];

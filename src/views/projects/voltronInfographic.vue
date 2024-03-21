@@ -10,7 +10,7 @@
     />
     <!-- LONG DESCRIPTION -->
     <div class="animate__animated animate__fadeInDown w-10/12 py-6 lg:text-2xl">
-      {{ projects["voltron_infographic"].long_description }}
+      {{ PROJECTS["voltron_infographic"].long_description }}
     </div>
     <!-- SMALL DESCRIPTION -->
     <div
@@ -25,12 +25,12 @@
         loading="lazy"
       />
       <div class="text-left">
-        {{ projects["voltron_infographic"].role }}
+        {{ PROJECTS["voltron_infographic"].role }}
       </div>
     </div>
     <!-- GAME -->
     <div
-      v-if="!isMobile()"
+      v-if="!isMobile"
       class="animate__animated animate__fadeIn flex flex-col justify-center py-3 sm:py-6 md:w-11/12"
     >
       <VueUnity class="rounded-lg bg-tertiary-100/30" :unity="unityContext" />
@@ -46,28 +46,29 @@
       </div>
     </div>
     <!-- IMAGES -->
-    <div v-if="isMobile()" class="py-3 sm:py-6">
+    <div v-if="isMobile" class="py-3 sm:py-6">
       <div
         class="animate__animated animate__fadeInUp mb-3 bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-200 to-tertiary-500 to-75% p-2 text-3xl lg:mb-6 lg:text-4xl"
       >
         Gallery
       </div>
-      <image-viewer :images="images" orientation="horizontal" />
+      <image-viewer :images="IMAGES" orientation="horizontal" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, onUnmounted } from "vue";
-import { projects, isMobile } from "../../.";
+import { PROJECTS, isMobile } from "../../.";
 import Button from "../../components/Button.vue";
 import Icon from "../../components/Icon.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 import UnityWebgl from "unity-webgl";
 import VueUnity from "unity-webgl/vue";
 
+// Computed
 const unityContext = computed(() => {
-  if (isMobile()) return {} as UnityWebgl;
+  if (isMobile.value) return {} as UnityWebgl;
   return new UnityWebgl({
     loaderUrl: "/portfolio/build/voltron-build.loader.js",
     dataUrl: "/portfolio/build/voltron-build.data",
@@ -78,13 +79,14 @@ const unityContext = computed(() => {
     productVersion: "1.0.0",
   });
 });
-const isUnityDisabled = computed(() => {
-  return (
+const isUnityDisabled = computed(
+  () =>
     Object.keys(unityContext.value).length === 0 &&
-    unityContext.value.constructor === Object
-  );
-});
-const images = [
+    unityContext.value.constructor === Object,
+);
+
+// Constants
+const IMAGES = [
   {
     src: "/portfolio/voltron-infographic/voltron-infographic-1",
     alt: "An image displaying Voltron from Voltron: Legendary Defender, three of the show's main planets: Altea, Daibazal and Balmera, as well as the Lion's Castle spaceship and an edited version of the show's logo.",
@@ -111,6 +113,7 @@ const images = [
   },
 ];
 
+// Lifecycle
 onUnmounted(() => {
   if (!isUnityDisabled.value) return;
   unityContext.value.unload();

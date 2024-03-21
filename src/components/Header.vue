@@ -27,7 +27,7 @@
           height="225"
         />
       </router-link>
-      <Icon
+      <icon
         class="mx-2 flex text-2xl transition hover:scale-110 sm:hidden"
         icon="mdi-menu"
         clickable
@@ -43,40 +43,48 @@
             Home
           </Button>
         </router-link>
-        <span class="group flex flex-col items-center justify-center">
+        <span
+          class="group flex flex-col items-center justify-center"
+          @mouseleave="isHoveringPortfolio = false"
+        >
           <router-link :to="{ name: 'projects' }">
             <Button
               class="mx-0.5 rounded-2xl px-2 py-1 uppercase sm:mx-1 sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
+              tabindex="1"
+              @mouseover="isHoveringPortfolio = true"
             >
               Portfolio
             </Button>
           </router-link>
-          <span
-            class="invisible absolute top-8 z-50 pt-2 sm:top-12"
-            :class="{ 'group-hover:visible': !isMobile() }"
+          <transition
+            v-if="!isMobile"
+            enter-active-class="animate__animated animate__fadeIn animate__faster"
+            leave-active-class="animate__animated animate__fadeOut animate__faster"
+            @mouseover="isHoveringPortfolio = true"
           >
-            <ul
-              class="flex flex-col justify-center rounded-b-xl bg-gradient-to-t from-tertiary-400 from-85% to-tertiary-200 to-95% px-2 py-1 sm:px-3 sm:py-2"
+            <span
+              v-if="isHoveringPortfolio"
+              class="absolute top-8 z-50 pt-2 sm:top-12"
             >
-              <li
-                v-for="(project, index) in projects"
-                :key="index"
-                class="py-1.5"
+              <ul
+                class="flex flex-col justify-center rounded-b-xl bg-gradient-to-t from-tertiary-400 from-85% to-tertiary-200 to-95% px-2 py-1 sm:px-3 sm:py-2"
               >
-                <router-link
-                  :to="{
-                    name: `${project.title}`,
-                  }"
+                <li
+                  v-for="(project, index) in PROJECTS"
+                  :key="index"
+                  class="py-1.5"
                 >
-                  <Button
-                    class="w-20 rounded-xl p-0.5 text-[9.6px] uppercase sm:w-28 sm:rounded-2xl sm:py-1 sm:text-xs md:w-32 md:text-sm lg:w-48 xl:text-base"
-                  >
-                    {{ project.title.replace(/-/g, " ") }}
-                  </Button>
-                </router-link>
-              </li>
-            </ul>
-          </span>
+                  <router-link :to="{ name: `${project.title}` }">
+                    <Button
+                      class="w-20 rounded-xl p-0.5 text-[9.6px] uppercase sm:w-28 sm:rounded-2xl sm:py-1 sm:text-xs md:w-32 md:text-sm lg:w-48 xl:text-base"
+                    >
+                      {{ project.title.replace(/-/g, " ") }}
+                    </Button>
+                  </router-link>
+                </li>
+              </ul>
+            </span>
+          </transition>
         </span>
         <router-link :to="{ name: 'about' }">
           <Button
@@ -95,97 +103,88 @@
       </div>
     </nav>
   </div>
-  <div
-    class="navbar-menu relative z-50"
-    :class="[
-      { hidden: !showSideMenu },
-      `${
-        showHeader
-          ? 'animate__fadeInDown animate__faster'
-          : 'animate__fadeOutUp animate__faster'
-      }`,
-    ]"
-  >
-    <nav
-      class="animate__animated fixed bottom-0 left-0 top-0 flex w-full flex-col overflow-y-auto bg-gradient-to-t from-tertiary-400/95 from-40% to-tertiary-500/95 p-8"
-      :class="{
-        animate__slideInLeft: showSideMenu,
-        animate__slideOutLeft: !showSideMenu,
-      }"
+  <div class="navbar-menu relative z-50">
+    <transition
+      enter-active-class="animate__animated animate__slideInLeft"
+      leave-active-class="animate__animated animate__slideOutLeft"
     >
-      <Icon
-        class="navbar-close flex self-end rounded-full text-4xl"
-        icon="mdi-close"
-        clickable
-        button
-        @click="showSideMenu = false"
-      />
-      <ul class="flex h-full flex-col items-center justify-center">
-        <li class="py-4">
-          <router-link :to="{ name: 'home' }">
-            <Button
-              class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
-              type="text"
-              @click="showSideMenu = false"
-            >
-              Home
-            </Button>
-          </router-link>
-        </li>
-        <li class="py-4">
-          <router-link :to="{ name: 'projects' }">
-            <Button
-              class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
-              type="text"
-              @click="showSideMenu = false"
-            >
-              Portfolio
-            </Button>
-          </router-link>
-        </li>
-        <li class="py-4">
-          <router-link :to="{ name: 'about' }">
-            <Button
-              class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
-              type="text"
-              @click="showSideMenu = false"
-            >
-              About
-            </Button>
-          </router-link>
-        </li>
-        <li class="py-4">
-          <router-link :to="{ name: 'contact' }">
-            <Button
-              class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
-              type="text"
-              @click="showSideMenu = false"
-            >
-              Contact
-            </Button>
-          </router-link>
-        </li>
-      </ul>
-    </nav>
+      <nav
+        v-if="showSideMenu"
+        class="fixed bottom-0 left-0 top-0 flex w-full flex-col overflow-y-auto bg-gradient-to-t from-tertiary-400/95 from-40% to-tertiary-500/95 p-8"
+      >
+        <Icon
+          class="navbar-close flex self-end rounded-full text-4xl"
+          icon="mdi-close"
+          clickable
+          button
+          @click="showSideMenu = false"
+        />
+        <ul class="flex h-full flex-col items-center justify-center">
+          <li class="py-4">
+            <router-link :to="{ name: 'home' }">
+              <Button
+                class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
+                type="text"
+                @click="showSideMenu = false"
+              >
+                Home
+              </Button>
+            </router-link>
+          </li>
+          <li class="py-4">
+            <router-link :to="{ name: 'projects' }">
+              <Button
+                class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
+                type="text"
+                @click="showSideMenu = false"
+              >
+                Portfolio
+              </Button>
+            </router-link>
+          </li>
+          <li class="py-4">
+            <router-link :to="{ name: 'about' }">
+              <Button
+                class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
+                type="text"
+                @click="showSideMenu = false"
+              >
+                About
+              </Button>
+            </router-link>
+          </li>
+          <li class="py-4">
+            <router-link :to="{ name: 'contact' }">
+              <Button
+                class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
+                type="text"
+                @click="showSideMenu = false"
+              >
+                Contact
+              </Button>
+            </router-link>
+          </li>
+        </ul>
+      </nav>
+    </transition>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, watch } from "vue";
-import { projects, isMobile } from "..";
+import { onMounted, ref, watch } from "vue";
+import { PROJECTS, isMobile } from "..";
 import Button from "./Button.vue";
 import Icon from "./Icon.vue";
 
+// State
 const showSideMenu = ref(false);
 const showHeader = ref(true);
+const isHoveringPortfolio = ref(false);
 const lastScrollPosition = ref(0);
 const scrollOffset = 40;
-onMounted(() => {
-  window.addEventListener("scroll", onScroll);
-});
-onUnmounted(() => {
-  window.removeEventListener("scroll", onScroll);
-});
+
+// Lifecycle
+onMounted(() => window.addEventListener("scroll", onScroll));
 
 document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelectorAll(".navbar-menu");
@@ -215,7 +214,7 @@ watch(showSideMenu, () => {
   window.scrollTo(0, parseInt(scrollY || "0") * -1);
 });
 
-// Function
+// Functions
 function onScroll() {
   if (window.scrollY < 0) return;
   if (Math.abs(window.scrollY - lastScrollPosition.value) < scrollOffset)

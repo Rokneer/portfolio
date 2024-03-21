@@ -40,7 +40,7 @@
     pause-autoplay-on-hover
   >
     <Slide
-      v-for="project in projects"
+      v-for="project in PROJECTS"
       :key="project.title"
       class="flex justify-center p-2 xs:px-2 xs:py-4 sm:px-6 sm:py-4 xl:p-6"
     >
@@ -84,7 +84,7 @@
 import "../carousel-custom.css";
 import { Carousel, Slide } from "vue3-carousel";
 import { computed } from "vue";
-import { sendEmail, projects, onWindowResize } from "..";
+import { sendEmail, PROJECTS, onWindowResize } from "..";
 import Button from "../components/Button.vue";
 
 const carouselItemNumber = computed(() => {

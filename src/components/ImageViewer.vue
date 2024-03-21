@@ -67,6 +67,7 @@
 </template>
 
 <script setup lang="ts">
+// Properties
 defineProps<{
   images: { src: string; alt: string }[];
   orientation: "horizontal" | "vertical";

@@ -17,7 +17,7 @@
     <div
       class="animate__animated animate__fadeInDown w-10/12 py-4 sm:py-6 lg:text-2xl"
     >
-      {{ projects["masquerade"].long_description }}
+      {{ PROJECTS["masquerade"].long_description }}
     </div>
     <!-- FEATURES -->
     <div
@@ -52,7 +52,7 @@
         loading="lazy"
       />
       <div class="text-left">
-        {{ projects["masquerade"].role }}
+        {{ PROJECTS["masquerade"].role }}
       </div>
     </div>
     <!-- GAME -->
@@ -89,19 +89,20 @@
       >
         Gallery
       </div>
-      <image-viewer :images="images" orientation="horizontal" />
+      <image-viewer :images="IMAGES" orientation="horizontal" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { projects } from "../../.";
+import { PROJECTS } from "../../.";
 import Button from "../../components/Button.vue";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 
-const images = [
+// Constants
+const IMAGES = [
   {
     src: "/portfolio/masquerade/masquerade-1",
     alt: "An image of a colorful house with trees at its sides at night. A figure wearing a squirrel mask stands at the right of the house.",
