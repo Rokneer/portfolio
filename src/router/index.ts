@@ -7,6 +7,7 @@ import Masquerade from "../views/projects/masquerade.vue";
 import PotionRush from "../views/projects/potionRush.vue";
 import SoulsOflight from "../views/projects/soulsOfLight.vue";
 import UnRecuerdo from "../views/projects/unRecuerdo.vue";
+import CaveDwellers from "../views/projects/caveDwellers.vue";
 import VoltronInfographic from "../views/projects/voltronInfographic.vue";
 import NotFound from "../views/404.vue";
 
@@ -35,6 +36,11 @@ const routes = [
     path: "/projects/souls-of-light",
     name: "souls-of-light",
     component: SoulsOflight,
+  },
+  {
+    path: "/projects/cave-dwellers",
+    name: "cave-dwellers",
+    component: CaveDwellers,
   },
   {
     path: "/projects/un-recuerdo",

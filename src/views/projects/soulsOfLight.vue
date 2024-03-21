@@ -57,17 +57,18 @@
     </div>
     <!-- GAME -->
     <div
-      class="animate__animated animate__fadeInDown flex flex-row items-center justify-center pb-6 pt-4 xs:text-xl sm:text-2xl lg:text-3xl"
+      class="animate__animated animate__fadeInDown flex items-center justify-center pb-6 pt-4 xs:text-xl sm:text-2xl lg:text-3xl"
     >
-      <a
-        href="https://skarddy.itch.io/souls-of-light"
-        target="_blank"
-        rel="noreferrer"
+      <iframe
+        frameborder="0"
+        src="https://itch.io/embed/2598860?bg_color=820046&amp;fg_color=ffffff&amp;link_color=9A00DB&amp;border_color=ffffff"
+        width="552"
+        height="167"
       >
-        <Button class="rounded-2xl px-6 py-1 lg:px-10 xl:px-16" block>
-          Play the game here!
-        </Button>
-      </a>
+        <a href="https://rokneer.itch.io/souls-of-light">
+          Souls of Light by Rokneer
+        </a>
+      </iframe>
     </div>
     <!-- TRAILER -->
     <div class="flex w-full justify-center py-3 sm:py-6">
@@ -87,7 +88,6 @@
 
 <script setup lang="ts">
 import { PROJECTS } from "../../.";
-import Button from "../../components/Button.vue";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";

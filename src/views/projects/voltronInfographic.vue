@@ -30,23 +30,20 @@
     </div>
     <!-- GAME -->
     <div
-      v-if="!isMobile"
-      class="animate__animated animate__fadeIn flex flex-col justify-center py-3 sm:py-6 md:w-11/12"
+      class="animate__animated animate__fadeInDown flex items-center justify-center pb-6 pt-4 xs:text-xl sm:text-2xl lg:text-3xl"
     >
-      <VueUnity class="rounded-lg bg-tertiary-100/30" :unity="unityContext" />
-      <div class="flex flex-row-reverse gap-x-4 py-4">
-        <Button
-          class="rounded-2xl px-2 py-1 text-sm sm:px-4 sm:text-base"
-          :disabled="isUnityDisabled"
-          @click="fullScreen"
-        >
-          FULLSCREEN
-          <icon class="sm:text-lg" icon="mdi-fullscreen" />
-        </Button>
-      </div>
+      <iframe
+        frameborder="0"
+        src="https://itch.io/embed/2598849?bg_color=A20058&amp;fg_color=ffffff&amp;link_color=9a00db&amp;border_color=ffffff"
+        width="552"
+        height="167"
+      >
+        <a href="https://rokneer.itch.io/voltron-infographic">
+          Voltron Infographic by Rokneer
+        </a>
+      </iframe>
     </div>
-    <!-- IMAGES -->
-    <div v-if="isMobile" class="py-3 sm:py-6">
+    <div class="py-3 sm:py-6">
       <div
         class="animate__animated animate__fadeInUp mb-3 bg-gradient-to-l from-tertiary-500 from-25% via-tertiary-200 to-tertiary-500 to-75% p-2 text-3xl lg:mb-6 lg:text-4xl"
       >
@@ -58,32 +55,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onUnmounted } from "vue";
-import { PROJECTS, isMobile } from "../../.";
-import Button from "../../components/Button.vue";
-import Icon from "../../components/Icon.vue";
+import { PROJECTS } from "../../.";
 import ImageViewer from "../../components/ImageViewer.vue";
-import UnityWebgl from "unity-webgl";
-import VueUnity from "unity-webgl/vue";
-
-// Computed
-const unityContext = computed(() => {
-  if (isMobile.value) return {} as UnityWebgl;
-  return new UnityWebgl({
-    loaderUrl: "/portfolio/build/voltron-build.loader.js",
-    dataUrl: "/portfolio/build/voltron-build.data",
-    frameworkUrl: "/portfolio/build/voltron-build.framework.js",
-    codeUrl: "/portfolio/build/voltron-build.wasm",
-    companyName: "Tomate Dev",
-    productName: "Voltron Infographic",
-    productVersion: "1.0.0",
-  });
-});
-const isUnityDisabled = computed(
-  () =>
-    Object.keys(unityContext.value).length === 0 &&
-    unityContext.value.constructor === Object,
-);
 
 // Constants
 const IMAGES = [
@@ -112,16 +85,4 @@ const IMAGES = [
     alt: "An image displaying three detailed weapon descriptions from Voltron: Legendary Defender, the weapons are separated into their pieces. To the left is Voltron's energy shield, to the upper right is Voltron's shoulder mounted laser cannon and to the lower right is Voltron's energy sword, its main weapon.",
   },
 ];
-
-// Lifecycle
-onUnmounted(() => {
-  if (!isUnityDisabled.value) return;
-  unityContext.value.unload();
-});
-
-// Functions
-function fullScreen() {
-  if (isUnityDisabled.value) return;
-  unityContext.value.setFullscreen(true);
-}
 </script>

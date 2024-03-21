@@ -66,6 +66,15 @@ export const PROJECTS: Record<string, Project> = {
     role: "I worked as the game designer, level designer and script writer for this project.",
     category: "game",
   },
+  cave_dwellers: {
+    title: "cave-dwellers",
+    short_description:
+      "A charming little 2D platformer where you look for treasure in a dark and dangerous cave.",
+    long_description:
+      "​Trapped in a dark cave, your light is running out, its only a matter of time before the darkness engulfs you.​",
+    role: "I worked as the sole developer and game designer and level designer for this project.",
+    category: "game",
+  },
   un_recuerdo: {
     title: "un-recuerdo",
     short_description: "A short film about memories and unconditional love.",

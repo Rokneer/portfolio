@@ -57,17 +57,16 @@
     </div>
     <!-- GAME -->
     <div
-      class="animate__animated animate__fadeInDown flex flex-col items-center justify-center gap-4 pb-6 pt-4 xs:text-xl sm:text-2xl md:flex-row md:gap-x-8 lg:text-3xl"
+      class="animate__animated animate__fadeInDown flex flex-col items-center justify-center gap-y-6 py-4 xs:text-xl sm:text-2xl md:gap-x-8 lg:text-3xl"
     >
-      <a
-        href="https://drive.google.com/file/d/1hsa1XxITBS-2SOhCsxEXsK6_i_S_exIN"
-        target="_blank"
-        rel="noreferrer"
+      <iframe
+        frameborder="0"
+        src="https://itch.io/embed/2598761?bg_color=820046&amp;fg_color=ffffff&amp;link_color=9a00db&amp;border_color=ffffff"
+        width="554"
+        height="169"
       >
-        <Button class="rounded-2xl px-6 py-1 lg:px-10 xl:px-16" block>
-          Download the game here!
-        </Button>
-      </a>
+        <a href="https://rokneer.itch.io/masquerade">Masquerade by Rokneer</a>
+      </iframe>
       <a
         href="https://issuu.com/alejandrohincapie4/docs/masquerade_art_book"
         target="_blank"
