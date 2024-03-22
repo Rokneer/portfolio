@@ -37,24 +37,24 @@
         class="hidden justify-end text-xs font-semibold sm:flex sm:text-sm md:text-base"
       >
         <router-link :to="{ name: 'home' }">
-          <Button
+          <basic-button
             class="mx-0.5 rounded-2xl px-2 py-1 uppercase sm:mx-1 sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
             Home
-          </Button>
+          </basic-button>
         </router-link>
         <span
           class="group flex flex-col items-center justify-center"
           @mouseleave="isHoveringPortfolio = false"
         >
           <router-link :to="{ name: 'projects' }">
-            <Button
+            <basic-button
               class="mx-0.5 rounded-2xl px-2 py-1 uppercase sm:mx-1 sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
               tabindex="1"
               @mouseover="isHoveringPortfolio = true"
             >
               Portfolio
-            </Button>
+            </basic-button>
           </router-link>
           <transition
             v-if="!isMobile"
@@ -75,11 +75,11 @@
                   class="py-1.5"
                 >
                   <router-link :to="{ name: `${project.title}` }">
-                    <Button
+                    <basic-button
                       class="w-20 rounded-xl p-0.5 text-[9.6px] uppercase sm:w-28 sm:rounded-2xl sm:py-1 sm:text-xs md:w-32 md:text-sm lg:w-48 xl:text-base"
                     >
                       {{ project.title.replace(/-/g, " ") }}
-                    </Button>
+                    </basic-button>
                   </router-link>
                 </li>
               </ul>
@@ -87,18 +87,18 @@
           </transition>
         </span>
         <router-link :to="{ name: 'about' }">
-          <Button
+          <basic-button
             class="mx-0.5 rounded-2xl px-2 py-1 uppercase sm:mx-1 sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
             About
-          </Button>
+          </basic-button>
         </router-link>
         <router-link :to="{ name: 'contact' }">
-          <Button
+          <basic-button
             class="mx-0.5 rounded-2xl px-2 py-1 uppercase sm:mx-1 sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
             Contact
-          </Button>
+          </basic-button>
         </router-link>
       </div>
     </nav>
@@ -122,46 +122,46 @@
         <ul class="flex h-full flex-col items-center justify-center">
           <li class="py-4">
             <router-link :to="{ name: 'home' }">
-              <Button
+              <basic-button
                 class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
                 type="text"
                 @click="showSideMenu = false"
               >
                 Home
-              </Button>
+              </basic-button>
             </router-link>
           </li>
           <li class="py-4">
             <router-link :to="{ name: 'projects' }">
-              <Button
+              <basic-button
                 class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
                 type="text"
                 @click="showSideMenu = false"
               >
                 Portfolio
-              </Button>
+              </basic-button>
             </router-link>
           </li>
           <li class="py-4">
             <router-link :to="{ name: 'about' }">
-              <Button
+              <basic-button
                 class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
                 type="text"
                 @click="showSideMenu = false"
               >
                 About
-              </Button>
+              </basic-button>
             </router-link>
           </li>
           <li class="py-4">
             <router-link :to="{ name: 'contact' }">
-              <Button
+              <basic-button
                 class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
                 type="text"
                 @click="showSideMenu = false"
               >
                 Contact
-              </Button>
+              </basic-button>
             </router-link>
           </li>
         </ul>
@@ -173,7 +173,7 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
 import { PROJECTS, isMobile } from "..";
-import Button from "./Button.vue";
+import BasicButton from "./BasicButton.vue";
 import Icon from "./Icon.vue";
 
 // State

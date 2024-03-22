@@ -71,12 +71,12 @@
     </Slide>
   </Carousel>
   <div class="animate__animated animate__fadeInUp flex justify-center py-6">
-    <Button
+    <basic-button
       class="rounded-lg px-4 py-1.5 text-sm uppercase sm:px-8 sm:text-2xl md:text-3xl lg:text-4xl"
       @click="sendEmail"
     >
       alejandro.hincapie.lo@gmail.com
-    </Button>
+    </basic-button>
   </div>
 </template>
 
@@ -85,7 +85,7 @@ import "../carousel-custom.css";
 import { Carousel, Slide } from "vue3-carousel";
 import { computed } from "vue";
 import { sendEmail, PROJECTS, onWindowResize } from "..";
-import Button from "../components/Button.vue";
+import BasicButton from "../components/BasicButton.vue";
 
 const carouselItemNumber = computed(() => {
   if (onWindowResize().width.value >= 780) return 5;

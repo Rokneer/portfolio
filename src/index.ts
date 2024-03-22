@@ -72,7 +72,7 @@ export const PROJECTS: Record<string, Project> = {
       "A charming little 2D platformer where you look for treasure in a dark and dangerous cave.",
     long_description:
       "​Trapped in a dark cave, your light is running out, its only a matter of time before the darkness engulfs you.​",
-    role: "I worked as the sole developer and game designer and level designer for this project.",
+    role: "I worked as the sole developer, game designer and level designer for this project.",
     category: "game",
   },
   un_recuerdo: {
@@ -88,7 +88,7 @@ export const PROJECTS: Record<string, Project> = {
     short_description:
       "An interactive introduction to the world of Voltron: The Legendary Defender",
     long_description:
-      "Meet the many characters of the Voltron: The Legendary Defender universe in this interactive infographic. Learn their stories, the planets they visited, their and much more in this thematic informative piece.",
+      "Meet the many characters of the Voltron: The Legendary Defender universe in this interactive infographic. Learn their stories, the planets they visited and much more in this thematic informative piece.",
     role: "I worked as developer, UI & UX designer, programmer and animator for this project.",
     category: "other",
   },

@@ -72,9 +72,9 @@
         target="_blank"
         rel="noreferrer"
       >
-        <Button class="rounded-2xl px-6 py-1 lg:px-10 xl:px-16" block>
+        <basic-button class="rounded-2xl px-6 py-1 lg:px-10 xl:px-16" block>
           Check out the art book here!
-        </Button>
+        </basic-button>
       </a>
     </div>
     <!-- TRAILER -->
@@ -95,7 +95,7 @@
 
 <script setup lang="ts">
 import { PROJECTS } from "../../.";
-import Button from "../../components/Button.vue";
+import BasicButton from "../../components/BasicButton.vue";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";

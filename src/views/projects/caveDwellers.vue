@@ -24,19 +24,19 @@
       class="animate__animated animate__fadeInDown flex w-10/12 flex-col items-center justify-center gap-y-4 py-4 sm:gap-x-4 sm:py-6 md:flex-row md:items-stretch md:gap-x-8 lg:gap-x-16"
     >
       <feature-box
-        title="Jump"
+        title="Explore"
         icon="mdi-arrow-up-thick"
-        description="Placeholder"
+        description="Dodge traps and stomp enemies, dashing your way through the dangers that you encounter."
       />
       <feature-box
         title="Shine"
         icon="mdi-star-four-points"
-        description="Placeholder"
+        description="Keep you and your light alive to force away the encroaching darkness that surrounds you."
       />
       <feature-box
-        title="Tresure"
+        title="Loot"
         icon="mdi-treasure-chest"
-        description="Placeholder"
+        description="Collect shiny coins and gems hidden away in the dephts of the cave."
       />
     </div>
     <!-- SMALL DESCRIPTION -->
