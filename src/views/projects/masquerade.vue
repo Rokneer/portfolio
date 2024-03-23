@@ -3,10 +3,10 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 content-visibility-auto xs:w-72 md:w-80 lg:max-w-sm"
-      src="/masquerade/masquerade-logo-576x.avif"
+      src="/masquerade/masquerade-logo-576x.png"
       srcset="
-        /masquerade/masquerade-logo-576x.avif 576w,
-        /masquerade/masquerade-logo-288x.avif 288w
+        /masquerade/masquerade-logo-576x.png 576w,
+        /masquerade/masquerade-logo-288x.png 288w
       "
       sizes="(min-width: 780px) 288px, (min-width: 480px) 256px, 208px"
       alt="Masquerade logo"

@@ -3,10 +3,10 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 content-visibility-auto xs:w-72 md:w-80 lg:max-w-sm"
-      src="/potion-rush/potion-rush-logo-576x.avif"
+      src="/potion-rush/potion-rush-logo-576x.png"
       srcset="
-        /potion-rush/potion-rush-logo-576x.avif 576w,
-        /potion-rush/potion-rush-logo-288x.avif 288w
+        /potion-rush/potion-rush-logo-576x.png 576w,
+        /potion-rush/potion-rush-logo-288x.png 288w
       "
       sizes="(min-width: 780px) 288px, (min-width: 480px) 256px, 208px"
       alt="Potion Rush logo"
@@ -66,7 +66,7 @@
         height="167"
       >
         <a href="https://rokneer.itch.io/potion-rush">
-          Potion Rush by Rokneer
+          Potion Rush by Rokneer, Ani
         </a>
       </iframe>
     </div>

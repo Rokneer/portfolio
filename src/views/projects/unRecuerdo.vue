@@ -3,7 +3,7 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 content-visibility-auto lg:max-w-xl"
-      src="/un-recuerdo/un-recuerdo-logo.avif"
+      src="/un-recuerdo/un-recuerdo-logo.png"
       alt="Un Recuerdo logo"
       width="795"
       height="166"

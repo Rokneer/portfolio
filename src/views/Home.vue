@@ -5,8 +5,8 @@
     <router-link class="transition hover:scale-105" :to="{ name: 'about' }">
       <img
         class="w-40 min-w-[8rem] rounded-full bg-secondary-200 p-1 content-visibility-auto sm:w-64 md:w-72 lg:w-80"
-        src="/headshot-624x.avif"
-        srcset="/headshot-312x.avif 312w, /headshot-624x.avif 624w"
+        src="/headshot-624x.png"
+        srcset="/headshot-312x.png 312w, /headshot-624x.png 624w"
         sizes="
           (min-width: 1920px) 312px,
           (min-width: 1280px) 16.45vw,
@@ -52,10 +52,10 @@
         >
           <img
             class="rounded-lg transition content-visibility-auto hover:scale-105"
-            :src="`/portfolio/${project.title}/${project.title}-vertical-768x.avif`"
+            :src="`/portfolio/${project.title}/${project.title}-vertical-768x.png`"
             :srcset="`
-            /portfolio/${project.title}/${project.title}-vertical-768x.avif 768w,
-            /portfolio/${project.title}/${project.title}-vertical-384x.avif 384w
+            /portfolio/${project.title}/${project.title}-vertical-768x.png 768w,
+            /portfolio/${project.title}/${project.title}-vertical-384x.png 384w
             `"
             sizes="
               (min-width: 2360px) 384px,

@@ -21,13 +21,13 @@
         >
           <img
             class="animate__animated animate__fadeInLeft rounded-3xl border-2 border-secondary-200 bg-secondary-200 object-scale-down content-visibility-auto sm:border-4"
-            :src="`/portfolio/${project.title}/${project.title}-horizontal-2048x.avif`"
+            :src="`/portfolio/${project.title}/${project.title}-horizontal-2048x.png`"
             :srcset="`
-              /portfolio/${project.title}/${project.title}-horizontal-2048x.avif 2048w,
-              /portfolio/${project.title}/${project.title}-horizontal-1920x.avif 1920w,
-              /portfolio/${project.title}/${project.title}-horizontal-1580x.avif 1580w,
-              /portfolio/${project.title}/${project.title}-horizontal-1130x.avif 1130w,
-              /portfolio/${project.title}/${project.title}-horizontal-256x.avif 256w
+              /portfolio/${project.title}/${project.title}-horizontal-2048x.png 2048w,
+              /portfolio/${project.title}/${project.title}-horizontal-1920x.png 1920w,
+              /portfolio/${project.title}/${project.title}-horizontal-1580x.png 1580w,
+              /portfolio/${project.title}/${project.title}-horizontal-1130x.png 1130w,
+              /portfolio/${project.title}/${project.title}-horizontal-256x.png 256w
             `"
             sizes="
               (min-width: 2800px) calc(50vw - 200px),

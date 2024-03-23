@@ -3,10 +3,10 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 content-visibility-auto xs:w-72 md:w-80 lg:max-w-sm"
-      src="/souls-of-light/souls-of-light-logo-576x.avif"
+      src="/souls-of-light/souls-of-light-logo-576x.png"
       srcset="
-        /souls-of-light/souls-of-light-logo-576x.avif 576w,
-        /souls-of-light/souls-of-light-logo-288x.avif 288w
+        /souls-of-light/souls-of-light-logo-576x.png 576w,
+        /souls-of-light/souls-of-light-logo-288x.png 288w
       "
       sizes="(min-width: 780px) 288px, (min-width: 480px) 256px, 208px"
       alt="Souls of Light logo"
@@ -66,7 +66,7 @@
         height="167"
       >
         <a href="https://rokneer.itch.io/souls-of-light">
-          Souls of Light by Rokneer
+          Souls of Light by Rokneer, Ani
         </a>
       </iframe>
     </div>

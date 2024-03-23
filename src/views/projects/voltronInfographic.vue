@@ -3,7 +3,7 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown max-w-xs object-scale-down p-4 content-visibility-auto lg:max-w-xl"
-      src="/voltron-infographic/voltron-infographic-logo.avif"
+      src="/voltron-infographic/voltron-infographic-logo.png"
       alt="Voltron Infographic logo"
       width="880"
       height="326"
