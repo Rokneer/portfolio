@@ -17,7 +17,7 @@
     <div
       class="animate__animated animate__fadeInDown w-10/12 py-4 sm:py-6 lg:text-2xl"
     >
-      {{ PROJECTS["souls_of_light"].long_description }}
+      {{ Projects["soulsOfLight"].longDescription }}
     </div>
     <!-- FEATURES -->
     <div
@@ -52,7 +52,7 @@
         loading="lazy"
       />
       <div class="text-left">
-        {{ PROJECTS["souls_of_light"].role }}
+        {{ Projects["soulsOfLight"].role }}
       </div>
     </div>
     <!-- GAME -->
@@ -87,7 +87,7 @@
 </template>
 
 <script setup lang="ts">
-import { PROJECTS } from "../../.";
+import Projects from "../../utils/projects";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 import EmbedVideo from "../../components/EmbedVideo.vue";

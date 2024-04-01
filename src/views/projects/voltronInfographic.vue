@@ -10,7 +10,7 @@
     />
     <!-- LONG DESCRIPTION -->
     <div class="animate__animated animate__fadeInDown w-10/12 py-6 lg:text-2xl">
-      {{ PROJECTS["voltron_infographic"].long_description }}
+      {{ Projects["voltronInfographic"].longDescription }}
     </div>
     <!-- SMALL DESCRIPTION -->
     <div
@@ -25,7 +25,7 @@
         loading="lazy"
       />
       <div class="text-left">
-        {{ PROJECTS["voltron_infographic"].role }}
+        {{ Projects["voltronInfographic"].role }}
       </div>
     </div>
     <!-- GAME -->
@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { PROJECTS } from "../../.";
+import Projects from "../../utils/projects";
 import ImageViewer from "../../components/ImageViewer.vue";
 
 // Constants

@@ -18,7 +18,7 @@
         <div class="grow pb-4 md:pb-8">Shoot me an email!</div>
         <img
           class="cursor-pointer transition hover:scale-110"
-          src="/email.png"
+          src="/common/email.png"
           alt="Shoot me an email!"
           width="256"
           height="256"
@@ -33,7 +33,12 @@
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/cv.png" alt="Look at my CV!" width="256" height="256" />
+          <img
+            src="/common/cv.png"
+            alt="Look at my CV!"
+            width="256"
+            height="256"
+          />
         </a>
       </div>
       <div class="flex flex-col items-center">
@@ -45,7 +50,7 @@
           rel="noreferrer"
         >
           <img
-            src="/linkedin.png"
+            src="/common/linkedin.png"
             alt="Check my LinkedIn!"
             width="256"
             height="256"
@@ -57,5 +62,5 @@
 </template>
 
 <script setup lang="ts">
-import { sendEmail } from "..";
+import { sendEmail } from "../utils";
 </script>

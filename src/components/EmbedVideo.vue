@@ -2,7 +2,7 @@
   <div
     class="animate__animated animate__fadeIn w-full rounded-md border-4 border-secondary-200 bg-secondary-200 md:w-[76%]"
   >
-    <LiteYouTubeEmbed :id="id" :title="title" />
+    <lite-you-tube-embed :id="id" :title="title" />
   </div>
 </template>
 

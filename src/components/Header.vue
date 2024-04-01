@@ -16,10 +16,10 @@
       >
         <img
           class="h-8 w-full transition content-visibility-auto hover:scale-105 sm:h-10"
-          src="/tomato-horizontal-960x.png"
+          src="/common/tomato-horizontal-960x.png"
           srcset="
-            /tomato-horizontal-960x.png 960w,
-            /tomato-horizontal-380x.png 380w
+            /common/tomato-horizontal-960x.png 960w,
+            /common/tomato-horizontal-380x.png 380w
           "
           sizes="(min-width: 640px) 171px, 137px"
           alt="Tomato Logo"
@@ -70,7 +70,7 @@
                 class="flex flex-col justify-center rounded-b-xl bg-gradient-to-t from-tertiary-400 from-85% to-tertiary-200 to-95% px-2 py-1 sm:px-3 sm:py-2"
               >
                 <li
-                  v-for="(project, index) in PROJECTS"
+                  v-for="(project, index) in Projects"
                   :key="index"
                   class="py-1.5"
                 >
@@ -172,7 +172,8 @@
 
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
-import { PROJECTS, isMobile } from "..";
+import isMobile from "../utils/isMobile";
+import Projects from "../utils/projects";
 import BasicButton from "./BasicButton.vue";
 import Icon from "./Icon.vue";
 

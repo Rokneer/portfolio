@@ -4,7 +4,7 @@
   >
     <div class="py-2 text-2xl font-bold lg:text-3xl">{{ title }}</div>
     <div class="py-2 lg:py-5">
-      <Icon
+      <icon
         :icon="icon"
         class="rounded-full bg-tertiary-300 px-3 py-2.5 text-xl lg:px-4 lg:py-3 lg:text-3xl"
       />

@@ -53,7 +53,7 @@
         <div
           class="text-xs xs:text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
         >
-          {{ project.short_description }}
+          {{ project.shortDescription }}
         </div>
       </div>
     </div>

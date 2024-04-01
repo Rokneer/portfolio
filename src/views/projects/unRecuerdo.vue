@@ -10,7 +10,7 @@
     />
     <!-- LONG DESCRIPTION -->
     <div class="animate__animated animate__fadeInDown w-10/12 py-6 lg:text-2xl">
-      {{ PROJECTS["un_recuerdo"].long_description }}
+      {{ Projects["unRecuerdo"].longDescription }}
     </div>
     <!-- SMALL DESCRIPTION -->
     <div
@@ -25,7 +25,7 @@
         loading="lazy"
       />
       <div class="text-left">
-        {{ PROJECTS["un_recuerdo"].role }}
+        {{ Projects["unRecuerdo"].role }}
       </div>
     </div>
     <!-- VIDEO -->
@@ -36,6 +36,6 @@
 </template>
 
 <script setup lang="ts">
-import { PROJECTS } from "../../.";
+import Projects from "../../utils/projects";
 import EmbedVideo from "../../components/EmbedVideo.vue";
 </script>

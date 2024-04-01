@@ -5,8 +5,8 @@
     <router-link class="transition hover:scale-105" :to="{ name: 'about' }">
       <img
         class="w-40 min-w-[8rem] rounded-full bg-secondary-200 p-1 content-visibility-auto sm:w-64 md:w-72 lg:w-80"
-        src="/headshot-624x.png"
-        srcset="/headshot-312x.png 312w, /headshot-624x.png 624w"
+        src="/common/headshot-624x.png"
+        srcset="/common/headshot-312x.png 312w, /common/headshot-624x.png 624w"
         sizes="
           (min-width: 1920px) 312px,
           (min-width: 1280px) 16.45vw,
@@ -14,7 +14,7 @@
           (min-width: 780px) calc(23.75vw - 21px),
           (min-width: 520px) calc(27.92vw - 17px),
           116px"
-        alt="A drawing of the portfolio owner"
+        alt="A portrait drawing of the portfolio owner"
         width="624"
         height="624"
       />
@@ -32,15 +32,15 @@
       </div>
     </div>
   </div>
-  <Carousel
+  <carousel
     class="animate__animated animate__fadeInUp py-2 sm:py-4"
     :autoplay="5000"
     :wrap-around="true"
     :items-to-show="carouselItemNumber"
     pause-autoplay-on-hover
   >
-    <Slide
-      v-for="project in PROJECTS"
+    <slide
+      v-for="project in Projects"
       :key="project.title"
       class="flex justify-center p-2 xs:px-2 xs:py-4 sm:px-6 sm:py-4 xl:p-6"
     >
@@ -68,8 +68,8 @@
           />
         </router-link>
       </div>
-    </Slide>
-  </Carousel>
+    </slide>
+  </carousel>
   <div class="animate__animated animate__fadeInUp flex justify-center py-6">
     <basic-button
       class="rounded-lg px-4 py-1.5 text-sm uppercase sm:px-8 sm:text-2xl md:text-3xl lg:text-4xl"
@@ -84,11 +84,12 @@
 import "../carousel-custom.css";
 import { Carousel, Slide } from "vue3-carousel";
 import { computed } from "vue";
-import { sendEmail, PROJECTS, onWindowResize } from "..";
+import { sendEmail, onWindowResize } from "../utils";
+import Projects from "../utils/projects";
 import BasicButton from "../components/BasicButton.vue";
 
-const carouselItemNumber = computed(() => {
-  if (onWindowResize().width.value >= 780) return 5;
-  return 3;
-});
+// Computed
+const carouselItemNumber = computed(() =>
+  onWindowResize().width.value >= 780 ? 5 : 3,
+);
 </script>

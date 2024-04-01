@@ -5,12 +5,12 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { PROJECTS } from "..";
+import Projects from "../utils/projects";
 import ProjectList from "../components/ProjectList.vue";
 const games = computed(() =>
-  Object.values(PROJECTS).filter((game) => game.category === "game"),
+  Object.values(Projects).filter((game) => game.category === "game"),
 );
 const others = computed(() =>
-  Object.values(PROJECTS).filter((game) => game.category === "other"),
+  Object.values(Projects).filter((game) => game.category === "other"),
 );
 </script>

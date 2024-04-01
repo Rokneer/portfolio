@@ -17,7 +17,7 @@
     <div
       class="animate__animated animate__fadeInDown w-10/12 py-4 sm:py-6 lg:text-2xl"
     >
-      {{ PROJECTS["cave_dwellers"].long_description }}
+      {{ Projects["caveDwellers"].longDescription }}
     </div>
     <!-- FEATURES -->
     <div
@@ -52,7 +52,7 @@
         loading="lazy"
       />
       <div class="text-left">
-        {{ PROJECTS["cave_dwellers"].role }}
+        {{ Projects["caveDwellers"].role }}
       </div>
     </div>
     <!-- GAME -->
@@ -83,7 +83,7 @@
 </template>
 
 <script setup lang="ts">
-import { PROJECTS } from "../../.";
+import Projects from "../../utils/projects";
 import FeatureBox from "../../components/FeatureBox.vue";
 import ImageViewer from "../../components/ImageViewer.vue";
 

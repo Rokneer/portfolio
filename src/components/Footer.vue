@@ -6,7 +6,7 @@
       <div class="w-16 md:w-20">
         <img
           class="content-visibility-auto"
-          src="/tomato-logo.png"
+          src="/common/tomato-logo.png"
           alt="Tomate Logo"
           width="160"
           heigth="160"
