@@ -36,7 +36,7 @@
               (min-width: 1000px) calc(50vw - 88px),
               calc(45.77vw - 7px)
             "
-            :alt="`${project.title.replace(/-/g, ' ')} horizontal image`"
+            :alt="`${project.title.replace(/-/g, ' ')}-horizontal-image`"
             width="2048"
             height="1152"
           />

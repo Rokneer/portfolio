@@ -1,16 +1,18 @@
 <template>
-  <ProjectList project-type="games" :projects="games" />
-  <ProjectList project-type="others" :projects="others" />
+  <project-list project-type="games" :projects="games" />
+  <project-list project-type="others" :projects="others" />
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
-import Projects from "../utils/projects";
+import PROJECTS from "../utils/projects";
 import ProjectList from "../components/ProjectList.vue";
+
+// Computed
 const games = computed(() =>
-  Object.values(Projects).filter((game) => game.category === "game"),
+  Object.values(PROJECTS).filter((game) => game.category === "game"),
 );
 const others = computed(() =>
-  Object.values(Projects).filter((game) => game.category === "other"),
+  Object.values(PROJECTS).filter((game) => game.category === "other"),
 );
 </script>

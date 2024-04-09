@@ -70,7 +70,7 @@
                 class="flex flex-col justify-center rounded-b-xl bg-gradient-to-t from-tertiary-400 from-85% to-tertiary-200 to-95% px-2 py-1 sm:px-3 sm:py-2"
               >
                 <li
-                  v-for="(project, index) in Projects"
+                  v-for="(project, index) in PROJECTS"
                   :key="index"
                   class="py-1.5"
                 >
@@ -173,7 +173,7 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
 import isMobile from "../utils/isMobile";
-import Projects from "../utils/projects";
+import PROJECTS from "../utils/projects";
 import BasicButton from "./BasicButton.vue";
 import Icon from "./Icon.vue";
 

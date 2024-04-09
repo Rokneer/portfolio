@@ -5,3 +5,16 @@ export interface Project {
   role: string;
   category: string;
 }
+
+export interface Feature {
+  title: string;
+  icon: string;
+  description: string;
+}
+
+export interface Image {
+  src: string;
+  alt: string;
+}
+
+export type Orientation = "horizontal" | "vertical";

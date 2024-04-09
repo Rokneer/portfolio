@@ -1,6 +1,6 @@
 import type { Project } from "../types";
 
-const Projects: Record<string, Project> = {
+const PROJECTS: Record<string, Project> = {
   masquerade: {
     title: "masquerade",
     shortDescription:
@@ -56,4 +56,4 @@ const Projects: Record<string, Project> = {
   },
 };
 
-export default Projects;
+export default PROJECTS;

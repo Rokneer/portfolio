@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="images">
     <viewer
       class="flex flex-row flex-wrap"
       :images="images"
@@ -67,9 +67,11 @@
 </template>
 
 <script setup lang="ts">
+import { Image, Orientation } from "./../types";
+
 // Properties
 defineProps<{
-  images: { src: string; alt: string }[];
-  orientation: "horizontal" | "vertical";
+  images: Image[] | null;
+  orientation: Orientation;
 }>();
 </script>
