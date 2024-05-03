@@ -4,7 +4,7 @@
   >
     <router-link class="transition hover:scale-105" :to="{ name: 'about' }">
       <img
-        class="w-40 min-w-[8rem] rounded-full bg-secondary-200 p-1 content-visibility-auto sm:w-64 md:w-72 lg:w-80"
+        class="w-40 min-w-32 rounded-full bg-secondary-200 p-1 content-visibility-auto sm:w-64 md:w-72 lg:w-80"
         src="/common/headshot-624x.png"
         srcset="/common/headshot-312x.png 312w, /common/headshot-624x.png 624w"
         sizes="
@@ -45,11 +45,7 @@
       class="flex justify-center p-2 xs:px-2 xs:py-4 sm:px-6 sm:py-4 xl:p-6"
     >
       <div class="relative flex cursor-pointer items-center">
-        <router-link
-          :to="{
-            name: `${project.title}`,
-          }"
-        >
+        <router-link :to="{ name: `${project.title}` }">
           <img
             class="rounded-lg transition content-visibility-auto hover:scale-105"
             :src="`/portfolio/${project.title}/${project.title}-vertical-768x.png`"
@@ -84,12 +80,10 @@
 import "../carousel-custom.css";
 import { Carousel, Slide } from "vue3-carousel";
 import { computed } from "vue";
-import { sendEmail, onWindowResize } from "../utils";
+import { sendEmail } from "../utils";
 import PROJECTS from "../utils/projects";
 import BasicButton from "../components/BasicButton.vue";
 
 // Computed
-const carouselItemNumber = computed(() =>
-  onWindowResize().width.value >= 780 ? 5 : 3,
-);
+const carouselItemNumber = computed(() => (window.innerWidth >= 780 ? 5 : 3));
 </script>
