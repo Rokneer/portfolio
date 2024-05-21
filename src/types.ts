@@ -4,6 +4,7 @@ export interface Project {
   longDescription: string;
   role: string;
   category: string;
+  bulletPoints: string[];
 }
 
 export interface Feature {

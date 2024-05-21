@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center text-center">
     <!-- LOGO -->
     <img
-      class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 content-visibility-auto xs:w-72 md:w-80 lg:max-w-sm"
+      class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 xs:w-72 md:w-80 lg:max-w-sm"
       :src="`./${project.title}/${project.title}-logo-576x.png`"
       :srcset="`
         ./${project.title}/${project.title}-logo-576x.png 576w,
@@ -22,7 +22,7 @@
     <!-- FEATURES -->
     <div
       v-if="features"
-      class="animate__animated animate__fadeInDown flex w-10/12 flex-col items-center justify-center gap-y-4 py-4 content-visibility-auto sm:gap-x-4 sm:py-6 md:flex-row md:items-stretch md:gap-x-8 lg:gap-x-16"
+      class="animate__animated animate__fadeInDown flex w-10/12 flex-col items-center justify-center gap-y-4 py-4 sm:gap-x-4 sm:py-6 md:flex-row md:items-stretch md:gap-x-8 lg:gap-x-16"
     >
       <feature-box
         v-for="(feature, index) in features"
@@ -32,26 +32,11 @@
         :description="feature.description"
       />
     </div>
-    <!-- PROJECT ROLE -->
-    <div
-      class="animate__animated animate__fadeInDown flex w-10/12 flex-row items-center justify-center pb-4 pt-6 lg:text-xl"
-    >
-      <img
-        class="mr-4 w-10 content-visibility-auto lg:w-12"
-        src="/android-chrome-192x192.png"
-        alt="Tomate icon"
-        width="192"
-        height="192"
-        loading="lazy"
-      />
-      <div class="text-left">
-        {{ project.role }}
-      </div>
-    </div>
+
     <!-- GAME -->
     <div
       v-if="itchCode"
-      class="animate__animated animate__fadeInDown flex flex-col items-center justify-center gap-y-6 py-4 xs:text-xl sm:text-2xl md:gap-x-8 lg:text-3xl"
+      class="animate__animated animate__fadeInDown flex flex-col items-center justify-center gap-y-6 py-5 xs:text-xl sm:text-2xl md:gap-x-8 lg:text-3xl"
     >
       <iframe
         frameborder="0"
@@ -83,11 +68,7 @@
 
 <script setup lang="ts">
 import { Project, Image, Orientation, Feature } from "./../types";
-import FeatureBox from "./../components/FeatureBox.vue";
-import ImageViewer from "./../components/ImageViewer.vue";
-import EmbedVideo from "./../components/EmbedVideo.vue";
-
-// Interfaces
+import { FeatureBox, ImageViewer, EmbedVideo } from "./../components";
 
 // Properties
 withDefaults(

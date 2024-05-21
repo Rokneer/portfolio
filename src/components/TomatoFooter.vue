@@ -5,7 +5,7 @@
     >
       <div class="w-16 md:w-20">
         <img
-          class="content-visibility-auto"
+          class=""
           src="/common/tomato-logo.png"
           alt="Tomate Logo"
           width="160"
