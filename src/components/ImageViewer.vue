@@ -34,7 +34,6 @@
           class="md:w-54 m-2 cursor-pointer rounded-lg border-4 border-secondary-200 bg-secondary-200 transition hover:scale-105 xs:m-2 md:m-3 lg:m-4 lg:w-[448px]"
           width="1380"
           height="776"
-          loading="lazy"
         />
       </span>
       <span
@@ -59,7 +58,6 @@
           class="m-2 w-32 cursor-pointer rounded-lg border-4 border-secondary-200 bg-secondary-200 transition hover:scale-105 xs:m-2 xs:w-36 lg:m-4 lg:w-60 xl:w-[360px]"
           width="740"
           height="1252"
-          loading="lazy"
         />
       </span>
     </viewer>

@@ -44,7 +44,11 @@
         width="554"
         height="169"
       >
-        <a :href="`https://rokneer.itch.io/${project.title}`">
+        <a
+          :href="`https://rokneer.itch.io/${project.title}`"
+          target="_blank"
+          rel="noreferrer"
+        >
           {{ project.title }} by Rokneer
         </a>
       </iframe>

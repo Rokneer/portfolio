@@ -13,7 +13,7 @@
         How about we go back
         <router-link
           class="text-primary-100 hover:shadow-primary-100 hover:text-shadow"
-          :to="{ name: 'home' }"
+          :to="{ name: 'projects' }"
         >
           home?
         </router-link>

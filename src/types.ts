@@ -4,6 +4,7 @@ export interface Project {
   longDescription: string;
   role: string;
   category: string;
+  page: "itch-play" | "itch-download" | "itch-learn" | "youtube";
   bulletPoints: string[];
 }
 

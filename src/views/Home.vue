@@ -32,14 +32,14 @@
       </div>
     </div>
   </div>
-  <project-list project-type="games" :projects="games" />
-  <project-list project-type="others" :projects="others" />
+  <project-list project-type="game" :projects="games" />
+  <project-list project-type="other" :projects="others" />
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
-import PROJECTS from "../utils/projects";
 import { ProjectList } from "./../components";
+import PROJECTS from "../utils/projects";
 
 // Computed
 const games = computed(() =>

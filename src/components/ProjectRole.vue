@@ -1,5 +1,7 @@
 <template>
-  <div class="animate__animated flex flex-row items-center py-2 font-semibold">
+  <div
+    class="animate__animated flex flex-row items-center py-1 font-semibold leading-snug"
+  >
     <img
       class="mr-3 w-7 md:mr-4 md:w-11"
       src="/android-chrome-192x192.png"

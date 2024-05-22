@@ -1,32 +1,71 @@
 <template>
   <div
-    class="animate__animated fixed z-40 w-full"
-    :class="`${
-      showHeader
-        ? 'animate__fadeInDown animate__faster'
-        : 'animate__fadeOutUp animate__faster'
-    }`"
+    class="animate__animated animate__faster fixed z-40 w-full"
+    :class="`${showHeader ? 'animate__fadeInDown' : 'animate__fadeOutUp'}`"
   >
     <nav
-      class="flex flex-row flex-wrap items-center justify-between bg-tertiary-200 p-3 shadow-sm shadow-tertiary-400 sm:px-4 md:px-6 lg:px-12 xl:px-24"
+      class="flex flex-row items-center justify-start bg-tertiary-200 p-3 shadow-sm shadow-tertiary-400 sm:px-4 md:px-6 lg:px-12 xl:px-24"
     >
-      <router-link
-        class="flex shrink cursor-pointer justify-start sm:pr-2"
-        :to="{ name: 'home' }"
-      >
-        <img
-          class="h-8 w-full transition hover:scale-105 sm:h-10"
-          src="/common/tomato-horizontal-960x.png"
-          srcset="
-            /common/tomato-horizontal-960x.png 960w,
-            /common/tomato-horizontal-380x.png 380w
-          "
-          sizes="(min-width: 640px) 171px, 137px"
-          alt="Tomato Logo"
-          width="960"
-          height="225"
-        />
-      </router-link>
+      <div class="flex w-full flex-row items-center sm:pr-2">
+        <router-link class="pr-4 lg:pr-12" :to="{ name: 'projects' }">
+          <img
+            class="h-8 w-full transition hover:scale-105 sm:h-10"
+            src="/common/tomato-horizontal-960x.png"
+            srcset="
+              /common/tomato-horizontal-960x.png 960w,
+              /common/tomato-horizontal-380x.png 380w
+            "
+            sizes="(min-width: 640px) 171px, 137px"
+            alt="Tomato Logo"
+            width="960"
+            height="225"
+          />
+        </router-link>
+        <div class="flex flex-row items-center gap-2 lg:gap-4">
+          <a
+            class="flex"
+            href="https://www.linkedin.com/in/alejandro-hincapie/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              class="h-7 w-full transition hover:scale-105 sm:h-[2.3rem]"
+              src="/common/itchio-logo-textless-white.png"
+              alt="itch.io"
+              width="225"
+              height="225"
+            />
+          </a>
+          <a
+            class="flex"
+            href="https://www.linkedin.com/in/alejandro-hincapie/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              class="h-7 w-full transition hover:scale-105 sm:h-[2.3rem]"
+              src="/common/github-white.png"
+              alt="GitHub"
+              width="225"
+              height="225"
+            />
+          </a>
+          <a
+            class="flex"
+            href="https://www.linkedin.com/in/alejandro-hincapie/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              class="h-7 w-full transition hover:scale-105 sm:h-[2.3rem]"
+              src="/common/linkedin.png"
+              alt="LinkedIn"
+              width="225"
+              height="225"
+            />
+          </a>
+        </div>
+      </div>
       <icon
         class="mx-2 flex text-2xl transition hover:scale-110 sm:hidden"
         icon="mdi-menu"
@@ -34,25 +73,25 @@
         @click="showSideMenu = true"
       />
       <div
-        class="hidden justify-end text-xs font-semibold sm:flex sm:text-sm md:text-base"
+        class="hidden justify-end gap-1 text-xs font-semibold sm:flex sm:text-sm md:text-base"
       >
-        <router-link :to="{ name: 'home' }">
+        <router-link :to="{ name: 'projects' }">
           <basic-button
-            class="mx-0.5 rounded-2xl px-2 py-1 uppercase sm:mx-1 sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
+            class="rounded-2xl px-2 py-1 uppercase sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
-            Home
+            Projects
           </basic-button>
         </router-link>
         <router-link :to="{ name: 'about' }">
           <basic-button
-            class="mx-0.5 rounded-2xl px-2 py-1 uppercase sm:mx-1 sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
+            class="rounded-2xl px-2 py-1 uppercase sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
             About
           </basic-button>
         </router-link>
         <router-link :to="{ name: 'contact' }">
           <basic-button
-            class="mx-0.5 rounded-2xl px-2 py-1 uppercase sm:mx-1 sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
+            class="rounded-2xl px-2 py-1 uppercase sm:px-4 md:px-6 lg:mx-2 lg:px-10 xl:px-16"
           >
             Contact
           </basic-button>
@@ -78,13 +117,13 @@
         />
         <ul class="flex h-full flex-col items-center justify-center">
           <li class="py-4">
-            <router-link :to="{ name: 'home' }">
+            <router-link :to="{ name: 'projects' }">
               <basic-button
                 class="navbar-close flex rounded-2xl p-4 text-4xl font-bold uppercase hover:scale-110 hover:text-secondary-200"
                 type="text"
                 @click="showSideMenu = false"
               >
-                Home
+                Projects
               </basic-button>
             </router-link>
           </li>
@@ -120,7 +159,7 @@
 import { onMounted, ref, watch } from "vue";
 import { BasicButton, Icon } from ".";
 
-// State
+// Reactivity
 const showSideMenu = ref(false);
 const showHeader = ref(true);
 const lastScrollPosition = ref(0);
