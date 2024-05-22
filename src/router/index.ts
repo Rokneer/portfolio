@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Portfolio from "../views/Portfolio.vue";
 import About from "../views/About.vue";
 import Contact from "../views/Contact.vue";
 import Masquerade from "../views/projects/masquerade.vue";
@@ -14,43 +13,43 @@ import NotFound from "../views/404.vue";
 const routes = [
   {
     path: "/",
-    name: "home",
+    name: "projects",
     component: Home,
   },
   {
     path: "/projects",
-    name: "projects",
-    component: Portfolio,
-  },
-  {
-    path: "/projects/masquerade",
-    name: "masquerade",
-    component: Masquerade,
-  },
-  {
-    path: "/projects/potion-rush",
-    name: "potion-rush",
-    component: PotionRush,
-  },
-  {
-    path: "/projects/souls-of-light",
-    name: "souls-of-light",
-    component: SoulsOflight,
-  },
-  {
-    path: "/projects/cave-dwellers",
-    name: "cave-dwellers",
-    component: CaveDwellers,
-  },
-  {
-    path: "/projects/un-recuerdo",
-    name: "un-recuerdo",
-    component: UnRecuerdo,
-  },
-  {
-    path: "/projects/voltron-infographic",
-    name: "voltron-infographic",
-    component: VoltronInfographic,
+    children: [
+      {
+        path: "masquerade",
+        name: "masquerade",
+        component: Masquerade,
+      },
+      {
+        path: "potion-rush",
+        name: "potion-rush",
+        component: PotionRush,
+      },
+      {
+        path: "souls-of-light",
+        name: "souls-of-light",
+        component: SoulsOflight,
+      },
+      {
+        path: "cave-dwellers",
+        name: "cave-dwellers",
+        component: CaveDwellers,
+      },
+      {
+        path: "un-recuerdo",
+        name: "un-recuerdo",
+        component: UnRecuerdo,
+      },
+      {
+        path: "voltron-infographic",
+        name: "voltron-infographic",
+        component: VoltronInfographic,
+      },
+    ],
   },
   {
     path: "/about",

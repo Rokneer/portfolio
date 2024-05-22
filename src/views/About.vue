@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center px-4 py-3 sm:px-16 sm:py-6">
     <img
-      class="animate__animated animate__fadeInLeft object-scale content-visibility-auto"
+      class="animate__animated animate__fadeInLeft object-scale"
       src="/common/tomato-horizontal-960x.png"
       srcset="
         /common/tomato-horizontal-960x.png 960w,

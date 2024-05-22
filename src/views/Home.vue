@@ -4,7 +4,7 @@
   >
     <router-link class="transition hover:scale-105" :to="{ name: 'about' }">
       <img
-        class="w-40 min-w-32 rounded-full bg-secondary-200 p-1 content-visibility-auto sm:w-64 md:w-72 lg:w-80"
+        class="w-40 min-w-32 rounded-full bg-secondary-200 p-1 sm:w-64 md:w-72 lg:w-80"
         src="/common/headshot-624x.png"
         srcset="/common/headshot-312x.png 312w, /common/headshot-624x.png 624w"
         sizes="
@@ -32,58 +32,20 @@
       </div>
     </div>
   </div>
-  <carousel
-    class="animate__animated animate__fadeInUp py-2 sm:py-4"
-    :autoplay="5000"
-    :wrap-around="true"
-    :items-to-show="carouselItemNumber"
-    pause-autoplay-on-hover
-  >
-    <slide
-      v-for="project in PROJECTS"
-      :key="project.title"
-      class="flex justify-center p-2 xs:px-2 xs:py-4 sm:px-6 sm:py-4 xl:p-6"
-    >
-      <div class="relative flex cursor-pointer items-center">
-        <router-link :to="{ name: `${project.title}` }">
-          <img
-            class="rounded-lg transition content-visibility-auto hover:scale-105"
-            :src="`/portfolio/${project.title}/${project.title}-vertical-768x.png`"
-            :srcset="`
-            /portfolio/${project.title}/${project.title}-vertical-768x.png 768w,
-            /portfolio/${project.title}/${project.title}-vertical-384x.png 384w
-            `"
-            sizes="
-              (min-width: 2360px) 384px,
-              (min-width: 2320px) calc(960vw - 22080px),
-              (min-width: 780px) calc(20vw - 26px),
-              calc(33.75vw - 20px)"
-            :alt="project.title"
-            width="768"
-            height="1078"
-          />
-        </router-link>
-      </div>
-    </slide>
-  </carousel>
-  <div class="animate__animated animate__fadeInUp flex justify-center py-6">
-    <basic-button
-      class="rounded-lg px-4 py-1.5 text-sm uppercase sm:px-8 sm:text-2xl md:text-3xl lg:text-4xl"
-      @click="sendEmail"
-    >
-      alejandro.hincapie.lo@gmail.com
-    </basic-button>
-  </div>
+  <project-list project-type="game" :projects="games" />
+  <project-list project-type="other" :projects="others" />
 </template>
 
 <script setup lang="ts">
-import "../carousel-custom.css";
-import { Carousel, Slide } from "vue3-carousel";
 import { computed } from "vue";
-import { sendEmail } from "../utils";
+import { ProjectList } from "./../components";
 import PROJECTS from "../utils/projects";
-import BasicButton from "../components/BasicButton.vue";
 
 // Computed
-const carouselItemNumber = computed(() => (window.innerWidth >= 780 ? 5 : 3));
+const games = computed(() =>
+  Object.values(PROJECTS).filter((game) => game.category === "game"),
+);
+const others = computed(() =>
+  Object.values(PROJECTS).filter((game) => game.category === "other"),
+);
 </script>

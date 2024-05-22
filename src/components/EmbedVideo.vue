@@ -11,8 +11,5 @@ import LiteYouTubeEmbed from "vue-lite-youtube-embed";
 import "vue-lite-youtube-embed/style.css";
 
 // Properties
-defineProps<{
-  id: string;
-  title: string;
-}>();
+defineProps<{ id: string; title: string }>();
 </script>
