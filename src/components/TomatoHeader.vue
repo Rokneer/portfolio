@@ -24,7 +24,7 @@
         <div class="flex flex-row items-center gap-2 lg:gap-4">
           <a
             class="flex"
-            href="https://www.linkedin.com/in/alejandro-hincapie/"
+            href="https://rokneer.itch.io/"
             target="_blank"
             rel="noreferrer"
           >
@@ -38,7 +38,7 @@
           </a>
           <a
             class="flex"
-            href="https://www.linkedin.com/in/alejandro-hincapie/"
+            href="https://github.com/Rokneer"
             target="_blank"
             rel="noreferrer"
           >
