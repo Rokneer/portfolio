@@ -1,16 +1,13 @@
 <template>
-  <div class="animate__animated flex flex-row items-center">
+  <div class="animate__animated flex flex-row items-center py-2 font-semibold">
     <img
-      class="mr-4 w-11"
+      class="mr-3 w-7 md:mr-4 md:w-11"
       src="/android-chrome-192x192.png"
       alt="Tomate icon"
       width="192"
       height="192"
-      loading="lazy"
     />
-    <div class="text-left">
-      {{ project.role }}
-    </div>
+    <div class="text-left">{{ project.role }}</div>
   </div>
 </template>
 <script lang="ts" setup>
