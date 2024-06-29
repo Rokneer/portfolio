@@ -5,15 +5,7 @@
     <router-link class="transition hover:scale-105" :to="{ name: 'about' }">
       <img
         class="w-40 min-w-32 rounded-full bg-secondary-200 p-1 sm:w-64 md:w-72 lg:w-80"
-        src="/common/headshot-624x.png"
-        srcset="/common/headshot-312x.png 312w, /common/headshot-624x.png 624w"
-        sizes="
-          (min-width: 1920px) 312px,
-          (min-width: 1280px) 16.45vw,
-          (min-width: 1040px) calc(20.91vw - 41px),
-          (min-width: 780px) calc(23.75vw - 21px),
-          (min-width: 520px) calc(27.92vw - 17px),
-          116px"
+        src="/common/headshot.png"
         alt="A portrait drawing of the portfolio owner"
         width="624"
         height="624"

@@ -67,7 +67,7 @@
       >
         <img
           class="rounded-b-[1.32rem]"
-          :src="`/portfolio/${project.title}/${project.title}-horizontal-1920x.png`"
+          :src="`/portfolio/${project.title}/${project.title}-horizontal.png`"
           :alt="`${project.title.replace(/-/g, ' ')}-horizontal-image`"
           width="852"
           height="480"

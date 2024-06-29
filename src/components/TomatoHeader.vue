@@ -10,12 +10,7 @@
         <router-link class="pr-4 lg:pr-12" :to="{ name: 'projects' }">
           <img
             class="h-8 w-full transition hover:scale-105 sm:h-10"
-            src="/common/tomato-horizontal-960x.png"
-            srcset="
-              /common/tomato-horizontal-960x.png 960w,
-              /common/tomato-horizontal-380x.png 380w
-            "
-            sizes="(min-width: 640px) 171px, 137px"
+            src="/common/tomato-horizontal.png"
             alt="Tomato Logo"
             width="960"
             height="225"

@@ -1,15 +1,10 @@
 <template>
-  <div class="flex flex-col items-center text-center">
+  <div class="flex flex-col items-center text-center 2xl:mx-64">
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 xs:w-72 md:w-80 lg:max-w-sm"
-      :src="`./${project.title}/${project.title}-logo-576x.png`"
-      :srcset="`
-        ./${project.title}/${project.title}-logo-576x.png 576w,
-        ./${project.title}/${project.title}-logo-288x.png 288w
-      `"
-      sizes="(min-width: 780px) 288px, (min-width: 480px) 256px, 208px"
-      :alt="`${project.title}-logo`"
+      :src="`./${project.title}/${project.title}-logo.png`"
+      :alt="`${project.title} logo`"
       width="576"
       height="563"
     />
@@ -39,7 +34,7 @@
       class="animate__animated animate__fadeInDown flex flex-col items-center justify-center gap-y-6 py-5 xs:text-xl sm:text-2xl md:gap-x-8 lg:text-3xl"
     >
       <iframe
-        frameborder="0"
+        class="w-[220px] rounded-xl xs:w-[424px] sm:w-[554px] md:w-[654px] lg:w-[910px]"
         :src="`https://itch.io/embed/${itchCode}?bg_color=A20058&amp;fg_color=ffffff&amp;link_color=580585&amp;border_color=A20058`"
         width="554"
         height="169"

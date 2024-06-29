@@ -12,8 +12,8 @@ const PROJECTS: Record<string, Project> = {
     page: "itch-download",
     bulletPoints: [
       "World design and level design for the islands.",
-      "Quest and puzzle design.",
-      "Original story concept and character writing.",
+      "Led quest and puzzle design.",
+      "Wrote original story concept and character writing.",
     ],
   },
   caveDwellers: {
@@ -26,9 +26,24 @@ const PROJECTS: Record<string, Project> = {
     category: "game",
     page: "itch-play",
     bulletPoints: [
-      "Overall gameplay and level design.",
-      "Playtesting to ensure smooth and snappy movement.",
-      "Developed gameplay and systems programming",
+      "Conceptualized overall gameplay and level design.",
+      "Playtested to ensure smooth and snappy movement.",
+      "Developed gameplay and systems programming.",
+    ],
+  },
+  foodForTheSoul: {
+    title: "food-for-the-soul",
+    shortDescription:
+      "A game about doing frenetic food photography to save your soul.",
+    longDescription:
+      "On his off day as a food photographer, Juan finds himself ravenously hungry and wishing for a bite to eat. Lucky for him, just around the corner a colorful Colombian restaurant appeared. Just as he entered a cold sweat ran down his spine, this was no ordinary place. Before he could escape his soul was trapped inside a cursed camera by the devilish head chef and now he must photograph ghostly food to serve to the ghoulish customers to free his soul.",
+    role: "Project lead, developer and game designer",
+    category: "game",
+    page: "itch-download",
+    bulletPoints: [
+      "Led a team of two developers and seven artists, handling the game scope and ensuring its quality.",
+      "Managed design and development, establishing the main gameplay loop.",
+      "Programmed the entirety of the game logic.",
     ],
   },
   potionRush: {
@@ -37,13 +52,13 @@ const PROJECTS: Record<string, Project> = {
       "A quirky mobile game about a witch trying to survive in the big city.",
     longDescription:
       "You've just opened your Potions Café in the middle of the world's greatest magical city, New Arkadia. With open doors you receive your first customers, only to discover that everyone is in a hurry to go elsewhere and does not have the patience to wait for their orders for long. In a hurry, you start creating potions and giving them to your customers. It's going to be hard but the rent doesn't pay for itself.",
-    role: "Game designer, level designer, UI & UX designer and artist",
+    role: "Game designer, level designer, UI designer and artist",
     category: "game",
     page: "itch-download",
     bulletPoints: [
       "Designed 12 unique potions and their magical ingredients.",
       "Conceptualized gameplay for four different potion making utensils.",
-      "Designed colorful, intuitive and easy to interact with UI",
+      "Designed colorful, intuitive and easy to interact with UI.",
     ],
   },
   soulsOfLight: {
@@ -51,13 +66,13 @@ const PROJECTS: Record<string, Project> = {
     shortDescription:
       "A mysterious 2D puzzle platformer where light is your only ally.",
     longDescription:
-      "You wake up in the middle of a cold dark forest, at your side lies a metallamp, a weak ember appears to burn inside it. In front of you an enormous castle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover thewalls. A chill runs down your spine, you try to remember who you are, whyyou are here, but your mind is blank. Who knows what other mysteries lieahead in this darken path.",
+      "You wake up in the middle of a cold dark forest, at your side lies a metallamp, a weak ember appears to burn inside it. In front of you an enormous castle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover the walls. A chill runs down your spine, you try to remember who you are, whyyou are here, but your mind is blank. Who knows what other mysteries lie ahead in this darken path.",
     role: "Game designer, level designer and script writer",
     category: "game",
     page: "itch-download",
     bulletPoints: [
       "Designed over 5 castle levels, and their own unique puzzles.",
-      "Wrote story and all NPCs conversations with the castle ghosts.",
+      "Wrote story and all NPCs dialogue with the castle ghosts.",
       "Conceptualized three different flame abilities.",
     ],
   },

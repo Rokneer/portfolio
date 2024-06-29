@@ -19,18 +19,8 @@
         <img
           v-for="image in images"
           :key="image.src"
-          :src="`${image.src}-1380x.png`"
+          :src="`${image.src}.png`"
           :alt="image.alt"
-          :srcset="`
-            ${image}-487x.png 487w,
-            ${image}-974x.png 974w,
-            ${image}-1380x.png 1380w,
-          `"
-          sizes="
-            (min-width: 1040px) 487px,
-            (min-width: 780px) 216px,
-            calc(93.04vw - 19px)
-          "
           class="md:w-54 m-2 cursor-pointer rounded-lg border-4 border-secondary-200 bg-secondary-200 transition hover:scale-105 xs:m-2 md:m-3 lg:m-4 lg:w-[448px]"
           width="1380"
           height="776"
@@ -43,18 +33,8 @@
         <img
           v-for="image in images"
           :key="image.src"
-          :src="`${image.src}-704x.png`"
+          :src="`${image.src}.png`"
           :alt="image.alt"
-          :srcset="`
-            ${image}-704x.png 704w,
-            ${image}-464x.png 464w,
-            ${image}-272x.png 272w,
-          `"
-          sizes="
-            (min-width: 1280px) 352px,
-            (min-width: 1040px) 232px,
-            (min-width: 480px) 136px, 120px
-          "
           class="m-2 w-32 cursor-pointer rounded-lg border-4 border-secondary-200 bg-secondary-200 transition hover:scale-105 xs:m-2 xs:w-36 lg:m-4 lg:w-60 xl:w-[360px]"
           width="740"
           height="1252"
@@ -68,8 +48,5 @@
 import { Image, Orientation } from "./../types";
 
 // Properties
-defineProps<{
-  images: Image[] | null;
-  orientation: Orientation;
-}>();
+defineProps<{ images: Image[] | null; orientation: Orientation }>();
 </script>

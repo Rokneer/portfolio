@@ -2,12 +2,7 @@
   <div class="flex justify-center px-4 py-3 sm:px-16 sm:py-6">
     <img
       class="animate__animated animate__fadeInLeft object-scale"
-      src="/common/tomato-horizontal-960x.png"
-      srcset="
-        /common/tomato-horizontal-960x.png 960w,
-        /common/tomato-horizontal-380x.png 380w
-      "
-      sizes="(min-width: 1080px) 960px, 91.05vw"
+      src="/common/tomato-horizontal.png"
       alt="Tomate logo"
       width="960"
       height="225"
