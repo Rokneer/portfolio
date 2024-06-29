@@ -9,6 +9,7 @@
         alt="A portrait drawing of the portfolio owner"
         width="624"
         height="624"
+        fetchpriority="high"
       />
     </router-link>
     <div>
