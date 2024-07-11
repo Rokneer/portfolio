@@ -42,6 +42,22 @@
         </a>
       </div>
       <div class="flex flex-col items-center">
+        <div class="grow pb-4 md:pb-8">Game in my itch.io!</div>
+        <a
+          class="transition hover:scale-110"
+          href="https://rokneer.itch.io/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="/common/itchio-logo-textless-white.png"
+            alt="Look at my CV!"
+            width="256"
+            height="256"
+          />
+        </a>
+      </div>
+      <div class="flex flex-col items-center">
         <div class="grow pb-4 md:pb-8">Check my LinkedIn!</div>
         <a
           class="transition hover:scale-110"

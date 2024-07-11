@@ -13,8 +13,17 @@
         </div>
         <div class="py-1 text-sm xs:py-2 sm:py-3 sm:text-lg md:text-[1.6rem]">
           <project-role :project="project" />
-          <div class="py-1.5 leading-snug md:py-3">
-            {{ project.shortDescription }}
+          <div class="flex flex-row items-center justify-center">
+            <img
+              class="mr-3 w-7 md:mr-4 md:w-11"
+              :src="`/common/${project.engine}.png`"
+              :alt="project.engine"
+              width="192"
+              height="192"
+            />
+            <div class="py-1.5 leading-snug md:py-3">
+              {{ project.shortDescription }}
+            </div>
           </div>
           <div>
             <div class="font-semibold">What I worked on:</div>

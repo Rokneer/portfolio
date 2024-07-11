@@ -10,6 +10,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Game designer, level designer, quest designer and script writer",
     category: "game",
     page: "itch-download",
+    engine: "unity-logo",
     bulletPoints: [
       "World design and level design for the islands.",
       "Led quest and puzzle design.",
@@ -25,6 +26,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Developer, game designer and level designer",
     category: "game",
     page: "itch-play",
+    engine: "unity-logo",
     bulletPoints: [
       "Conceptualized overall gameplay and level design.",
       "Playtested to ensure smooth and snappy movement.",
@@ -36,10 +38,11 @@ const PROJECTS: Record<string, Project> = {
     shortDescription:
       "A game about doing frenetic food photography to save your soul.",
     longDescription:
-      "On his off day as a food photographer, Juan finds himself ravenously hungry and wishing for a bite to eat. Lucky for him, just around the corner a colorful Colombian restaurant appeared. Just as he entered a cold sweat ran down his spine, this was no ordinary place. Before he could escape his soul was trapped inside a cursed camera by the devilish head chef and now he must photograph ghostly food to serve to the ghoulish customers to free his soul.",
+      "On his off day, Juan, a food photographer, finds himself ravenously hungry and wishing for a bite to eat. Lucky for him, just around the corner a colorful Colombian restaurant appeared. Just as he entered a cold sweat ran down his spine, this was no ordinary place. Before he could escape his soul was trapped inside a cursed camera by the devilish head chef and now he must photograph ghostly food to serve to the ghoulish customers to free his soul.",
     role: "Project lead, developer and game designer",
     category: "game",
     page: "itch-download",
+    engine: "unity-logo",
     bulletPoints: [
       "Led a team of two developers and seven artists, handling the game scope and ensuring its quality.",
       "Managed design and development, establishing the main gameplay loop.",
@@ -55,6 +58,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Game designer, level designer, UI designer and artist",
     category: "game",
     page: "itch-download",
+    engine: "unity-logo",
     bulletPoints: [
       "Designed 12 unique potions and their magical ingredients.",
       "Conceptualized gameplay for four different potion making utensils.",
@@ -66,10 +70,11 @@ const PROJECTS: Record<string, Project> = {
     shortDescription:
       "A mysterious 2D puzzle platformer where light is your only ally.",
     longDescription:
-      "You wake up in the middle of a cold dark forest, at your side lies a metallamp, a weak ember appears to burn inside it. In front of you an enormous castle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover the walls. A chill runs down your spine, you try to remember who you are, whyyou are here, but your mind is blank. Who knows what other mysteries lie ahead in this darken path.",
+      "You wake up in the middle of a cold dark forest, at your side lies a metal lamp, a weak ember appears to burn inside it. In front of you an enormous castle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover the walls. A chill runs down your spine, you try to remember who you are, whyyou are here, but your mind is blank. Who knows what other mysteries lie ahead in this darken path.",
     role: "Game designer, level designer and script writer",
     category: "game",
     page: "itch-download",
+    engine: "unity-logo",
     bulletPoints: [
       "Designed over 5 castle levels, and their own unique puzzles.",
       "Wrote story and all NPCs dialogue with the castle ghosts.",
@@ -84,8 +89,9 @@ const PROJECTS: Record<string, Project> = {
     role: "Actor, video editor and poster designer",
     category: "other",
     page: "youtube",
+    engine: "unity-logo",
     bulletPoints: [
-      "Acted as one of the protragonist of the short film.",
+      "Acted as one of the protagonist of the short film.",
       "Edited the script and video footage.",
       "Designed vertical and horizontal posters to promote the short film.",
     ],
@@ -99,6 +105,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Developer, UI & UX designer, programmer and animator",
     category: "other",
     page: "itch-learn",
+    engine: "unity-logo",
     bulletPoints: [
       "Designed the flow of the infographic.",
       "Researched information about the Voltron's main cast.",
