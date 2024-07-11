@@ -5,7 +5,7 @@ export interface Project {
   role: string;
   category: string;
   page: "itch-play" | "itch-download" | "itch-learn" | "youtube";
-  engine: "unity-logo" | "godot-logo";
+  engine: "unity" | "godot";
   bulletPoints: string[];
 }
 

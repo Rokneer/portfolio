@@ -15,13 +15,13 @@
           <project-role :project="project" />
           <div class="flex flex-row items-center justify-center">
             <img
-              class="mr-3 w-7 md:mr-4 md:w-11"
-              :src="`/common/${project.engine}.png`"
+              class="mr-3 w-7 py-1.5 md:mr-4 md:w-11 md:py-3"
+              :src="`./common/${project.engine}-logo.png`"
               :alt="project.engine"
               width="192"
               height="192"
             />
-            <div class="py-1.5 leading-snug md:py-3">
+            <div class="leading-snug">
               {{ project.shortDescription }}
             </div>
           </div>

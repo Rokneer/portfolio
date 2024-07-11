@@ -10,7 +10,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Game designer, level designer, quest designer and script writer",
     category: "game",
     page: "itch-download",
-    engine: "unity-logo",
+    engine: "unity",
     bulletPoints: [
       "World design and level design for the islands.",
       "Led quest and puzzle design.",
@@ -26,7 +26,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Developer, game designer and level designer",
     category: "game",
     page: "itch-play",
-    engine: "unity-logo",
+    engine: "unity",
     bulletPoints: [
       "Conceptualized overall gameplay and level design.",
       "Playtested to ensure smooth and snappy movement.",
@@ -42,7 +42,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Project lead, developer and game designer",
     category: "game",
     page: "itch-download",
-    engine: "unity-logo",
+    engine: "unity",
     bulletPoints: [
       "Led a team of two developers and seven artists, handling the game scope and ensuring its quality.",
       "Managed design and development, establishing the main gameplay loop.",
@@ -58,7 +58,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Game designer, level designer, UI designer and artist",
     category: "game",
     page: "itch-download",
-    engine: "unity-logo",
+    engine: "unity",
     bulletPoints: [
       "Designed 12 unique potions and their magical ingredients.",
       "Conceptualized gameplay for four different potion making utensils.",
@@ -74,7 +74,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Game designer, level designer and script writer",
     category: "game",
     page: "itch-download",
-    engine: "unity-logo",
+    engine: "unity",
     bulletPoints: [
       "Designed over 5 castle levels, and their own unique puzzles.",
       "Wrote story and all NPCs dialogue with the castle ghosts.",
@@ -89,7 +89,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Actor, video editor and poster designer",
     category: "other",
     page: "youtube",
-    engine: "unity-logo",
+    engine: "unity",
     bulletPoints: [
       "Acted as one of the protagonist of the short film.",
       "Edited the script and video footage.",
@@ -105,7 +105,7 @@ const PROJECTS: Record<string, Project> = {
     role: "Developer, UI & UX designer, programmer and animator",
     category: "other",
     page: "itch-learn",
-    engine: "unity-logo",
+    engine: "unity",
     bulletPoints: [
       "Designed the flow of the infographic.",
       "Researched information about the Voltron's main cast.",
