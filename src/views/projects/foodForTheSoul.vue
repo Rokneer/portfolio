@@ -4,6 +4,7 @@
     :features="FEATURES"
     :images="IMAGES"
     orientation="horizontal"
+    youtube-code="PrqyUO0w4ic"
     itch-code="2753590"
   />
 </template>
@@ -17,27 +18,27 @@ import { Image, Feature } from "./../../types";
 const IMAGES: Image[] = [
   {
     src: "./../portfolio/food-for-the-soul/food-for-the-soul-1",
-    alt: "An image of",
+    alt: "A first person view of a dilapidated restaurant, the player character is holding a polaroid-like camera and pointing it at a zombie.",
   },
   {
     src: "./../portfolio/food-for-the-soul/food-for-the-soul-2",
-    alt: "An image of",
+    alt: "A first person view of a zoomed in camera viewport pointing at a plate of food in a wood beam.",
   },
   {
     src: "./../portfolio/food-for-the-soul/food-for-the-soul-3",
-    alt: "An image of",
+    alt: "An image of a dilapidated restaurant, two zombies are in frame with colorful chairs and tables thrown about.",
   },
   {
     src: "./../portfolio/food-for-the-soul/food-for-the-soul-4",
-    alt: "An image of",
+    alt: "An image of an evil looking chef looking maliciously from behind a kitchen window.",
   },
   {
     src: "./../portfolio/food-for-the-soul/food-for-the-soul-5",
-    alt: "An image of",
+    alt: "An image of a single zombie walkin through a dilapidated restaurant.",
   },
   {
     src: "./../portfolio/food-for-the-soul/food-for-the-soul-6",
-    alt: "An image of",
+    alt: "An wide shot image of dilapidated restaurant, three zombies walk forwards towards the counter while ingredients float in the wooden beams above.",
   },
 ];
 const FEATURES: Feature[] = [

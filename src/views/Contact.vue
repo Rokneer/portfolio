@@ -12,71 +12,33 @@
       hesitate to contact me.
     </div>
     <div
-      class="animate__animated animate__fadeInUp flex flex-row justify-center gap-x-4 text-center text-lg font-semibold md:gap-x-20 md:text-2xl lg:text-3xl xl:text-4xl"
+      class="animate__animated animate__fadeInUp grid grid-cols-2 justify-center gap-4 text-center text-lg font-semibold md:grid-cols-4 md:gap-x-20 md:text-2xl lg:text-3xl xl:text-4xl"
     >
-      <div class="flex flex-col items-center">
-        <div class="grow pb-4 md:pb-8">Shoot me an email!</div>
-        <img
-          class="cursor-pointer transition hover:scale-110"
-          src="/common/email.png"
-          alt="Shoot me an email!"
-          width="256"
-          height="256"
-          @click="sendEmail"
-        />
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="grow pb-4 md:pb-8">Look at my CV!</div>
-        <a
-          class="transition hover:scale-110"
-          href="https://drive.google.com/file/d/1c11vZkUXzI7QEqjcQp86l1xCUVQTRyqQ"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="/common/cv.png"
-            alt="Look at my CV!"
-            width="256"
-            height="256"
-          />
-        </a>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="grow pb-4 md:pb-8">Game in my itch.io!</div>
-        <a
-          class="transition hover:scale-110"
-          href="https://rokneer.itch.io/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="/common/itchio-logo-textless-white.png"
-            alt="Look at my CV!"
-            width="256"
-            height="256"
-          />
-        </a>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="grow pb-4 md:pb-8">Check my LinkedIn!</div>
-        <a
-          class="transition hover:scale-110"
-          href="https://www.linkedin.com/in/alejandro-hincapie/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="/common/linkedin.png"
-            alt="Check my LinkedIn!"
-            width="256"
-            height="256"
-          />
-        </a>
-      </div>
+      <contact-element
+        title="Shoot me an email!"
+        image="/common/email.png"
+        :action="sendEmail"
+      />
+      <contact-element
+        title="Take a look at my CV!"
+        image="/common/cv.png"
+        link="https://drive.google.com/file/d/1c11vZkUXzI7QEqjcQp86l1xCUVQTRyqQ"
+      />
+      <contact-element
+        title="Game in my itch.io!"
+        image="/common/itchio-logo-textless-white.png"
+        link="https://rokneer.itch.io/"
+      />
+      <contact-element
+        title="Check my LinkedIn!"
+        image="/common/linkedin.png"
+        link="https://www.linkedin.com/in/alejandro-hincapie/"
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { sendEmail } from "../utils";
+import ContactElement from "../components/ContactElement.vue";
 </script>

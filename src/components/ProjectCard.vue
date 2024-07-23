@@ -13,8 +13,9 @@
         </div>
         <div class="py-1 text-sm xs:py-2 sm:py-3 sm:text-lg md:text-[1.6rem]">
           <project-role :project="project" />
-          <div class="flex flex-row items-center justify-center">
+          <div class="flex flex-row items-center pb-4 pt-2">
             <img
+              v-if="project.engine"
               class="mr-3 w-7 py-1.5 md:mr-4 md:w-11 md:py-3"
               :src="`./common/${project.engine}-logo.png`"
               :alt="project.engine"
@@ -44,14 +45,14 @@
               Read more
             </basic-button>
           </router-link>
-          <div class="flex flex-row items-center gap-x-2 xl:gap-x-4">
+          <div class="flex flex-row items-center">
             <img
-              class="w-6 sm:hidden"
+              class="mx-2 w-6 sm:hidden xl:mx-4"
               src="/common/itchio-logo-textless-white.png"
               alt="itch.io"
             />
             <img
-              class="hidden sm:flex sm:w-32"
+              class="mx-2 hidden sm:flex sm:w-32 xl:mx-4"
               src="/common/itchio-logo-white.png"
               alt="itch.io"
             />
@@ -75,10 +76,9 @@
         :to="{ name: `${project.title}` }"
       >
         <img
-          class="rounded-b-[1.32rem]"
+          class="w-full rounded-b-[1.32rem] bg-cover"
           :src="`/portfolio/${project.title}/${project.title}-horizontal.png`"
           :alt="`${project.title.replace(/-/g, ' ')}-horizontal-image`"
-          width="852"
           height="480"
         />
       </router-link>

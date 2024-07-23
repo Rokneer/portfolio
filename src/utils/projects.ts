@@ -12,9 +12,9 @@ const PROJECTS: Record<string, Project> = {
     page: "itch-download",
     engine: "unity",
     bulletPoints: [
-      "World design and level design for the islands.",
+      "World and level design for the islands.",
       "Led quest and puzzle design.",
-      "Wrote original story concept and character writing.",
+      "Wrote original story concept and character dialogue.",
     ],
   },
   caveDwellers: {
@@ -29,8 +29,8 @@ const PROJECTS: Record<string, Project> = {
     engine: "unity",
     bulletPoints: [
       "Conceptualized overall gameplay and level design.",
-      "Playtested to ensure smooth and snappy movement.",
       "Developed gameplay and systems programming.",
+      "Playtested to ensure smooth and snappy movement.",
     ],
   },
   foodForTheSoul: {
@@ -89,7 +89,6 @@ const PROJECTS: Record<string, Project> = {
     role: "Actor, video editor and poster designer",
     category: "other",
     page: "youtube",
-    engine: "unity",
     bulletPoints: [
       "Acted as one of the protagonist of the short film.",
       "Edited the script and video footage.",
