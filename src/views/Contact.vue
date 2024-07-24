@@ -16,22 +16,22 @@
     >
       <contact-element
         title="Shoot me an email!"
-        image="/common/email.png"
+        image="./common/email.png"
         :action="sendEmail"
       />
       <contact-element
         title="Take a look at my CV!"
-        image="/common/cv.png"
+        image="./common/cv.png"
         link="https://drive.google.com/file/d/1c11vZkUXzI7QEqjcQp86l1xCUVQTRyqQ"
       />
       <contact-element
         title="Game in my itch.io!"
-        image="/common/itchio-logo-textless-white.png"
+        image="./common/itchio-logo-textless-white.png"
         link="https://rokneer.itch.io/"
       />
       <contact-element
         title="Check my LinkedIn!"
-        image="/common/linkedin.png"
+        image="./common/linkedin-logo.png"
         link="https://www.linkedin.com/in/alejandro-hincapie/"
       />
     </div>

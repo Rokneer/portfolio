@@ -9,7 +9,7 @@
         <div
           class="py-1 text-center text-2xl font-extrabold uppercase xs:py-3 xs:text-4xl md:text-5xl"
         >
-          {{ project.title.replace(/-/g, " ") }}
+          {{ formatTitle(project.title) }}
         </div>
         <div class="py-1 text-sm xs:py-2 sm:py-3 sm:text-lg md:text-[1.6rem]">
           <project-role :project="project" />
@@ -77,8 +77,9 @@
       >
         <img
           class="w-full rounded-b-[1.32rem] bg-cover"
-          :src="`/portfolio/${project.title}/${project.title}-horizontal.png`"
-          :alt="`${project.title.replace(/-/g, ' ')}-horizontal-image`"
+          :src="getCoverImage(project.title)"
+          :srcset="getCoverImage(project.title)"
+          :alt="`${formatTitle(project.title)} Cover Image`"
           height="480"
         />
       </router-link>
@@ -89,6 +90,7 @@
 import { computed } from "vue";
 import { Project } from "../types";
 import { ProjectRole, BasicButton } from "./../components";
+import { formatTitle } from "../utils";
 
 // Properties
 const props = defineProps<{ project: Project }>();
@@ -120,4 +122,9 @@ const buttonPage = computed(() => {
       return "";
   }
 });
+
+// Functions
+function getCoverImage(projectTitle: string) {
+  return `/portfolio/${projectTitle}/${projectTitle}-cover.png`;
+}
 </script>

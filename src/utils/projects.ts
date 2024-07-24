@@ -70,25 +70,26 @@ const PROJECTS: Record<string, Project> = {
     shortDescription:
       "A mysterious 2D puzzle platformer where light is your only ally.",
     longDescription:
-      "You wake up in the middle of a cold dark forest, at your side lies a metal lamp, a weak ember appears to burn inside it. In front of you an enormous castle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover the walls. A chill runs down your spine, you try to remember who you are, whyyou are here, but your mind is blank. Who knows what other mysteries lie ahead in this darken path.",
+      "You wake up in the middle of a cold dark forest, at your side lies a metal lamp, a weak ember appears to burn inside it. In front of you an enormous castle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover the walls. A chill runs down your spine, you try to remember who you are, why you are here, but your mind is blank. Who knows what other mysteries lie ahead in this darken path.",
     role: "Game designer, level designer and script writer",
     category: "game",
     page: "itch-download",
     engine: "unity",
     bulletPoints: [
-      "Designed over 5 castle levels, and their own unique puzzles.",
-      "Wrote story and all NPCs dialogue with the castle ghosts.",
+      "Designed over five castle levels, and their own unique puzzles.",
+      "Wrote story and all dialogue with the castle ghosts.",
       "Conceptualized three different flame abilities.",
     ],
   },
   unRecuerdo: {
     title: "un-recuerdo",
     shortDescription: "A short film about memories and unconditional love.",
-    longDescription: `Today is an special day for Amelia, she and her husband Jorge are going on a date to her favorite museum the Parque Explora. The date goes great but the past a truth that they need to live with every day.
-    This shortfilm was nominated in the Smartfilms 2022 film festival in the REDvolucionarias category.`,
+    longDescription: `Today is an special day for Amelia, she and her husband Jorge are going on a date to her favorite museum the Parque Explora. The date goes great but the in the past lives a truth that they need to live with every day.
+    This short film was nominated in the Smartfilms 2022 film festival in the REDvolucionarias category.`,
     role: "Actor, video editor and poster designer",
     category: "other",
     page: "youtube",
+    engine: "youtube",
     bulletPoints: [
       "Acted as one of the protagonist of the short film.",
       "Edited the script and video footage.",
