@@ -6,7 +6,7 @@
       <img
         class="w-40 min-w-32 rounded-full bg-secondary-200 p-1 sm:w-64 md:w-72 lg:w-80"
         src="/common/headshot.png"
-        alt="A portrait drawing of the portfolio owner"
+        alt="A portrait drawing of me, the portfolio owner"
         width="624"
         height="624"
         fetchpriority="high"

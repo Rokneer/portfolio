@@ -53,10 +53,6 @@ const IMAGES: Image[] = [
     src: "./../portfolio/masquerade/masquerade-6",
     alt: "An image of two small huts with an assortment of magical looking objects. A purple crystal floats on top of them.",
   },
-  {
-    src: "./../portfolio/masquerade/masquerade-7",
-    alt: "An image of farm, five pigs roam around freely sniffing at the ground. A figure with a pig mask stands far in the background.",
-  },
 ];
 const FEATURES: Feature[] = [
   {
@@ -75,7 +71,7 @@ const FEATURES: Feature[] = [
     title: "Help",
     icon: "mdi-handshake",
     description:
-      "Aid the masked inhabitants of Liberio with their problems and help them remember who they were.",
+      "Aid the masked inhabitants of Liberio with their problems to help them remember who they were.",
   },
 ];
 </script>

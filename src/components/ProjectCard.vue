@@ -77,8 +77,16 @@
       >
         <img
           class="w-full rounded-b-[1.32rem] bg-cover"
-          :src="getCoverImage(project.title)"
-          :srcset="getCoverImage(project.title)"
+          :src="imagesSizes['xs'].split(' ')[0]"
+          :srcset="
+            [
+              `${imagesSizes['sm']} ${Breakpoints['sm']}w`,
+              `${imagesSizes['md']} ${Breakpoints['md']}w`,
+              `${imagesSizes['lg']} ${Breakpoints['lg']}w`,
+              `${imagesSizes['xl']} ${Breakpoints['xl']}w`,
+              `${imagesSizes['2xl']} ${Breakpoints['2xl']}w`,
+            ].toString()
+          "
           :alt="`${formatTitle(project.title)} Cover Image`"
           height="480"
         />
@@ -88,14 +96,14 @@
 </template>
 <script lang="ts" setup>
 import { computed } from "vue";
-import { Project } from "../types";
+import { Project, BreakpointType, Breakpoints } from "../types";
 import { ProjectRole, BasicButton } from "./../components";
-import { formatTitle } from "../utils";
+import { formatTitle, formatImageSrcSet } from "../utils";
 
 // Properties
 const props = defineProps<{ project: Project }>();
+const imagesSizes = formatImageSrcSet(props.project.title, getCoverImage);
 
-// Computed
 const buttonVerb = computed(() => {
   switch (props.project.page) {
     case "itch-play":
@@ -124,7 +132,7 @@ const buttonPage = computed(() => {
 });
 
 // Functions
-function getCoverImage(projectTitle: string) {
-  return `/portfolio/${projectTitle}/${projectTitle}-cover.png`;
+function getCoverImage(projectTitle: string, size: BreakpointType) {
+  return `/portfolio/${projectTitle}/${projectTitle}-cover-${size}.png`;
 }
 </script>
