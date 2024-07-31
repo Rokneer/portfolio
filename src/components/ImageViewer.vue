@@ -17,8 +17,8 @@
         class="flex flex-wrap justify-center"
       >
         <game-image
-          v-for="(image, index) in images"
-          :key="index"
+          v-for="image in images"
+          :key="image.src"
           class="md:w-54 lg:w-[448px]"
           :image="image"
           width="1380"

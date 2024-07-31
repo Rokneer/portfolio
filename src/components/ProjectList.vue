@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="animate__animated animate__fadeInUp my-3 flex justify-center bg-gradient-to-l from-tertiary-500 from-10% via-tertiary-200 to-tertiary-500 to-90% py-3 text-2xl font-black uppercase xs:text-3xl sm:my-6 sm:text-4xl md:text-5xl"
+      class="animate__animated animate__fadeInUp my-3 flex justify-center bg-gradient-to-l from-tertiary-500 from-10% via-tertiary-200 to-tertiary-500 to-90% py-3 text-3xl font-black uppercase sm:my-6 sm:text-4xl md:text-5xl"
     >
       {{ typeTitle }}
     </div>

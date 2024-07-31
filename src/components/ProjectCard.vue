@@ -4,7 +4,7 @@
       class="animate__animated animate__fadeIn flex flex-col rounded-3xl border-2 border-secondary-200 bg-secondary-100/20 md:border-3"
     >
       <div
-        class="flex h-full flex-col justify-evenly px-3 py-2 xs:px-6 sm:py-3 xl:px-8"
+        class="flex h-full flex-col justify-evenly px-6 py-2 sm:py-3 xl:px-8"
       >
         <div
           class="py-1 text-center text-2xl font-extrabold uppercase xs:py-3 xs:text-4xl md:text-5xl"
@@ -77,14 +77,14 @@
       >
         <img
           class="w-full rounded-b-[1.32rem] bg-cover"
-          :src="imagesSizes['xs'].split(' ')[0]"
+          :src="imagesSizes['xs']"
           :srcset="
             [
               `${imagesSizes['sm']} ${Breakpoints['sm']}w`,
-              `${imagesSizes['md']} ${Breakpoints['md']}w`,
-              `${imagesSizes['lg']} ${Breakpoints['lg']}w`,
-              `${imagesSizes['xl']} ${Breakpoints['xl']}w`,
-              `${imagesSizes['2xl']} ${Breakpoints['2xl']}w`,
+              ` ${imagesSizes['md']} ${Breakpoints['md']}w`,
+              ` ${imagesSizes['lg']} ${Breakpoints['lg']}w`,
+              ` ${imagesSizes['xl']} ${Breakpoints['xl']}w`,
+              ` ${imagesSizes['2xl']} ${Breakpoints['2xl']}w`,
             ].toString()
           "
           :alt="`${formatTitle(project.title)} Cover Image`"

@@ -1,14 +1,13 @@
 <template>
   <img
-    :key="image.src"
-    :src="imagesSizes['xs'].split(' ')[0]"
+    :src="imagesSizes['xs']"
     :srcset="
       [
         `${imagesSizes['sm']} ${Breakpoints['sm']}w`,
-        `${imagesSizes['md']} ${Breakpoints['md']}w`,
-        `${imagesSizes['lg']} ${Breakpoints['lg']}w`,
-        `${imagesSizes['xl']} ${Breakpoints['xl']}w`,
-        `${imagesSizes['2xl']} ${Breakpoints['2xl']}w`,
+        ` ${imagesSizes['md']} ${Breakpoints['md']}w`,
+        ` ${imagesSizes['lg']} ${Breakpoints['lg']}w`,
+        ` ${imagesSizes['xl']} ${Breakpoints['xl']}w`,
+        ` ${imagesSizes['2xl']} ${Breakpoints['2xl']}w`,
       ].toString()
     "
     :alt="image.alt"
