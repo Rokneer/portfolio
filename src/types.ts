@@ -5,7 +5,7 @@ export interface Project {
   role: string;
   category: string;
   page: "itch-play" | "itch-download" | "itch-learn" | "youtube";
-  engine?: "unity" | "godot";
+  engine: "unity" | "godot" | "youtube";
   bulletPoints: string[];
 }
 
@@ -21,3 +21,13 @@ export interface Image {
 }
 
 export type Orientation = "horizontal" | "vertical";
+
+export const Breakpoints = {
+  xs: "475",
+  sm: "640",
+  md: "768",
+  lg: "1024",
+  xl: "1280",
+  "2xl": "1536",
+} as const;
+export type BreakpointType = keyof typeof Breakpoints;

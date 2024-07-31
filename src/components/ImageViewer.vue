@@ -16,12 +16,11 @@
         v-if="orientation === 'horizontal'"
         class="flex flex-wrap justify-center"
       >
-        <img
+        <game-image
           v-for="image in images"
           :key="image.src"
-          :src="`${image.src}.png`"
-          :alt="image.alt"
-          class="md:w-54 m-2 cursor-pointer rounded-lg border-4 border-secondary-200 bg-secondary-200 transition hover:scale-105 xs:m-2 md:m-3 lg:m-4 lg:w-[448px]"
+          class="md:w-54 lg:w-[448px]"
+          :image="image"
           width="1380"
           height="776"
         />
@@ -30,12 +29,11 @@
         v-if="orientation === 'vertical'"
         class="flex flex-wrap justify-center"
       >
-        <img
-          v-for="image in images"
-          :key="image.src"
-          :src="`${image.src}.png`"
-          :alt="image.alt"
-          class="m-2 w-32 cursor-pointer rounded-lg border-4 border-secondary-200 bg-secondary-200 transition hover:scale-105 xs:m-2 xs:w-36 lg:m-4 lg:w-60 xl:w-[360px]"
+        <game-image
+          v-for="(image, index) in images"
+          :key="index"
+          class="w-36 sm:w-32 lg:w-60 xl:w-[360px]"
+          :image="image"
           width="740"
           height="1252"
         />
@@ -45,6 +43,7 @@
 </template>
 
 <script setup lang="ts">
+import GameImage from "./GameImage.vue";
 import { Image, Orientation } from "./../types";
 
 // Properties

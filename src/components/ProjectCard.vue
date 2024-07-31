@@ -4,12 +4,12 @@
       class="animate__animated animate__fadeIn flex flex-col rounded-3xl border-2 border-secondary-200 bg-secondary-100/20 md:border-3"
     >
       <div
-        class="flex h-full flex-col justify-evenly px-3 py-2 xs:px-6 sm:py-3 xl:px-8"
+        class="flex h-full flex-col justify-evenly px-6 py-2 sm:py-3 xl:px-8"
       >
         <div
           class="py-1 text-center text-2xl font-extrabold uppercase xs:py-3 xs:text-4xl md:text-5xl"
         >
-          {{ project.title.replace(/-/g, " ") }}
+          {{ formatTitle(project.title) }}
         </div>
         <div class="py-1 text-sm xs:py-2 sm:py-3 sm:text-lg md:text-[1.6rem]">
           <project-role :project="project" />
@@ -77,8 +77,17 @@
       >
         <img
           class="w-full rounded-b-[1.32rem] bg-cover"
-          :src="`/portfolio/${project.title}/${project.title}-horizontal.png`"
-          :alt="`${project.title.replace(/-/g, ' ')}-horizontal-image`"
+          :src="imagesSizes['xs']"
+          :srcset="
+            [
+              `${imagesSizes['sm']} ${Breakpoints['sm']}w`,
+              ` ${imagesSizes['md']} ${Breakpoints['md']}w`,
+              ` ${imagesSizes['lg']} ${Breakpoints['lg']}w`,
+              ` ${imagesSizes['xl']} ${Breakpoints['xl']}w`,
+              ` ${imagesSizes['2xl']} ${Breakpoints['2xl']}w`,
+            ].toString()
+          "
+          :alt="`${formatTitle(project.title)} Cover Image`"
           height="480"
         />
       </router-link>
@@ -87,13 +96,14 @@
 </template>
 <script lang="ts" setup>
 import { computed } from "vue";
-import { Project } from "../types";
+import { Project, BreakpointType, Breakpoints } from "../types";
 import { ProjectRole, BasicButton } from "./../components";
+import { formatTitle, formatImageSrcSet } from "../utils";
 
 // Properties
 const props = defineProps<{ project: Project }>();
+const imagesSizes = formatImageSrcSet(props.project.title, getCoverImage);
 
-// Computed
 const buttonVerb = computed(() => {
   switch (props.project.page) {
     case "itch-play":
@@ -120,4 +130,9 @@ const buttonPage = computed(() => {
       return "";
   }
 });
+
+// Functions
+function getCoverImage(projectTitle: string, size: BreakpointType) {
+  return `/portfolio/${projectTitle}/${projectTitle}-cover-${size}.png`;
+}
 </script>

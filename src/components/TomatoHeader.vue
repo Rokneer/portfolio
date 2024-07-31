@@ -53,7 +53,7 @@
           >
             <img
               class="h-7 w-full transition hover:scale-105 sm:h-[2.3rem]"
-              src="/common/linkedin.png"
+              src="/common/linkedin-logo.png"
               alt="LinkedIn"
               width="225"
               height="225"

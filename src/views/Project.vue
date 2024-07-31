@@ -3,8 +3,8 @@
     <!-- LOGO -->
     <img
       class="animate__animated animate__fadeInDown w-60 object-scale-down p-4 xs:w-72 md:w-80 lg:max-w-sm"
-      :src="`./${project.title}/${project.title}-logo.png`"
-      :alt="`${project.title} logo`"
+      :src="getLogoImage(project.title)"
+      :alt="`${formatTitle(project.title)} Logo`"
       width="576"
       height="563"
     />
@@ -44,14 +44,17 @@
           target="_blank"
           rel="noreferrer"
         >
-          {{ project.title }} by Rokneer
+          {{ formatTitle(project.title) }} by Rokneer
         </a>
       </iframe>
       <slot name="extras"></slot>
     </div>
     <!-- TRAILER -->
     <div v-if="youtubeCode" class="flex w-full justify-center py-3 sm:py-6">
-      <embed-video :id="youtubeCode" :title="`${project.title} Trailer`" />
+      <embed-video
+        :id="youtubeCode"
+        :title="`${formatTitle(project.title)} Trailer`"
+      />
     </div>
     <!-- IMAGES -->
     <div v-if="images" class="py-3 sm:py-6">
@@ -68,6 +71,7 @@
 <script setup lang="ts">
 import { Project, Image, Orientation, Feature } from "./../types";
 import { FeatureBox, ImageViewer, EmbedVideo } from "./../components";
+import { formatTitle } from "../utils";
 
 // Properties
 withDefaults(
@@ -84,4 +88,9 @@ withDefaults(
     orientation: "horizontal",
   },
 );
+
+// Functions
+function getLogoImage(projectTitle: string) {
+  return `./${projectTitle}/${projectTitle}-logo.png`;
+}
 </script>

@@ -4,13 +4,26 @@
     :features="FEATURES"
     :images="IMAGES"
     orientation="horizontal"
-    youtube-code="PrqyUO0w4ic"
     itch-code="2753590"
-  />
+    youtube-code="PrqyUO0w4ic"
+  >
+    <template #extras>
+      <a
+        href="https://drive.google.com/file/d/1oGYcLSaGs34Bf-CRapuvfuuO0MeKpKB5"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <basic-button class="rounded-2xl px-6 py-1 lg:px-10 xl:px-16" block>
+          Check out the art book here!
+        </basic-button>
+      </a>
+    </template>
+  </project>
 </template>
 
 <script setup lang="ts">
 import Project from "../Project.vue";
+import BasicButton from "../../components/BasicButton.vue";
 import PROJECTS from "../../utils/projects";
 import { Image, Feature } from "./../../types";
 
