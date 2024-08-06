@@ -39,6 +39,6 @@
 </template>
 
 <script setup lang="ts">
+import { ContactElement } from "../components";
 import { sendEmail } from "../utils";
-import ContactElement from "../components/ContactElement.vue";
 </script>

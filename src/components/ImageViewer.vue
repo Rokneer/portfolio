@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import GameImage from "./GameImage.vue";
+import { GameImage } from ".";
 import { Image, Orientation } from "./../types";
 
 // Properties

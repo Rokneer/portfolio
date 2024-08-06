@@ -3,8 +3,8 @@
     :project="PROJECTS['potionRush']"
     :features="FEATURES"
     :images="IMAGES"
+    :itch-code="PROJECTS['potionRush'].itchCode"
     orientation="vertical"
-    itch-code="2598797"
   />
 </template>
 

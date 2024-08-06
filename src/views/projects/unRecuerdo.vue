@@ -1,5 +1,8 @@
 <template>
-  <project :project="PROJECTS['unRecuerdo']" youtube-code="HOMR1tvPWy0" />
+  <project
+    :project="PROJECTS['unRecuerdo']"
+    :youtube-code="PROJECTS['unRecuerdo'].youtubeCode"
+  />
 </template>
 
 <script setup lang="ts">

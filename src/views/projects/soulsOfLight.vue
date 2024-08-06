@@ -3,9 +3,9 @@
     :project="PROJECTS['soulsOfLight']"
     :features="FEATURES"
     :images="IMAGES"
+    :itch-code="PROJECTS['soulsOfLight'].itchCode"
+    :youtube-code="PROJECTS['soulsOfLight'].youtubeCode"
     orientation="horizontal"
-    itch-code="2598860"
-    youtube-code="iAwDhvxiL7o"
   />
 </template>
 

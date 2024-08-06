@@ -3,8 +3,8 @@
     :project="PROJECTS['caveDwellers']"
     :features="FEATURES"
     :images="IMAGES"
+    :itch-code="PROJECTS['caveDwellers'].itchCode"
     orientation="horizontal"
-    itch-code="2579277"
   />
 </template>
 

@@ -3,8 +3,8 @@
     :project="PROJECTS['voltronInfographic']"
     :features="FEATURES"
     :images="IMAGES"
+    :itch-code="PROJECTS['voltronInfographic'].itchCode"
     orientation="horizontal"
-    itch-code="2598849"
   />
 </template>
 

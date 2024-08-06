@@ -11,6 +11,8 @@ const PROJECTS: Record<string, Project> = {
     category: "game",
     page: "itch-download",
     engine: "unity",
+    itchCode: "2598761",
+    youtubeCode: "TJUIgSQkQws",
     bulletPoints: [
       "World and level design for the islands.",
       "Led quest and puzzle design.",
@@ -27,6 +29,7 @@ const PROJECTS: Record<string, Project> = {
     category: "game",
     page: "itch-play",
     engine: "unity",
+    itchCode: "2579277",
     bulletPoints: [
       "Conceptualized overall gameplay and level design.",
       "Developed gameplay and systems programming.",
@@ -43,6 +46,8 @@ const PROJECTS: Record<string, Project> = {
     category: "game",
     page: "itch-download",
     engine: "unity",
+    itchCode: "2753590",
+    youtubeCode: "PrqyUO0w4ic",
     bulletPoints: [
       "Led a team of two developers and seven artists, handling the game scope and ensuring its quality.",
       "Managed design and development, establishing the main gameplay loop.",
@@ -59,6 +64,7 @@ const PROJECTS: Record<string, Project> = {
     category: "game",
     page: "itch-download",
     engine: "unity",
+    itchCode: "2598797",
     bulletPoints: [
       "Designed 12 unique potions and their magical ingredients.",
       "Conceptualized gameplay for four different potion making utensils.",
@@ -75,6 +81,8 @@ const PROJECTS: Record<string, Project> = {
     category: "game",
     page: "itch-download",
     engine: "unity",
+    itchCode: "2598860",
+    youtubeCode: "iAwDhvxiL7o",
     bulletPoints: [
       "Designed over five castle levels, and their own unique puzzles.",
       "Wrote story and all dialogue with the castle ghosts.",
@@ -90,6 +98,7 @@ const PROJECTS: Record<string, Project> = {
     category: "other",
     page: "youtube",
     engine: "youtube",
+    youtubeCode: "HOMR1tvPWy0",
     bulletPoints: [
       "Acted as one of the protagonist of the short film.",
       "Edited the script and video footage.",
@@ -106,6 +115,7 @@ const PROJECTS: Record<string, Project> = {
     category: "other",
     page: "itch-learn",
     engine: "unity",
+    itchCode: "2598849",
     bulletPoints: [
       "Designed the flow of the infographic.",
       "Researched information about the Voltron's main cast.",

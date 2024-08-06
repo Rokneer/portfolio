@@ -6,6 +6,8 @@ export interface Project {
   category: string;
   page: "itch-play" | "itch-download" | "itch-learn" | "youtube";
   engine: "unity" | "godot" | "youtube";
+  itchCode?: string;
+  youtubeCode?: string;
   bulletPoints: string[];
 }
 

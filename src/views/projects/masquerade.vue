@@ -3,9 +3,9 @@
     :project="PROJECTS['masquerade']"
     :features="FEATURES"
     :images="IMAGES"
+    :itch-code="PROJECTS['masquerade'].itchCode"
+    :youtube-code="PROJECTS['masquerade'].youtubeCode"
     orientation="horizontal"
-    itch-code="2598761"
-    youtube-code="TJUIgSQkQws"
   >
     <template #extras>
       <a

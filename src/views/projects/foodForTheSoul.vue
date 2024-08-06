@@ -3,9 +3,9 @@
     :project="PROJECTS['foodForTheSoul']"
     :features="FEATURES"
     :images="IMAGES"
+    :itch-code="PROJECTS['foodForTheSoul'].itchCode"
+    :youtube-code="PROJECTS['foodForTheSoul'].youtubeCode"
     orientation="horizontal"
-    itch-code="2753590"
-    youtube-code="PrqyUO0w4ic"
   >
     <template #extras>
       <a
