@@ -47,7 +47,7 @@
           {{ formatTitle(project.title) }} by Rokneer
         </a>
       </iframe>
-      <slot name="extras"></slot>
+      <slot name="extras" />
     </div>
     <!-- TRAILER -->
     <div v-if="youtubeCode" class="flex w-full justify-center py-3 sm:py-6">

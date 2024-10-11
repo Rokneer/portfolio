@@ -9,7 +9,9 @@
       width="192"
       height="192"
     />
-    <div class="text-left">{{ project.role }}</div>
+    <div class="text-left">
+      {{ project.role }}
+    </div>
   </div>
 </template>
 <script lang="ts" setup>

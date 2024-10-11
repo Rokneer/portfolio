@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col items-center justify-between">
-    <div class="pb-4 md:pb-8">{{ title }}</div>
+    <div class="pb-4 md:pb-8">
+      {{ title }}
+    </div>
     <a
       class="cursor-pointer transition hover:scale-110"
       :href="link"

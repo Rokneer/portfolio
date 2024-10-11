@@ -2,7 +2,9 @@
   <div
     class="flex w-56 flex-col items-center rounded-3xl bg-secondary-200 p-2 text-center lg:w-72 lg:p-4"
   >
-    <div class="py-2 text-2xl font-bold lg:text-3xl">{{ title }}</div>
+    <div class="py-2 text-2xl font-bold lg:text-3xl">
+      {{ title }}
+    </div>
     <div class="py-2 lg:py-5">
       <icon
         :icon="icon"
