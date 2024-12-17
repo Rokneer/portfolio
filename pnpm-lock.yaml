@@ -28,9 +28,6 @@ dependencies:
     version: 4.4.5(vue@3.5.12)
 
 devDependencies:
-  '@rushstack/eslint-patch':
-    specifier: ^1.10.4
-    version: 1.10.4
   '@types/eslint__js':
     specifier: ^8.42.3
     version: 8.42.3
@@ -613,10 +610,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /@rushstack/eslint-patch@1.10.4:
-    resolution: {integrity: sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==}
-    dev: true
 
   /@types/eslint@9.6.1:
     resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
