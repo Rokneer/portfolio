@@ -1,28 +1,19 @@
 export interface Project {
-  title: string;
-  shortDescription: string;
-  longDescription: string;
-  role: string;
-  category: string;
-  page: "itch-play" | "itch-download" | "itch-learn" | "youtube";
-  engine: "unity" | "godot" | "youtube";
+  cover: Image;
+  logo: Image;
+  description: string;
+  roles: string[];
+  contributions: string[];
+  platform: Image;
   itchCode?: string;
   youtubeCode?: string;
-  bulletPoints: string[];
-}
-
-export interface Feature {
-  title: string;
-  icon: string;
-  description: string;
+  gddUrl?: string;
 }
 
 export interface Image {
   src: string;
   alt: string;
 }
-
-export type Orientation = "horizontal" | "vertical";
 
 export const Breakpoints = {
   xs: "475",
