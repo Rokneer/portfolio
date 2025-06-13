@@ -9,15 +9,15 @@ import { soulsCover, soulsLogo } from "@/assets/soulsOfLight";
 import { potionCover, potionLogo } from "@/assets/potionRush";
 import { recuerdoCover, recuerdoLogo } from "@/assets/unRecuerdo";
 import { voltronCover, voltronLogo } from "@/assets/voltronInfographic";
-import { adaletCover, adaletLogo } from "@/assets/adalet";
+import { adaletCover, adaletLogo } from "@/assets/adaletCode";
 import { ninjaCover, ninjaLogo } from "@/assets/medievalNinja";
 import { islandsCover, islandsLogo } from "@/assets/floatingIslands";
 import { lilDungeonCover, lilDungeonLogo } from "@/assets/littleDungeon";
 
 const masquerade: Project = {
-  cover: { src: masqueradeCover, alt: "" },
-  logo: { src: masqueradeLogo, alt: "Masquerade's logo" },
-  roles: ["Game designer", "Level designer", "Quest designer", "Script writer"],
+  cover: { src: masqueradeCover, alt: "Masquerade cover image." },
+  logo: { src: masqueradeLogo, alt: "Masquerade logo" },
+  roles: ["Game designer", "Level designer", "Quest designer"],
   contributions: [
     "World and level design for the islands.",
     "Led quest and puzzle design.",
@@ -28,12 +28,11 @@ const masquerade: Project = {
     "After a mysterious train ride you find yourself stranded in the floating village of Liberio. Its inhabitants are cheerful and welcoming, but you can't seem to shake the feeling that something is wrong. Why are you here, why does everyone in the village wear a mask and who was that towering figure that spoke to you in the train, the answers to this questions are for you to find.",
   itchCode: "2598761",
   youtubeCode: "TJUIgSQkQws",
-  gddUrl: "",
 };
 
 const foodForTheSoul: Project = {
-  cover: { src: foodCover, alt: "" },
-  logo: { src: foodLogo, alt: "Food for the Soul's logo" },
+  cover: { src: foodCover, alt: "Food for the Soul cover image." },
+  logo: { src: foodLogo, alt: "Food for the Soul logo" },
   roles: ["Project lead", "Lead developer", "Game designer"],
   contributions: [
     "Led a team of two developers and seven artists, handling the game scope and ensuring quality.",
@@ -48,9 +47,9 @@ const foodForTheSoul: Project = {
 };
 
 const caveDwellers: Project = {
-  cover: { src: caveCover, alt: "" },
-  logo: { src: caveLogo, alt: "Cave Dwellers's logo" },
-  roles: ["Solo Developer", "Game designer", "Level designer"],
+  cover: { src: caveCover, alt: "Cave Dwellers cover image." },
+  logo: { src: caveLogo, alt: "Cave Dwellers logo" },
+  roles: ["Solo developer", "Game designer", "Level designer"],
   contributions: [
     "Conceptualized overall gameplay and level design.",
     "Developed gameplay and systems programming.",
@@ -63,18 +62,22 @@ const caveDwellers: Project = {
 };
 
 const velezShowcase: Project = {
-  cover: { src: velezCover, alt: "" },
-  logo: { src: velezLogo, alt: "Velez Showcase's logo" },
+  cover: { src: velezCover, alt: "Velez Showcase cover image." },
+  logo: { src: velezLogo, alt: "Velez Showcase logo" },
   roles: ["Lead developer", "App designer", "QA tester"],
-  contributions: ["Designed.", "Designed.", "Designed."],
+  contributions: [
+    "Developed interactivity logic for interfacing with products.",
+    "Designed.",
+    "Designed.",
+  ],
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate commodi dolore possimus, voluptates natus laudantium optio? Iusto natus cupiditate recusandae eum ex? Id veritatis repellat quis itaque a temporibus.",
   platform: PLATFORMS.unity,
 };
 
 const potionRush: Project = {
-  cover: { src: potionCover, alt: "" },
-  logo: { src: potionLogo, alt: "Potion Rush's logo" },
+  cover: { src: potionCover, alt: "Potion Rush cover image." },
+  logo: { src: potionLogo, alt: "Potion Rush logo" },
   roles: ["Game designer", "UI designer", "Artist"],
   contributions: [
     "Designed 12 unique potions and their magical ingredients.",
@@ -88,8 +91,8 @@ const potionRush: Project = {
 };
 
 const soulsOfLight: Project = {
-  cover: { src: soulsCover, alt: "" },
-  logo: { src: soulsLogo, alt: "Souls of Light's logo" },
+  cover: { src: soulsCover, alt: "Souls of Light cover image." },
+  logo: { src: soulsLogo, alt: "Souls of Light logo" },
   roles: ["Game designer", "Level designer", "Script writer"],
   contributions: [
     "Designed over five castle levels, and their own unique puzzles.",
@@ -104,8 +107,8 @@ const soulsOfLight: Project = {
 };
 
 const unRecuerdo: Project = {
-  cover: { src: recuerdoCover, alt: "" },
-  logo: { src: recuerdoLogo, alt: "Un Recuerdo's logo" },
+  cover: { src: recuerdoCover, alt: "Un Recuerdo cover image." },
+  logo: { src: recuerdoLogo, alt: "Un Recuerdo logo" },
   roles: ["Actor", "Video editor", "Poster designer"],
   contributions: [
     "Acted as one of the protagonist of the short film.",
@@ -119,9 +122,9 @@ const unRecuerdo: Project = {
 };
 
 const voltronInfographic: Project = {
-  cover: { src: voltronCover, alt: "" },
-  logo: { src: voltronLogo, alt: "Voltron Infographic's logo" },
-  roles: ["Solo Developer", "UI & UX designer", "Animator"],
+  cover: { src: voltronCover, alt: "Voltron Infographic cover image." },
+  logo: { src: voltronLogo, alt: "Voltron Infographic logo" },
+  roles: ["Solo developer", "UI & UX designer", "Animator"],
   contributions: [
     "Designed the flow of the infographic.",
     "Researched information about the Voltron's main cast.",
@@ -134,8 +137,8 @@ const voltronInfographic: Project = {
 };
 
 const adaletCode: Project = {
-  cover: { src: adaletCover, alt: "" },
-  logo: { src: adaletLogo, alt: "Adalet's logo" },
+  cover: { src: adaletCover, alt: "Adalet's Code cover image." },
+  logo: { src: adaletLogo, alt: "Adalet's Code logo" },
   roles: ["Lead developer", "Level designer", "QA tester"],
   contributions: ["Designed.", "Designed.", "Designed."],
   description:
@@ -144,8 +147,8 @@ const adaletCode: Project = {
 };
 
 const medievalNinja: Project = {
-  cover: { src: ninjaCover, alt: "" },
-  logo: { src: ninjaLogo, alt: "Medieval Ninja's logo" },
+  cover: { src: ninjaCover, alt: "Medieval Ninja cover image." },
+  logo: { src: ninjaLogo, alt: "Medieval Ninja logo" },
   roles: ["Solo developer", "Level designer", "Dialogue writer"],
   contributions: ["Designed.", "Designed.", "Designed."],
   description:
@@ -154,8 +157,8 @@ const medievalNinja: Project = {
 };
 
 const floatingIslands: Project = {
-  cover: { src: islandsCover, alt: "" },
-  logo: { src: islandsLogo, alt: "Floating Islands's logo" },
+  cover: { src: islandsCover, alt: "Floating Islands cover image." },
+  logo: { src: islandsLogo, alt: "Floating Islands logo" },
   roles: ["Solo developer", "Level designer", "Gameplay designer"],
   contributions: ["Designed.", "Designed.", "Designed."],
   description:
@@ -164,8 +167,8 @@ const floatingIslands: Project = {
 };
 
 const littleDungeon: Project = {
-  cover: { src: lilDungeonCover, alt: "" },
-  logo: { src: lilDungeonLogo, alt: "Little Dungeon's logo" },
+  cover: { src: lilDungeonCover, alt: "Little Dungeon cover image." },
+  logo: { src: lilDungeonLogo, alt: "Little Dungeon logo" },
   roles: ["Solo developer", "Level designer", "Gameplay designer"],
   contributions: ["Designed.", "Designed.", "Designed."],
   description:

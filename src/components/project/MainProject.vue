@@ -1,13 +1,13 @@
 <template>
   <div class="hover:motion-rotate-out-1 motion-rotate-in-1">
     <div
-      class="shadow-10/violet hover:shadow-20/crimson group relative h-[500px] w-[780px] cursor-pointer border-4 transition-all duration-200 ease-in-out"
+      class="shadow-10/violet hover:shadow-20/crimson group relative h-[500px] cursor-pointer border-4 transition-all duration-200 ease-in-out"
       @click="open"
     >
       <img
         :src="project.cover.src"
         :alt="project.cover.alt"
-        class="size-full mask-cover object-cover group-hover:blur-[1px] group-hover:brightness-40"
+        class="size-full object-cover group-hover:blur-[1px] group-hover:brightness-40"
       />
       <div
         class="text-shadow-2/amaranth bg-blue/30 absolute top-0 flex size-full flex-col justify-center px-12 text-[26px] opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100"

@@ -41,7 +41,7 @@ import soulsImages from "@/assets/soulsOfLight";
 import potionImages from "@/assets/potionRush";
 import recuerdoImages from "@/assets/unRecuerdo";
 import voltronImages from "@/assets/voltronInfographic";
-import adaletImages from "@/assets/adalet";
+import adaletImages from "@/assets/adaletCode";
 import ninjaImages from "@/assets/medievalNinja";
 import islandsImages from "@/assets/floatingIslands";
 import lilDungeonImages from "@/assets/littleDungeon";
