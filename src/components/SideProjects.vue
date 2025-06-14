@@ -20,8 +20,8 @@
       <side-project :project="PROJECTS.Adalet" :images="adaletImages" />
       <side-project :project="PROJECTS.MedievalNinja" :images="ninjaImages" />
       <side-project
-        :project="PROJECTS.FloatingIslands"
-        :images="islandsImages"
+        :project="PROJECTS.RainbowConstellation"
+        :images="constellationImages"
       />
       <side-project
         :project="PROJECTS.LittleDungeon"
@@ -43,6 +43,6 @@ import recuerdoImages from "@/assets/unRecuerdo";
 import voltronImages from "@/assets/voltronInfographic";
 import adaletImages from "@/assets/adaletCode";
 import ninjaImages from "@/assets/medievalNinja";
-import islandsImages from "@/assets/floatingIslands";
+import constellationImages from "@/assets/rainbowConstellation";
 import lilDungeonImages from "@/assets/littleDungeon";
 </script>

@@ -55,16 +55,16 @@
           />
         </div>
       </div>
-
       <div class="flex size-full flex-row gap-4">
         <div
-          class="bg-amaranth text-shadow-2/violet flex w-1/2 items-center justify-center rounded-bl-[50px] px-10 text-justify text-2xl"
+          class="bg-amaranth text-shadow-2/violet flex items-center justify-center px-10 text-justify text-2xl"
+          :class="`${images.length > 0 ? 'w-1/2 rounded-bl-[50px]' : 'w-full rounded-b-[50px]'}`"
         >
           {{ project.description }}
         </div>
-
         <div
           class="bg-amaranth flex w-1/2 items-center justify-center rounded-br-[50px]"
+          v-if="images.length > 0"
         >
           <viewer
             class="relative size-full cursor-pointer overflow-hidden rounded-br-[50px]"

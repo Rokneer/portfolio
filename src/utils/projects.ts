@@ -11,7 +11,10 @@ import { recuerdoCover, recuerdoLogo } from "@/assets/unRecuerdo";
 import { voltronCover, voltronLogo } from "@/assets/voltronInfographic";
 import { adaletCover, adaletLogo } from "@/assets/adaletCode";
 import { ninjaCover, ninjaLogo } from "@/assets/medievalNinja";
-import { islandsCover, islandsLogo } from "@/assets/floatingIslands";
+import {
+  constellationCover,
+  constellationLogo,
+} from "@/assets/rainbowConstellation";
 import { lilDungeonCover, lilDungeonLogo } from "@/assets/littleDungeon";
 
 const masquerade: Project = {
@@ -115,8 +118,8 @@ const unRecuerdo: Project = {
     "Edited the script and video footage.",
     "Designed vertical and horizontal posters to promote the short film.",
   ],
-  description: `Today is an special day for Amelia, she and her husband Jorge are going on a date to her favorite museum the Parque Explora. The date goes great but the in the past lives a truth that they need to live with every day.
-  This short film was nominated in the Smartfilms 2022 film festival in the REDvolucionarias category.`,
+  description:
+    "Today is an special day for Amelia, she and her husband Jorge are going on a date to her favorite museum the Parque Explora. The date goes great but the in the past lives a truth that they need to live with every day. This short film was nominated in the Smartfilms 2022 film festival in the REDvolucionarias category.",
   platform: PLATFORMS.youtube,
   youtubeCode: "HOMR1tvPWy0",
 };
@@ -156,10 +159,10 @@ const medievalNinja: Project = {
   platform: PLATFORMS.unreal,
 };
 
-const floatingIslands: Project = {
-  cover: { src: islandsCover, alt: "Floating Islands cover image." },
-  logo: { src: islandsLogo, alt: "Floating Islands logo" },
-  roles: ["Solo developer", "Level designer", "Gameplay designer"],
+const rainbowConstellation: Project = {
+  cover: { src: constellationCover, alt: "Rainbow Constellation cover image." },
+  logo: { src: constellationLogo, alt: "Rainbow Constellation logo" },
+  roles: ["Lead developer", "Level designer", "Gameplay designer"],
   contributions: ["Designed.", "Designed.", "Designed."],
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate commodi dolore possimus, voluptates natus laudantium optio? Iusto natus cupiditate recusandae eum ex? Id veritatis repellat quis itaque a temporibus.",
@@ -169,7 +172,7 @@ const floatingIslands: Project = {
 const littleDungeon: Project = {
   cover: { src: lilDungeonCover, alt: "Little Dungeon cover image." },
   logo: { src: lilDungeonLogo, alt: "Little Dungeon logo" },
-  roles: ["Solo developer", "Level designer", "Gameplay designer"],
+  roles: ["Solo developer", "System designer", "Gameplay designer"],
   contributions: ["Designed.", "Designed.", "Designed."],
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate commodi dolore possimus, voluptates natus laudantium optio? Iusto natus cupiditate recusandae eum ex? Id veritatis repellat quis itaque a temporibus.",
@@ -187,7 +190,7 @@ const PROJECTS: Record<string, Project> = {
   VelezShowcase: velezShowcase,
   Adalet: adaletCode,
   MedievalNinja: medievalNinja,
-  FloatingIslands: floatingIslands,
+  RainbowConstellation: rainbowConstellation,
   LittleDungeon: littleDungeon,
 };
 
