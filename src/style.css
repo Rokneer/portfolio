@@ -1,8 +1,429 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin 'tailwindcss-motion';
 
-body {
-  font-family: "Sora", sans-serif;
-  font-display: swap;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /** Colors */
+  --color-*: initial;
+  --color-violet: #311f4c;
+  --color-amaranth: #981869;
+  --color-crimson: #e42038;
+  --color-blue: #a9a5d2;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /** Fonts **/
+  --font-atma: Atma, sans-serif;
+  --font-overpass: Overpass, sans-serif;
+
+  /** Breakpoints **/
+  --breakpoint-xs: 30rem;
+
+  /** Shadows **/
+  --shadow-*: initial;
+  --text-shadow-*: initial;
+  --tw-drop-shadow-*: initial;
+
+  /** Animations **/
+  --animate-duration-*: initial;
+  --animate-delay-*: initial;
+
+  --animate-wave: wave 0.8s ease-in-out infinite;
+  @keyframes wave {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+}
+
+/** Animation **/
+@utility animate-duration-* {
+  --animate-duration: calc(--value(integer) * 1s)
+    animation-duration: --value(--animate-duration);
+}
+@utility animate-delay-* {
+  --animate-delay: calc(--value(integer) * 1s)
+    animation-delay: --value(--animate-delay);
+}
+
+/** Text Stroke **/
+@utility text-stroke-* {
+  -webkit-text-stroke-width: calc(--value(integer) * 1px);
+  -webkit-text-stroke-color: --value(--color- *);
+}
+
+/** Paint Order **/
+@utility stroke-front {
+  paint-order: fill stroke;
+}
+@utility stroke-behind {
+  paint-order: stroke fill;
+}
+
+/** Shadows **/
+@utility shadow-* {
+  --shadow-size: calc(--value(integer) * 1px);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: var(--shadow-size, 0) var(--shadow-size, 0) var(--shadow-blur, 0)
+    var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility -shadow-* {
+  --shadow-size: calc(--value(integer) * -1px);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: var(--shadow-size, 0) var(--shadow-size, 0) var(--shadow-blur, 0)
+    var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility shadow-x-* {
+  --shadow-x: calc(--value(integer) * 1px);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
+    var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility -shadow-x-* {
+  --shadow-x: calc(--value(integer) * 1px * -1);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
+    var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility shadow-y-* {
+  --shadow-y: calc(--value(integer) * 1px);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
+    var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility -shadow-y-* {
+  --shadow-y: calc(--value(integer) * 1px * -1);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
+    var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility shadow-blur-* {
+  --shadow-blur: calc(--value(integer) * 1px);
+}
+@utility shadow-spread-* {
+  --shadow-spread: calc(--value(integer) * 1px);
+}
+
+/** Inset Shadows **/
+@utility inset-shadow-* {
+  --inset-shadow-size: calc(--value(integer) * 1px);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: var(--inset-shadow-size, 0) var(--inset-shadow-size, 0)
+    var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility -inset-shadow-* {
+  --inset-shadow-size: calc(--value(integer) * -1px);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: var(--inset-shadow-size, 0) var(--inset-shadow-size, 0)
+    var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility inset-shadow-x-* {
+  --inset-shadow-x: calc(--value(integer) * 1px);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
+    var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility -inset-shadow-x-* {
+  --inset-shadow-x: calc(--value(integer) * 1px * -1);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
+    var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility inset-shadow-y-* {
+  --inset-shadow-y: calc(--value(integer) * 1px);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
+    var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+@utility -inset-shadow-y-* {
+  --inset-shadow-y: calc(--value(integer) * 1px * -1);
+  --tw-shadow-color: --modifier(--color- *, [color]);
+  box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
+    var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
+}
+
+/** Text Shadows **/
+@utility text-shadow-* {
+  --text-shadow-size: calc(--value(integer) * 1px);
+  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  text-shadow:
+    var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color);
+}
+@utility -text-shadow-* {
+  --text-shadow-size: calc(--value(integer) * -1px);
+  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  text-shadow:
+    var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color);
+}
+@utility text-shadow-x-* {
+  --text-shadow-x: calc(--value(integer) * 1px);
+  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  text-shadow:
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color);
+}
+@utility -text-shadow-x-* {
+  --text-shadow-x: calc(--value(integer) * 1px);
+  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  text-shadow:
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color);
+}
+@utility text-shadow-y-* {
+  --text-shadow-y: calc(--value(integer) * 1px);
+  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  text-shadow:
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color);
+}
+@utility -text-shadow-y-* {
+  --text-shadow-y: calc(--value(integer) * 1px);
+  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  text-shadow:
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color),
+    var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
+      var(--tw-text-shadow-color);
+}
+
+/** Drop Shadows **/
+@utility drop-shadow-* {
+  --drop-shadow-size: calc(--value(integer) * 1px);
+  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --drop-shadow: drop-shadow(
+    var(--drop-shadow-size, 0) var(--drop-shadow-size, 0)
+      var(--drop-shadow-blur, 0) var(--tw-drop-shadow-color)
+  );
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,)
+    var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,)
+    var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
+}
+@utility -drop-shadow-* {
+  --drop-shadow-size: calc(--value(integer) * -1px);
+  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --drop-shadow: drop-shadow(
+    var(--drop-shadow-size, 0) var(--drop-shadow-size, 0)
+      var(--drop-shadow-blur, 0) var(--tw-drop-shadow-color)
+  );
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,)
+    var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,)
+    var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
+}
+@utility drop-shadow-x-* {
+  --drop-shadow-x: calc(--value(integer) * 1px);
+  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --drop-shadow: drop-shadow(
+    var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
+      var(--tw-drop-shadow-color)
+  );
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,)
+    var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,)
+    var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
+}
+@utility -drop-shadow-x-* {
+  --drop-shadow-x: calc(--value(integer) * -1px);
+  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --drop-shadow: drop-shadow(
+    var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
+      var(--tw-drop-shadow-color)
+  );
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,)
+    var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,)
+    var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
+}
+@utility drop-shadow-y-* {
+  --drop-shadow-y: calc(--value(integer) * 1px);
+  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --drop-shadow: drop-shadow(
+    var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
+      var(--tw-drop-shadow-color)
+  );
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,)
+    var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,)
+    var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
+}
+@utility -drop-shadow-y-* {
+  --drop-shadow-y: calc(--value(integer) * -1px);
+  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --drop-shadow: drop-shadow(
+    var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
+      var(--tw-drop-shadow-color)
+  );
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,)
+    var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,)
+    var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
+}
+@utility drop-shadow-blur-* {
+  --drop-shadow-blur: calc(--value(integer) * 1px);
+}
+
+/** Inline Sizing **/
+@utility inline-size-* {
+  inline-size: calc(--value(integer) * var(--spacing));
+  inline-size: calc(--value(ratio) * 100%);
+  inline-size: --value(percentage);
+}
+@utility max-inline-size-* {
+  max-inline-size: calc(--value(integer) * var(--spacing));
+  max-inline-size: calc(--value(ratio) * 100%);
+  max-inline-size: --value(percentage);
+}
+@utility min-inline-size-* {
+  min-inline-size: calc(--value(integer) * var(--spacing));
+  min-inline-size: calc(--value(ratio) * 100%);
+  max-inline-size: --value(percentage);
+}
+
+/** Block Sizing **/
+@utility block-size-* {
+  block-size: calc(--value(integer) * var(--spacing));
+  block-size: calc(--value(ratio) * 100%);
+  block-size: --value(percentage);
+}
+@utility max-block-size-* {
+  max-block-size: calc(--value(integer) * var(--spacing));
+  max-block-size: calc(--value(ratio) * 100%);
+  max-block-size: --value(percentage);
+}
+@utility min-block-size-* {
+  min-block-size: calc(--value(integer) * var(--spacing));
+  min-block-size: calc(--value(ratio) * 100%);
+  min-block-size: --value(percentage);
+}
+
+/** Writing Mode **/
+@utility horizontal-tb {
+  writing-mode: horizontal-tb;
+}
+@utility vertical-rl {
+  writing-mode: vertical-rl;
+}
+@utility vertical-lr {
+  writing-mode: vertical-lr;
+}
+@utility sideways-rl {
+  writing-mode: sideways-rl;
+}
+@utility sideways-lr {
+  writing-mode: sideways-lr;
+}
+
+/** Linear Gradients Masks **/
+@utility mask-linear-to-t {
+  mask-image: linear-gradient(to bottom, var(--mask-gradient-stops));
+}
+@utility mask-linear-to-tr {
+  mask-image: linear-gradient(to bottom right, var(--mask-gradient-stops));
+}
+@utility mask-linear-to-r {
+  mask-image: linear-gradient(to right, var(--mask-gradient-stops));
+}
+@utility mask-linear-to-br {
+  mask-image: linear-gradient(to bottom right, var(--mask-gradient-stops));
+}
+@utility mask-linear-to-b {
+  mask-image: linear-gradient(to bottom, var(--mask-gradient-stops));
+}
+@utility mask-linear-to-bl {
+  mask-image: linear-gradient(to bottom left, var(--mask-gradient-stops));
+}
+@utility mask-linear-to-l {
+  mask-image: linear-gradient(to left, var(--mask-gradient-stops));
+}
+@utility mask-linear-to-tl {
+  mask-image: linear-gradient(to top left, var(--mask-gradient-stops));
+}
+
+/** Radial Gradients Masks **/
+@utility mask-radial {
+  mask-image: radial-gradient(in oklab, var(--mask-gradient-stops));
+}
+@utility mask-radial-* {
+  mask-image: radial-gradient(
+    --value([value]) in oklab,
+    var(--mask-gradient-stops)
+  );
+}
+
+/** Conic Gradients Masks **/
+@utility mask-conic-* {
+  mask-image: conic-gradient(
+    from calc(--value(integer) * 1deg) in oklab,
+    var(--mask-gradient-stops)
+  );
+}
+@utility -mask-conic-* {
+  mask-image: conic-gradient(
+    from calc(--value(integer) * -1deg) in oklab,
+    var(--mask-gradient-stops)
+  );
+}
+
+/** To & From Values **/
+@utility mask-to-transparent {
+  --mask-gradient-to: transparent;
+  --mask-gradient-stops:
+    var(--mask-gradient-from) var(--mask-gradient-from-position, 0%),
+    var(--mask-gradient-to) var(--mask-gradient-to-position, 100%);
+}
+@utility mask-to-* {
+  --mask-gradient-to-position: --value(percentage);
+  --mask-gradient-to-position: calc(--value(ratio) * 100%);
+  --mask-gradient-to: --value(--color- *, [color]);
+  --mask-gradient-stops:
+    var(--mask-gradient-from) var(--mask-gradient-from-position, 0%),
+    var(--mask-gradient-to) var(--mask-gradient-to-position, 100%);
+}
+@utility mask-from-transparent {
+  --mask-gradient-from: transparent;
+  --mask-gradient-stops:
+    var(--mask-gradient-from) var(--mask-gradient-from-position, 0%),
+    var(--mask-gradient-to) var(--mask-gradient-to-position, 100%);
+}
+@utility mask-from-* {
+  --mask-gradient-from-position: --value(percentage);
+  --mask-gradient-from-position: calc(--value(ratio) * 100%);
+  --mask-gradient-from: --value(--color- *, [color]);
+  --mask-gradient-stops:
+    var(--mask-gradient-from) var(--mask-gradient-from-position, 0%),
+    var(--mask-gradient-to) var(--mask-gradient-to-position, 100%);
 }
