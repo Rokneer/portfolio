@@ -1,10 +1,13 @@
 import { createApp } from "vue";
-import "./style.css";
-import "@mdi/font/css/materialdesignicons.css";
-import "viewerjs/dist/viewer.css";
-import "animate.css";
-import VueViewer from "v-viewer";
-import router from "./router";
 import App from "./App.vue";
+import router from "./router";
 
-createApp(App).use(router).use(VueViewer).mount("#app");
+import "./style.css";
+
+import { createVfm } from "vue-final-modal";
+import "vue-final-modal/style.css";
+
+import VueViewer from "v-viewer";
+import "viewerjs/dist/viewer.css";
+
+createApp(App).use(router).use(createVfm()).use(VueViewer).mount("#app");

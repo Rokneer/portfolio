@@ -1,23 +1,20 @@
 <template>
-  <div class="py-4 text-center">
-    <div
-      class="animate__animated animate__fadeInDown py-4 text-7xl font-extrabold sm:py-8 sm:text-8xl lg:text-9xl"
-    >
+  <div class="py-10 text-center">
+    <div class="text-shadow-6/crimson py-4 text-[250px] font-extrabold">
       ¡404!
     </div>
-    <div
-      class="animate__animated animate__fadeInDown flex flex-col gap-y-6 py-3 text-xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-    >
-      <div>Woops! Couldn't find the page you were looking for.</div>
-      <div>
+    <div class="flex flex-col gap-y-6 py-3 text-6xl">
+      <div class="text-shadow-5/violet font-bold">
+        Whoops! Couldn't find the page you were looking for.
+      </div>
+      <div class="text-shadow-5/violet font-bold">
         How about we go back
         <router-link
-          class="text-primary-100 hover:shadow-primary-100 hover:text-shadow"
+          class="hover:text-shadow-5/crimson inline-block duration-200 ease-in-out hover:text-8xl hover:font-semibold hover:tracking-[0.015em]"
           :to="{ name: 'projects' }"
         >
-          home?
-        </router-link>
-        :)
+          home </router-link
+        >? :)
       </div>
     </div>
   </div>
