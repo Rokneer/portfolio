@@ -62,7 +62,7 @@
       </a>
       <a
         class="hover:motion-rotate-out-1 motion-rotate-in-1"
-        href="https://drive.google.com/file/d/1c11vZkUXzI7QEqjcQp86l1xCUVQTRyqQ"
+        :href="CV"
         target="_blank"
         rel="noreferrer"
       >
@@ -80,6 +80,7 @@
 <script setup lang="ts">
 import Tomatito from "/common/tomate/mascot/mascot-crimson-border.svg";
 import VineContact from "/common/tomate/vines/VineContact.svg";
+import CV from "/common/CV-ATS.pdf";
 
 import { PhLinkedinLogo, PhEnvelope, PhUserSquare } from "@phosphor-icons/vue";
 import PhItchDotIoLogo from "@/components/icons/PhItchDotIoLogo.vue";

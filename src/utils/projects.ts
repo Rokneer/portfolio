@@ -17,6 +17,7 @@ import {
 } from "@/assets/rainbowConstellation";
 import { lilDungeonCover, lilDungeonLogo } from "@/assets/littleDungeon";
 
+//* Main Projects
 const masquerade: Project = {
   cover: { src: masqueradeCover, alt: "Masquerade cover image." },
   logo: { src: masqueradeLogo, alt: "Masquerade logo" },
@@ -65,8 +66,8 @@ const caveDwellers: Project = {
 };
 
 const velezShowcase: Project = {
-  cover: { src: velezCover, alt: "Velez Showcase cover image." },
-  logo: { src: velezLogo, alt: "Velez Showcase logo" },
+  cover: { src: velezCover, alt: "TresDLab by Velez cover image." },
+  logo: { src: velezLogo, alt: "TresDLab by Velez logo" },
   roles: ["Lead developer", "App designer", "QA tester"],
   contributions: [
     "Developed interactivity logic for interfacing with products.",
@@ -74,10 +75,11 @@ const velezShowcase: Project = {
     "Designed.",
   ],
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate commodi dolore possimus, voluptates natus laudantium optio? Iusto natus cupiditate recusandae eum ex? Id veritatis repellat quis itaque a temporibus.",
+    "An interactive application developed to allow a fully digital workflow for Velez Cueros bag prototyping. Users can interact with highly detailed and fully realized 3D models, allowing real-time changes to the models, colors and textures, as well as having a digital mannequin providing a clear and realistic sense of scale.",
   platform: PLATFORMS.unity,
 };
 
+//* Side Projects
 const potionRush: Project = {
   cover: { src: potionCover, alt: "Potion Rush cover image." },
   logo: { src: potionLogo, alt: "Potion Rush logo" },
@@ -97,11 +99,6 @@ const soulsOfLight: Project = {
   cover: { src: soulsCover, alt: "Souls of Light cover image." },
   logo: { src: soulsLogo, alt: "Souls of Light logo" },
   roles: ["Game designer", "Level designer", "Script writer"],
-  contributions: [
-    "Designed over five castle levels, and their own unique puzzles.",
-    "Wrote story and all dialogue with the castle ghosts.",
-    "Conceptualized three different flame abilities.",
-  ],
   description:
     "You wake up in the middle of a cold dark forest, at your side lies a metal lamp, a weak ember appears to burn inside it. In front of you an enormous castle opens its rusted gates to you. With no other option you decide to enter the castle, as you advance you notice that thorny vines cover the walls. A chill runs down your spine, you try to remember who you are, why you are here, but your mind is blank. Who knows what other mysteries lie ahead in this darken path.",
   platform: PLATFORMS.unity,
@@ -113,11 +110,6 @@ const unRecuerdo: Project = {
   cover: { src: recuerdoCover, alt: "Un Recuerdo cover image." },
   logo: { src: recuerdoLogo, alt: "Un Recuerdo logo" },
   roles: ["Actor", "Video editor", "Poster designer"],
-  contributions: [
-    "Acted as one of the protagonist of the short film.",
-    "Edited the script and video footage.",
-    "Designed vertical and horizontal posters to promote the short film.",
-  ],
   description:
     "Today is an special day for Amelia, she and her husband Jorge are going on a date to her favorite museum the Parque Explora. The date goes great but the in the past lives a truth that they need to live with every day. This short film was nominated in the Smartfilms 2022 film festival in the REDvolucionarias category.",
   platform: PLATFORMS.youtube,
@@ -128,11 +120,6 @@ const voltronInfographic: Project = {
   cover: { src: voltronCover, alt: "Voltron Infographic cover image." },
   logo: { src: voltronLogo, alt: "Voltron Infographic logo" },
   roles: ["Solo developer", "UI & UX designer", "Animator"],
-  contributions: [
-    "Designed the flow of the infographic.",
-    "Researched information about the Voltron's main cast.",
-    "Programmed interactivity and animations for the infographic.",
-  ],
   description:
     "Meet the many characters of the Voltron: The Legendary Defender universe in this interactive infographic. Learn their stories, the planets they visited and much more in this thematic informative piece.",
   platform: PLATFORMS.unity,
@@ -143,29 +130,27 @@ const adaletCode: Project = {
   cover: { src: adaletCover, alt: "Adalet's Code cover image." },
   logo: { src: adaletLogo, alt: "Adalet's Code logo" },
   roles: ["Lead developer", "Level designer", "QA tester"],
-  contributions: ["Designed.", "Designed.", "Designed."],
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate commodi dolore possimus, voluptates natus laudantium optio? Iusto natus cupiditate recusandae eum ex? Id veritatis repellat quis itaque a temporibus.",
+    "Explore an abandoned bunker and solve puzzle minigames in hopes to find a way to help the human rebelion and destroy their robotic overlords one and for all.",
   platform: PLATFORMS.unity,
+  itchCode: "3142157",
 };
 
 const medievalNinja: Project = {
   cover: { src: ninjaCover, alt: "Medieval Ninja cover image." },
   logo: { src: ninjaLogo, alt: "Medieval Ninja logo" },
   roles: ["Solo developer", "Level designer", "Dialogue writer"],
-  contributions: ["Designed.", "Designed.", "Designed."],
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate commodi dolore possimus, voluptates natus laudantium optio? Iusto natus cupiditate recusandae eum ex? Id veritatis repellat quis itaque a temporibus.",
+    "You're master has just informed you of some trully terrible news, the king is dying and it is your mission to deliver his live saving medicine before its too late.",
   platform: PLATFORMS.unreal,
 };
 
 const rainbowConstellation: Project = {
   cover: { src: constellationCover, alt: "Rainbow Constellation cover image." },
   logo: { src: constellationLogo, alt: "Rainbow Constellation logo" },
-  roles: ["Lead developer", "Level designer", "Gameplay designer"],
-  contributions: ["Designed.", "Designed.", "Designed."],
+  roles: ["Lead developer", "UI designer", "Gameplay designer"],
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate commodi dolore possimus, voluptates natus laudantium optio? Iusto natus cupiditate recusandae eum ex? Id veritatis repellat quis itaque a temporibus.",
+    "Join colorful stars to reveal beatiful constellations from different cultures in this fun and casual mobile game.",
   platform: PLATFORMS.unity,
 };
 
@@ -173,9 +158,9 @@ const littleDungeon: Project = {
   cover: { src: lilDungeonCover, alt: "Little Dungeon cover image." },
   logo: { src: lilDungeonLogo, alt: "Little Dungeon logo" },
   roles: ["Solo developer", "System designer", "Gameplay designer"],
-  contributions: ["Designed.", "Designed.", "Designed."],
+
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate commodi dolore possimus, voluptates natus laudantium optio? Iusto natus cupiditate recusandae eum ex? Id veritatis repellat quis itaque a temporibus.",
+    "Fight little monster with your little weapons while you explore and try to escape a little dungeon in this little game prototype.",
   platform: PLATFORMS.unity,
 };
 

@@ -3,7 +3,7 @@ export interface Project {
   logo: Image;
   description: string;
   roles: string[];
-  contributions: string[];
+  contributions?: string[];
   platform: Image;
   itchCode?: string;
   youtubeCode?: string;

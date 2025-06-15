@@ -63,8 +63,8 @@
           {{ project.description }}
         </div>
         <div
-          class="bg-amaranth flex w-1/2 items-center justify-center rounded-br-[50px]"
           v-if="images.length > 0"
+          class="bg-amaranth flex w-1/2 items-center justify-center rounded-br-[50px]"
         >
           <viewer
             class="relative size-full cursor-pointer overflow-hidden rounded-br-[50px]"
