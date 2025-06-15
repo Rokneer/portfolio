@@ -7,7 +7,7 @@
       <img
         :src="project.cover.src"
         :alt="project.cover.alt"
-        class="size-full object-cover group-hover:blur-[1px] group-hover:brightness-40"
+        class="group-hover:brightness-40 size-full object-cover group-hover:blur-[1px]"
       />
       <div
         class="text-shadow-2/amaranth bg-blue/30 absolute top-0 flex size-full flex-col justify-center px-12 text-[26px] opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100"

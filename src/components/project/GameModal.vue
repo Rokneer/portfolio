@@ -26,7 +26,7 @@
             :href="project.gddUrl"
             target="_blank"
             rel="noreferrer"
-            class="flex cursor-pointer flex-row items-end justify-center transition hover:scale-102"
+            class="hover:scale-102 flex cursor-pointer flex-row items-end justify-center transition"
           >
             <ph-file-text
               :size="115"
@@ -84,7 +84,7 @@
               :class="{ hidden: image != images[0] }"
             >
               <img
-                class="absolute -top-[100%] -right-[100%] -bottom-[100%] -left-[100%] m-auto min-h-full min-w-full"
+                class="absolute -bottom-[100%] -left-[100%] -right-[100%] -top-[100%] m-auto min-h-full min-w-full"
                 :src="image.src"
                 :alt="image.alt"
               />

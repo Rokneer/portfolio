@@ -1,7 +1,7 @@
 <template>
-  <div class="mb-48 flex w-full flex-row justify-center gap-45">
+  <div class="gap-45 mb-48 flex w-full flex-row justify-center">
     <div
-      class="text-crimson text-stroke-white text-stroke-20 stroke-behind drop-shadow-violet drop-shadow-4 flex flex-col items-center justify-center text-[230px]/55"
+      class="text-crimson text-stroke-white text-stroke-20 stroke-behind drop-shadow-violet drop-shadow-4 text-[230px]/55 flex flex-col items-center justify-center"
     >
       <div>Contact</div>
       <div class="flex flex-row items-center">
@@ -28,7 +28,7 @@
         rel="noreferrer"
       >
         <ph-envelope
-          class="drop-shadow-4 hover:drop-shadow-8 drop-shadow-violet stroke-behind cursor-pointer stroke-white stroke-25 transition ease-in-out"
+          class="drop-shadow-4 hover:drop-shadow-8 drop-shadow-violet stroke-behind stroke-25 cursor-pointer stroke-white transition ease-in-out"
           :size="230"
           weight="fill"
           color="#e42038"
@@ -41,7 +41,7 @@
         rel="noreferrer"
       >
         <ph-itch-dot-io-logo
-          class="drop-shadow-4 hover:drop-shadow-8 drop-shadow-violet stroke-behind cursor-pointer stroke-white stroke-25 transition ease-in-out"
+          class="drop-shadow-4 hover:drop-shadow-8 drop-shadow-violet stroke-behind stroke-25 cursor-pointer stroke-white transition ease-in-out"
           :size="230"
           weight="fill"
           color="#e42038"
@@ -54,7 +54,7 @@
         rel="noreferrer"
       >
         <ph-linkedin-logo
-          class="drop-shadow-4 hover:drop-shadow-8 drop-shadow-violet stroke-behind cursor-pointer stroke-white stroke-25 transition ease-in-out"
+          class="drop-shadow-4 hover:drop-shadow-8 drop-shadow-violet stroke-behind stroke-25 cursor-pointer stroke-white transition ease-in-out"
           :size="230"
           weight="fill"
           color="#e42038"
@@ -67,7 +67,7 @@
         rel="noreferrer"
       >
         <ph-user-square
-          class="drop-shadow-4 hover:drop-shadow-8 drop-shadow-violet stroke-behind cursor-pointer stroke-white stroke-25 transition ease-in-out"
+          class="drop-shadow-4 hover:drop-shadow-8 drop-shadow-violet stroke-behind stroke-25 cursor-pointer stroke-white transition ease-in-out"
           :size="230"
           weight="fill"
           color="#e42038"
