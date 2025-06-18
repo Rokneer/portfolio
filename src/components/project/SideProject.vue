@@ -1,7 +1,7 @@
 <template>
-  <div class="hover:motion-rotate-out-1 motion-rotate-in-1">
+  <div class="hover:motion-rotate-out-1 motion-rotate-in-1 aspect-square">
     <div
-      class="shadow-10/violet hover:shadow-20/crimson group relative size-[360px] cursor-pointer border-4 transition-all duration-200 ease-in-out"
+      class="@5xl:shadow-10 shadow-violet @5xl:hover:shadow-20 hover:shadow-crimson @xl:shadow-8 @xl:border-4 shadow-3 @xl:hover:shadow-10 hover:shadow-4 group relative cursor-pointer border transition-all duration-200 ease-in-out"
       @click="open"
     >
       <img
@@ -10,14 +10,16 @@
         class="size-full mask-cover object-cover group-hover:blur-[1px] group-hover:brightness-40"
       />
       <div
-        class="text-shadow-2/amaranth bg-blue/30 absolute top-0 flex size-full flex-col justify-center p-8 opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100"
+        class="@7xl:text-shadow-2 text-shadow-0.5 text-shadow-amaranth bg-blue/30 @7xl:text-[26px] @7xl:px-8 @xs:px-4 @xs:text-[10px] @xl:text-[16px] absolute top-0 flex size-full flex-col justify-center px-2 text-[6px] opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100"
       >
-        <div class="flex flex-col items-center gap-5">
+        <div class="@7xl:gap-5 flex flex-col items-center gap-1">
           <div class="flex w-full flex-col">
-            <div class="text-shadow-3/amaranth pb-1 text-3xl font-bold">
+            <div
+              class="@7xl:text-shadow-3 text-shadow-1 text-shadow-amaranth @7xl:text-[32px] @7xl:mb-3 @xs:text-[12px] @xl:text-[22px] text-[7px] font-bold"
+            >
               Worked as
             </div>
-            <ul class="list-inside list-disc text-[22px]">
+            <ul class="@7xl:text-[22px] list-inside list-disc">
               <li v-for="(role, index) in project.roles" :key="index">
                 {{ role }}
               </li>
@@ -25,11 +27,13 @@
           </div>
 
           <div class="flex w-full flex-col">
-            <div class="text-shadow-3/amaranth pb-1 text-3xl font-bold">
+            <div
+              class="@7xl:text-shadow-3 text-shadow-1 text-shadow-amaranth @7xl:text-[32px] @7xl:mb-3 @xs:text-[12px] @xl:text-[22px] text-[7px] font-bold"
+            >
               Made with
             </div>
             <img
-              class="drop-shadow-3/amaranth"
+              class="@7xl:drop-shadow-3 drop-shadow-1 drop-shadow-amaranth"
               :src="project.platform.src"
               :alt="project.platform.alt"
             />

@@ -1,7 +1,9 @@
 <template>
-  <div class="mb-48 flex flex-row items-center gap-12">
+  <div
+    class="@7xl:mb-48 @5xl:mb-24 @xl:mb-20 @lg:mb-12 @xl:gap-12 @lg:gap-6 mb-8 flex flex-row items-center justify-around gap-3"
+  >
     <img
-      class="drop-shadow-5/violet z-10"
+      class="@5xl:drop-shadow-5 @xl:drop-shadow-4 @lg:drop-shadow-2 drop-shadow-1.5 drop-shadow-violet z-10 w-[30%]"
       :src="isMeHovered ? meHover : meBase"
       alt="Me!"
       width="382"
@@ -9,8 +11,10 @@
       @mouseover="isMeHovered = true"
       @mouseleave="isMeHovered = false"
     />
-    <div class="flex flex-col font-medium">
-      <div class="text-shadow-4/violet pb-4 text-[90px]">
+    <div class="flex w-[70%] flex-col font-medium">
+      <div
+        class="@5xl:text-shadow-4 @xl:text-shadow-3 @lg:text-shadow-2 @xs:text-shadow-1 text-shadow-0.5 text-shadow-violet @7xl:pb-4 @7xl:text-[90px] @xl:text-[42px] @lg:text-[32px] @xs:text-[16px] text-[10px]"
+      >
         <span> Hi there, my name is </span>
         <a
           class="text-crimson transition-all ease-in-out hover:font-semibold"
@@ -21,7 +25,9 @@
           Alejandro
         </a>
       </div>
-      <div class="text-shadow-3/violet flex flex-col gap-2 text-[46px]">
+      <div
+        class="@5xl:text-shadow-3 @xl:text-shadow-2 @lg:text-shadow-1 text-shadow-0.5 text-shadow-violet @min-7xl:text-[46px] @max-7xl:text-[36px] @5xl:text-[28px] @lg:text-[20px] @xs:text-[10px] flex flex-col gap-1 text-[6px]"
+      >
         <div class="hover:animate-wave motion-reduce:animate-none">
           I design and develop games and other neat stuff!
         </div>

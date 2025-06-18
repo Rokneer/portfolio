@@ -39,7 +39,7 @@ const foodForTheSoul: Project = {
   logo: { src: foodLogo, alt: "Food for the Soul logo" },
   roles: ["Project lead", "Lead developer", "Game designer"],
   contributions: [
-    "Led a team of two developers and seven artists, handling the game scope and ensuring quality.",
+    "Led a team of two developers and seven artists.",
     "Managed design and development, establishing main gameplay loop.",
     "Programmed the entirety of the game logic.",
   ],
@@ -71,8 +71,8 @@ const velezShowcase: Project = {
   roles: ["Lead developer", "App designer", "QA tester"],
   contributions: [
     "Developed interactivity logic for interfacing with products.",
-    "Designed.",
-    "Designed.",
+    "Integrated all art assets.",
+    "Prototyped and integrated UI.",
   ],
   description:
     "An interactive application developed to allow a fully digital workflow for Velez Cueros bag prototyping. Users can interact with highly detailed and fully realized 3D models, allowing real-time changes to the models, colors and textures, as well as having a digital mannequin providing a clear and realistic sense of scale.",
