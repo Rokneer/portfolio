@@ -1,6 +1,6 @@
 <template>
   <div
-    class="4xl:pt-60 4xl:pb-10 flex flex-col gap-1 pt-10 pb-3 lg:pt-20 xl:pb-4 2xl:gap-4 2xl:pt-40 2xl:pb-8"
+    class="4xl:pt-60 4xl:pb-10 flex flex-col gap-1 pb-3 pt-10 lg:pt-20 xl:pb-4 2xl:gap-4 2xl:pb-8 2xl:pt-40"
   >
     <div
       class="3xl:gap-10 flex flex-row items-center justify-center gap-2 md:gap-3 xl:gap-4 2xl:gap-5"

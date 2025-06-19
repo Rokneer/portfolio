@@ -43,6 +43,8 @@ jobs:
             ${{ runner.os }}-pnpm-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Lint Fix
+        run: pnpm run lint-fix
       - name: Lint check
         run: pnpm run lint-check
       - name: Build

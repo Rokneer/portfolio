@@ -1,7 +1,7 @@
 <template>
   <div class="hover:motion-rotate-out-1 motion-rotate-in-1 aspect-video">
     <div
-      class="shadow-4 lg:shadow-6 xl:shadow-8 2xl:shadow-10 hover:shadow-8 lg:hover:shadow-12 xl:hover:shadow-16 2xl:hover:shadow-20 shadow-violet hover:shadow-crimson group relative cursor-pointer border-2 transition-all duration-200 ease-in-out lg:border-4 xl:border-6"
+      class="shadow-4 lg:shadow-6 xl:shadow-8 2xl:shadow-10 hover:shadow-8 lg:hover:shadow-12 xl:hover:shadow-16 2xl:hover:shadow-20 shadow-violet hover:shadow-crimson xl:border-6 group relative cursor-pointer border-2 transition-all duration-200 ease-in-out lg:border-4"
       @click="open"
     >
       <img

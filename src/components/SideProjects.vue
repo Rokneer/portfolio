@@ -1,6 +1,6 @@
 <template>
   <div
-    class="xs:mb-10 3xl:mb-42 4xl:mb-50 3xl:gap-14 mb-8 flex flex-col justify-center gap-4 sm:mb-14 md:mb-16 lg:mb-20 xl:mb-24 xl:gap-8 2xl:mb-30 2xl:flex-row 2xl:gap-12"
+    class="xs:mb-10 3xl:mb-42 4xl:mb-50 3xl:gap-14 2xl:mb-30 mb-8 flex flex-col justify-center gap-4 sm:mb-14 md:mb-16 lg:mb-20 xl:mb-24 xl:gap-8 2xl:flex-row 2xl:gap-12"
   >
     <!--* FIRST PROJECTS  -->
     <div

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="xs:mb-10 3xl:mb-42 4xl:mb-50 mb-8 flex flex-row items-center justify-around gap-3 sm:mb-14 md:mb-16 lg:mb-20 lg:gap-6 xl:mb-24 xl:gap-12 2xl:mb-30"
+    class="xs:mb-10 3xl:mb-42 4xl:mb-50 2xl:mb-30 mb-8 flex flex-row items-center justify-around gap-3 sm:mb-14 md:mb-16 lg:mb-20 lg:gap-6 xl:mb-24 xl:gap-12"
   >
     <img
       class="drop-shadow-1.5 lg:drop-shadow-2 xl:drop-shadow-4 2xl:drop-shadow-5 drop-shadow-violet z-10 w-[30%]"

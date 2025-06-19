@@ -1,9 +1,9 @@
 <template>
   <div
-    class="xs:mb-10 3xl:mb-42 4xl:mb-50 xs:gap-8 3xl:gap-45 mb-8 flex w-full flex-row items-center justify-around gap-3 sm:mb-14 sm:gap-8 md:mb-16 md:gap-8 lg:mb-20 lg:gap-12 xl:mb-24 xl:gap-20 2xl:mb-30 2xl:gap-20"
+    class="xs:mb-10 3xl:mb-42 4xl:mb-50 xs:gap-8 3xl:gap-45 2xl:mb-30 mb-8 flex w-full flex-row items-center justify-around gap-3 sm:mb-14 sm:gap-8 md:mb-16 md:gap-8 lg:mb-20 lg:gap-12 xl:mb-24 xl:gap-20 2xl:gap-20"
   >
     <div
-      class="text-stroke-3 xs:text-stroke-4 md:text-stroke-7 xl:text-stroke-10 2xl:text-stroke-13 3xl:text-stroke-20 drop-shadow-1 sm:drop-shadow-2 lg:drop-shadow-3 2xl:drop-shadow-6 xs:text-[50px]/11 3xl:text-[180px]/35 4xl:text-[220px]/45 text-crimson stroke-behind drop-shadow-violet text-stroke-white flex w-[50%] flex-col items-center justify-center text-[32px]/8 tracking-tight md:text-[75px]/15 xl:text-[120px]/25 2xl:text-[160px]/30"
+      class="text-stroke-3 xs:text-stroke-4 md:text-stroke-7 xl:text-stroke-10 2xl:text-stroke-13 3xl:text-stroke-20 drop-shadow-1 sm:drop-shadow-2 lg:drop-shadow-3 2xl:drop-shadow-6 xs:text-[50px]/11 3xl:text-[180px]/35 4xl:text-[220px]/45 text-crimson stroke-behind drop-shadow-violet text-stroke-white md:text-[75px]/15 xl:text-[120px]/25 2xl:text-[160px]/30 flex w-[50%] flex-col items-center justify-center text-[32px]/8 tracking-tight"
     >
       <div>Contact</div>
       <div class="flex w-[70%] flex-row items-center justify-around">
