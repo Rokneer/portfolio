@@ -1,28 +1,28 @@
 <template>
   <div
-    class="@7xl:pt-40 @7xl:gap-4 @7xl:pb-8 @xl:pb-4 flex flex-col gap-1 pb-2 pt-10"
+    class="4xl:pt-60 4xl:pb-10 flex flex-col gap-1 pt-10 pb-3 lg:pt-20 xl:pb-4 2xl:gap-4 2xl:pt-40 2xl:pb-8"
   >
     <div
-      class="@7xl:gap-10 @5xl:gap-5 @xl:gap-3 flex flex-row items-center justify-center gap-2"
+      class="3xl:gap-10 flex flex-row items-center justify-center gap-2 md:gap-3 xl:gap-4 2xl:gap-5"
     >
       <img
-        class="@7xl:drop-shadow-4 @xl:drop-shadow-2 drop-shadow-1 drop-shadow-violet @7xl:h-[100px] @5xl:h-[48px] @xl:h-[32px] @xs:h-[15px] h-[9.5px]"
+        class="drop-shadow-2 sm:drop-shadow-3 lg:drop-shadow-4 xl:drop-shadow-6 2xl:drop-shadow-8 3xl:drop-shadow-10 3xl:h-[80px] 4xl:h-[110px] drop-shadow-violet h-[15px] sm:h-[20px] md:h-[28px] xl:h-[32px] 2xl:h-[60px]"
         :src="VineBottomL"
         alt="A picture long red horizontal vine."
       />
       <img
-        class="@7xl:drop-shadow-4 @xl:drop-shadow-2 drop-shadow-1 drop-shadow-violet @7xl:size-[150px] @5xl:size-[90px] @xl:size-[55px] @xs:size-[25px] size-[20px]"
+        class="drop-shadow-2 sm:drop-shadow-3 lg:drop-shadow-4 xl:drop-shadow-6 2xl:drop-shadow-8 3xl:drop-shadow-10 3xl:size-[150px] 4xl:size-[180px] drop-shadow-violet size-[30px] sm:h-[35px] md:h-[45px] xl:size-[55px] 2xl:size-[120px]"
         :src="Tomatito"
         alt="A picture of the developer mascot character, a small red tomato with two big goofy eyes."
       />
       <img
-        class="@7xl:drop-shadow-4 @xl:drop-shadow-2 drop-shadow-1 drop-shadow-violet @7xl:h-[100px] @5xl:h-[48px] @xl:h-[32px] @xs:h-[15px] h-[9.5px]"
+        class="drop-shadow-2 sm:drop-shadow-3 lg:drop-shadow-4 xl:drop-shadow-6 2xl:drop-shadow-8 3xl:drop-shadow-10 3xl:h-[80px] 4xl:h-[110px] drop-shadow-violet h-[15px] sm:h-[20px] md:h-[28px] xl:h-[32px] 2xl:h-[60px]"
         :src="VineBottomR"
         alt="A picture long red horizontal vine."
       />
     </div>
     <div
-      class="@7xl:text-shadow-2 text-shadow-1 text-shadow-violet @7xl:text-[20px] @5xl:text-[16px] @xl:text-[10px] @xs:text-[6px] text-center text-[5px]"
+      class="text-shadow-1 2xl:text-shadow-2 4xl:text-shadow-4 3xl:text-[20px] 4xl:text-[30px] text-shadow-violet text-center text-[6px] sm:text-[8px] xl:text-[10px] 2xl:text-[16px]"
     >
       Designed and developed in Vue by Tomato.Dev
     </div>

@@ -1,11 +1,13 @@
 <template>
-  <div class="@container">
+  <div>
     <hero />
-    <div class="@max-7xl:mx-64 @5xl:mb-24 @xl:mx-20 @lg:mx-12 mx-4">
+    <div
+      class="xs:mx-8 3xl:mx-40 4xl:mx-64 mx-4 sm:mx-10 md:mx-12 lg:mx-14 xl:mx-20 2xl:mx-30"
+    >
       <main-projects />
       <side-projects />
       <img
-        class="drop-shadow-violet @7xl:drop-shadow-6 @5xl:drop-shadow-4 @xl:drop-shadow-3 drop-shadow-1 @7xl:mb-48 @5xl:mb-24 @xl:mb-20 @lg:mb-12 mb-8"
+        class="drop-shadow-2 sm:drop-shadow-3 lg:drop-shadow-4 xl:drop-shadow-6 2xl:drop-shadow-8 3xl:drop-shadow-10 xs:mb-10 3xl:mb-42 4xl:mb-50 drop-shadow-violet mb-8 sm:mb-14 md:mb-16 lg:mb-20 xl:mb-24 2xl:mb-30"
         :src="VineMid"
         alt="A picture two long red horizontal vines side by side."
       />

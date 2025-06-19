@@ -1,9 +1,9 @@
 <template>
   <div
-    class="@7xl:h-[1000px] @7xl:mb-24 @xl:h-[500px] @5xl:mb-24 @xl:mb-20 @lg:h-[450px] @xs:h-[300px] @lg:mb-12 relative mb-8 h-[250px] w-full"
+    class="xs:mb-10 3xl:mb-42 4xl:mb-50 xs:h-[350px] 3xl:h-[800px] 4xl:h-[900px] relative mb-8 h-[300px] w-full sm:mb-14 md:mb-16 md:h-[400px] lg:mb-20 lg:h-[500px] xl:mb-24 xl:h-[550px] 2xl:mb-30 2xl:h-[700px]"
   >
     <div
-      class="bg-amaranth/70 mask-t-from-5% mask-t-to-40% @7xl:h-[1000px] @xl:h-[500px] @lg:h-[450px] @xs:h-[300px] @xl:border-b-4 @xs:border-b-2 absolute top-0 h-[250px] w-full border-b-[1.5px]"
+      class="xs:h-[350px] 3xl:h-[800px] 4xl:h-[900px] bg-amaranth/70 absolute top-0 h-[300px] w-full border-b-2 mask-t-from-5% mask-t-to-40% md:h-[400px] lg:h-[500px] xl:h-[550px] xl:border-b-4 2xl:h-[700px]"
     />
     <video
       class="aspect-video size-full object-cover"
@@ -24,7 +24,7 @@
     >
       <img
         :src="TomatoLogo"
-        class="@7xl:drop-shadow-5 drop-shadow-3 drop-shadow-violet @7xl:bottom-13 @7xl:w-[700px] @5xl:w-[350px] @xl:w-[300px] @max-xl:right-0 @xl:left-20 absolute bottom-8 left-0 m-auto w-[200px]"
+        class="drop-shadow-3 xl:drop-shadow-5 3xl:w-[600px] drop-shadow-violet absolute bottom-8 left-0 m-auto w-[200px] max-xl:right-0 lg:w-[300px] xl:left-20 xl:w-[400px] 2xl:bottom-13"
       />
     </div>
   </div>

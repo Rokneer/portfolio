@@ -1,9 +1,9 @@
 <template>
   <div
-    class="@7xl:mb-48 @5xl:mb-24 @xl:mb-20 @lg:mb-12 @xl:gap-12 @lg:gap-6 mb-8 flex flex-row items-center justify-around gap-3"
+    class="xs:mb-10 3xl:mb-42 4xl:mb-50 mb-8 flex flex-row items-center justify-around gap-3 sm:mb-14 md:mb-16 lg:mb-20 lg:gap-6 xl:mb-24 xl:gap-12 2xl:mb-30"
   >
     <img
-      class="@5xl:drop-shadow-5 @xl:drop-shadow-4 @lg:drop-shadow-2 drop-shadow-1.5 drop-shadow-violet z-10 w-[30%]"
+      class="drop-shadow-1.5 lg:drop-shadow-2 xl:drop-shadow-4 2xl:drop-shadow-5 drop-shadow-violet z-10 w-[30%]"
       :src="isMeHovered ? meHover : meBase"
       alt="Me!"
       width="382"
@@ -13,7 +13,7 @@
     />
     <div class="flex w-[70%] flex-col font-medium">
       <div
-        class="@5xl:text-shadow-4 @xl:text-shadow-3 @lg:text-shadow-2 @xs:text-shadow-1 text-shadow-0.5 text-shadow-violet @7xl:pb-4 @7xl:text-[90px] @xl:text-[42px] @lg:text-[32px] @xs:text-[16px] text-[10px]"
+        class="text-shadow-0.5 xs:text-shadow-1 lg:text-shadow-2 xl:text-shadow-3 2xl:text-shadow-4 xs:text-[20px] 3xl:text-[80px] 4xl:text-[90px] text-shadow-violet text-[14px] md:text-[30px] lg:text-[40px] xl:text-[52px] 2xl:text-[60px]"
       >
         <span> Hi there, my name is </span>
         <a
@@ -26,7 +26,7 @@
         </a>
       </div>
       <div
-        class="@5xl:text-shadow-3 @xl:text-shadow-2 @lg:text-shadow-1 text-shadow-0.5 text-shadow-violet @min-7xl:text-[46px] @max-7xl:text-[36px] @5xl:text-[28px] @lg:text-[20px] @xs:text-[10px] flex flex-col gap-1 text-[6px]"
+        class="text-shadow-0.5 lg:text-shadow-1 xl:text-shadow-2 2xl:text-shadow-3 xs:text-[13px] 3xl:text-[42px] 4xl:text-[56px] text-shadow-violet flex flex-col text-[9px] md:text-[20px] lg:text-[25px] xl:text-[32px] 2xl:text-[40px]"
       >
         <div class="hover:animate-wave motion-reduce:animate-none">
           I design and develop games and other neat stuff!

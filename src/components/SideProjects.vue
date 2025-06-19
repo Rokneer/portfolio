@@ -1,10 +1,10 @@
 <template>
   <div
-    class="@7xl:gap-24 @7xl:flex-row @5xl:gap-12 @xl:gap-8 @7xl:mb-48 @5xl:mb-25 @xl:mb-20 @lg:mb-12 mb-8 flex flex-col justify-center gap-3"
+    class="xs:mb-10 3xl:mb-42 4xl:mb-50 3xl:gap-14 mb-8 flex flex-col justify-center gap-4 sm:mb-14 md:mb-16 lg:mb-20 xl:mb-24 xl:gap-8 2xl:mb-30 2xl:flex-row 2xl:gap-12"
   >
     <!--* FIRST PROJECTS  -->
     <div
-      class="@5xl:gap-12 @xl:gap-6 grid w-full grid-cols-2 place-items-start gap-2"
+      class="xs:gap-4 3xl:gap-8 grid w-full grid-cols-2 place-items-start gap-3 md:gap-6 xl:gap-8 2xl:gap-10"
     >
       <side-project :project="PROJECTS.SoulsOfLight" :images="soulsImages" />
       <side-project :project="PROJECTS.PotionRush" :images="potionImages" />
@@ -17,20 +17,20 @@
 
     <!--* VERTICAL DIVIDER  -->
     <img
-      class="drop-shadow-violet @7xl:drop-shadow-6 @5xl:drop-shadow-4 @xl:drop-shadow-3 drop-shadow-1 @7xl:w-[250px] @7xl:block hidden"
+      class="drop-shadow-2 sm:drop-shadow-3 lg:drop-shadow-4 xl:drop-shadow-6 2xl:drop-shadow-8 3xl:drop-shadow-10 drop-shadow-violet hidden 2xl:block 2xl:w-[200px]"
       :src="VineGames"
       alt="A picture two long red vertical vines side by side."
     />
     <!--* HORIZONTAL DIVIDER  -->
     <img
-      class="drop-shadow-violet @7xl:drop-shadow-6 @5xl:drop-shadow-4 @xl:drop-shadow-3 drop-shadow-1 @7xl:w-[250px] @7xl:hidden"
+      class="drop-shadow-2 sm:drop-shadow-3 lg:drop-shadow-4 xl:drop-shadow-6 2xl:drop-shadow-8 3xl:drop-shadow-10 drop-shadow-violet 2xl:hidden 2xl:w-[250px]"
       :src="VineMid"
       alt="A picture two long red vertical vines side by side."
     />
 
     <!--* SECOND PROJECTS  -->
     <div
-      class="@7xl:gap-12 @xl:gap-6 grid w-full grid-cols-2 place-items-start gap-2"
+      class="xs:gap-4 3xl:gap-8 grid w-full grid-cols-2 place-items-start gap-3 md:gap-6 xl:gap-8 2xl:gap-10"
     >
       <side-project :project="PROJECTS.Adalet" :images="adaletImages" />
       <side-project :project="PROJECTS.MedievalNinja" :images="ninjaImages" />

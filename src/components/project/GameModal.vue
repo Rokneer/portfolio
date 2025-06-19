@@ -4,23 +4,23 @@
     content-transition="vfm-slide-down"
     class="flex items-center justify-center"
     overlay-class="absolute left-0 top-0 bg-violet/70 backdrop-blur-sm"
-    content-class="flex justify-center w-[80%] @container"
+    content-class="flex justify-center w-[80%] lg:w-[70%] 3xl:w-[60%]"
   >
     <div
-      class="bg-violet @7xl:rounded-[70px] @7xl:p-10 @7xl:gap-y-4 @7xl:border-4 @lg:grid-cols-2 @xl:border-3 grid max-h-screen flex-col gap-2 rounded-[30px] border-2 p-2"
+      class="4xl:p-6 bg-violet grid max-h-screen flex-col gap-2 rounded-[30px] border-2 p-2 lg:grid-cols-2 xl:border-3 xl:p-4 2xl:gap-4 2xl:border-4"
     >
       <!--* LOGO & GDD -->
       <div
-        class="bg-amaranth @2xl:h-60 @xl:h-35 h-30 @max-lg:rounded-t-[20px] relative flex w-full items-center justify-center p-2"
+        class="3xl:h-85 4xl:h-95 bg-amaranth relative flex h-30 w-full items-center justify-center p-2 max-lg:rounded-t-[20px] md:h-35 lg:h-60 xl:h-65 2xl:h-75"
         :class="`${
           hasItchOrYoutube
-            ? '@7xl:rounded-tl-[50px] @lg:rounded-tl-[20px]'
-            : '@7xl:rounded-t-[50px] @lg:rounded-t-[20px] @lg:col-span-2'
+            ? 'lg:rounded-tl-[20px]'
+            : 'lg:col-span-2 lg:rounded-t-[20px]'
         }`"
       >
         <!--* LOGO -->
         <img
-          class="@7xl:drop-shadow-5 drop-shadow-1.5 drop-shadow-violet @7xl:max-h-70 @2xl:max-h-60 @2xl:p-4 @xl:max-h-35 max-h-30 p-2"
+          class="drop-shadow-1.5 lg:drop-shadow-2 xl:drop-shadow-3 2xl:drop-shadow-5 3xl:max-h-80 4xl:max-h-90 drop-shadow-violet max-h-30 p-2 lg:max-h-50 xl:max-h-60 2xl:max-h-70 2xl:p-4"
           :src="project.logo.src"
           :alt="project.logo.alt"
         />
@@ -31,16 +31,16 @@
           :href="project.gddUrl"
           target="_blank"
           rel="noreferrer"
-          class="hover:scale-102 @2xl:m-2 absolute bottom-0 right-0 m-1 flex cursor-pointer flex-col items-center justify-center transition"
+          class="absolute right-0 bottom-0 m-1 flex cursor-pointer flex-col items-center justify-center transition hover:scale-102 2xl:m-2"
         >
           <div
-            class="@2xl:text-shadow-1 text-shadow-0.5 text-shadow-violet @2xl:text-[10px] text-center text-[5px] font-bold"
+            class="text-shadow-0.5 xl:text-shadow-1 xs:text-[10px] text-shadow-violet text-center text-[5px] font-bold lg:text-[12px] 2xl:text-[20px]"
           >
             GDD
           </div>
           <ph-file-text
             weight="fill"
-            class="@2xl:drop-shadow-2 drop-shadow-1 drop-shadow-violet @2xl:size-[25px] size-[15px]"
+            class="drop-shadow-1 xl:drop-shadow-2 xs:size-[25px] drop-shadow-violet size-[15px] lg:size-[35px] 2xl:size-[50px]"
           />
         </a>
       </div>
@@ -48,11 +48,11 @@
       <!--* ITCH OR YOUTUBE -->
       <div
         v-if="hasItchOrYoutube"
-        class="bg-amaranth @7xl:rounded-tr-[50px] @2xl:h-60 @xl:h-35 h-30 @lg: @lg:rounded-tr-[20px] flex w-full items-center justify-center"
+        class="3xl:h-85 4xl:h-95 bg-amaranth flex h-30 w-full items-center justify-center md:h-35 lg:h-60 lg:rounded-tr-[20px] xl:h-65 2xl:h-75"
       >
         <iframe
           v-if="project.itchCode"
-          class="@2xl:scale-100 scale-70 p-2"
+          class="scale-70 p-2 xl:scale-85 2xl:scale-100"
           :src="`https://itch.io/embed/${project.itchCode}?bg_color=981869&amp;border_color=981869&amp;fg_color=ffffff&amp;link_color=e42038`"
           width="90%"
         />
@@ -65,15 +65,13 @@
 
       <!--* DESCRIPTION -->
       <div
-        class="bg-amaranth @7xl:px-10 @2xl:h-60 @xl:h-35 h-30 @2xl:px-8 @sm:px-4 flex w-full items-center justify-center px-2"
+        class="3xl:h-85 4xl:h-95 xs:p-6 bg-amaranth flex h-30 w-full items-center justify-center p-4 sm:p-8 md:h-35 md:p-10 lg:h-60 lg:p-8 xl:h-65 2xl:h-75"
         :class="`${
-          hasImages
-            ? '@7xl:rounded-bl-[50px] @lg:rounded-bl-[20px]'
-            : '@7xl:rounded-b-[50px] @lg:col-span-2 rounded-b-[20px]'
+          hasImages ? 'lg:rounded-bl-[20px]' : 'rounded-b-[20px] lg:col-span-2'
         }`"
       >
         <span
-          class="@7xl:text-shadow-2 text-shadow-1 text-shadow-violet @7xl:text-[24px] @2xl:text-[15px] @xl:text-[10px] @md:text-[8px] w-full text-justify text-[7px]"
+          class="text-shadow-1 2xl:text-shadow-2 xs:text-[10px] 3xl:text-[22px] 4xl:text-[26px] text-shadow-violet w-full text-justify text-[8px] sm:text-[12px] md:text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px]"
         >
           {{ project.description }}
         </span>
@@ -82,7 +80,7 @@
       <!--* GALLERY -->
       <viewer
         v-if="hasImages"
-        class="@2xl:h-60 @xl:h-35 h-30 @lg:rounded-br-[20px] @max-lg:rounded-b-[20px] relative size-full cursor-pointer overflow-hidden"
+        class="3xl:h-85 4xl:h-95 relative size-full h-30 cursor-pointer overflow-hidden max-lg:rounded-b-[20px] md:h-35 lg:h-60 lg:rounded-br-[20px] xl:h-65 2xl:h-75"
         :images="images"
         :options="{
           toolbar: false,
@@ -99,7 +97,7 @@
           :class="{ hidden: image != images[0] }"
         >
           <img
-            class="absolute -bottom-[100%] -left-[100%] -right-[100%] -top-[100%] m-auto min-h-full min-w-full object-cover"
+            class="absolute -top-[100%] -right-[100%] -bottom-[100%] -left-[100%] m-auto min-h-full min-w-full object-cover"
             :src="image.src"
             :alt="image.alt"
           />

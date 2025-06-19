@@ -17,8 +17,10 @@
   --font-atma: Atma, sans-serif;
   --font-overpass: Overpass, sans-serif;
 
-  /** Container **/
-  --container-8xl: 96rem;
+  /** Breakpoint **/
+  --breakpoint-xs: 30rem;
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 160rem;
 
   /** Shadows **/
   --shadow-*: initial;

@@ -1,17 +1,15 @@
 <template>
   <div
-    class="@max-7xl:mb-48 @5xl:mb-24 @xl:mb-20 @lg:mb-12 @max-7xl:gap-45 @5xl:gap-20 @lg:gap-12 @xs:gap-8 mb-8 flex w-full flex-row items-center justify-around gap-3"
+    class="xs:mb-10 3xl:mb-42 4xl:mb-50 xs:gap-8 3xl:gap-45 mb-8 flex w-full flex-row items-center justify-around gap-3 sm:mb-14 sm:gap-8 md:mb-16 md:gap-8 lg:mb-20 lg:gap-12 xl:mb-24 xl:gap-20 2xl:mb-30 2xl:gap-20"
   >
     <div
-      class="text-crimson text-stroke-white @max-7xl:text-stroke-20 @5xl:text-stroke-15 @lg:text-stroke-7 text-stroke-3 stroke-behind drop-shadow-violet @5xl:drop-shadow-4 @lg:drop-shadow-2 drop-shadow-1 @max-7xl:text-[230px]/55 @7xl:text-[150px]/35 @5xl:text-[120px]/35 @lg:text-[75px]/12 @xs:text-[40px]/9 flex w-[50%] flex-col items-center justify-center text-[25px]/6 tracking-tight"
+      class="text-stroke-3 xs:text-stroke-4 md:text-stroke-7 xl:text-stroke-10 2xl:text-stroke-13 3xl:text-stroke-20 drop-shadow-1 sm:drop-shadow-2 lg:drop-shadow-3 2xl:drop-shadow-6 xs:text-[50px]/11 3xl:text-[180px]/35 4xl:text-[220px]/45 text-crimson stroke-behind drop-shadow-violet text-stroke-white flex w-[50%] flex-col items-center justify-center text-[32px]/8 tracking-tight md:text-[75px]/15 xl:text-[120px]/25 2xl:text-[160px]/30"
     >
       <div>Contact</div>
-      <div
-        class="@5xl:w-[80%] @xs:w-[70%] flex w-full flex-row items-center justify-around"
-      >
+      <div class="flex w-[70%] flex-row items-center justify-around">
         <span>me</span>
         <img
-          class="hover:animate-wiggle @max-7xl:size-[200px] @5xl:size-[140px] @lg:size-[70px] size-[32px] motion-reduce:animate-none"
+          class="xs:size-[45px] 3xl:size-[200px] 4xl:w-[260px] hover:animate-wiggle size-[32px] motion-reduce:animate-none md:size-[70px] xl:size-[100px] 2xl:size-[150px]"
           :src="Tomatito"
           alt="A picture of the developer mascot character, a small red tomato with two big goofy eyes."
         />
@@ -19,13 +17,13 @@
     </div>
 
     <img
-      class="drop-shadow-violet @7xl:drop-shadow-4 @lg:drop-shadow-2 drop-shadow-1 @7xl:max-w-[120px] @5xl:w-[90px] @lg:w-[35px] w-[15px]"
+      class="drop-shadow-2 sm:drop-shadow-3 lg:drop-shadow-4 xl:drop-shadow-6 2xl:drop-shadow-8 3xl:drop-shadow-10 xs:w-[25px] 3xl:w-[120px] drop-shadow-violet w-[20px] sm:w-[30px] md:w-[45px] lg:w-[65px] 2xl:w-[90px]"
       :src="VineContact"
       alt="A picture small red vertical vine."
     />
 
     <div
-      class="@7xl:gap-x-24 @7xl:gap-y-12 @lg:gap-x-12 @lg:gap-y-6 grid w-[50%] grid-cols-2 items-center justify-center gap-x-2 gap-y-1"
+      class="grid w-[50%] grid-cols-2 items-center justify-center gap-1 lg:gap-6 2xl:gap-12"
     >
       <contact-icon
         href="mailto:rokneer@gmail.com?subject=Opportunity Email&body=Your message here!"
