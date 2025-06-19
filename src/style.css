@@ -17,8 +17,10 @@
   --font-atma: Atma, sans-serif;
   --font-overpass: Overpass, sans-serif;
 
-  /** Breakpoints **/
+  /** Breakpoint **/
   --breakpoint-xs: 30rem;
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 160rem;
 
   /** Shadows **/
   --shadow-*: initial;
@@ -53,18 +55,18 @@
 
 /** Animation **/
 @utility animate-duration-* {
-  --animate-duration: calc(--value(integer) * 1s)
+  --animate-duration: calc(--value(number) * 1s)
     animation-duration: --value(--animate-duration);
 }
 @utility animate-delay-* {
-  --animate-delay: calc(--value(integer) * 1s)
+  --animate-delay: calc(--value(number) * 1s)
     animation-delay: --value(--animate-delay);
 }
 
 /** Text Stroke **/
 @utility text-stroke-* {
-  -webkit-text-stroke-width: calc(--value(integer) * 1px);
-  -webkit-text-stroke-color: --value(--color- *);
+  -webkit-text-stroke-width: calc(--value(number) * 1px);
+  -webkit-text-stroke-color: --value(--color- *, [color]);
 }
 
 /** Paint Order **/
@@ -77,81 +79,81 @@
 
 /** Shadows **/
 @utility shadow-* {
-  --shadow-size: calc(--value(integer) * 1px);
+  --shadow-size: calc(--value(number) * 1px);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: var(--shadow-size, 0) var(--shadow-size, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -shadow-* {
-  --shadow-size: calc(--value(integer) * -1px);
+  --shadow-size: calc(--value(number) * -1px);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: var(--shadow-size, 0) var(--shadow-size, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility shadow-x-* {
-  --shadow-x: calc(--value(integer) * 1px);
+  --shadow-x: calc(--value(number) * 1px);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -shadow-x-* {
-  --shadow-x: calc(--value(integer) * 1px * -1);
+  --shadow-x: calc(--value(number) * 1px * -1);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility shadow-y-* {
-  --shadow-y: calc(--value(integer) * 1px);
+  --shadow-y: calc(--value(number) * 1px);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -shadow-y-* {
-  --shadow-y: calc(--value(integer) * 1px * -1);
+  --shadow-y: calc(--value(number) * 1px * -1);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility shadow-blur-* {
-  --shadow-blur: calc(--value(integer) * 1px);
+  --shadow-blur: calc(--value(number) * 1px);
 }
 @utility shadow-spread-* {
-  --shadow-spread: calc(--value(integer) * 1px);
+  --shadow-spread: calc(--value(number) * 1px);
 }
 
 /** Inset Shadows **/
 @utility inset-shadow-* {
-  --inset-shadow-size: calc(--value(integer) * 1px);
+  --inset-shadow-size: calc(--value(number) * 1px);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: var(--inset-shadow-size, 0) var(--inset-shadow-size, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -inset-shadow-* {
-  --inset-shadow-size: calc(--value(integer) * -1px);
+  --inset-shadow-size: calc(--value(number) * -1px);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: var(--inset-shadow-size, 0) var(--inset-shadow-size, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility inset-shadow-x-* {
-  --inset-shadow-x: calc(--value(integer) * 1px);
+  --inset-shadow-x: calc(--value(number) * 1px);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -inset-shadow-x-* {
-  --inset-shadow-x: calc(--value(integer) * 1px * -1);
+  --inset-shadow-x: calc(--value(number) * 1px * -1);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility inset-shadow-y-* {
-  --inset-shadow-y: calc(--value(integer) * 1px);
+  --inset-shadow-y: calc(--value(number) * 1px);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -inset-shadow-y-* {
-  --inset-shadow-y: calc(--value(integer) * 1px * -1);
+  --inset-shadow-y: calc(--value(number) * 1px * -1);
   --tw-shadow-color: --modifier(--color- *, [color]);
   box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
@@ -159,7 +161,7 @@
 
 /** Text Shadows **/
 @utility text-shadow-* {
-  --text-shadow-size: calc(--value(integer) * 1px);
+  --text-shadow-size: calc(--value(number) * 1px);
   --tw-text-shadow-color: --modifier(--color- *, [color]);
   text-shadow:
     var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
@@ -170,7 +172,7 @@
       var(--tw-text-shadow-color);
 }
 @utility -text-shadow-* {
-  --text-shadow-size: calc(--value(integer) * -1px);
+  --text-shadow-size: calc(--value(number) * -1px);
   --tw-text-shadow-color: --modifier(--color- *, [color]);
   text-shadow:
     var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
@@ -181,7 +183,7 @@
       var(--tw-text-shadow-color);
 }
 @utility text-shadow-x-* {
-  --text-shadow-x: calc(--value(integer) * 1px);
+  --text-shadow-x: calc(--value(number) * 1px);
   --tw-text-shadow-color: --modifier(--color- *, [color]);
   text-shadow:
     var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
@@ -192,7 +194,7 @@
       var(--tw-text-shadow-color);
 }
 @utility -text-shadow-x-* {
-  --text-shadow-x: calc(--value(integer) * 1px);
+  --text-shadow-x: calc(--value(number) * 1px);
   --tw-text-shadow-color: --modifier(--color- *, [color]);
   text-shadow:
     var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
@@ -203,7 +205,7 @@
       var(--tw-text-shadow-color);
 }
 @utility text-shadow-y-* {
-  --text-shadow-y: calc(--value(integer) * 1px);
+  --text-shadow-y: calc(--value(number) * 1px);
   --tw-text-shadow-color: --modifier(--color- *, [color]);
   text-shadow:
     var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
@@ -214,7 +216,7 @@
       var(--tw-text-shadow-color);
 }
 @utility -text-shadow-y-* {
-  --text-shadow-y: calc(--value(integer) * 1px);
+  --text-shadow-y: calc(--value(number) * 1px);
   --tw-text-shadow-color: --modifier(--color- *, [color]);
   text-shadow:
     var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
@@ -227,7 +229,7 @@
 
 /** Drop Shadows **/
 @utility drop-shadow-* {
-  --drop-shadow-size: calc(--value(integer) * 1px);
+  --drop-shadow-size: calc(--value(number) * 1px);
   --tw-drop-shadow-color: --modifier(--color- *, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-size, 0) var(--drop-shadow-size, 0)
@@ -238,7 +240,7 @@
     var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
 }
 @utility -drop-shadow-* {
-  --drop-shadow-size: calc(--value(integer) * -1px);
+  --drop-shadow-size: calc(--value(number) * -1px);
   --tw-drop-shadow-color: --modifier(--color- *, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-size, 0) var(--drop-shadow-size, 0)
@@ -249,7 +251,7 @@
     var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
 }
 @utility drop-shadow-x-* {
-  --drop-shadow-x: calc(--value(integer) * 1px);
+  --drop-shadow-x: calc(--value(number) * 1px);
   --tw-drop-shadow-color: --modifier(--color- *, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
@@ -260,7 +262,7 @@
     var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
 }
 @utility -drop-shadow-x-* {
-  --drop-shadow-x: calc(--value(integer) * -1px);
+  --drop-shadow-x: calc(--value(number) * -1px);
   --tw-drop-shadow-color: --modifier(--color- *, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
@@ -271,7 +273,7 @@
     var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
 }
 @utility drop-shadow-y-* {
-  --drop-shadow-y: calc(--value(integer) * 1px);
+  --drop-shadow-y: calc(--value(number) * 1px);
   --tw-drop-shadow-color: --modifier(--color- *, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
@@ -282,7 +284,7 @@
     var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
 }
 @utility -drop-shadow-y-* {
-  --drop-shadow-y: calc(--value(integer) * -1px);
+  --drop-shadow-y: calc(--value(number) * -1px);
   --tw-drop-shadow-color: --modifier(--color- *, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
@@ -293,39 +295,39 @@
     var(--tw-saturate,) var(--tw-sepia,) var(--drop-shadow,);
 }
 @utility drop-shadow-blur-* {
-  --drop-shadow-blur: calc(--value(integer) * 1px);
+  --drop-shadow-blur: calc(--value(number) * 1px);
 }
 
 /** Inline Sizing **/
 @utility inline-size-* {
-  inline-size: calc(--value(integer) * var(--spacing));
+  inline-size: calc(--value(number) * var(--spacing));
   inline-size: calc(--value(ratio) * 100%);
   inline-size: --value(percentage);
 }
 @utility max-inline-size-* {
-  max-inline-size: calc(--value(integer) * var(--spacing));
+  max-inline-size: calc(--value(number) * var(--spacing));
   max-inline-size: calc(--value(ratio) * 100%);
   max-inline-size: --value(percentage);
 }
 @utility min-inline-size-* {
-  min-inline-size: calc(--value(integer) * var(--spacing));
+  min-inline-size: calc(--value(number) * var(--spacing));
   min-inline-size: calc(--value(ratio) * 100%);
   max-inline-size: --value(percentage);
 }
 
 /** Block Sizing **/
 @utility block-size-* {
-  block-size: calc(--value(integer) * var(--spacing));
+  block-size: calc(--value(number) * var(--spacing));
   block-size: calc(--value(ratio) * 100%);
   block-size: --value(percentage);
 }
 @utility max-block-size-* {
-  max-block-size: calc(--value(integer) * var(--spacing));
+  max-block-size: calc(--value(number) * var(--spacing));
   max-block-size: calc(--value(ratio) * 100%);
   max-block-size: --value(percentage);
 }
 @utility min-block-size-* {
-  min-block-size: calc(--value(integer) * var(--spacing));
+  min-block-size: calc(--value(number) * var(--spacing));
   min-block-size: calc(--value(ratio) * 100%);
   min-block-size: --value(percentage);
 }
@@ -387,13 +389,13 @@
 /** Conic Gradients Masks **/
 @utility mask-conic-* {
   mask-image: conic-gradient(
-    from calc(--value(integer) * 1deg) in oklab,
+    from calc(--value(number) * 1deg) in oklab,
     var(--mask-gradient-stops)
   );
 }
 @utility -mask-conic-* {
   mask-image: conic-gradient(
-    from calc(--value(integer) * -1deg) in oklab,
+    from calc(--value(number) * -1deg) in oklab,
     var(--mask-gradient-stops)
   );
 }

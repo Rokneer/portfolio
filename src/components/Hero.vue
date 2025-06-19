@@ -1,10 +1,12 @@
 <template>
-  <div class="relative mb-24 h-[1000px] w-full">
+  <div
+    class="xs:mb-10 3xl:mb-42 4xl:mb-50 xs:h-[350px] 3xl:h-[800px] 4xl:h-[900px] relative mb-8 h-[300px] w-full sm:mb-14 md:mb-16 md:h-[400px] lg:mb-20 lg:h-[500px] xl:mb-24 xl:h-[550px] 2xl:mb-30 2xl:h-[700px]"
+  >
     <div
-      class="bg-amaranth mask-b-from-60% mask-b-to-90% absolute top-0 -z-50 h-[1200px] w-full"
+      class="xs:h-[350px] 3xl:h-[800px] 4xl:h-[900px] bg-amaranth/70 absolute top-0 h-[300px] w-full border-b-2 mask-t-from-5% mask-t-to-40% md:h-[400px] lg:h-[500px] xl:h-[550px] xl:border-b-4 2xl:h-[700px]"
     />
     <video
-      class="h-[1000px] w-full object-none"
+      class="aspect-video size-full object-cover"
       :poster="HeroPoster"
       autoplay
       muted
@@ -15,15 +17,16 @@
     >
       <source :src="HeroVideoMP4" type="video/mp4" />
       <source :src="HeroVideoWebM" type="video/webm" />
-      <img class="h-[1000px] w-full object-none" :src="HeroPoster" alt="" />
+      <img class="size-full object-cover" :src="HeroPoster" alt="" />
     </video>
     <div
-      class="bg-amaranth/70 mask-t-from-5% mask-t-to-40% absolute top-0 h-[1000px] w-full border-b-4"
-    />
-    <img
-      :src="TomatoLogo"
-      class="drop-shadow-5/violet motion-opacity-in-0 motion-translate-y-in-100 motion-rotate-in-90 motion-delay-150 hover:motion-preset-stretch bottom-13 absolute left-20 w-[700px]"
-    />
+      class="motion-opacity-in-0 motion-translate-y-in-100 motion-rotate-in-90 motion-delay-150 hover:motion-preset-stretch"
+    >
+      <img
+        :src="TomatoLogo"
+        class="drop-shadow-3 xl:drop-shadow-5 3xl:w-[600px] drop-shadow-violet absolute bottom-8 left-0 m-auto w-[200px] max-xl:right-0 lg:w-[300px] xl:left-20 xl:w-[400px] 2xl:bottom-13"
+      />
+    </div>
   </div>
 </template>
 
