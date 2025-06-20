@@ -18,7 +18,7 @@
         <span> Hi there, my name is </span>
         <a
           class="text-crimson transition-all ease-in-out hover:font-semibold"
-          href="https://drive.google.com/file/d/1c11vZkUXzI7QEqjcQp86l1xCUVQTRyqQ"
+          :href="CV"
           target="_blank"
           rel="noreferrer"
         >
@@ -49,5 +49,6 @@ import { ref } from "vue";
 import meBase from "/common/tomate/avatar/avatar-1.svg";
 import meHover from "/common/tomate/avatar/avatar-2.svg";
 
+import CV from "/common/CV-ATS.pdf";
 const isMeHovered = ref<boolean>(false);
 </script>
