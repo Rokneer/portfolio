@@ -13,11 +13,14 @@
       <!--* LOGO & GDD -->
       <div
         class="3xl:h-85 4xl:h-95 bg-amaranth h-30 md:h-35 xl:h-65 2xl:h-75 relative flex w-full items-center justify-center p-2 max-lg:rounded-t-[20px] lg:h-60"
-        :class="`${
-          hasItchOrYoutube
-            ? 'lg:rounded-tl-[20px]'
-            : 'lg:col-span-2 lg:rounded-t-[20px]'
-        }`"
+        :class="[
+          `${
+            hasItchOrYoutube || !isMobile
+              ? 'lg:rounded-tl-[20px]'
+              : 'lg:col-span-2 lg:rounded-t-[20px]'
+          }`,
+          { 'lg:rounded-tr-[0px]': isMobile },
+        ]"
       >
         <!--* LOGO -->
         <img
@@ -49,14 +52,15 @@
       <!--* CONTRIBUTIONS -->
       <div
         v-if="isMobile"
-        class="3xl:h-85 4xl:h-95 h-30 md:h-35 xl:h-65 2xl:h-75 bg-amaranth xs:p-6 3xl:p-8 text-shadow-1 2xl:text-shadow-2 text-shadow-violet flex w-full items-center p-3 text-justify sm:p-8 md:p-10 lg:h-60 lg:p-4 xl:p-5 2xl:p-6"
+        class="3xl:p-8 text-shadow-1 2xl:text-shadow-2 text-shadow-violet xs:p-6 bg-amaranth h-30 md:h-50 xl:h-65 2xl:h-75 3xl:h-85 4xl:h-95 flex w-full items-center p-4 sm:h-40 sm:p-8 md:p-10 lg:h-60 lg:p-4 xl:p-5 2xl:p-6"
+        :class="`${hasItchOrYoutube ? 'lg:rounded-t-none' : 'lg:rounded-tr-[20px]'}`"
       >
         <div
-          class="xs:text-[7px] 3xl:text-[16px] 4xl:text-[18px] grid w-full grid-cols-3 gap-4 text-[6px] sm:text-[9px] md:gap-8 md:text-[11px] lg:grid-cols-2 lg:gap-1 xl:text-[12px] 2xl:gap-2 2xl:text-[14px]"
+          class="xs:text-[7px] 3xl:text-[16px] 4xl:text-[18px] grid w-full grid-cols-3 gap-2 text-[6px] sm:text-[9px] md:text-[11px] lg:grid-cols-2 lg:gap-1 xl:text-[12px] 2xl:gap-2 2xl:text-[14px]"
         >
           <div class="flex w-full flex-col">
             <div
-              class="text-shadow-1 2xl:text-shadow-3 3xl:text-[28px] text-shadow-violet text-[9px] font-bold sm:text-[12px] md:text-[14px] lg:text-[18px] 2xl:text-[23px]"
+              class="text-shadow-1 2xl:text-shadow-3 3xl:text-[28px] text-shadow-violet text-[9px] font-bold sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[23px]"
             >
               Worked as
             </div>
@@ -69,20 +73,20 @@
 
           <div class="flex flex-col">
             <div
-              class="text-shadow-1 2xl:text-shadow-3 3xl:text-[28px] text-shadow-violet text-[9px] font-bold sm:text-[12px] md:text-[14px] lg:text-[18px] 2xl:text-[23px]"
+              class="text-shadow-1 2xl:text-shadow-3 3xl:text-[28px] text-shadow-violet text-[9px] font-bold sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[23px]"
             >
               Made with
             </div>
             <img
-              class="drop-shadow-1 2xl:drop-shadow-3 drop-shadow-violet max-h-[120px] w-full"
+              class="drop-shadow-1 2xl:drop-shadow-3 drop-shadow-violet max-h-[60px]"
               :src="project.platform.src"
               :alt="project.platform.alt"
             />
           </div>
 
-          <div v-if="project.contributions" class="flex flex-col lg:col-span-2">
+          <div v-if="project.contributions" class="col-span-2 flex flex-col">
             <div
-              class="text-shadow-1 2xl:text-shadow-3 3xl:text-[28px] text-shadow-violet text-[9px] font-bold sm:text-[12px] md:text-[14px] lg:text-[18px] 2xl:text-[23px]"
+              class="text-shadow-1 2xl:text-shadow-3 3xl:text-[28px] text-shadow-violet text-[9px] font-bold sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[23px]"
             >
               Doing
             </div>
@@ -138,7 +142,7 @@
       <!--* GALLERY -->
       <viewer
         v-if="hasImages"
-        class="3xl:h-85 4xl:h-95 h-30 md:h-35 xl:h-65 2xl:h-75 relative size-full cursor-pointer overflow-hidden max-lg:rounded-b-[20px] lg:h-60 lg:rounded-br-[20px]"
+        class="3xl:h-85 4xl:h-95 h-30 md:h-35 xl:h-65 2xl:h-75 bg-amaranth relative size-full cursor-pointer overflow-hidden max-lg:rounded-b-[20px] lg:h-60 lg:rounded-br-[20px]"
         :class="`${isMobile ? 'lg:col-span-2' : 'lg:col-span-1'}`"
         :images="images"
         :options="{
