@@ -7,7 +7,8 @@
     content-class="flex justify-center w-[80%] lg:w-[70%] 3xl:w-[60%]"
   >
     <div
-      class="4xl:p-6 bg-violet xl:border-3 grid max-h-screen flex-col gap-2 rounded-[30px] border-2 p-2 lg:grid-cols-2 xl:p-4 2xl:gap-4 2xl:border-4"
+      class="4xl:p-6 bg-violet xl:border-3 grid max-h-screen flex-col gap-2 rounded-[30px] border-2 p-2 xl:p-4 2xl:gap-4 2xl:border-4"
+      :class="`${isMobile ? 'lg:grid-cols-3' : 'lg:grid-cols-2'}`"
     >
       <!--* LOGO & GDD -->
       <div
@@ -45,6 +46,58 @@
         </a>
       </div>
 
+      <!--* CONTRIBUTIONS -->
+      <div
+        v-if="isMobile"
+        class="3xl:h-85 4xl:h-95 h-30 md:h-35 xl:h-65 2xl:h-75 bg-amaranth xs:p-6 3xl:p-8 text-shadow-1 2xl:text-shadow-2 text-shadow-violet flex w-full items-center p-3 text-justify sm:p-8 md:p-10 lg:h-60 lg:p-4 xl:p-5 2xl:p-6"
+      >
+        <div
+          class="xs:text-[7px] 3xl:text-[16px] 4xl:text-[18px] grid w-full grid-cols-3 gap-4 text-[6px] sm:text-[9px] md:gap-8 md:text-[11px] lg:grid-cols-2 lg:gap-1 xl:text-[12px] 2xl:gap-2 2xl:text-[14px]"
+        >
+          <div class="flex w-full flex-col">
+            <div
+              class="text-shadow-1 2xl:text-shadow-3 3xl:text-[28px] text-shadow-violet text-[9px] font-bold sm:text-[12px] md:text-[14px] lg:text-[18px] 2xl:text-[23px]"
+            >
+              Worked as
+            </div>
+            <ul class="list-inside list-disc">
+              <li v-for="(role, index) in project.roles" :key="index">
+                {{ role }}
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col">
+            <div
+              class="text-shadow-1 2xl:text-shadow-3 3xl:text-[28px] text-shadow-violet text-[9px] font-bold sm:text-[12px] md:text-[14px] lg:text-[18px] 2xl:text-[23px]"
+            >
+              Made with
+            </div>
+            <img
+              class="drop-shadow-1 2xl:drop-shadow-3 drop-shadow-violet max-h-[120px] w-full"
+              :src="project.platform.src"
+              :alt="project.platform.alt"
+            />
+          </div>
+
+          <div v-if="project.contributions" class="flex flex-col lg:col-span-2">
+            <div
+              class="text-shadow-1 2xl:text-shadow-3 3xl:text-[28px] text-shadow-violet text-[9px] font-bold sm:text-[12px] md:text-[14px] lg:text-[18px] 2xl:text-[23px]"
+            >
+              Doing
+            </div>
+            <ul class="list-inside list-disc">
+              <li
+                v-for="(contribution, index) in project.contributions"
+                :key="index"
+              >
+                {{ contribution }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <!--* ITCH OR YOUTUBE -->
       <div
         v-if="hasItchOrYoutube"
@@ -71,7 +124,12 @@
         }`"
       >
         <span
-          class="text-shadow-1 2xl:text-shadow-2 xs:text-[10px] 3xl:text-[22px] 4xl:text-[26px] text-shadow-violet w-full text-justify text-[8px] sm:text-[12px] md:text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px]"
+          class="text-shadow-1 2xl:text-shadow-2 text-shadow-violet w-full text-justify"
+          :class="`${
+            isMobile
+              ? 'xs:text-[10px] 3xl:text-[16px] 4xl:text-[20px] text-[8px] sm:text-[12px] md:text-[14px] lg:text-[10px] xl:text-[12px] 2xl:text-[14px]'
+              : 'xs:text-[10px] 3xl:text-[22px] 4xl:text-[26px] text-[8px] sm:text-[12px] md:text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px]'
+          }`"
         >
           {{ project.description }}
         </span>
@@ -81,6 +139,7 @@
       <viewer
         v-if="hasImages"
         class="3xl:h-85 4xl:h-95 h-30 md:h-35 xl:h-65 2xl:h-75 relative size-full cursor-pointer overflow-hidden max-lg:rounded-b-[20px] lg:h-60 lg:rounded-br-[20px]"
+        :class="`${isMobile ? 'lg:col-span-2' : 'lg:col-span-1'}`"
         :images="images"
         :options="{
           toolbar: false,
@@ -113,11 +172,12 @@ import { VueFinalModal } from "vue-final-modal";
 import { component as Viewer } from "v-viewer";
 import { PhFileText } from "@phosphor-icons/vue";
 import { computed } from "vue";
+import { isMobile } from "mobile-device-detect";
 
 const props = defineProps<{ project: Project; images: Image[] }>();
 
 const hasItchOrYoutube = computed(
-  () => props.project.itchCode || props.project.youtubeCode,
+  () => !!props.project.itchCode || !!props.project.youtubeCode,
 );
 const hasImages = computed(() => props.images.length > 0);
 </script>
