@@ -1,13 +1,13 @@
 <template>
   <div class="hover:motion-rotate-out-1 motion-rotate-in-1 aspect-video">
     <div
-      class="shadow-4 lg:shadow-6 xl:shadow-8 2xl:shadow-10 hover:shadow-8 lg:hover:shadow-12 xl:hover:shadow-16 2xl:hover:shadow-20 shadow-violet hover:shadow-crimson group relative cursor-pointer border-2 transition-all duration-200 ease-in-out lg:border-4 xl:border-6"
+      class="shadow-4 lg:shadow-6 xl:shadow-8 2xl:shadow-10 hover:shadow-8 lg:hover:shadow-12 xl:hover:shadow-16 2xl:hover:shadow-20 shadow-violet hover:shadow-crimson xl:border-6 group relative cursor-pointer border-2 transition-all duration-200 ease-in-out lg:border-4"
       @click="open"
     >
       <img
         :src="project.cover.src"
         :alt="project.cover.alt"
-        class="size-full object-cover group-hover:blur-[1px] group-hover:brightness-40"
+        class="group-hover:brightness-40 size-full object-cover group-hover:blur-[1px]"
       />
       <div
         class="text-shadow-0.5 2xl:text-shadow-2 xs:p-4 xs:text-[10px] 3xl:text-[21px] 4xl:text-[28px] bg-blue/30 text-shadow-amaranth absolute top-0 flex size-full flex-col justify-center p-2 text-[8px] opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100 sm:text-[12px] md:text-[17px] lg:p-6 lg:text-[23px] xl:p-8 xl:text-[26px] 2xl:gap-2 2xl:p-12 2xl:text-[16px]"

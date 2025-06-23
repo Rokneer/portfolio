@@ -1,6 +1,6 @@
 <template>
   <div
-    class="xs:mb-10 3xl:mb-42 4xl:mb-50 mb-8 flex flex-row items-center justify-around gap-3 sm:mb-14 md:mb-16 lg:mb-20 lg:gap-6 xl:mb-24 xl:gap-12 2xl:mb-30"
+    class="xs:mb-10 3xl:mb-42 4xl:mb-50 2xl:mb-30 mb-8 flex flex-row items-center justify-around gap-3 sm:mb-14 md:mb-16 lg:mb-20 lg:gap-6 xl:mb-24 xl:gap-12"
   >
     <img
       class="drop-shadow-1.5 lg:drop-shadow-2 xl:drop-shadow-4 2xl:drop-shadow-5 drop-shadow-violet z-10 w-[30%]"
@@ -18,7 +18,7 @@
         <span> Hi there, my name is </span>
         <a
           class="text-crimson transition-all ease-in-out hover:font-semibold"
-          href="https://drive.google.com/file/d/1c11vZkUXzI7QEqjcQp86l1xCUVQTRyqQ"
+          :href="CV"
           target="_blank"
           rel="noreferrer"
         >
@@ -49,5 +49,6 @@ import { ref } from "vue";
 import meBase from "/common/tomate/avatar/avatar-1.svg";
 import meHover from "/common/tomate/avatar/avatar-2.svg";
 
+import CV from "/common/CV-ATS.pdf";
 const isMeHovered = ref<boolean>(false);
 </script>

@@ -13,6 +13,7 @@
   "dependencies": {
     "@phosphor-icons/vue": "^2.2.1",
     "@tailwindcss/vite": "^4.1.10",
+    "mobile-device-detect": "^0.4.3",
     "v-viewer": "^3.0.21",
     "viewerjs": "^1.11.7",
     "vue": "^3.5.16",
