@@ -15,7 +15,7 @@
         class="3xl:h-85 4xl:h-95 bg-amaranth h-30 md:h-35 xl:h-65 2xl:h-75 relative flex w-full items-center justify-center p-2 max-lg:rounded-t-[20px] lg:h-60"
         :class="[
           `${
-            hasItchOrYoutube || !isMobile
+            hasItchOrYoutube || isMobile
               ? 'lg:rounded-tl-[20px]'
               : 'lg:col-span-2 lg:rounded-t-[20px]'
           }`,
