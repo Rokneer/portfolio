@@ -1,17 +1,10 @@
 <template>
-  <div>
-    <hero />
+  <div class="">
     <div
-      class="xs:mx-8 3xl:mx-40 4xl:mx-64 2xl:mx-30 mx-4 sm:mx-10 md:mx-12 lg:mx-14 xl:mx-20"
+      class="mx-4 my-2 flex flex-col gap-3 sm:mx-10 sm:my-6 sm:gap-5 md:mx-12 md:my-8 lg:mx-14 lg:my-10 lg:gap-8 xl:my-12 2xl:mx-18 2xl:my-18 2xl:gap-16 3xl:mx-26"
     >
-      <main-projects />
-      <side-projects />
-      <img
-        class="drop-shadow-2 sm:drop-shadow-3 lg:drop-shadow-4 xl:drop-shadow-6 2xl:drop-shadow-8 3xl:drop-shadow-10 xs:mb-10 3xl:mb-42 4xl:mb-50 drop-shadow-violet 2xl:mb-30 mb-8 sm:mb-14 md:mb-16 lg:mb-20 xl:mb-24"
-        :src="VineMid"
-        alt="A picture two long red horizontal vines side by side."
-      />
       <about />
+      <main-projects />
       <contact-info />
       <tomato-footer />
     </div>
@@ -19,14 +12,5 @@
 </template>
 
 <script setup lang="ts">
-import {
-  Hero,
-  About,
-  ContactInfo,
-  TomatoFooter,
-  MainProjects,
-  SideProjects,
-} from "@/components";
-
-import VineMid from "/common/tomate/vines/VineMid.svg";
+import { About, ContactInfo, TomatoFooter, MainProjects } from "@/components";
 </script>

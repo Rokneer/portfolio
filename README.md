@@ -6,4 +6,4 @@
 
 My goal is to create new and exciting experiences and tell wonderful stories that inspire and entertain the people who play them.
 
-Hire me and let's make games! 
+Hire me and let's make games!
