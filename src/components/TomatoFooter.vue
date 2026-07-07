@@ -6,19 +6,19 @@
       <img
         class="h-3.75 drop-shadow-2 sm:h-5 sm:drop-shadow-3 md:h-7 lg:h-8.75 lg:drop-shadow-4 xl:h-12.5 xl:drop-shadow-6 2xl:h-15"
         :src="VineBottomL"
-        alt="A picture long red horizontal vine."
+        alt="A picture long red horizontal vine with a white outline."
       />
 
       <img
         class="size-7.5 drop-shadow-2 hover:animate-wiggle motion-reduce:animate-none sm:h-8.75 sm:drop-shadow-3 md:h-11.25 lg:h-13.75 lg:drop-shadow-4 xl:size-30 xl:drop-shadow-6"
         :src="Tomatito"
-        alt="A picture of the developer mascot character, a small red tomato with two big goofy eyes."
+        alt="A picture of the developer mascot character, a small red cartoon tomato with two big goofy eyes, outlined in white."
       />
 
       <img
         class="h-3.75 drop-shadow-2 sm:h-5 sm:drop-shadow-3 md:h-7 lg:h-8.75 lg:drop-shadow-4 xl:h-12.5 xl:drop-shadow-6 2xl:h-15"
         :src="VineBottomR"
-        alt="A picture long red horizontal vine."
+        alt="A picture long red horizontal vine with a white outline."
       />
     </div>
     <div

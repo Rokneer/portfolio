@@ -5,6 +5,7 @@ import { masqueradeCover, masqueradeLogo } from "@/assets/masquerade";
 import { foodCover, foodLogo } from "@/assets/foodForTheSoul";
 import { caveCover, caveLogo } from "@/assets/caveDwellers";
 import { potionCover, potionLogo } from "@/assets/potionRush";
+import { billCover, billLogo } from "@/assets/angryBill";
 
 //* Main Projects
 const masquerade: Project = {
@@ -69,11 +70,25 @@ const potionRush: Project = {
   itchCode: "2598797",
 };
 
+const angryBill: Project = {
+  cover: { src: billCover, alt: "Angry Bill cover image." },
+  logo: { src: billLogo, alt: "Angry Bill logo" },
+  roles: ["Lead developer", "Enemy AI programmer", "Core systems developer"],
+  contributions: [
+    "Developed all AI logic trees for bosses and enemies.",
+    "Designed and developed a token based, enemy skill selection system.",
+    "Programmed a modular damage and status effects system.",
+  ],
+  description: "Angry Bill demo",
+  platform: PLATFORMS.unity,
+};
+
 const PROJECTS: Record<string, Project> = {
   Masquerade: masquerade,
   CaveDwellers: caveDwellers,
   FoodForTheSoul: foodForTheSoul,
   PotionRush: potionRush,
+  AngryBill: angryBill,
 };
 
 export default PROJECTS;

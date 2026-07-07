@@ -22,17 +22,17 @@
       </contact-icon>
 
       <contact-icon :href="CV">
-        <ph-user-square weight="fill" color="#e42038" />
+        <ph-read-cv-logo weight="fill" color="#e42038" />
       </contact-icon>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import CV from "/common/CV-ATS.pdf";
+import CV from "/common/CV.pdf";
 import ContactIcon from "./project/ContactIcon.vue";
 
-import { PhEnvelope, PhUserSquare } from "@phosphor-icons/vue";
+import { PhEnvelope, PhReadCvLogo } from "@phosphor-icons/vue";
 import PhItchDotIoLogo from "@/components/icons/PhItchDotIoLogo.vue";
 import PhGithubLogo from "@/components/icons/PhGitHubLogo.vue";
 </script>
