@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@plugin 'tailwindcss-motion';
+@plugin "tailwindcss-motion";
 
 /** Dark Theme **/
 @custom-variant dark (&:where(.dark, .dark *));
@@ -84,7 +84,7 @@
 /** Text Stroke **/
 @utility text-stroke-* {
   -webkit-text-stroke-width: calc(--value(number) * 1px);
-  -webkit-text-stroke-color: --value(--color- *, [color]);
+  -webkit-text-stroke-color: --value(--color-*, [color]);
 }
 
 /** Paint Order **/
@@ -98,37 +98,37 @@
 /** Shadows **/
 @utility shadow-* {
   --shadow-size: calc(--value(number) * 1px);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: var(--shadow-size, 0) var(--shadow-size, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -shadow-* {
   --shadow-size: calc(--value(number) * -1px);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: var(--shadow-size, 0) var(--shadow-size, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility shadow-x-* {
   --shadow-x: calc(--value(number) * 1px);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -shadow-x-* {
   --shadow-x: calc(--value(number) * 1px * -1);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility shadow-y-* {
   --shadow-y: calc(--value(number) * 1px);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -shadow-y-* {
   --shadow-y: calc(--value(number) * 1px * -1);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: var(--shadow-x, 0) var(--shadow-y, 0) var(--shadow-blur, 0)
     var(--shadow-spread, 0) var(--tw-shadow-color);
 }
@@ -142,37 +142,37 @@
 /** Inset Shadows **/
 @utility inset-shadow-* {
   --inset-shadow-size: calc(--value(number) * 1px);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: var(--inset-shadow-size, 0) var(--inset-shadow-size, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -inset-shadow-* {
   --inset-shadow-size: calc(--value(number) * -1px);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: var(--inset-shadow-size, 0) var(--inset-shadow-size, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility inset-shadow-x-* {
   --inset-shadow-x: calc(--value(number) * 1px);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -inset-shadow-x-* {
   --inset-shadow-x: calc(--value(number) * 1px * -1);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility inset-shadow-y-* {
   --inset-shadow-y: calc(--value(number) * 1px);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
 @utility -inset-shadow-y-* {
   --inset-shadow-y: calc(--value(number) * 1px * -1);
-  --tw-shadow-color: --modifier(--color- *, [color]);
+  --tw-shadow-color: --modifier(--color-*, [color]);
   box-shadow: inset var(--inset-shadow-x, 0) var(--inset-shadow-y, 0)
     var(--shadow-blur, 0) var(--shadow-spread, 0) var(--tw-shadow-color);
 }
@@ -180,7 +180,7 @@
 /** Text Shadows **/
 @utility text-shadow-* {
   --text-shadow-size: calc(--value(number) * 1px);
-  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  --tw-text-shadow-color: --modifier(--color-*, [color]);
   text-shadow:
     var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
       var(--tw-text-shadow-color),
@@ -191,7 +191,7 @@
 }
 @utility -text-shadow-* {
   --text-shadow-size: calc(--value(number) * -1px);
-  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  --tw-text-shadow-color: --modifier(--color-*, [color]);
   text-shadow:
     var(--text-shadow-size, 0) var(--text-shadow-size, 0) var(--shadow-blur, 0)
       var(--tw-text-shadow-color),
@@ -202,7 +202,7 @@
 }
 @utility text-shadow-x-* {
   --text-shadow-x: calc(--value(number) * 1px);
-  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  --tw-text-shadow-color: --modifier(--color-*, [color]);
   text-shadow:
     var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
       var(--tw-text-shadow-color),
@@ -213,7 +213,7 @@
 }
 @utility -text-shadow-x-* {
   --text-shadow-x: calc(--value(number) * 1px);
-  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  --tw-text-shadow-color: --modifier(--color-*, [color]);
   text-shadow:
     var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
       var(--tw-text-shadow-color),
@@ -224,7 +224,7 @@
 }
 @utility text-shadow-y-* {
   --text-shadow-y: calc(--value(number) * 1px);
-  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  --tw-text-shadow-color: --modifier(--color-*, [color]);
   text-shadow:
     var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
       var(--tw-text-shadow-color),
@@ -235,7 +235,7 @@
 }
 @utility -text-shadow-y-* {
   --text-shadow-y: calc(--value(number) * 1px);
-  --tw-text-shadow-color: --modifier(--color- *, [color]);
+  --tw-text-shadow-color: --modifier(--color-*, [color]);
   text-shadow:
     var(--text-shadow-x, 0) var(--text-shadow-y, 0) var(--shadow-blur, 0)
       var(--tw-text-shadow-color),
@@ -248,7 +248,7 @@
 /** Drop Shadows **/
 @utility drop-shadow-* {
   --drop-shadow-size: calc(--value(number) * 1px);
-  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --tw-drop-shadow-color: --modifier(--color-*, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-size, 0) var(--drop-shadow-size, 0)
       var(--drop-shadow-blur, 0) var(--tw-drop-shadow-color)
@@ -259,7 +259,7 @@
 }
 @utility -drop-shadow-* {
   --drop-shadow-size: calc(--value(number) * -1px);
-  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --tw-drop-shadow-color: --modifier(--color-*, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-size, 0) var(--drop-shadow-size, 0)
       var(--drop-shadow-blur, 0) var(--tw-drop-shadow-color)
@@ -270,7 +270,7 @@
 }
 @utility drop-shadow-x-* {
   --drop-shadow-x: calc(--value(number) * 1px);
-  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --tw-drop-shadow-color: --modifier(--color-*, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
       var(--tw-drop-shadow-color)
@@ -281,7 +281,7 @@
 }
 @utility -drop-shadow-x-* {
   --drop-shadow-x: calc(--value(number) * -1px);
-  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --tw-drop-shadow-color: --modifier(--color-*, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
       var(--tw-drop-shadow-color)
@@ -292,7 +292,7 @@
 }
 @utility drop-shadow-y-* {
   --drop-shadow-y: calc(--value(number) * 1px);
-  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --tw-drop-shadow-color: --modifier(--color-*, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
       var(--tw-drop-shadow-color)
@@ -303,7 +303,7 @@
 }
 @utility -drop-shadow-y-* {
   --drop-shadow-y: calc(--value(number) * -1px);
-  --tw-drop-shadow-color: --modifier(--color- *, [color]);
+  --tw-drop-shadow-color: --modifier(--color-*, [color]);
   --drop-shadow: drop-shadow(
     var(--drop-shadow-x, 0) var(--drop-shadow-y, 0) var(--drop-shadow-blur, 0)
       var(--tw-drop-shadow-color)
@@ -428,7 +428,7 @@
 @utility mask-to-* {
   --mask-gradient-to-position: --value(percentage);
   --mask-gradient-to-position: calc(--value(ratio) * 100%);
-  --mask-gradient-to: --value(--color- *, [color]);
+  --mask-gradient-to: --value(--color-*, [color]);
   --mask-gradient-stops:
     var(--mask-gradient-from) var(--mask-gradient-from-position, 0%),
     var(--mask-gradient-to) var(--mask-gradient-to-position, 100%);
@@ -442,7 +442,7 @@
 @utility mask-from-* {
   --mask-gradient-from-position: --value(percentage);
   --mask-gradient-from-position: calc(--value(ratio) * 100%);
-  --mask-gradient-from: --value(--color- *, [color]);
+  --mask-gradient-from: --value(--color-*, [color]);
   --mask-gradient-stops:
     var(--mask-gradient-from) var(--mask-gradient-from-position, 0%),
     var(--mask-gradient-to) var(--mask-gradient-to-position, 100%);
