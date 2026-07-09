@@ -1,7 +1,7 @@
 <template>
   <div class="flex w-full flex-col items-center justify-center">
     <div
-      class="text-[32px] text-crimson drop-shadow-violet drop-shadow-1 stroke-behind text-stroke-3 text-stroke-white sm:text-[50px] sm:drop-shadow-2 md:text-[70px] md:text-stroke-7 lg:drop-shadow-3 xl:text-[120px] xl:drop-shadow-5 xl:text-stroke-12 2xl:text-[140px]"
+      class="text-[32px] text-crimson drop-shadow-violet drop-shadow-1 stroke-behind text-stroke-3 text-stroke-white sm:text-[50px] sm:drop-shadow-2 md:text-[70px] md:text-stroke-7 lg:drop-shadow-3 xl:text-[120px] xl:drop-shadow-5 xl:text-stroke-12 2xl:text-[140px] 5xl:text-[240px] 5xl:drop-shadow-8 5xl:text-stroke-20"
     >
       Contact me!
     </div>

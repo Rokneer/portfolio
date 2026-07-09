@@ -10,7 +10,7 @@
         class="size-full object-cover group-hover:blur-[1px] group-hover:brightness-40"
       />
       <div
-        class="absolute top-0 flex size-full flex-col justify-center bg-black/15 p-4 text-[11px] opacity-0 transition-all duration-200 ease-in-out text-shadow-0.5 text-shadow-amaranth group-hover:opacity-100 sm:p-6 sm:text-[19px] sm:text-shadow-1 md:p-8 md:text-[23px] lg:p-12 lg:text-[30px] xl:p-18 xl:text-[36px] xl:text-shadow-2 2xl:p-10 2xl:text-[26px] 4xl:p-14 4xl:text-[35px]"
+        class="absolute top-0 flex size-full flex-col justify-center bg-black/15 p-4 text-[11px] opacity-0 transition-all duration-200 ease-in-out text-shadow-0.5 text-shadow-amaranth group-hover:opacity-100 sm:p-6 sm:text-[19px] sm:text-shadow-1 md:p-8 md:text-[23px] lg:p-12 lg:text-[30px] xl:p-18 xl:text-[36px] xl:text-shadow-2 2xl:p-10 2xl:text-[26px] 4xl:p-14 4xl:text-[35px] 5xl:p-24 5xl:text-[55px]"
       >
         <div class="flex w-full flex-row">
           <div class="flex size-full flex-col gap-y-2 2xl:gap-y-5">
@@ -65,6 +65,6 @@ const { open } = useModal({
 <style scoped>
 @reference "../../style.css";
 .project-text {
-  @apply text-[15px] font-bold text-shadow-1 text-shadow-amaranth sm:text-[26px] sm:text-shadow-2 md:text-[32px] lg:text-[45px] xl:text-[52px] xl:text-shadow-3 2xl:text-[40px] 4xl:text-[55px];
+  @apply text-[15px] font-bold text-shadow-1 text-shadow-amaranth sm:text-[26px] sm:text-shadow-2 md:text-[32px] lg:text-[45px] xl:text-[52px] xl:text-shadow-3 2xl:text-[40px] 4xl:text-[55px] 5xl:text-[80px];
 }
 </style>

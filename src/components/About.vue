@@ -1,10 +1,12 @@
 <template>
-  <div class="flex px-2 py-4 lg:px-6 xl:px-16 3xl:px-20 4xl:px-36">
+  <div
+    class="flex justify-center px-2 py-4 lg:px-6 xl:px-16 3xl:px-20 4xl:px-36 5xl:px-56"
+  >
     <div
-      class="flex flex-row items-center gap-3 sm:gap-6 lg:gap-10 xl:gap-16 2xl:gap-20"
+      class="flex flex-row items-center gap-3 sm:gap-6 lg:gap-10 xl:gap-16 2xl:gap-20 5xl:gap-30"
     >
       <div
-        class="flex flex-2/5 flex-col drop-shadow-violet drop-shadow-1.5 lg:drop-shadow-2 xl:drop-shadow-4 3xl:drop-shadow-5"
+        class="flex flex-2/5 flex-col drop-shadow-violet drop-shadow-1.5 lg:drop-shadow-2 xl:drop-shadow-4 3xl:drop-shadow-5 5xl:drop-shadow-7"
       >
         <img
           :src="isMeHovered ? meHover : meBase"
@@ -20,7 +22,7 @@
       </div>
       <div class="flex flex-col font-medium">
         <div
-          class="text-[17px] text-shadow-1 text-shadow-violet sm:text-[30px] md:text-[35px] lg:text-[45px] lg:text-shadow-3 xl:text-[52px] xl:text-shadow-5 2xl:text-[64px] 3xl:text-[70px] 3xl:text-shadow-5 4xl:text-[100px]"
+          class="text-[17px] text-shadow-1 text-shadow-violet sm:text-[30px] md:text-[35px] lg:text-[45px] lg:text-shadow-3 xl:text-[52px] xl:text-shadow-5 2xl:text-[64px] 3xl:text-[70px] 3xl:text-shadow-5 4xl:text-[100px] 5xl:text-[160px] 5xl:text-shadow-7"
         >
           <span> Hi there, my name is </span>
           <a
@@ -33,7 +35,7 @@
           </a>
         </div>
         <div
-          class="flex flex-col text-[10px] text-shadow-0.5 text-shadow-violet sm:text-[16px] sm:text-shadow-1 md:text-[20px] lg:text-[26px] lg:text-shadow-1.5 xl:text-[32px] xl:text-shadow-2 2xl:text-[36px] 3xl:text-[40px] 4xl:text-[55px] 4xl:text-shadow-3"
+          class="flex flex-col text-[10px] text-shadow-0.5 text-shadow-violet sm:text-[16px] sm:text-shadow-1 md:text-[20px] lg:text-[26px] lg:text-shadow-1.5 xl:text-[32px] xl:text-shadow-2 2xl:text-[36px] 3xl:text-[40px] 4xl:text-[55px] 4xl:text-shadow-3 5xl:text-[80px] 5xl:text-shadow-4"
         >
           <div class="hover:animate-wave motion-reduce:animate-none">
             I design and develop games and other neat stuff!

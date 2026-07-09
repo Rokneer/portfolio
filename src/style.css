@@ -39,6 +39,7 @@
   --breakpoint-xs: 30rem;
   --breakpoint-3xl: 120rem;
   --breakpoint-4xl: 160rem;
+  --breakpoint-5xl: 240rem;
 
   /** Shadows **/
   --shadow-*: initial;

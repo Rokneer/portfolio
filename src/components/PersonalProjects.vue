@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="mb-1 flex flex-row items-center justify-center gap-1 text-center text-[18px] font-medium drop-shadow-violet drop-shadow-1.5 sm:mb-3 sm:gap-3 sm:text-[36px] md:text-[40px] lg:mb-4 lg:gap-6 lg:text-[50px] lg:drop-shadow-2 xl:mb-6 xl:gap-8 xl:text-[65px] xl:drop-shadow-4 2xl:gap-10 2xl:text-[80px] 3xl:gap-12 3xl:text-[90px] 3xl:drop-shadow-5 4xl:mb-8 4xl:gap-14 4xl:text-[100px]"
+      class="mb-1 flex flex-row items-center justify-center gap-1 text-center text-[18px] font-medium drop-shadow-violet drop-shadow-1.5 sm:mb-3 sm:gap-3 sm:text-[36px] md:text-[40px] lg:mb-4 lg:gap-6 lg:text-[50px] lg:drop-shadow-2 xl:mb-6 xl:gap-8 xl:text-[65px] xl:drop-shadow-4 2xl:gap-10 2xl:text-[80px] 3xl:gap-12 3xl:text-[90px] 3xl:drop-shadow-5 4xl:mb-8 4xl:gap-14 4xl:text-[100px] 5xl:text-[160px] 5xl:drop-shadow-7"
     >
       <ph-heart
         weight="fill"
@@ -16,16 +16,12 @@
       />
     </div>
     <div
-      class="flex flex-row items-center justify-center gap-8 sm:gap-12 md:gap-14 lg:gap-20 xl:gap-30"
+      class="grid w-full items-center justify-center gap-4 md:gap-6 xl:gap-8 2xl:grid-cols-2 2xl:gap-10 5xl:gap-15"
     >
-      <div
-        class="grid w-full gap-4 md:gap-6 xl:gap-8 2xl:grid-cols-2 2xl:gap-10"
-      >
-        <project :project="PROJECTS.FoodForTheSoul" :images="foodImages" />
-        <project :project="PROJECTS.Masquerade" :images="masqueradeImages" />
-        <project :project="PROJECTS.CaveDwellers" :images="caveImages" />
-        <project :project="PROJECTS.PotionRush" :images="potionImages" />
-      </div>
+      <project :project="PROJECTS.FoodForTheSoul" :images="foodImages" />
+      <project :project="PROJECTS.Masquerade" :images="masqueradeImages" />
+      <project :project="PROJECTS.CaveDwellers" :images="caveImages" />
+      <project :project="PROJECTS.PotionRush" :images="potionImages" />
     </div>
   </div>
 </template>

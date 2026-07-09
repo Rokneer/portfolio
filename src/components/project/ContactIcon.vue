@@ -6,7 +6,7 @@
     rel="noreferrer"
   >
     <div
-      class="flex cursor-pointer stroke-white stroke-16 drop-shadow-violet drop-shadow-1 transition ease-in-out stroke-behind *:size-12.5 hover:drop-shadow-2 sm:drop-shadow-2 sm:*:size-15 sm:hover:drop-shadow-4 md:*:size-20 lg:drop-shadow-3 lg:*:size-25 lg:hover:drop-shadow-6 xl:drop-shadow-5 xl:*:size-40 xl:hover:drop-shadow-8 2xl:*:size-55"
+      class="flex cursor-pointer stroke-white stroke-16 drop-shadow-violet drop-shadow-1 transition ease-in-out stroke-behind *:size-12.5 hover:drop-shadow-2 sm:drop-shadow-2 sm:*:size-15 sm:hover:drop-shadow-4 md:*:size-20 lg:drop-shadow-3 lg:*:size-25 lg:hover:drop-shadow-6 xl:drop-shadow-5 xl:*:size-40 xl:hover:drop-shadow-8 2xl:*:size-55 5xl:drop-shadow-8 5xl:*:size-70"
     >
       <slot></slot>
     </div>
