@@ -10,12 +10,12 @@
       class="grid max-h-screen flex-col gap-2 rounded-[30px] border-2 bg-violet p-2 xl:border-3 xl:p-4 2xl:gap-4 2xl:border-4 4xl:p-6"
       :class="`${isMobile ? 'lg:grid-cols-3' : 'lg:grid-cols-2'}`"
     >
-      <!--* LOGO & GDD -->
+      <!--* LOGO -->
       <div
         class="relative flex h-30 w-full items-center justify-center bg-amaranth p-2 max-lg:rounded-t-[20px] md:h-35 lg:h-60 xl:h-65 2xl:h-75 3xl:h-85 4xl:h-95"
         :class="[
           `${
-            hasItchOrYoutube || isMobile
+            hasItch || isMobile
               ? 'lg:rounded-tl-[20px]'
               : 'lg:col-span-2 lg:rounded-t-[20px]'
           }`,
@@ -28,32 +28,13 @@
           :src="project.logo.src"
           :alt="project.logo.alt"
         />
-
-        <!--* GDD -->
-        <a
-          v-if="project.gddUrl"
-          :href="project.gddUrl"
-          target="_blank"
-          rel="noreferrer"
-          class="absolute right-0 bottom-0 m-1 flex cursor-pointer flex-col items-center justify-center transition hover:scale-102 2xl:m-2"
-        >
-          <div
-            class="text-center text-[5px] font-bold text-shadow-0.5 text-shadow-violet xs:text-[10px] lg:text-[12px] xl:text-shadow-1 2xl:text-[20px]"
-          >
-            GDD
-          </div>
-          <ph-file-text
-            weight="fill"
-            class="size-3.75 drop-shadow-violet drop-shadow-1 xs:size-6.25 lg:size-8.75 xl:drop-shadow-2 2xl:size-12.5"
-          />
-        </a>
       </div>
 
       <!--* CONTRIBUTIONS -->
       <div
         v-if="isMobile"
         class="flex h-30 w-full items-center bg-amaranth p-4 text-shadow-1 text-shadow-violet xs:p-6 sm:h-40 sm:p-8 md:h-50 md:p-10 lg:h-60 lg:p-4 xl:h-65 xl:p-5 2xl:h-75 2xl:p-6 2xl:text-shadow-2 3xl:h-85 3xl:p-8 4xl:h-95"
-        :class="`${hasItchOrYoutube ? 'lg:rounded-t-none' : 'lg:rounded-tr-[20px]'}`"
+        :class="`${hasItch ? 'lg:rounded-t-none' : 'lg:rounded-tr-[20px]'}`"
       >
         <div
           class="grid w-full grid-cols-3 gap-2 text-[6px] xs:text-[7px] sm:text-[9px] md:text-[11px] lg:grid-cols-2 lg:gap-1 xl:text-[12px] 2xl:gap-2 2xl:text-[14px] 3xl:text-[16px] 4xl:text-[18px]"
@@ -104,7 +85,7 @@
 
       <!--* ITCH OR YOUTUBE -->
       <div
-        v-if="hasItchOrYoutube"
+        v-if="hasItch"
         class="flex h-30 w-full items-center justify-center bg-amaranth md:h-35 lg:h-60 lg:rounded-tr-[20px] xl:h-65 2xl:h-75 3xl:h-85 4xl:h-95"
       >
         <iframe
@@ -144,7 +125,7 @@
         v-if="hasImages"
         class="relative size-full h-30 cursor-pointer overflow-hidden bg-amaranth max-lg:rounded-b-[20px] md:h-35 lg:h-60 lg:rounded-br-[20px] xl:h-65 2xl:h-75 3xl:h-85 4xl:h-95"
         :class="`${isMobile ? 'lg:col-span-2' : 'lg:col-span-1'}`"
-        :images="images"
+        :images="project.images"
         :options="{
           toolbar: false,
           movable: false,
@@ -155,9 +136,11 @@
         }"
       >
         <div
-          v-for="image in images"
+          v-for="image in project.images"
           :key="image.src"
-          :class="{ hidden: image != images[0] }"
+          :class="{
+            hidden: image != project.images[0],
+          }"
         >
           <img
             class="absolute -top-full -right-full -bottom-full -left-full m-auto min-h-full min-w-full object-cover"
@@ -171,17 +154,14 @@
 </template>
 
 <script setup lang="ts">
-import type { Image, Project } from "@/types";
+import type { Project } from "@/types";
 import { VueFinalModal } from "vue-final-modal";
 import { component as Viewer } from "v-viewer";
-import { PhFileText } from "@phosphor-icons/vue";
 import { computed } from "vue";
 import { isMobile } from "mobile-device-detect";
 
-const props = defineProps<{ project: Project; images: Image[] }>();
+const props = defineProps<{ project: Project }>();
 
-const hasItchOrYoutube = computed(
-  () => !!props.project.itchCode || !!props.project.youtubeCode,
-);
-const hasImages = computed(() => props.images.length > 0);
+const hasItch = computed(() => !!props.project.itchCode);
+const hasImages = computed(() => props.project.images.length > 0);
 </script>

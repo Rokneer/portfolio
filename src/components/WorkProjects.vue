@@ -17,7 +17,7 @@
     </div>
     <div class="flex flex-row items-center justify-center">
       <div class="w-[60%]">
-        <project :project="PROJECTS.AngryBill" :images="billImages" />
+        <project :project="PROJECTS.AngryBill" />
       </div>
     </div>
   </div>
@@ -27,7 +27,6 @@
 import PROJECTS from "@/utils/projects";
 import Project from "./project/Project.vue";
 
-import billImages from "@/assets/angryBill";
 
 import { PhStar } from "@phosphor-icons/vue";
 </script>

@@ -18,10 +18,13 @@
     <div
       class="grid w-full items-center justify-center gap-4 md:gap-6 xl:gap-8 2xl:grid-cols-2 2xl:gap-10 5xl:gap-15"
     >
-      <project :project="PROJECTS.FoodForTheSoul" :images="foodImages" />
-      <project :project="PROJECTS.Masquerade" :images="masqueradeImages" />
-      <project :project="PROJECTS.CaveDwellers" :images="caveImages" />
-      <project :project="PROJECTS.PotionRush" :images="potionImages" />
+      <project :project="PROJECTS.FoodForTheSoul"> </project>
+
+      <project :project="PROJECTS.Masquerade"> </project>
+
+      <project :project="PROJECTS.CaveDwellers"> </project>
+
+      <project :project="PROJECTS.PotionRush"> </project>
     </div>
   </div>
 </template>
@@ -29,11 +32,6 @@
 <script setup lang="ts">
 import PROJECTS from "@/utils/projects";
 import Project from "./project/Project.vue";
-
-import foodImages from "@/assets/foodForTheSoul";
-import masqueradeImages from "@/assets/masquerade";
-import caveImages from "@/assets/caveDwellers";
-import potionImages from "@/assets/potionRush";
 
 import { PhHeart } from "@phosphor-icons/vue";
 </script>

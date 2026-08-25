@@ -30,7 +30,7 @@
 
 <script setup lang="ts">
 import CV from "/common/CV.pdf";
-import ContactIcon from "./project/ContactIcon.vue";
+import ContactIcon from "./ContactIcon.vue";
 
 import { PhEnvelope, PhReadCvLogo } from "@phosphor-icons/vue";
 import PhItchDotIoLogo from "@/components/icons/PhItchDotIoLogo.vue";

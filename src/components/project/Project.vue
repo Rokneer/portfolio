@@ -50,15 +50,15 @@
 </template>
 
 <script setup lang="ts">
-import type { Image, Project } from "@/types";
+import type { Project } from "@/types";
 import { useModal } from "vue-final-modal";
-import GameModal from "./GameModal.vue";
+import GameModal from "./ProjectModal.vue";
 
-const props = defineProps<{ project: Project; images: Image[] }>();
+const props = defineProps<{ project: Project }>();
 
 const { open } = useModal({
   component: GameModal,
-  attrs: { images: props.images, project: props.project },
+  attrs: { project: props.project },
 });
 </script>
 

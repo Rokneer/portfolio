@@ -2,12 +2,17 @@ import type { Project } from "../types";
 import PLATFORMS from "./platform";
 
 import { masqueradeCover, masqueradeLogo } from "@/assets/masquerade";
+import masqueradeImages from "@/assets/masquerade";
 import { foodCover, foodLogo } from "@/assets/foodForTheSoul";
+import foodImages from "@/assets/foodForTheSoul";
 import { caveCover, caveLogo } from "@/assets/caveDwellers";
+import caveImages from "@/assets/caveDwellers";
 import { potionCover, potionLogo } from "@/assets/potionRush";
+import potionImages from "@/assets/potionRush";
 import { billCover, billLogo } from "@/assets/angryBill";
+import billImages from "@/assets/angryBill";
 
-//* Main Projects
+//* Personal Projects
 const masquerade: Project = {
   cover: { src: masqueradeCover, alt: "Masquerade cover image." },
   logo: { src: masqueradeLogo, alt: "Masquerade logo" },
@@ -22,6 +27,7 @@ const masquerade: Project = {
     "After a mysterious train ride you find yourself stranded in the floating village of Liberio. Its inhabitants are cheerful and welcoming, but you can't seem to shake the feeling that something is wrong. Why are you here, why does everyone in the village wear a mask and who was that towering figure that spoke to you in the train, the answers to this questions are for you to find.",
   itchCode: "2598761",
   youtubeCode: "TJUIgSQkQws",
+  images: masqueradeImages,
 };
 
 const foodForTheSoul: Project = {
@@ -38,6 +44,7 @@ const foodForTheSoul: Project = {
   platform: PLATFORMS.unity,
   itchCode: "2753590",
   youtubeCode: "PrqyUO0w4ic",
+  images: foodImages,
 };
 
 const caveDwellers: Project = {
@@ -53,6 +60,7 @@ const caveDwellers: Project = {
     "Trapped in a dark cave, your light is running out, its only a matter of time before the darkness engulfs you.",
   platform: PLATFORMS.unity,
   itchCode: "2579277",
+  images: caveImages,
 };
 
 const potionRush: Project = {
@@ -68,8 +76,10 @@ const potionRush: Project = {
     "You've just opened your Potions Café in the middle of the world's greatest magical city, New Arkadia. With open doors you receive your first customers, only to discover that everyone is in a hurry to go elsewhere and does not have the patience to wait for their orders for long. In a hurry, you start creating potions and giving them to your customers. It's going to be hard but the rent doesn't pay for itself.",
   platform: PLATFORMS.unity,
   itchCode: "2598797",
+  images: potionImages,
 };
 
+//* Professional Projects
 const angryBill: Project = {
   cover: { src: billCover, alt: "Angry Bill cover image." },
   logo: { src: billLogo, alt: "Angry Bill logo" },
@@ -81,6 +91,7 @@ const angryBill: Project = {
   ],
   description: "Angry Bill demo",
   platform: PLATFORMS.unity,
+  images: billImages,
 };
 
 const PROJECTS: Record<string, Project> = {
