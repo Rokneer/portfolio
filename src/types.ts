@@ -1,4 +1,5 @@
 export interface Project {
+  name: string;
   cover: Image;
   logo: Image;
   images: Image[];

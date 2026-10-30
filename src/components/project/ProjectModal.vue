@@ -155,7 +155,6 @@
 
 <script setup lang="ts">
 import type { Project } from "@/types";
-import { VueFinalModal } from "vue-final-modal";
 import { component as Viewer } from "v-viewer";
 import { computed } from "vue";
 import { isMobile } from "mobile-device-detect";

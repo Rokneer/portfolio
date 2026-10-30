@@ -1,8 +1,10 @@
 <template>
-  <div class="aspect-video motion-rotate-in-1 hover:motion-rotate-out-1">
+  <router-link
+    :to="project.name"
+    class="aspect-video motion-rotate-in-1 hover:motion-rotate-out-1"
+  >
     <div
       class="group relative cursor-pointer shadow-4 shadow-violet transition-all duration-200 ease-in-out hover:shadow-8 hover:shadow-crimson lg:shadow-6 lg:hover:shadow-12 xl:shadow-8 xl:hover:shadow-16 2xl:shadow-10"
-      @click="open"
     >
       <img
         :src="project.cover.src"
@@ -46,20 +48,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script setup lang="ts">
 import type { Project } from "@/types";
-import { useModal } from "vue-final-modal";
-import GameModal from "./ProjectModal.vue";
 
 const props = defineProps<{ project: Project }>();
-
-const { open } = useModal({
-  component: GameModal,
-  attrs: { project: props.project },
-});
 </script>
 
 <style scoped>

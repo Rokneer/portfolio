@@ -13,7 +13,8 @@ import { billCover, billLogo } from "@/assets/angryBill";
 import billImages from "@/assets/angryBill";
 
 //* Personal Projects
-const masquerade: Project = {
+const Masquerade: Project = {
+  name: "masquerade",
   cover: { src: masqueradeCover, alt: "Masquerade cover image." },
   logo: { src: masqueradeLogo, alt: "Masquerade logo" },
   roles: ["Game designer", "Level designer", "Quest designer"],
@@ -30,7 +31,8 @@ const masquerade: Project = {
   images: masqueradeImages,
 };
 
-const foodForTheSoul: Project = {
+const FoodForTheSoul: Project = {
+  name: "foodForTheSoul",
   cover: { src: foodCover, alt: "Food for the Soul cover image." },
   logo: { src: foodLogo, alt: "Food for the Soul logo" },
   roles: ["Project lead", "Lead developer", "Game designer"],
@@ -47,7 +49,8 @@ const foodForTheSoul: Project = {
   images: foodImages,
 };
 
-const caveDwellers: Project = {
+const CaveDwellers: Project = {
+  name: "caveDwellers",
   cover: { src: caveCover, alt: "Cave Dwellers cover image." },
   logo: { src: caveLogo, alt: "Cave Dwellers logo" },
   roles: ["Solo developer", "Game designer", "Level designer"],
@@ -63,7 +66,8 @@ const caveDwellers: Project = {
   images: caveImages,
 };
 
-const potionRush: Project = {
+const PotionRush: Project = {
+  name: "potionRush",
   cover: { src: potionCover, alt: "Potion Rush cover image." },
   logo: { src: potionLogo, alt: "Potion Rush logo" },
   roles: ["Game designer", "UI designer", "Artist"],
@@ -80,7 +84,8 @@ const potionRush: Project = {
 };
 
 //* Professional Projects
-const angryBill: Project = {
+const AngryBill: Project = {
+  name: "angryBill",
   cover: { src: billCover, alt: "Angry Bill cover image." },
   logo: { src: billLogo, alt: "Angry Bill logo" },
   roles: ["Lead developer", "Enemy AI programmer", "Core systems developer"],
@@ -95,11 +100,11 @@ const angryBill: Project = {
 };
 
 const PROJECTS: Record<string, Project> = {
-  Masquerade: masquerade,
-  CaveDwellers: caveDwellers,
-  FoodForTheSoul: foodForTheSoul,
-  PotionRush: potionRush,
-  AngryBill: angryBill,
+  masquerade: Masquerade,
+  caveDwellers: CaveDwellers,
+  foodForTheSoul: FoodForTheSoul,
+  potionRush: PotionRush,
+  angryBill: AngryBill,
 };
 
 export default PROJECTS;

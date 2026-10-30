@@ -1,9 +1,9 @@
 <template>
   <div>
-    <router-view />
-    <modals-container />
+    <router-view v-slot="{ Component, route }">
+      <transition :name="route.meta.transition || 'fade'">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </router-view>
   </div>
 </template>
-<script setup lang="ts">
-import { ModalsContainer } from "vue-final-modal";
-</script>

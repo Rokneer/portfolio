@@ -1,61 +1,55 @@
 <template>
   <div class="flex flex-col items-center gap-8 p-20">
     <div
-      class="absolute top-0 left-0 -z-10 h-full w-full bg-linear-to-l from-amaranth from-0%"
+      class="absolute top-0 left-0 -z-10 size-full bg-linear-120 from-30% to-crimson"
     />
-    <div class="flex w-full flex-row items-center justify-center-safe gap-20">
+    <div
+      class="flex basis-1/4 flex-row items-center justify-center-safe gap-20"
+    >
       <!--* LOGO -->
       <div class="">
         <img
-          class="aspect-square"
-          :src="project.logo.src"
-          :alt="project.logo.alt"
+          class="drop-shadow-violet drop-shadow-5"
+          :src="PROJECTS[project].logo.src"
+          :alt="PROJECTS[project].logo.alt"
         />
       </div>
-
-      <div class="flex basis-3/4 flex-col">
-        <!--* ITCH -->
-        <div class="flex w-full" v-if="project.itchCode">
-          <iframe
-            class="h-44"
-            :src="`https://itch.io/embed/${project.itchCode}?bg_color=a9a5d2&amp;border_color=a9a5d2&amp;fg_color=ffffff&amp;link_color=e42038`"
-            width="60%"
-          />
+      <div
+        class="flex basis-3/4 flex-col gap-8 text-[6px] text-shadow-1 text-shadow-violet xs:text-[7px] sm:text-[9px] md:text-[11px] xl:text-[12px] 2xl:text-[24px] 2xl:text-shadow-2 3xl:text-[36px] 4xl:text-[42px]"
+      >
+        <!--* ROLES -->
+        <div
+          class="w-fit rounded-sm bg-crimson bg-linear-to-l px-10 py-4 shadow-10 shadow-violet"
+        >
+          <div
+            class="text-[9px] font-bold text-shadow-1 text-shadow-violet sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[40px] 2xl:text-shadow-3 3xl:text-[50px] 4xl:text-[65px]"
+          >
+            Worked as
+          </div>
+          <ul class="list-inside list-disc">
+            <li v-for="(role, index) in PROJECTS[project].roles" :key="index">
+              {{ role }}
+            </li>
+          </ul>
         </div>
 
+        <!--* CONTRIBUTIONS -->
         <div
-          class="flex flex-row gap-8 text-[6px] text-shadow-1 text-shadow-violet xs:text-[7px] sm:text-[9px] md:text-[11px] xl:text-[12px] 2xl:text-[24px] 2xl:text-shadow-2 3xl:text-[36px] 4xl:text-[42px]"
+          class="w-fit rounded-sm bg-crimson px-10 py-4 shadow-10 shadow-violet"
         >
-          <!--* ROLES -->
-          <div class="flex-2/6 p-4">
-            <div
-              class="text-[9px] font-bold text-shadow-1 text-shadow-violet sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[40px] 2xl:text-shadow-3 3xl:text-[50px] 4xl:text-[65px]"
-            >
-              Worked as
-            </div>
-            <ul class="list-inside list-disc">
-              <li v-for="(role, index) in project.roles" :key="index">
-                {{ role }}
-              </li>
-            </ul>
+          <div
+            class="text-[9px] font-bold text-shadow-1 text-shadow-violet sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[40px] 2xl:text-shadow-3 3xl:text-[50px] 4xl:text-[65px]"
+          >
+            Doing
           </div>
-
-          <!--* CONTRIBUTIONS -->
-          <div class="flex-4/6 p-4">
-            <div
-              class="text-[9px] font-bold text-shadow-1 text-shadow-violet sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[40px] 2xl:text-shadow-3 3xl:text-[50px] 4xl:text-[65px]"
+          <ul class="list-inside list-disc">
+            <li
+              v-for="(contribution, index) in PROJECTS[project].contributions"
+              :key="index"
             >
-              Doing
-            </div>
-            <ul class="list-inside list-disc">
-              <li
-                v-for="(contribution, index) in project.contributions"
-                :key="index"
-              >
-                {{ contribution }}
-              </li>
-            </ul>
-          </div>
+              {{ contribution }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -64,7 +58,7 @@
     <div
       class="w-full text-[9px] text-shadow-1 text-shadow-violet sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[40px] 2xl:text-shadow-3 3xl:text-[50px] 4xl:text-[55px]"
     >
-      {{ project.description }}
+      {{ PROJECTS[project].description }}
     </div>
 
     <!--* ANALYSIS -->
@@ -115,7 +109,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import type { Project } from "@/types";
+import PROJECTS from "@/utils/projects";
 
-const props = defineProps<{ project: Project }>();
+const props = defineProps<{ project: string }>();
 </script>

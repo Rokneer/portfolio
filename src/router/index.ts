@@ -1,17 +1,27 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import NotFound from "../views/404.vue";
+import Home from "@/views/Home.vue";
+import NotFound from "@/views/404.vue";
+import ProjectDescription from "@/views/ProjectDescription.vue";
 
 const routes = [
   {
     path: "/",
     name: "projects",
     component: Home,
+    meta: { transition: "" },
+  },
+  {
+    path: "/:project",
+    name: ":project",
+    component: ProjectDescription,
+    props: true,
+    meta: { transition: "" },
   },
   {
     path: "/:pathName(.*)",
     name: "404",
     component: NotFound,
+    meta: { transition: "" },
   },
 ];
 

@@ -16,8 +16,8 @@
       />
     </div>
     <div class="flex flex-row items-center justify-center">
-      <div class="w-[60%]">
-        <project :project="PROJECTS.AngryBill" />
+      <div class="2xl:w-[60%]">
+        <project :project="PROJECTS.angryBill" />
       </div>
     </div>
   </div>
@@ -26,7 +26,6 @@
 <script setup lang="ts">
 import PROJECTS from "@/utils/projects";
 import Project from "./project/Project.vue";
-
 
 import { PhStar } from "@phosphor-icons/vue";
 </script>
