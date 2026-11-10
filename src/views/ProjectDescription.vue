@@ -1,32 +1,17 @@
 <template>
-  <div class="flex flex-col items-center gap-8 p-20">
-    <div
-      class="absolute top-0 left-0 -z-10 size-full bg-linear-120 from-30% to-crimson"
-    />
-    <div
-      class="flex basis-1/4 flex-row items-center justify-center-safe gap-20"
-    >
+  <div class="description-container">
+    <div class="header">
       <!--* LOGO -->
-      <div class="">
-        <img
-          class="drop-shadow-violet drop-shadow-5"
-          :src="PROJECTS[project].logo.src"
-          :alt="PROJECTS[project].logo.alt"
-        />
-      </div>
-      <div
-        class="flex basis-3/4 flex-col gap-8 text-[6px] text-shadow-1 text-shadow-violet xs:text-[7px] sm:text-[9px] md:text-[11px] xl:text-[12px] 2xl:text-[24px] 2xl:text-shadow-2 3xl:text-[36px] 4xl:text-[42px]"
-      >
+      <img
+        class="logo"
+        :src="PROJECTS[project].logo.src"
+        :alt="PROJECTS[project].logo.alt"
+      />
+      <div class="contributions-container">
         <!--* ROLES -->
-        <div
-          class="w-fit rounded-sm bg-crimson bg-linear-to-l px-10 py-4 shadow-10 shadow-violet"
-        >
-          <div
-            class="text-[9px] font-bold text-shadow-1 text-shadow-violet sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[40px] 2xl:text-shadow-3 3xl:text-[50px] 4xl:text-[65px]"
-          >
-            Worked as
-          </div>
-          <ul class="list-inside list-disc">
+        <div class="contribution">
+          <div class="contribution-title">Worked as</div>
+          <ul class="contribution-text">
             <li v-for="(role, index) in PROJECTS[project].roles" :key="index">
               {{ role }}
             </li>
@@ -34,15 +19,9 @@
         </div>
 
         <!--* CONTRIBUTIONS -->
-        <div
-          class="w-fit rounded-sm bg-crimson px-10 py-4 shadow-10 shadow-violet"
-        >
-          <div
-            class="text-[9px] font-bold text-shadow-1 text-shadow-violet sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[40px] 2xl:text-shadow-3 3xl:text-[50px] 4xl:text-[65px]"
-          >
-            Doing
-          </div>
-          <ul class="list-inside list-disc">
+        <div class="contribution">
+          <div class="contribution-title">Doing</div>
+          <ul class="contribution-text">
             <li
               v-for="(contribution, index) in PROJECTS[project].contributions"
               :key="index"
@@ -55,16 +34,12 @@
     </div>
 
     <!--* DESCRIPTION -->
-    <div
-      class="w-full text-[9px] text-shadow-1 text-shadow-violet sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[40px] 2xl:text-shadow-3 3xl:text-[50px] 4xl:text-[55px]"
-    >
+    <div class="text">
       {{ PROJECTS[project].description }}
     </div>
 
     <!--* ANALYSIS -->
-    <div
-      class="w-full text-[9px] text-shadow-1 text-shadow-violet sm:text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[40px] 2xl:text-shadow-3 3xl:text-[50px] 4xl:text-[55px]"
-    >
+    <div class="text">
       <slot>
         GAME ANALYSIS
         <br />
@@ -108,6 +83,147 @@
     </div>
   </div>
 </template>
+
+<style lang="css" scoped>
+/* DEFAULT */
+.description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3.5rem;
+  background-image: linear-gradient(
+    120deg,
+    transparent 30%,
+    var(--color-crimson)
+  );
+}
+.header {
+  display: flex;
+  flex-basis: 25%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: safe center;
+  gap: 3rem;
+  padding-bottom: 1.5rem;
+}
+.logo {
+  filter: drop-shadow(0.313rem 0.313rem 0 var(--color-violet));
+}
+.contributions-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 75%;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.438rem;
+  text-shadow: 0.063rem 0.063rem 0 var(--color-violet);
+}
+.contribution {
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: var(--color-crimson);
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+  box-shadow: 0.313rem 0.313rem 0 var(--color-violet);
+}
+.contribution-title {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  text-shadow: 0.063rem 0.063rem 0 var(--color-violet);
+}
+.contribution-text {
+  list-style: inside disc;
+  font-size: 0.625rem;
+}
+.text {
+  font-size: 0.625rem;
+  text-shadow: 0.063rem 0.063rem 0 var(--color-violet);
+}
+
+/* SM - 640px*/
+@media (min-width: 40rem) {
+  .header {
+    flex-direction: column;
+  }
+  .contributions-container {
+    font-size: 0.563rem;
+  }
+  .contribution-title {
+    font-size: 0.75rem;
+  }
+  .text {
+    font-size: 0.75rem;
+  }
+}
+/* MD - 768px*/
+@media (min-width: 48rem) {
+  .contributions-container {
+    font-size: 0.688rem;
+  }
+  .contribution-title {
+    font-size: 0.875rem;
+  }
+  .text {
+    font-size: 0.875rem;
+  }
+}
+/* LG - 1024px*/
+@media (min-width: 64rem) {
+  .contribution-title {
+    font-size: 1rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+}
+/* XL - 1280px*/
+@media (min-width: 80rem) {
+  .contributions-container {
+    font-size: 0.75rem;
+  }
+}
+/* 2XL - 1536px*/
+@media (min-width: 96rem) {
+  .contributions-container {
+    font-size: 1.5rem;
+    text-shadow: 0.125rem 0.125rem 0 var(--color-violet);
+  }
+  .contribution-title {
+    font-size: 2.5rem;
+    text-shadow: 0.188rem 0.188rem 0 var(--color-violet);
+  }
+  .text {
+    font-size: 2.5rem;
+    text-shadow: 0.188rem 0.188rem 0 var(--color-violet);
+  }
+}
+/* 3XL - 191.25rem*/
+@media (min-width: 120rem) {
+  .contributions-container {
+    font-size: 2.25rem;
+  }
+  .contribution-title {
+    font-size: 3.125rem;
+  }
+  .text {
+    font-size: 3.125rem;
+  }
+}
+/* 4XL - 2560px*/
+@media (min-width: 160rem) {
+  .contributions-container {
+    font-size: 2.625rem;
+  }
+  .contribution-title {
+    font-size: 4.063rem;
+  }
+  .text {
+    font-size: 3.438rem;
+  }
+}
+</style>
+
 <script setup lang="ts">
 import PROJECTS from "@/utils/projects";
 
