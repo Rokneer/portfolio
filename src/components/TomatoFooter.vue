@@ -49,12 +49,12 @@ import Tomatito from "/common/tomate/mascot/mascot-crimson-border.svg";
 }
 .vines {
   height: 0.9375rem;
-  filter: drop-shadow(0.125rem 0.125rem 0 var(--color-violet));
+  filter: drop-shadow(0.125rem 0.125rem 0 var(--violet));
 }
 .tomatito {
   width: 1.875rem;
   height: 1.875rem;
-  filter: drop-shadow(0.125rem 0.125rem 0 var(--color-violet));
+  filter: drop-shadow(0.125rem 0.125rem 0 var(--violet));
 }
 .tomatito:hover {
   animation: wiggle 1s ease-in-out infinite;
@@ -62,7 +62,7 @@ import Tomatito from "/common/tomate/mascot/mascot-crimson-border.svg";
 .footnote {
   text-align: center;
   font-size: 0.375rem;
-  text-shadow: 0.065rem 0.065rem 0 var(--color-violet);
+  text-shadow: 0.065rem 0.065rem 0 var(--violet);
 }
 @media (prefers-reduced-motion: reduce) {
   .tomatito:hover {
@@ -73,11 +73,11 @@ import Tomatito from "/common/tomate/mascot/mascot-crimson-border.svg";
 @media (min-width: 40rem) {
   .vines {
     height: 1.25rem;
-    filter: drop-shadow(0.2rem 0.2rem 0 var(--color-violet));
+    filter: drop-shadow(0.2rem 0.2rem 0 var(--violet));
   }
   .tomatito {
     height: 2.25rem;
-    filter: drop-shadow(0.2rem 0.2rem 0 var(--color-violet));
+    filter: drop-shadow(0.2rem 0.2rem 0 var(--violet));
   }
   .footnote {
     font-size: 0.5rem;
@@ -93,7 +93,7 @@ import Tomatito from "/common/tomate/mascot/mascot-crimson-border.svg";
   }
   .vines {
     height: 1.75rem;
-    filter: drop-shadow(0.2rem 0.2rem 0 var(--color-violet));
+    filter: drop-shadow(0.2rem 0.2rem 0 var(--violet));
   }
   .tomatito {
     height: 2.8rem;
@@ -107,12 +107,12 @@ import Tomatito from "/common/tomate/mascot/mascot-crimson-border.svg";
   }
   .vines {
     height: 2.5rem;
-    filter: drop-shadow(0.25rem 0.25rem 0 var(--color-violet));
+    filter: drop-shadow(0.25rem 0.25rem 0 var(--violet));
   }
   .tomatito {
     width: 4.5rem;
     height: 4.5rem;
-    filter: drop-shadow(0.25rem 0.25rem 0 var(--color-violet));
+    filter: drop-shadow(0.25rem 0.25rem 0 var(--violet));
   }
   .footnote {
     font-size: 1rem;
@@ -129,16 +129,16 @@ import Tomatito from "/common/tomate/mascot/mascot-crimson-border.svg";
   }
   .vines {
     height: 3.125rem;
-    filter: drop-shadow(0.375rem 0.375rem 0 var(--color-violet));
+    filter: drop-shadow(0.375rem 0.375rem 0 var(--violet));
   }
   .tomatito {
     width: 7.5rem;
     height: 7.5rem;
-    filter: drop-shadow(0.375rem 0.375rem 0 var(--color-violet));
+    filter: drop-shadow(0.375rem 0.375rem 0 var(--violet));
   }
   .footnote {
     font-size: 1.25rem;
-    text-shadow: 0.15rem 0.15rem 0 var(--color-violet);
+    text-shadow: 0.15rem 0.15rem 0 var(--violet);
   }
 }
 /* 2XL - 1536px*/
@@ -161,7 +161,7 @@ import Tomatito from "/common/tomate/mascot/mascot-crimson-border.svg";
   }
   .footnote {
     font-size: 1.625rem;
-    text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
+    text-shadow: 0.2rem 0.2rem 0 var(--violet);
   }
 }
 /* 4XL - 2560px*/
@@ -187,16 +187,16 @@ import Tomatito from "/common/tomate/mascot/mascot-crimson-border.svg";
   }
   .vines {
     height: 8.75rem;
-    filter: drop-shadow(0.5rem 0.5rem 0 var(--color-violet));
+    filter: drop-shadow(0.5rem 0.5rem 0 var(--violet));
   }
   .tomatito {
     width: 13.75rem;
     height: 13.75rem;
-    filter: drop-shadow(0.5rem 0.5rem 0 var(--color-violet));
+    filter: drop-shadow(0.5rem 0.5rem 0 var(--violet));
   }
   .footnote {
     font-size: 2.5rem;
-    text-shadow: 0.25rem 0.25rem 0 var(--color-violet);
+    text-shadow: 0.25rem 0.25rem 0 var(--violet);
   }
 }
 </style>

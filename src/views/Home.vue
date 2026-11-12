@@ -25,11 +25,7 @@ import {
 .gradient {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(
-    180deg,
-    transparent 85%,
-    var(--color-violet)
-  );
+  background-image: linear-gradient(180deg, transparent 85%, var(--violet));
 }
 .home-container {
   display: flex;
@@ -42,6 +38,7 @@ import {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  scroll-margin-top: 8.5rem;
 }
 :deep(.category) {
   display: flex;
@@ -53,7 +50,7 @@ import {
   text-align: center;
   font-size: 1.55rem;
   font-weight: 500;
-  filter: drop-shadow(0.1rem 0.1rem 0 var(--color-violet));
+  filter: drop-shadow(0.1rem 0.1rem 0 var(--violet));
 }
 :deep(.category-title) {
   vertical-align: bottom;
@@ -110,7 +107,7 @@ import {
     margin-bottom: 1rem;
     gap: 1.5rem;
     font-size: 3.75rem;
-    filter: drop-shadow(0.125rem 0.125rem 0 var(--color-violet));
+    filter: drop-shadow(0.125rem 0.125rem 0 var(--violet));
   }
   :deep(.icon) {
     margin-bottom: 0.75rem;
@@ -126,7 +123,7 @@ import {
     margin-bottom: 1.5rem;
     gap: 2rem;
     font-size: 4.75rem;
-    filter: drop-shadow(0.25rem 0.25rem 0 var(--color-violet));
+    filter: drop-shadow(0.25rem 0.25rem 0 var(--violet));
   }
   :deep(.project-grid) {
     gap: 2rem;
@@ -141,7 +138,7 @@ import {
   }
   :deep(.category) {
     font-size: 5rem;
-    filter: drop-shadow(0.625rem 0.625rem 0 var(--color-violet));
+    filter: drop-shadow(0.625rem 0.625rem 0 var(--violet));
   }
   :deep(.icon) {
     margin-bottom: 1rem;
@@ -161,7 +158,7 @@ import {
   :deep(.category) {
     font-size: 6.25rem;
     gap: 3rem;
-    filter: drop-shadow(0.315rem 0.315rem 0 var(--color-violet));
+    filter: drop-shadow(0.315rem 0.315rem 0 var(--violet));
   }
   :deep(.icon) {
     margin-bottom: 1.5rem;
@@ -187,7 +184,7 @@ import {
   }
   :deep(.category) {
     font-size: 10rem;
-    filter: drop-shadow(0.45rem 0.45rem 0 var(--color-violet));
+    filter: drop-shadow(0.45rem 0.45rem 0 var(--violet));
   }
   :deep(.project-grid) {
     gap: 3.75rem;

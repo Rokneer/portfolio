@@ -65,6 +65,7 @@ const isMeHovered = ref<boolean>(false);
   gap: 0.25rem;
   padding-inline: 0.25rem;
   padding-block: 1rem;
+  scroll-margin-top: 8.5rem;
 }
 .description-container {
   display: flex;
@@ -77,13 +78,13 @@ const isMeHovered = ref<boolean>(false);
   width: 100%;
   text-align: center;
   font-size: 1.35rem;
-  text-shadow: 0.065rem 0.065rem 0 var(--color-violet);
+  text-shadow: 0.065rem 0.065rem 0 var(--violet);
 }
 .images-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  filter: drop-shadow(0.1rem 0.1rem 0 var(--color-violet));
+  filter: drop-shadow(0.1rem 0.1rem 0 var(--violet));
   flex-basis: 20%;
   padding: 0.25rem;
   width: 3rem;
@@ -96,14 +97,14 @@ const isMeHovered = ref<boolean>(false);
 }
 .description {
   font-size: 0.675rem;
-  text-shadow: 0.03rem 0.03rem 0 var(--color-violet);
+  text-shadow: 0.03rem 0.03rem 0 var(--violet);
   font-weight: 500;
   flex-basis: 80%;
 }
 .name-highlight {
-  color: var(--color-crimson);
-  transition-property: font-size;
+  color: var(--crimson);
   text-decoration: none;
+  transition-property: font-size;
   transition: 0.2s ease-in-out;
 }
 .name-highlight:hover {
@@ -113,6 +114,9 @@ const isMeHovered = ref<boolean>(false);
   animation: wave 0.8s ease-in-out infinite;
 }
 @media (prefers-reduced-motion: reduce) {
+  .name-highlight {
+    transition: none;
+  }
   .wave-highlight:hover {
     animation: none;
   }
@@ -130,21 +134,21 @@ const isMeHovered = ref<boolean>(false);
   }
   .description {
     font-size: 1.125rem;
-    text-shadow: 0.065rem 0.065rem 0 var(--color-violet);
+    text-shadow: 0.065rem 0.065rem 0 var(--violet);
   }
 }
 /* MD - 768px*/
 @media (min-width: 48rem) {
   .greeting {
     font-size: 3rem;
-    text-shadow: 0.15rem 0.15rem 0 var(--color-violet);
+    text-shadow: 0.15rem 0.15rem 0 var(--violet);
   }
   .images-container {
     width: 6.5rem;
   }
   .description {
     font-size: 1.4rem;
-    text-shadow: 0.1rem 0.1rem 0 var(--color-violet);
+    text-shadow: 0.1rem 0.1rem 0 var(--violet);
   }
 }
 /* LG - 1024px*/
@@ -157,11 +161,11 @@ const isMeHovered = ref<boolean>(false);
   }
   .images-container {
     width: 8.25rem;
-    filter: drop-shadow(0.125rem 0.125rem 0 var(--color-violet));
+    filter: drop-shadow(0.125rem 0.125rem 0 var(--violet));
   }
   .greeting {
     font-size: 3.75rem;
-    text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
+    text-shadow: 0.2rem 0.2rem 0 var(--violet);
   }
   .description {
     font-size: 1.815rem;
@@ -177,15 +181,15 @@ const isMeHovered = ref<boolean>(false);
   }
   .images-container {
     width: 10rem;
-    filter: drop-shadow(0.25rem 0.25rem 0 var(--color-violet));
+    filter: drop-shadow(0.25rem 0.25rem 0 var(--violet));
   }
   .greeting {
     font-size: 4.625rem;
-    text-shadow: 0.315rem 0.315rem 0 var(--color-violet);
+    text-shadow: 0.315rem 0.315rem 0 var(--violet);
   }
   .description {
     font-size: 2.15rem;
-    text-shadow: 0.125rem 0.125rem 0 var(--color-violet);
+    text-shadow: 0.125rem 0.125rem 0 var(--violet);
   }
 }
 /* 2XL - 1536px*/
@@ -207,15 +211,15 @@ const isMeHovered = ref<boolean>(false);
   }
   .images-container {
     width: 14rem;
-    filter: drop-shadow(0.315rem 0.315rem 0 var(--color-violet));
+    filter: drop-shadow(0.315rem 0.315rem 0 var(--violet));
   }
   .greeting {
     font-size: 6.25rem;
-    text-shadow: 0.315rem 0.315rem 0 var(--color-violet);
+    text-shadow: 0.315rem 0.315rem 0 var(--violet);
   }
   .description {
     font-size: 2.95rem;
-    text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
+    text-shadow: 0.2rem 0.2rem 0 var(--violet);
   }
 }
 /* 4XL - 2560px*/
@@ -243,15 +247,15 @@ const isMeHovered = ref<boolean>(false);
   }
   .images-container {
     width: 30rem;
-    filter: drop-shadow(0.45rem 0.45rem 0 var(--color-violet));
+    filter: drop-shadow(0.45rem 0.45rem 0 var(--violet));
   }
   .greeting {
     font-size: 13.25rem;
-    text-shadow: 0.45rem 0.45rem 0 var(--color-violet);
+    text-shadow: 0.45rem 0.45rem 0 var(--violet);
   }
   .description {
     font-size: 6.25rem;
-    text-shadow: 0.315rem 0.315rem 0 var(--color-violet);
+    text-shadow: 0.315rem 0.315rem 0 var(--violet);
   }
 }
 </style>

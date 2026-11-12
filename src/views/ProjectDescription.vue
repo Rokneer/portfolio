@@ -78,11 +78,7 @@ defineProps<{ project: string }>();
 /* DEFAULT */
 .gradient {
   display: flex;
-  background-image: linear-gradient(
-    120deg,
-    transparent 30%,
-    var(--color-crimson)
-  );
+  background-image: linear-gradient(120deg, transparent 30%, var(--crimson));
 }
 .description-container {
   display: flex;
@@ -103,7 +99,7 @@ defineProps<{ project: string }>();
 }
 .logo {
   width: 100%;
-  filter: drop-shadow(0.315rem 0.315rem 0 var(--color-violet));
+  filter: drop-shadow(0.315rem 0.315rem 0 var(--violet));
 }
 .contributions-container {
   display: flex;
@@ -117,26 +113,26 @@ defineProps<{ project: string }>();
   display: flex;
   flex-direction: column;
   border-radius: 0.25rem;
-  background-color: var(--color-crimson);
+  background-color: var(--crimson);
   padding-inline: 1.5rem;
   padding-block: 1rem;
-  box-shadow: 0.315rem 0.315rem 0 var(--color-violet);
+  box-shadow: 0.315rem 0.315rem 0 var(--violet);
 }
 .contribution-title {
   font-size: 1.85rem;
   font-weight: bold;
-  text-shadow: 0.1rem 0.1rem 0 var(--color-violet);
+  text-shadow: 0.1rem 0.1rem 0 var(--violet);
 }
 .contribution-text {
   list-style: outside disc;
   font-size: 1.35rem;
   padding-left: 1.2rem;
   line-height: 1.75rem;
-  text-shadow: 0.065rem 0.065rem 0 var(--color-violet);
+  text-shadow: 0.065rem 0.065rem 0 var(--violet);
 }
 .general-text {
   font-size: 1.35rem;
-  text-shadow: 0.065rem 0.065rem 0 var(--color-violet);
+  text-shadow: 0.065rem 0.065rem 0 var(--violet);
 }
 
 /* SM - 640px*/
@@ -213,7 +209,7 @@ defineProps<{ project: string }>();
   }
   .contribution-text {
     font-size: 1.75rem;
-    text-shadow: 0.125rem 0.125rem 0 var(--color-violet);
+    text-shadow: 0.125rem 0.125rem 0 var(--violet);
   }
 }
 /* 2XL - 1536px*/
@@ -228,11 +224,11 @@ defineProps<{ project: string }>();
   }
   .contribution-title {
     font-size: 2.75rem;
-    text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
+    text-shadow: 0.2rem 0.2rem 0 var(--violet);
   }
   .general-text {
     font-size: 2.5rem;
-    text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
+    text-shadow: 0.2rem 0.2rem 0 var(--violet);
   }
 }
 /* 3XL - 1920px*/

@@ -57,8 +57,8 @@ import PhGithubLogo from "@/components/icons/PhGitHubLogo.vue";
 }
 .contact-text {
   font-size: 2rem;
-  color: var(--color-crimson);
-  filter: drop-shadow(0.065rem 0.065rem 0 var(--color-violet));
+  color: var(--crimson);
+  filter: drop-shadow(0.065rem 0.065rem 0 var(--violet));
   paint-order: stroke fill;
   -webkit-text-stroke-width: 0.2rem;
   -webkit-text-stroke-color: white;
@@ -77,7 +77,7 @@ import PhGithubLogo from "@/components/icons/PhGitHubLogo.vue";
 @media (min-width: 40rem) {
   .contact-text {
     font-size: 3.125rem;
-    filter: drop-shadow(0.125rem 0.125rem 0 var(--color-violet));
+    filter: drop-shadow(0.125rem 0.125rem 0 var(--violet));
   }
 }
 /* MD - 768px*/
@@ -91,14 +91,14 @@ import PhGithubLogo from "@/components/icons/PhGitHubLogo.vue";
 @media (min-width: 64rem) {
   .contact-text {
     font-size: 8.25rem;
-    filter: drop-shadow(0.2rem 0.2rem 0 var(--color-violet));
+    filter: drop-shadow(0.2rem 0.2rem 0 var(--violet));
   }
 }
 /* XL - 1280px*/
 @media (min-width: 80rem) {
   .contact-text {
     font-size: 11.25rem;
-    filter: drop-shadow(0.315rem 0.315rem 0 var(--color-violet));
+    filter: drop-shadow(0.315rem 0.315rem 0 var(--violet));
     -webkit-text-stroke-width: 0.75rem;
   }
 }
@@ -111,7 +111,7 @@ import PhGithubLogo from "@/components/icons/PhGitHubLogo.vue";
 /* 3XL - 1920px*/
 @media (min-width: 120rem) {
   .contact-text {
-    filter: drop-shadow(0.375rem 0.375rem 0 var(--color-violet));
+    filter: drop-shadow(0.375rem 0.375rem 0 var(--violet));
     -webkit-text-stroke-width: 0.938rem;
   }
 }
@@ -125,7 +125,7 @@ import PhGithubLogo from "@/components/icons/PhGitHubLogo.vue";
 @media (min-width: 240rem) {
   .contact-text {
     font-size: 18.75rem;
-    filter: drop-shadow(0.5rem 0.5rem 0 var(--color-violet));
+    filter: drop-shadow(0.5rem 0.5rem 0 var(--violet));
     -webkit-text-stroke-width: 1.25rem;
   }
 }

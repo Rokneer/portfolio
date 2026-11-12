@@ -1,15 +1,27 @@
 :root {
-  /** Fonts **/
-  --font-atma: Atma, sans-serif;
-  --font-overpass: Overpass, sans-serif;
-
   /** Colors */
-  --color-violet: #311f4c;
-  --color-amaranth: #981869;
-  --color-crimson: #e42038;
-  --color-blue: #a9a5d2;
+  --violet: #311f4c;
+  --amaranth: #981869;
+  --crimson: #e42038;
+  --blue: #a9a5d2;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: var(--blue);
+    color: white;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--blue);
+    color: white;
+  }
+}
+
+html {
+  font-family: Overpass, sans-serif;
+}
 html,
 body,
 li,
@@ -20,6 +32,10 @@ ul {
 body {
   width: 100vw;
   height: 100vh;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 * {
   box-sizing: border-box;
