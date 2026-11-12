@@ -14,10 +14,7 @@
           <div>
             <div class="project-text">Worked as</div>
             <ul class="list">
-              <li
-                v-for="(role, index) in project.roles"
-                :key="index"
-              >
+              <li v-for="(role, index) in project.roles" :key="index">
                 {{ role }}
               </li>
             </ul>
@@ -63,13 +60,13 @@ test:hover {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  box-shadow: 0.25rem 0.25rem 0 var(--color-violet);
+  box-shadow: 0.25rem 0.25rem 0 var(--violet);
   transition: all 0.2s ease-in-out;
   animation: rotateIn 0.3s forwards;
 }
 .project-container:hover {
   animation: rotateOut 0.3s forwards;
-  box-shadow: 0.5rem 0.5rem 0 var(--color-crimson);
+  box-shadow: 0.5rem 0.5rem 0 var(--crimson);
 }
 .project-cover {
   width: 100%;
@@ -91,7 +88,7 @@ test:hover {
   font-size: 0.7rem;
   color: white;
   transition: all 0.2s ease-in-out;
-  text-shadow: 0.03rem 0.03rem 0 var(--color-amaranth);
+  text-shadow: 0.03rem 0.03rem 0 var(--amaranth);
 }
 .project-container:hover .description {
   opacity: 100%;
@@ -111,14 +108,14 @@ test:hover {
 .project-text {
   font-size: 0.95rem;
   font-weight: bold;
-  text-shadow: 0.065rem 0.065rem 0 var(--color-amaranth);
+  text-shadow: 0.065rem 0.065rem 0 var(--amaranth);
 }
 .list {
   list-style: disc inside;
 }
 .engine-logo {
   width: 65%;
-  filter: drop-shadow(0.065rem 0.065rem 0 var(--color-amaranth));
+  filter: drop-shadow(0.065rem 0.065rem 0 var(--amaranth));
 }
 .category-column {
   width: 100%;
@@ -127,10 +124,14 @@ test:hover {
 }
 @media (prefers-reduced-motion: reduce) {
   .project-container {
+    transition: none;
     animation: none;
   }
   .project-container:hover {
     animation: none;
+  }
+  .description {
+    transition: none;
   }
 }
 /* SM - 640px*/
@@ -138,14 +139,14 @@ test:hover {
   .description {
     padding: 1.5rem;
     font-size: 1.2rem;
-    text-shadow: 0.065rem 0.065rem 0 var(--color-amaranth);
+    text-shadow: 0.065rem 0.065rem 0 var(--amaranth);
   }
   .project-text {
     font-size: 1.625rem;
-    text-shadow: 0.125rem 0.125rem 0 var(--color-amaranth);
+    text-shadow: 0.125rem 0.125rem 0 var(--amaranth);
   }
   .engine-logo {
-    filter: drop-shadow(0.125rem 0.125rem 0 var(--color-amaranth));
+    filter: drop-shadow(0.125rem 0.125rem 0 var(--amaranth));
   }
 }
 /* MD - 768px*/
@@ -161,10 +162,10 @@ test:hover {
 /* LG - 1024px*/
 @media (min-width: 64rem) {
   .project-container {
-    box-shadow: 0.375rem 0.375rem 0 var(--color-violet);
+    box-shadow: 0.375rem 0.375rem 0 var(--violet);
   }
   .project-container:hover {
-    box-shadow: 0.75rem 0.75rem 0 var(--color-crimson);
+    box-shadow: 0.75rem 0.75rem 0 var(--crimson);
   }
   .description {
     padding: 3rem;
@@ -177,31 +178,31 @@ test:hover {
 /* XL - 1280px*/
 @media (min-width: 80rem) {
   .project-container {
-    box-shadow: 0.5rem 0.5rem 0 var(--color-violet);
+    box-shadow: 0.5rem 0.5rem 0 var(--violet);
   }
   .project-container:hover {
-    box-shadow: 1rem 1rem 0 var(--color-crimson);
+    box-shadow: 1rem 1rem 0 var(--crimson);
   }
   .description {
     padding: 4.5rem;
     font-size: 2.25rem;
-    text-shadow: 0.125rem 0.125rem 0 var(--color-amaranth);
+    text-shadow: 0.125rem 0.125rem 0 var(--amaranth);
   }
   .project-text {
     font-size: 3.25rem;
-    text-shadow: 0.2rem 0.2rem 0 var(--color-amaranth);
+    text-shadow: 0.2rem 0.2rem 0 var(--amaranth);
   }
   .engine-logo {
-    filter: drop-shadow(0.2rem 0.2rem 0 var(--color-amaranth));
+    filter: drop-shadow(0.2rem 0.2rem 0 var(--amaranth));
   }
 }
 /* 2XL - 1536px*/
 @media (min-width: 96rem) {
   .project-container {
-    box-shadow: 0.625rem 0.625rem 0 var(--color-violet);
+    box-shadow: 0.625rem 0.625rem 0 var(--violet);
   }
   .project-container:hover {
-    box-shadow: 1.125rem 1.125rem 0 var(--color-crimson);
+    box-shadow: 1.125rem 1.125rem 0 var(--crimson);
   }
   .description {
     padding: 2.5rem;
@@ -217,10 +218,10 @@ test:hover {
 /* 4XL - 2560px*/
 @media (min-width: 160rem) {
   .project-container {
-    box-shadow: 0.75rem 0.75rem 0 var(--color-violet);
+    box-shadow: 0.75rem 0.75rem 0 var(--violet);
   }
   .project-container:hover {
-    box-shadow: 1.25rem 1.125rem 0 var(--color-crimson);
+    box-shadow: 1.25rem 1.125rem 0 var(--crimson);
   }
   .description {
     padding: 3.5rem;
@@ -233,10 +234,10 @@ test:hover {
 /*  5XL - 3840px*/
 @media (min-width: 240rem) {
   .project-container {
-    box-shadow: 1rem 1rem 0 var(--color-violet);
+    box-shadow: 1rem 1rem 0 var(--violet);
   }
   .project-container:hover {
-    box-shadow: 1.5rem 1.5rem 0 var(--color-crimson);
+    box-shadow: 1.5rem 1.5rem 0 var(--crimson);
   }
   .description {
     padding: 6rem;

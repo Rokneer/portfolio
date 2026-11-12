@@ -29,12 +29,17 @@ const router = createRouter({
     if (to.hash) {
       const targetElement = document.getElementById(to.hash.slice(1));
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
+        const scrollMargin = parseFloat(
+          getComputedStyle(targetElement).scrollMarginTop,
+        );
+        return {
+          el: targetElement,
+          top: scrollMargin,
+          behavior: "smooth",
+        };
       }
-      return { top: 0, behavior: "smooth" };
     }
-    return savedPosition || { top: 0, behavior: "smooth" };
+    return savedPosition || { top: 0, left: 0, behavior: "smooth" };
   },
 });
 

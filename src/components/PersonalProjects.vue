@@ -1,17 +1,9 @@
 <template>
   <div class="projects-container">
     <div class="category">
-      <ph-heart
-        weight="fill"
-        color="#e42038"
-        class="icon"
-      />
+      <ph-heart weight="fill" color="#e42038" class="icon" />
       <div class="category-title">Personal Projects</div>
-      <ph-heart
-        weight="fill"
-        color="#e42038"
-        class="icon"
-      />
+      <ph-heart weight="fill" color="#e42038" class="icon" />
     </div>
     <div class="project-grid">
       <project :project="PROJECTS.foodForTheSoul" />

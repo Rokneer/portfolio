@@ -1,17 +1,9 @@
 <template>
   <div class="projects-container">
     <div class="category">
-      <ph-star
-        weight="fill"
-        color="#e42038"
-        class="icon"
-      />
+      <ph-star weight="fill" color="#e42038" class="icon" />
       <div class="category-title">Professional Work</div>
-      <ph-star
-        weight="fill"
-        color="#e42038"
-        class="icon"
-      />
+      <ph-star weight="fill" color="#e42038" class="icon" />
     </div>
     <div class="project-grid single-grid">
       <project :project="PROJECTS.angryBill" />
