@@ -1,20 +1,23 @@
 <template>
   <router-link
     :to="'project/' + project.name"
-    class="project-container group motion-rotate-in-1 hover:motion-rotate-out-1"
+    class="project-container group test"
   >
     <img
       :src="project.cover.src"
       :alt="project.cover.alt"
-      class="project-blur group-hover:blur-[0.063rem] group-hover:brightness-40"
+      class="project-cover group test"
     />
-    <div class="description group-hover:opacity-100">
+    <div class="description group test">
       <div class="project-row">
         <div class="project-column">
           <div>
             <div class="project-text">Worked as</div>
             <ul class="list">
-              <li v-for="(role, index) in project.roles" :key="index">
+              <li
+                v-for="(role, index) in project.roles"
+                :key="index"
+              >
                 {{ role }}
               </li>
             </ul>
@@ -48,25 +51,32 @@
 <script setup lang="ts">
 import type { Project } from "@/types";
 
-const props = defineProps<{ project: Project }>();
+defineProps<{ project: Project }>();
 </script>
 
 <style lang="css" scoped>
 /* DEFAULT */
+test:hover {
+  filter: blur(1.5px) brightness(40%);
+}
 .project-container {
-  aspect-ratio: 16 / 9 auto;
-  position: relative;
-  cursor: pointer;
-  box-shadow: 0.25rem 0.25rem 0 var(--color-violet);
-  transition: all 200ms ease-in-out;
-}
-.project-container:hover {
-  box-shadow: 0.5rem 0.5rem 0 var(--color-crimson);
-}
-.project-blur {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 0 var(--color-violet);
+  transition: all 0.2s ease-in-out;
+  animation: rotateIn 0.3s forwards;
+}
+.project-container:hover {
+  animation: rotateOut 0.3s forwards;
+  box-shadow: 0.5rem 0.5rem 0 var(--color-crimson);
+}
+.project-cover {
+  width: 100%;
+  height: 100%;
+}
+.project-container:hover .project-cover {
+  filter: blur(1.5px) brightness(40%);
 }
 .description {
   width: 100%;
@@ -76,12 +86,15 @@ const props = defineProps<{ project: Project }>();
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: color-mix(in oklab, var(--color-amaranth) 15%, transparent);
   opacity: 0%;
   padding: 1rem;
-  font-size: 0.688rem;
-  transition: all 200ms ease-in-out;
-  text-shadow: 0.031rem 0.031rem 0 var(--color-amaranth);
+  font-size: 0.7rem;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 0.03rem 0.03rem 0 var(--color-amaranth);
+}
+.project-container:hover .description {
+  opacity: 100%;
 }
 .project-row {
   width: 100%;
@@ -96,29 +109,36 @@ const props = defineProps<{ project: Project }>();
   row-gap: 0.5rem;
 }
 .project-text {
-  font-size: 0.938rem;
-  font-weight: var(--font-weight-bold);
-  text-shadow: 0.063rem 0.063rem 0 var(--color-amaranth);
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-shadow: 0.065rem 0.065rem 0 var(--color-amaranth);
 }
 .list {
   list-style: disc inside;
 }
 .engine-logo {
   width: 65%;
-  filter: drop-shadow(0.063rem 0.063rem 0 var(--color-amaranth));
+  filter: drop-shadow(0.065rem 0.065rem 0 var(--color-amaranth));
 }
 .category-column {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-
+@media (prefers-reduced-motion: reduce) {
+  .project-container {
+    animation: none;
+  }
+  .project-container:hover {
+    animation: none;
+  }
+}
 /* SM - 640px*/
 @media (min-width: 40rem) {
   .description {
     padding: 1.5rem;
-    font-size: 1.188rem;
-    text-shadow: 0.063rem 0.063rem 0 var(--color-amaranth);
+    font-size: 1.2rem;
+    text-shadow: 0.065rem 0.065rem 0 var(--color-amaranth);
   }
   .project-text {
     font-size: 1.625rem;
@@ -132,7 +152,7 @@ const props = defineProps<{ project: Project }>();
 @media (min-width: 48rem) {
   .description {
     padding: 2rem;
-    font-size: 1.438rem;
+    font-size: 1.45rem;
   }
   .project-text {
     font-size: 2rem;
@@ -151,7 +171,7 @@ const props = defineProps<{ project: Project }>();
     font-size: 1.875rem;
   }
   .project-text {
-    font-size: 2.813rem;
+    font-size: 2.8rem;
   }
 }
 /* XL - 1280px*/
@@ -169,10 +189,10 @@ const props = defineProps<{ project: Project }>();
   }
   .project-text {
     font-size: 3.25rem;
-    text-shadow: 0.188rem 0.188rem 0 var(--color-amaranth);
+    text-shadow: 0.2rem 0.2rem 0 var(--color-amaranth);
   }
   .engine-logo {
-    filter: drop-shadow(0.188rem 0.188rem 0 var(--color-amaranth));
+    filter: drop-shadow(0.2rem 0.2rem 0 var(--color-amaranth));
   }
 }
 /* 2XL - 1536px*/
@@ -204,10 +224,10 @@ const props = defineProps<{ project: Project }>();
   }
   .description {
     padding: 3.5rem;
-    font-size: 2.188rem;
+    font-size: 2.2rem;
   }
   .project-text {
-    font-size: 3.438rem;
+    font-size: 3.45rem;
   }
 }
 /*  5XL - 3840px*/
@@ -220,7 +240,7 @@ const props = defineProps<{ project: Project }>();
   }
   .description {
     padding: 6rem;
-    font-size: 3.438rem;
+    font-size: 3.45rem;
   }
   .project-text {
     font-size: 5rem;

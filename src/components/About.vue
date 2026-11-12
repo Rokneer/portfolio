@@ -2,26 +2,32 @@
   <div class="about">
     <div class="greeting">
       <span> Hi there, my name is </span>
-      <a class="name-highlight" :href="CV" target="_blank" rel="noreferrer">
+      <a
+        class="name-highlight"
+        :href="CV"
+        target="_blank"
+        rel="noreferrer"
+      >
         Alejandro
       </a>
     </div>
     <div class="description-container">
-      <div class="mascot">
+      <div class="images-container">
         <img
           :src="isMeHovered ? meHover : meBase"
           alt="A cartoony redition of the the developer, Alejandro, drawn in different shades of purple. Their hand is waving, welcoming you to their portfolio."
+          class="avatar"
           @mouseover="isMeHovered = true"
           @mouseleave="isMeHovered = false"
         />
         <img
           :src="TomatoLogo"
           alt="Bold red text with a white outline reading: tomato.dev, the Os are stylized as small cartoony tomatos."
-          class="hover:motion-preset-stretch"
+          class="logo"
         />
       </div>
       <div class="description">
-        <div class="wave-highlight hover:animate-wave">
+        <div class="wave-highlight">
           I design and develop games and other neat stuff!
         </div>
         <div>
@@ -37,6 +43,18 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import { ref } from "vue";
+
+import meBase from "/common/tomate/avatar/avatar-1.svg";
+import meHover from "/common/tomate/avatar/avatar-2.svg";
+import TomatoLogo from "/common/tomate/logo/logo-red.svg";
+
+import CV from "/common/CV.pdf";
+
+const isMeHovered = ref<boolean>(false);
+</script>
+
 <style lang="css" scoped>
 /* DEFAULT */
 .about {
@@ -45,7 +63,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  padding-inline: 0.5rem;
+  padding-inline: 0.25rem;
   padding-block: 1rem;
 }
 .description-container {
@@ -58,30 +76,41 @@
 .greeting {
   width: 100%;
   text-align: center;
-  font-size: 1.25rem;
-  text-shadow: 0.063rem 0.063rem 0 var(--color-violet);
+  font-size: 1.35rem;
+  text-shadow: 0.065rem 0.065rem 0 var(--color-violet);
 }
-.mascot {
+.images-container {
   display: flex;
   flex-direction: column;
-  filter: drop-shadow(0.094rem 0.094rem 0 var(--color-violet));
+  align-items: center;
+  filter: drop-shadow(0.1rem 0.1rem 0 var(--color-violet));
   flex-basis: 20%;
   padding: 0.25rem;
+  width: 3rem;
+}
+.avatar {
+  width: inherit;
+}
+.logo {
+  width: inherit;
 }
 .description {
-  font-size: 0.625rem;
-  text-shadow: 0.031rem 0.031rem 0 var(--color-violet);
-  font-weight: var(--font-weight-medium);
+  font-size: 0.675rem;
+  text-shadow: 0.03rem 0.03rem 0 var(--color-violet);
+  font-weight: 500;
   flex-basis: 80%;
 }
 .name-highlight {
   color: var(--color-crimson);
-  transition: all 200ms ease-in-out;
+  transition-property: font-size;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
 }
 .name-highlight:hover {
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
 }
 .wave-highlight:hover {
+  animation: wave 0.8s ease-in-out infinite;
 }
 @media (prefers-reduced-motion: reduce) {
   .wave-highlight:hover {
@@ -94,21 +123,28 @@
     gap: 1.5rem;
   }
   .greeting {
-    font-size: 2.188rem;
+    font-size: 2.5rem;
+  }
+  .images-container {
+    width: 5.5rem;
   }
   .description {
     font-size: 1.125rem;
-    text-shadow: 0.063rem 0.063rem 0 var(--color-violet);
+    text-shadow: 0.065rem 0.065rem 0 var(--color-violet);
   }
 }
 /* MD - 768px*/
 @media (min-width: 48rem) {
   .greeting {
-    font-size: 2.813rem;
+    font-size: 3rem;
+    text-shadow: 0.15rem 0.15rem 0 var(--color-violet);
+  }
+  .images-container {
+    width: 6.5rem;
   }
   .description {
-    font-size: 1.25rem;
-    text-shadow: 0.094rem 0.094rem 0 var(--color-violet);
+    font-size: 1.4rem;
+    text-shadow: 0.1rem 0.1rem 0 var(--color-violet);
   }
 }
 /* LG - 1024px*/
@@ -119,15 +155,16 @@
   .description-container {
     gap: 2.5rem;
   }
-  .mascot {
+  .images-container {
+    width: 8.25rem;
     filter: drop-shadow(0.125rem 0.125rem 0 var(--color-violet));
   }
   .greeting {
     font-size: 3.75rem;
-    text-shadow: 0.188rem 0.188rem 0 var(--color-violet);
+    text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
   }
   .description {
-    font-size: 1.813rem;
+    font-size: 1.815rem;
   }
 }
 /* XL - 1280px*/
@@ -138,15 +175,16 @@
   .description-container {
     gap: 4rem;
   }
-  .mascot {
+  .images-container {
+    width: 10rem;
     filter: drop-shadow(0.25rem 0.25rem 0 var(--color-violet));
   }
   .greeting {
     font-size: 4.625rem;
-    text-shadow: 0.313rem 0.313rem 0 var(--color-violet);
+    text-shadow: 0.315rem 0.315rem 0 var(--color-violet);
   }
   .description {
-    font-size: 2.188rem;
+    font-size: 2.15rem;
     text-shadow: 0.125rem 0.125rem 0 var(--color-violet);
   }
 }
@@ -159,24 +197,25 @@
     font-size: 5.625rem;
   }
   .description {
-    font-size: 2.688rem;
+    font-size: 2.75rem;
   }
 }
-/* 3XL - 191.25rem*/
+/* 3XL - 1920px*/
 @media (min-width: 120rem) {
   .about {
     padding-inline: 5rem;
   }
-  .mascot {
-    filter: drop-shadow(0.313rem 0.313rem 0 var(--color-violet));
+  .images-container {
+    width: 14rem;
+    filter: drop-shadow(0.315rem 0.315rem 0 var(--color-violet));
   }
   .greeting {
     font-size: 6.25rem;
-    text-shadow: 0.313rem 0.313rem 0 var(--color-violet);
+    text-shadow: 0.315rem 0.315rem 0 var(--color-violet);
   }
   .description {
-    font-size: 2.938rem;
-    text-shadow: 0.188rem 0.188rem 0 var(--color-violet);
+    font-size: 2.95rem;
+    text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
   }
 }
 /* 4XL - 2560px*/
@@ -184,8 +223,11 @@
   .about {
     padding-inline: 9rem;
   }
+  .images-container {
+    width: 18.5rem;
+  }
   .greeting {
-    font-size: 8.125rem;
+    font-size: 8.65rem;
   }
   .description {
     font-size: 4.125rem;
@@ -199,28 +241,17 @@
   .description-container {
     gap: 8rem;
   }
-  .mascot {
-    filter: drop-shadow(0.438rem 0.438rem 0 var(--color-violet));
+  .images-container {
+    width: 30rem;
+    filter: drop-shadow(0.45rem 0.45rem 0 var(--color-violet));
   }
   .greeting {
-    font-size: 20.625rem;
-    text-shadow: 0.438rem 0.438rem 0 var(--color-violet);
+    font-size: 13.25rem;
+    text-shadow: 0.45rem 0.45rem 0 var(--color-violet);
   }
   .description {
     font-size: 6.25rem;
-    text-shadow: 0.313rem 0.313rem 0 var(--color-violet);
+    text-shadow: 0.315rem 0.315rem 0 var(--color-violet);
   }
 }
 </style>
-
-<script setup lang="ts">
-import { ref } from "vue";
-
-import meBase from "/common/tomate/avatar/avatar-1.svg";
-import meHover from "/common/tomate/avatar/avatar-2.svg";
-import TomatoLogo from "/common/tomate/logo/logo-red.svg";
-
-import CV from "/common/CV.pdf";
-
-const isMeHovered = ref<boolean>(false);
-</script>

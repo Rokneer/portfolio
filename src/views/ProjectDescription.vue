@@ -1,102 +1,96 @@
 <template>
-  <div class="description-container">
-    <div class="header">
-      <!--* LOGO -->
-      <img
-        class="logo"
-        :src="PROJECTS[project].logo.src"
-        :alt="PROJECTS[project].logo.alt"
-      />
-      <div class="contributions-container">
-        <!--* ROLES -->
-        <div class="contribution">
-          <div class="contribution-title">Worked as</div>
-          <ul class="contribution-text">
-            <li v-for="(role, index) in PROJECTS[project].roles" :key="index">
-              {{ role }}
-            </li>
-          </ul>
-        </div>
+  <div class="gradient">
+    <div class="description-container">
+      <div class="header">
+        <!--* LOGO -->
+        <img
+          class="logo"
+          :src="PROJECTS[project].logo.src"
+          :alt="PROJECTS[project].logo.alt"
+        />
+        <div class="contributions-container">
+          <!--* ROLES -->
+          <div class="contribution">
+            <div class="contribution-title">Worked as</div>
+            <ul class="contribution-text">
+              <li
+                v-for="(role, index) in PROJECTS[project].roles"
+                :key="index"
+              >
+                {{ role }}
+              </li>
+            </ul>
+          </div>
 
-        <!--* CONTRIBUTIONS -->
-        <div class="contribution">
-          <div class="contribution-title">Doing</div>
-          <ul class="contribution-text">
-            <li
-              v-for="(contribution, index) in PROJECTS[project].contributions"
-              :key="index"
-            >
-              {{ contribution }}
-            </li>
-          </ul>
+          <!--* CONTRIBUTIONS -->
+          <div class="contribution">
+            <div class="contribution-title">Doing</div>
+            <ul class="contribution-text">
+              <li
+                v-for="(contribution, index) in PROJECTS[project].contributions"
+                :key="index"
+              >
+                {{ contribution }}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--* DESCRIPTION -->
-    <div class="text">
-      {{ PROJECTS[project].description }}
-    </div>
+      <!--* DESCRIPTION -->
+      <div class="general-text">
+        {{ PROJECTS[project].description }}
+      </div>
 
-    <!--* ANALYSIS -->
-    <div class="text">
-      <slot>
-        GAME ANALYSIS
-        <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum iusto
-        tempora, eius suscipit ducimus dicta. Explicabo voluptatibus dolore,
-        consequatur minima dicta culpa quas, modi ullam, nesciunt ad tenetur
-        quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-        excepturi ea exercitationem facilis sit sequi dolor veniam, laborum,
-        soluta delectus consequatur inventore reiciendis, officiis beatae
-        laboriosam fugiat repellat ipsum obcaecati.
-        <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-        aspernatur. Consectetur commodi id velit autem nulla accusamus modi
-        expedita. Molestias ea ipsum enim modi voluptates harum similique
-        corrupti maxime quam? Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Minima fugiat ipsa nostrum. Ut quas dignissimos
-        doloremque, quo temporibus aspernatur repellendus expedita dolore porro
-        iste labore odio, excepturi ab.
-        <br />
-        Possimus, quasi! Lorem ipsum dolor sit amet consectetur, adipisicing
-        elit. Ut sunt nulla ex qui sequi maiores. Dolorem suscipit voluptas,
-        porro blanditiis illo quos qui rerum. Optio ab enim beatae obcaecati
-        labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-        tempore distinctio ratione voluptatibus quisquam perspiciatis ducimus
-        consequatur quos totam quae similique quia, soluta doloribus repellendus
-        adipisci optio ex quaerat blanditiis! Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Recusandae ullam et odio saepe esse vitae
-        vero earum minus quaerat repellendus dolore quod, cum maiores omnis,
-        cumque iusto sapiente placeat autem! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit.
-        <br />
-        Officiis possimus ad error impedit reiciendis eum aliquid optio atque
-        itaque suscipit eius pariatur ipsam, aliquam voluptate unde doloremque,
-        perspiciatis laborum id! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Cumque sit aspernatur natus aliquam porro? Eius, aut
-        facilis.
-        <br />
-        Quis, deleniti! Dicta dolorem voluptatem corrupti ut minus reprehenderit
-        distinctio nemo asperiores doloremque.
-      </slot>
+      <!--* ANALYSIS -->
+      <div class="general-text">
+        <slot>
+          GAME ANALYSIS
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum iusto
+          tempora, eius suscipit ducimus dicta. Explicabo voluptatibus dolore,
+          consequatur minima dicta culpa quas, modi ullam, nesciunt ad tenetur
+          quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+          excepturi ea exercitationem facilis sit sequi dolor veniam, laborum,
+          soluta delectus consequatur inventore reiciendis, officiis beatae
+          laboriosam fugiat repellat ipsum obcaecati.
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+          aspernatur. Consectetur commodi id velit autem nulla accusamus modi
+          expedita. Molestias ea ipsum enim modi voluptates harum similique
+          corrupti maxime quam? Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit. Minima fugiat ipsa nostrum. Ut quas dignissimos
+          doloremque, quo temporibus aspernatur repellendus expedita dolore
+          porro iste labore odio, excepturi ab.
+        </slot>
+      </div>
     </div>
   </div>
 </template>
 
+<script setup lang="ts">
+import PROJECTS from "@/utils/projects";
+
+defineProps<{ project: string }>();
+</script>
+
 <style lang="css" scoped>
 /* DEFAULT */
-.description-container {
+.gradient {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  padding: 3.5rem;
   background-image: linear-gradient(
     120deg,
     transparent 30%,
     var(--color-crimson)
   );
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: 2.5rem;
+  margin-block: 3.5rem;
+  gap: 2rem;
 }
 .header {
   display: flex;
@@ -105,10 +99,11 @@
   align-items: center;
   justify-content: safe center;
   gap: 3rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 .logo {
-  filter: drop-shadow(0.313rem 0.313rem 0 var(--color-violet));
+  width: 100%;
+  filter: drop-shadow(0.315rem 0.315rem 0 var(--color-violet));
 }
 .contributions-container {
   display: flex;
@@ -116,116 +111,172 @@
   flex-basis: 75%;
   align-items: center;
   gap: 1.5rem;
-  font-size: 0.438rem;
-  text-shadow: 0.063rem 0.063rem 0 var(--color-violet);
 }
 .contribution {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   border-radius: 0.25rem;
   background-color: var(--color-crimson);
   padding-inline: 1.5rem;
   padding-block: 1rem;
-  box-shadow: 0.313rem 0.313rem 0 var(--color-violet);
+  box-shadow: 0.315rem 0.315rem 0 var(--color-violet);
 }
 .contribution-title {
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-bold);
-  text-shadow: 0.063rem 0.063rem 0 var(--color-violet);
+  font-size: 1.85rem;
+  font-weight: bold;
+  text-shadow: 0.1rem 0.1rem 0 var(--color-violet);
 }
 .contribution-text {
-  list-style: inside disc;
-  font-size: 0.625rem;
+  list-style: outside disc;
+  font-size: 1.35rem;
+  padding-left: 1.2rem;
+  line-height: 1.75rem;
+  text-shadow: 0.065rem 0.065rem 0 var(--color-violet);
 }
-.text {
-  font-size: 0.625rem;
-  text-shadow: 0.063rem 0.063rem 0 var(--color-violet);
+.general-text {
+  font-size: 1.35rem;
+  text-shadow: 0.065rem 0.065rem 0 var(--color-violet);
 }
 
 /* SM - 640px*/
 @media (min-width: 40rem) {
-  .header {
-    flex-direction: column;
-  }
-  .contributions-container {
-    font-size: 0.563rem;
+  .description-container {
+    margin-inline: 3.5rem;
+    margin-block: 2.5rem;
+    gap: 2.5rem;
   }
   .contribution-title {
-    font-size: 0.75rem;
+    font-size: 2.25rem;
   }
-  .text {
-    font-size: 0.75rem;
+  .contribution-text {
+    font-size: 1.55rem;
+  }
+  .general-text {
+    font-size: 1.75rem;
   }
 }
 /* MD - 768px*/
 @media (min-width: 48rem) {
+  .description-container {
+    margin-inline: 4.5rem;
+    margin-block: 3.5rem;
+  }
   .contributions-container {
-    font-size: 0.688rem;
+    gap: 3rem;
+  }
+  .contribution {
+    padding-inline: 2.5rem;
+    padding-block: 1.5rem;
   }
   .contribution-title {
-    font-size: 0.875rem;
+    font-size: 2.5rem;
   }
-  .text {
-    font-size: 0.875rem;
+  .contribution-text {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
   }
 }
 /* LG - 1024px*/
 @media (min-width: 64rem) {
-  .contribution-title {
-    font-size: 1rem;
+  .description-container {
+    margin-inline: 6.5rem;
+    margin-block: 4rem;
   }
-  .text {
-    font-size: 1rem;
+  .contribution {
+    width: 85%;
+    padding-inline: 3.5rem;
+    padding-block: 2.5rem;
+    gap: 0.5rem;
+  }
+  .general-text {
+    font-size: 2rem;
   }
 }
 /* XL - 1280px*/
 @media (min-width: 80rem) {
-  .contributions-container {
-    font-size: 0.75rem;
+  .description-container {
+    margin-inline: 5.5rem;
+    margin-block: 5rem;
+  }
+  .header {
+    flex-direction: row;
+    padding-bottom: 1.5rem;
+  }
+  .logo {
+    flex-basis: 70%;
+  }
+  .contribution {
+    width: 100%;
+    padding-inline: 2.5rem;
+    padding-block: 1.25rem;
+  }
+  .contribution-text {
+    font-size: 1.75rem;
+    text-shadow: 0.125rem 0.125rem 0 var(--color-violet);
   }
 }
 /* 2XL - 1536px*/
 @media (min-width: 96rem) {
-  .contributions-container {
-    font-size: 1.5rem;
-    text-shadow: 0.125rem 0.125rem 0 var(--color-violet);
+  .description-container {
+    margin-inline: 9.5rem;
+    margin-block: 5.5rem;
+    gap: 4.5rem;
+  }
+  .header {
+    padding-bottom: 1.5rem;
   }
   .contribution-title {
-    font-size: 2.5rem;
-    text-shadow: 0.188rem 0.188rem 0 var(--color-violet);
+    font-size: 2.75rem;
+    text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
   }
-  .text {
+  .general-text {
     font-size: 2.5rem;
-    text-shadow: 0.188rem 0.188rem 0 var(--color-violet);
+    text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
   }
 }
-/* 3XL - 191.25rem*/
+/* 3XL - 1920px*/
 @media (min-width: 120rem) {
-  .contributions-container {
-    font-size: 2.25rem;
+  .description-container {
+    margin-inline: 12rem;
+    gap: 5rem;
+  }
+  .contribution {
+    padding-inline: 3.5rem;
+    padding-block: 2.25rem;
   }
   .contribution-title {
-    font-size: 3.125rem;
+    font-size: 3.5rem;
   }
-  .text {
+  .contribution-text {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .general-text {
     font-size: 3.125rem;
   }
 }
 /* 4XL - 2560px*/
 @media (min-width: 160rem) {
-  .contributions-container {
-    font-size: 2.625rem;
+  .description-container {
+    margin-inline: 13.5rem;
+  }
+  .header {
+    gap: 5.5rem;
+  }
+  .contribution {
+    padding-inline: 4.5rem;
+    padding-block: 3.25rem;
   }
   .contribution-title {
-    font-size: 4.063rem;
+    font-size: 4rem;
   }
-  .text {
-    font-size: 3.438rem;
+  .contribution-text {
+    font-size: 2.85rem;
+    line-height: 3.75rem;
+  }
+  .general-text {
+    font-size: 3.45rem;
   }
 }
 </style>
-
-<script setup lang="ts">
-import PROJECTS from "@/utils/projects";
-
-const props = defineProps<{ project: string }>();
-</script>

@@ -6,30 +6,35 @@ import ProjectDescription from "@/views/ProjectDescription.vue";
 const routes = [
   {
     path: "/",
-    name: "projects",
+    name: "home",
     component: Home,
-    meta: { transition: "" },
   },
   {
     path: "/project/:project",
     name: ":project",
     component: ProjectDescription,
     props: true,
-    meta: { transition: "" },
   },
   {
     path: "/:pathName(.*)",
     name: "404",
     component: NotFound,
-    meta: { transition: "" },
   },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: routes,
-  scrollBehavior() {
-    return { top: 0 };
+  scrollBehavior(to, _from, savedPosition) {
+    if (to.hash) {
+      const targetElement = document.getElementById(to.hash.slice(1));
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      return { top: 0, behavior: "smooth" };
+    }
+    return savedPosition || { top: 0, behavior: "smooth" };
   },
 });
 

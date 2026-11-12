@@ -1,6 +1,5 @@
 <template>
   <a
-    class="icon-motion motion-rotate-in-1 hover:motion-rotate-out-1"
     :href="href"
     target="_blank"
     rel="noreferrer"
@@ -11,26 +10,38 @@
   </a>
 </template>
 
+<script setup lang="ts">
+defineProps<{ href: string }>();
+</script>
 <style lang="css" scoped>
 /* DEFAULT */
-.icon-motion {
-}
-.icon-motion:hover {
-}
+
 .icon {
   width: 3.125rem;
   height: 3.125rem;
   display: flex;
   cursor: pointer;
-  stroke: var(--color-white);
+  stroke: white;
   stroke-width: 16;
   paint-order: stroke fill;
-  filter: drop-shadow(0.063rem 0.063rem 0 var(--color-violet));
-  transition: all 200ms;
+  filter: drop-shadow(0.065rem 0.065rem 0 var(--color-violet));
+  transition: all 0.2s;
+  animation: rotateIn 0.3s forwards;
 }
 .icon:hover {
   filter: drop-shadow(0.125rem 0.125rem 0 var(--color-violet));
+  animation: rotateOut 0.3s forwards;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    animation: none;
+  }
+  .icon:hover {
+    animation: none;
+  }
+}
+
 /* SM - 640px*/
 @media (min-width: 40rem) {
   .icon {
@@ -52,9 +63,9 @@
 /* LG - 1024px*/
 @media (min-width: 64rem) {
   .icon {
-    width: 6.25rem;
-    height: 6.25rem;
-    filter: drop-shadow(0.188rem 0.188rem 0 var(--color-violet));
+    width: 8.25rem;
+    height: 8.25rem;
+    filter: drop-shadow(0.2rem 0.2rem 0 var(--color-violet));
   }
   .icon:hover {
     filter: drop-shadow(0.375rem 0.375rem 0 var(--color-violet));
@@ -65,7 +76,7 @@
   .icon {
     width: 10rem;
     height: 10rem;
-    filter: drop-shadow(0.313rem 0.313rem 0 var(--color-violet));
+    filter: drop-shadow(0.315rem 0.315rem 0 var(--color-violet));
   }
   .icon:hover {
     filter: drop-shadow(0.5rem 0.5rem 0 var(--color-violet));
@@ -78,7 +89,7 @@
     height: 13.75rem;
   }
 }
-/* 3XL - 191.25rem*/
+/* 3XL - 1920px*/
 @media (min-width: 120rem) {
   .icon {
     width: 16rem;
@@ -109,6 +120,3 @@
   }
 }
 </style>
-<script setup lang="ts">
-defineProps<{ href: string }>();
-</script>

@@ -7,7 +7,10 @@
       </div>
       <div class="error-text">
         How about we go back
-        <router-link class="home-link" :to="{ name: 'projects' }">
+        <router-link
+          class="home-link"
+          :to="{ name: 'projects' }"
+        >
           home
         </router-link>
         ? :)
@@ -19,7 +22,7 @@
 <style lang="css" scoped>
 /* DEFAULT */
 .error-container {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +32,7 @@
 }
 .error-title {
   font-size: 6.25rem;
-  font-weight: var(--font-weight-extrabold);
+  font-weight: bolder;
   text-shadow: 0.375rem 0.375rem 0 var(--color-crimson);
 }
 .error-description {
@@ -39,18 +42,20 @@
   font-size: 2.5rem;
 }
 .error-text {
-  font-weight: var(--font-weight-bold);
-  text-shadow: 0.188rem 0.188rem 0 var(--color-violet);
+  font-weight: bold;
+  text-shadow: 0.2rem 0.2rem 0 var(--color-violet);
 }
 .home-link {
+  color: white;
+  text-decoration: none;
   display: inline-block;
-  transition-duration: 200ms;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 .home-link:hover {
   font-size: 3.125rem;
-  font-weight: var(--font-weight-bold);
-  text-shadow: 0.313rem 0.313rem 0 var(--color-crimson);
+  font-weight: bold;
+  text-shadow: 0.315rem 0.315rem 0 var(--color-crimson);
 }
 
 /* MD - 768px*/
